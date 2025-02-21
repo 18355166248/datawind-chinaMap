@@ -66104,6 +66104,7 @@ function AV(t) {
     const t = u[0][f];
     (d = wV(t[0], t[1], i)), c[0].push([d[0] - a[0], d[1] - a[1]]);
   }
+  console.log('c', c)
   for (
     l.globalCompositeOperation = "source-out", l.beginPath(), h = 0;
     h < c.length;
@@ -67238,6 +67239,8 @@ function zV(t) {
           h = Math.abs(u[0] - c[0]),
           p = Math.abs(u[1] - c[1]),
           d = document.createElement("canvas");
+
+        console.log('o',r, o);
         (d.width = h),
           (d.height = p),
           (d.style.width = h + "px"),
@@ -67251,6 +67254,8 @@ function zV(t) {
           },
           m = am.flatten(Object.assign({}, e));
         let y, v;
+        console.log('m.features', m.features);
+
         for (y = 0; y < m.features.length; y++) {
           v = m.features[y];
           const t = am.bbox(v),
@@ -67268,6 +67273,18 @@ function zV(t) {
               height: r,
               offset: [e[0], i[1]],
             });
+            console.log({
+              feature: v,
+              zoom: l,
+              style: g,
+              width: n,
+              height: r,
+              offset: [e[0], i[1]],
+            },  t,
+              Math.abs(e[0] - u[0]),
+              Math.abs(i[1] - c[1]),
+              t.width,
+              t.height)
             f.drawImage(
               t,
               Math.abs(e[0] - u[0]),
@@ -67277,6 +67294,18 @@ function zV(t) {
             );
           }
         }
+        // // 生成图片数据URL（PNG格式，默认质量0.9）
+        // const dataUrl = d.toDataURL('image/png', 0.9);
+
+        // // 创建隐藏的下载链接
+        // const link = document.createElement('a');
+        // link.href = dataUrl;
+        // link.download = `myImage-${y}.png`; // 自定义文件名
+        // // 触发下载
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
+
         return d;
       })({
         geojson: n,
@@ -105304,8 +105333,10 @@ class O2 extends z {
           },
           innerShadow: {
             enabled: i.enable,
-            shadowColor: i.color,
-            shadowBlurScale: i.width,
+            // shadowColor: i.color,
+            // shadowBlurScale: i.width,
+            shadowColor: 'rgba(252,228,14,1)',
+            shadowBlurScale: 0.1,
           },
           boundaryStreamer: {
             enabled: r.enable,
