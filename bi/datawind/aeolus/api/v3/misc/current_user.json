@@ -1,0 +1,20 @@
+{
+  "msg": "OK",
+  "extraMsg": "",
+  "code": 0,
+  "data": {
+      "departmentName": "",
+      "name": "Swell",
+      "workCity": "",
+      "emailPrefix": "2102429019",
+      "departmentNames": "",
+      "ipAddr": "172.16.143.255",
+      "isAdmin": 1,
+      "staffType": "",
+      "avatar": null,
+      "servicePath": "",
+      "isIntraDomainId": 0,
+      "email": null,
+      "departmentId": ""
+  }
+}

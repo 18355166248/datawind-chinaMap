@@ -1,0 +1,45 @@
+{
+  "JSONIFY_PRETTYPRINT_REGULAR": false,
+  "code": "aeolus/ok",
+  "data": {
+      "beecdn__cn": "lf3-beecdn.bytetos.com",
+      "beecdn__va": "sf16-muse-va.ibytedtos.com",
+      "boeHost": "",
+      "bucketName": "aeolus-saas-public",
+      "bucketURLPrefix": "https://aeolus-saas-public.tos-cn-beijing.volces.com",
+      "cn": {
+          "FEEDBACK_CHANNEL": "",
+          "slardarWeb": "https://lf3-short.bytegoofy.com/slardar/fe/sdk-web/browser.cn.js",
+          "teaCdn": ""
+      },
+      "dataCenterHost": "",
+      "digitaltwinHost": "https://lf-digitaltwin-cim.bytetos.com",
+      "doc_link": "https://www.volcengine.com/docs/4726",
+      "huoshanstatic": "huoshanstatic.com",
+      "integrationHost": "",
+      "larkGroup": "https://bytedance.feishu.cn",
+      "musesFeDevHost": "",
+      "peopleHostUrl": "",
+      "peopleTestHostUrl": "",
+      "saasHost": "console.volcengine.com",
+      "sg": {
+          "FEEDBACK_CHANNEL": "",
+          "slardarWeb": "https://sf16-short-sg.bytedapm.com/slardar/fe/sdk-web/browser.sg.js",
+          "teaCdn": ""
+      },
+      "tosHost": "",
+      "toutiaostatic": "toutiaostatic.com",
+      "ttp": {
+          "FEEDBACK_CHANNEL": "",
+          "slardarWeb": "https://sf16-short-va.bytedapm.com/slardar/fe/sdk-web/browser.maliva.js",
+          "teaCdn": ""
+      },
+      "unPkgHost": "https://unpkg.byted-static.com",
+      "va": {
+          "FEEDBACK_CHANNEL": "",
+          "slardarWeb": "https://sf16-short-va.bytedapm.com/slardar/fe/sdk-web/browser.maliva.js",
+          "teaCdn": ""
+      }
+  },
+  "msg": "成功"
+}

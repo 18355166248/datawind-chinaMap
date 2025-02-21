@@ -1,0 +1,27 @@
+{
+  "JSONIFY_PRETTYPRINT_REGULAR": false,
+  "code": "aeolus/ok",
+  "data": {
+      "skeleton": {
+          "children": [
+              {
+                  "children": [],
+                  "height": 768,
+                  "nodeType": "host",
+                  "opacity": 1,
+                  "renderType": "@dp/aeolian-package-geography://gis_map",
+                  "visible": true,
+                  "width": 1024,
+                  "x": 142,
+                  "y": 81
+              }
+          ],
+          "height": 1080,
+          "properties": [
+              "rgba(12,9,41,1)"
+          ],
+          "width": 1920
+      }
+  },
+  "msg": "\u6210\u529f"
+}

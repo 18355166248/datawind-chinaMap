@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="scm-version"
+      content="v2.76.0-20250116173641026116.1737020415942"
+    />
+
+    <meta name="hash" content="832086d87239093f93fd3b6a4701c4326f9b7482" />
+
+    <script>
+      window.__afc__ = {
+        aeolusPrefix: "/bi/datawind",
+        apiBasePath: "/bi/datawind",
+        basePath: "",
+        dataManage: {
+          enableJumpDimMetDataSourceTypes: [
+            "bytehouse_cdw_engine",
+            "bytehouse_ce_engine",
+          ],
+        },
+        dataPrep: {
+          enableJumpDimMetDataSourceTypes: [
+            "bytehouse_cdw_engine",
+            "bytehouse_ce_engine",
+          ],
+        },
+        enableQueryEditorV2Module: true,
+        extension: {
+          registry:
+            "https://aeolus-saas-public.tos-cn-beijing.volces.com/packages",
+        },
+        pagePath: "/bi/datawind",
+        prepRuntimePublicPath: "/bi/datawind/prep/statics/",
+        publicPath:
+          "https://lf-dp.bytetos.com/obj/dp-open-internet-cn/data/dp/aeolus_fe_std/static/",
+        queryEditor: { isBindCurrentApp: true, newVersionOnly: true },
+        systemCenter: { enableCopilotFeature: true },
+        vizQuery: { enableExtension: true, useVTable: true },
+      };
+      window.__afc__.basePath = window.__afc__.basePath ?? "";
+      window.__afc__.pagePath = window.__afc__.pagePath ?? "";
+      window.__env__ = { CUSTOM_STANDALONE: "1" };
+      // CLIENT 注入失败，这里手动注入
+      if (window.__env__.CLIENT === undefined) {
+        if (window.__env__.CUSTOM_STANDALONE === "1") {
+          if (/.volcengine.com/.test(window.location.host)) {
+            window.__env__.CLIENT = "aeolus_saas_abi";
+          } else {
+            window.__env__.CLIENT = "abi";
+          }
+        }
+      }
+    </script>
+    <script>
+      // 根据 region 挂载 cookie
+      const url = new URL(window.location.href);
+      const region = url.searchParams.get("region");
+      if (region) {
+        document.cookie = "x_vedi_region" + "=" + region + "; path=/";
+      }
+      // 挂载环境变量
+      window.__maat_env = window.__maat_env || {};
+      window.__afc__ = window.__afc__ || {};
+      // 默认值来自构建时配置
+      let dynamicPublicPath = "/";
+      try {
+        /** SaaS、私有化环境，打包资源到同域名本地地址 */
+        let basePath = window.__afc__.basePath || "";
+        let pagePath = window.__afc__.pagePath || "/bi";
+        dynamicPublicPath = `${location.origin}${basePath}${pagePath}/aeolus/embed/statics/`;
+      } catch (e) {
+        console.error("[Aeolus] Set dynamic public path failed", e);
+      }
+      window.embedPublicPath = dynamicPublicPath;
+    </script>
+    <script>
+      (function (win, export_obj) {
+        win["LogAnalyticsObject"] = export_obj;
+        if (!win[export_obj]) {
+          function _collect() {
+            _collect.q.push(arguments);
+          }
+          _collect.q = _collect.q || [];
+          win[export_obj] = _collect;
+        }
+        win[export_obj].l = +new Date();
+      })(window, "collectEvent");
+    </script>
+    <script>
+      (function () {
+        function __vitePluginPublicPath_addLinkTag(rel, href, integrity) {
+          var link = document.createElement("link");
+          link.rel = rel;
+          link.href = href;
+          if (integrity) {
+            link.integrity = integrity;
+          }
+          document.head.appendChild(link);
+        }
+        __vitePluginPublicPath_addLinkTag(
+          "stylesheet",
+          window.embedPublicPath + "assets\u002Fasset\u002Findex.33d90732.css",
+          undefined
+        );
+      })();
+    </script>
+
+    <!-- 本地开启埋点上报 -->
+    <!-- 1. 手动设置 LOCAL_SEND_TEA 为 true  -->
+    <!-- 2. 手动取消下方 teaScript 注释。目前由于 argus 合规检测，代码不能直接明文引用此地址 -->
+    <!-- <script type="text/javascript" src="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js"></script> -->
+    <title></title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- vite -->
+    <div id="root"></div>
+
+    <script>
+      (function () {
+        function __vitePluginPublicPath_addScriptTag(
+          attributes,
+          inlineScriptCode
+        ) {
+          var script = document.createElement("script");
+          if (attributes)
+            for (var key in attributes)
+              script.setAttribute(key, attributes[key]);
+          script.async = false;
+          if (inlineScriptCode)
+            script.src = "data:text/javascript," + inlineScriptCode;
+          document.body.appendChild(script);
+        }
+        __vitePluginPublicPath_addScriptTag({
+          type: "module",
+          crossorigin: "",
+          src:
+            window.embedPublicPath + "assets\u002Fentry\u002Findex.7886b0f6.js",
+        });
+      })();
+    </script>
+  </body>
+</html>
