@@ -38,6 +38,14 @@ import {
 import { i as R } from "./invert.8c0ac90e.js";
 import { G as O, a as F } from "./GhostElement.0a01c8ce.js";
 import { E as z } from "./EntityHostElement.e9904ea6.js";
+
+import './utils.js';
+import './_G.js';
+import './kf.js';
+import './oV.js';
+import { O2 } from './O2.js';
+import './IW.js';
+
 import "./typo.146e79ca.js";
 import "./destroy.6bac23ca.js";
 import "./removeTips.d0c4745f.js";
@@ -2159,6 +2167,8 @@ var J = Object.defineProperty,
       for (var n of tt(t)) e.indexOf(n) < 0 && it.call(t, n) && (i[n] = t[n]);
     return i;
   };
+window.ot = ot;
+window.rt = rt;
 var st,
   lt,
   ut = "0.10.50",
@@ -2171,7 +2181,8 @@ var st,
       ? global
       : "undefined" != typeof self
       ? self
-      : {};
+            : {};
+window.ut = ut;
 function ht(t) {
   if (t.__esModule) return t;
   var e = Object.defineProperty({}, "__esModule", {
@@ -2998,6 +3009,7 @@ var pt = {
     (t.exports = s);
 })(pt);
 var dt = pt.exports;
+window.dt = dt;
 var ft, gt, mt, yt;
 class vt {
   addEventListener(t, e) {
@@ -3129,6 +3141,7 @@ function we() {
     Se[(n >> 24) & 255]
   ).toUpperCase();
 }
+window.we = we
 function Ae(t, e, i) {
   return Math.max(e, Math.min(i, t));
 }
@@ -5213,6 +5226,7 @@ class Ye {
     yield this.x, yield this.y, yield this.z;
   }
 }
+window.Ye = Ye;
 const Xe = new Ye(),
   Qe = [
     new Ye(),
@@ -9286,6 +9300,7 @@ class Wn extends Hi {
         );
   }
 }
+window.Wn = Wn;
 function qn(t, e, i, n, r, o, a, s, l, u, c, h) {
   Ln.fromBufferAttribute(r, u),
     In.fromBufferAttribute(r, c),
@@ -9569,6 +9584,7 @@ class Jn extends hn {
     return Object.keys(i).length > 0 && (e.extensions = i), e;
   }
 }
+window.Jn = Jn;
 class Kn extends Hi {
   constructor() {
     super(),
@@ -18760,6 +18776,7 @@ class As extends Hi {
     super(), (this.isGroup = !0);
   }
 }
+window.As = As;
 class Es extends Ge {
   constructor(t, e, i, n, r, o, a, s, l) {
     super(t, e, i, n, r, o, a, s, l),
@@ -21808,6 +21825,7 @@ function Yd(t, e, i) {
   );
   return (n.placeholder = Yd.placeholder), n;
 }
+window.Yd = Yd
 function Xd(t, e, i) {
   ((void 0 !== i && !Vc(t[e], i)) || (void 0 === i && !(e in t))) &&
     Hc(t, e, i);
@@ -21884,6 +21902,7 @@ function $d(t, e) {
 function tf(t, e) {
   return Hd(t, e);
 }
+window.tf = tf;
 function ef(t) {
   return t && t.length
     ? (function (t, e, i) {
@@ -21901,6 +21920,7 @@ function ef(t) {
 var nf = $c(function (t, e, i) {
   Jd(t, e, i);
 });
+window.nf = nf;
 const rf = (function () {
   try {
     return (
@@ -21920,9 +21940,11 @@ const of = pd,
       kl(e) ? e : void 0 === e ? null : void 0
     );
   };
+window.af = af;
 function sf(t, e) {
   return t && t.hasOwnProperty(e);
 }
+window.sf = sf;
 function lf(t) {
   return uf(t) || "" === t;
 }
@@ -22147,115 +22169,9 @@ function Nf(t, e) {
 }
 var Rf,
   Of = !0;
-function Ff(t, e) {
-  if ("string" == typeof e) return t[e];
-  {
-    const i = e.length;
-    let n,
-      r,
-      o = -1;
-    for (; ++o < i && ((n = e[o]), Object.hasOwnProperty.call(t, n)); )
-      r = t = t[n];
-    return o === i ? r : void 0;
-  }
-}
+
 void 0 === (Rf = !1) && (Rf = !0), (Of = Rf);
-class zf {
-  constructor(t) {
-    (this.parent = t), (this.watchers = []);
-  }
-  addWatch(t) {
-    t instanceof Array
-      ? Array.prototype.push.apply(this.watchers, t)
-      : this.watchers.push(t),
-      this.watchers.sort((t, e) => (t.priority || 10) - (e.priority || 10));
-  }
-  compare(t, e) {
-    if (e && t)
-      for (let i = 0, n = this.watchers.length; i < n; i++) {
-        const n = this.watchers[i],
-          { rule: r, cb: o } = n;
-        if (this.__calcRuleAndProps(r, e, t) && (o(e, t), n.serial)) break;
-      }
-  }
-  defaultRule(t, e, i, n = !1) {
-    return this.parent.defaultRule(t, e, i, n);
-  }
-  __calcRuleAndProps(t, e, i) {
-    let n = !1;
-    switch (t.type) {
-      case "all":
-        t.rules && (n = t.rules.every((t) => this.__calcRuleAndProps(t, e, i)));
-        break;
-      case "some":
-        t.rules && (n = t.rules.some((t) => this.__calcRuleAndProps(t, e, i)));
-        break;
-      default: {
-        const n =
-          "custom" === t.type ? t.ruleFunc : this.parent.ruleFuncMap[t.type];
-        return !!n && n(e, i, t.key);
-      }
-    }
-    return n;
-  }
-}
-const kf = new (class {
-  constructor() {
-    this.ruleFuncMap = {};
-  }
-  registerRule(t, e) {
-    this.ruleFuncMap[t] = e;
-  }
-  createPropsWatch() {
-    return new zf(this);
-  }
-  defaultRule(t, e, i, n = !1) {
-    return {
-      rule: {
-        type: e,
-        key: t,
-      },
-      cb: i,
-      serial: n,
-    };
-  }
-})();
-kf.registerRule("has", (t, e, i) => cf(Ff(t, i))),
-  kf.registerRule("diff", (t, e, i) => {
-    const n = Ff(t, i),
-      r = Ff(e, i);
-    return cf(n) && n !== r;
-  }),
-  kf.registerRule("diffDeep", (t, e, i) => {
-    const n = Ff(t, i),
-      r = Ff(e, i);
-    return (
-      cf(n) && n !== r && (Array.isArray(n) ? !tf(n, r) : !tf(nf({}, r, n), r))
-    );
-  }),
-  kf.registerRule("diffAnyone", (t, e, i) =>
-    i.some((i) => {
-      const n = Ff(t, i),
-        r = Ff(e, i);
-      return cf(n) && n !== r;
-    })
-  ),
-  kf.registerRule("diffAnyoneDeep", (t, e, i) =>
-    i.some((i) => {
-      const n = Ff(t, i),
-        r = Ff(e, i);
-      return (
-        cf(n) &&
-        n !== r &&
-        (Array.isArray(n) ? !tf(n, r) : !tf(nf({}, r, n), r))
-      );
-    })
-  ),
-  kf.registerRule("always", () => !0),
-  kf.registerRule("hasAndClose", (t, e, i) => {
-    const n = Ff(t, i);
-    return cf(n) && !n;
-  });
+
 const Bf = 0.01,
   Gf = Math.PI / 180,
   Uf = 180 / Math.PI,
@@ -24143,6 +24059,7 @@ const am = {
   dissolve: tm,
   simplify: em.exports,
 };
+window.am = am;
 function sm(t, e) {
   const i = (t) => {
       const i = e(t);
@@ -46315,6 +46232,7 @@ const Ww = {
       n
     );
   };
+window.Xw = Xw;
 var Qw, Zw;
 ((Zw = Qw || (Qw = {})).contain = "contain"),
   (Zw.intersect = "intersect"),
@@ -47439,6 +47357,7 @@ function EA(t) {
     return AA.set(t, n), n;
   }
 }
+window.EA = EA;
 function DA(t, e) {
   return t.transparent ? t.opacity : e;
 }
@@ -47706,6 +47625,7 @@ class zA extends hn {
     );
   }
 }
+window.zA = zA;
 const kA = {
   arraySlice: (t, e, i) =>
     kA.isTypedArray(t)
@@ -51956,6 +51876,7 @@ class QD {
     );
   }
 }
+window.QD = QD;
 function ZD(t, e, i) {
   t.normalized
     ? t.setXYZW(e, 255 * i[0], 255 * i[1], 255 * i[2], 255 * i[3])
@@ -52013,6 +51934,7 @@ const aT = (t, e) => {
   const { callback: i } = e;
   return i && (t = t.filter(i)), t;
 };
+window.aT = aT;
 class sT {
   constructor() {
     (this._partials = new Float64Array(32)), (this._n = 0);
@@ -53614,6 +53536,7 @@ const SL = {
       });
     });
   };
+window.ML = ML;
 function CL(t) {
   if (t.__esModule) return t;
   var e = Object.defineProperty({}, "__esModule", {
@@ -55124,6 +55047,7 @@ var uI = jL.topology,
     }
   };
 const gI = (t, e) => fI(t);
+window.gI = gI;
 var mI = {
     exports: {},
   },
@@ -56287,6 +56211,7 @@ const mF = (t, e) => {
   const { callback: i } = e;
   return i && (t = t.map(i)), t;
 };
+window.mF = mF;
 var yF = {},
   vF = {};
 function bF(t) {
@@ -57759,6 +57684,7 @@ const Qz = (function (t, e) {
     );
   },
   $z = {};
+window.Kz = Kz;
 var tk = {
   exports: {},
 };
@@ -57963,6 +57889,7 @@ class ok {
       this.target.removeAllListeners();
   }
 }
+window.ok = ok;
 class ak {
   constructor(t, e) {
     let i;
@@ -58060,6 +57987,7 @@ class ak {
     this.dataSet.removeDataView(this.name);
   }
 }
+window.ak = ak;
 const sk = !0,
   lk = !0,
   uk = {
@@ -58155,6 +58083,7 @@ var xk, _k;
   (_k.GEOBUF = "geobuf"),
   (_k.GEOJSON_URL = "geojson_url"),
   (_k.GEOBUF_URL = "geobuf_url");
+window.xk = xk;
 const Sk = {
     visible: !0,
     offset: [0, 0, 0],
@@ -58363,34 +58292,9 @@ const Pk = {
     cameraChange: !0,
     cameraTween: !0,
   };
-function Fk(t) {
-  return !![
-    "loaded",
-    "destroy",
-    "resize",
-    "viewportChange",
-    "pan",
-    "panStart",
-    "panEnd",
-    "zoom",
-    "zoomStart",
-    "zoomEnd",
-    "rotate",
-    "rotateStart",
-    "rotateEnd",
-    "pitch",
-    "pitchStart",
-    "pitchEnd",
-    "hover",
-    "select",
-    "drill",
-    "drillUp",
-    "drillUpEnd",
-    "drillDown",
-    "drillDownEnd",
-    "drillEnd",
-  ].includes(t);
-}
+window.Rk = Rk;
+window.Ok = Ok;
+
 var zk = "named",
   kk = "name",
   Bk = "unmanaged",
@@ -58415,49 +58319,9 @@ var zk = "named",
     ClassProperty: "ClassProperty",
     ConstructorArgument: "ConstructorArgument",
     Variable: "Variable",
-  },
-  Qk = 0;
-function Zk() {
-  return Qk++;
-}
-var Jk = (function () {
-    function t(t, e) {
-      (this.id = Zk()),
-        (this.activated = !1),
-        (this.serviceIdentifier = t),
-        (this.scope = e),
-        (this.type = Yk.Invalid),
-        (this.constraint = function (t) {
-          return !0;
-        }),
-        (this.implementationType = null),
-        (this.cache = null),
-        (this.factory = null),
-        (this.provider = null),
-        (this.onActivation = null),
-        (this.dynamicValue = null);
-    }
-    return (
-      (t.prototype.clone = function () {
-        var e = new t(this.serviceIdentifier, this.scope);
-        return (
-          (e.activated = !1),
-          (e.implementationType = this.implementationType),
-          (e.dynamicValue = this.dynamicValue),
-          (e.scope = this.scope),
-          (e.type = this.type),
-          (e.factory = this.factory),
-          (e.provider = this.provider),
-          (e.constraint = this.constraint),
-          (e.onActivation = this.onActivation),
-          (e.cache = this.cache),
-          e
-        );
-      }),
-      t
-    );
-  })(),
-  Kk = "NULL argument",
+  }
+
+var Kk = "NULL argument",
   $k = "Key Not Found",
   tB = "Ambiguous match found for serviceIdentifier:",
   eB = "No matching bindings found for serviceIdentifier:",
@@ -58555,7 +58419,7 @@ function gB(t) {
 }
 var mB = (function () {
     function t(t) {
-      (this.id = Zk()), (this.container = t);
+      (this.id = window.Zk()), (this.container = t);
     }
     return (
       (t.prototype.addPlan = function (t) {
@@ -58633,7 +58497,7 @@ var mB = (function () {
   })(),
   _B = (function () {
     function t(t, e, i, n) {
-      (this.id = Zk()),
+      (this.id = window.Zk()),
         (this.type = t),
         (this.serviceIdentifier = i),
         (this.name = new xB(e || "")),
@@ -58790,7 +58654,7 @@ function AB(t) {
 }
 var EB = (function () {
   function t(t, e, i, n, r) {
-    (this.id = Zk()),
+    (this.id = window.Zk()),
       (this.serviceIdentifier = t),
       (this.parentContext = e),
       (this.parentRequest = i),
@@ -59264,160 +59128,7 @@ var FB = function (t, e) {
       t
     );
   })(),
-  VB = (function () {
-    function t(t) {
-      (this._binding = t),
-        (this._bindingWhenSyntax = new GB(this._binding)),
-        (this._bindingOnSyntax = new UB(this._binding)),
-        (this._bindingInSyntax = new HB(t));
-    }
-    return (
-      (t.prototype.inRequestScope = function () {
-        return this._bindingInSyntax.inRequestScope();
-      }),
-      (t.prototype.inSingletonScope = function () {
-        return this._bindingInSyntax.inSingletonScope();
-      }),
-      (t.prototype.inTransientScope = function () {
-        return this._bindingInSyntax.inTransientScope();
-      }),
-      (t.prototype.when = function (t) {
-        return this._bindingWhenSyntax.when(t);
-      }),
-      (t.prototype.whenTargetNamed = function (t) {
-        return this._bindingWhenSyntax.whenTargetNamed(t);
-      }),
-      (t.prototype.whenTargetIsDefault = function () {
-        return this._bindingWhenSyntax.whenTargetIsDefault();
-      }),
-      (t.prototype.whenTargetTagged = function (t, e) {
-        return this._bindingWhenSyntax.whenTargetTagged(t, e);
-      }),
-      (t.prototype.whenInjectedInto = function (t) {
-        return this._bindingWhenSyntax.whenInjectedInto(t);
-      }),
-      (t.prototype.whenParentNamed = function (t) {
-        return this._bindingWhenSyntax.whenParentNamed(t);
-      }),
-      (t.prototype.whenParentTagged = function (t, e) {
-        return this._bindingWhenSyntax.whenParentTagged(t, e);
-      }),
-      (t.prototype.whenAnyAncestorIs = function (t) {
-        return this._bindingWhenSyntax.whenAnyAncestorIs(t);
-      }),
-      (t.prototype.whenNoAncestorIs = function (t) {
-        return this._bindingWhenSyntax.whenNoAncestorIs(t);
-      }),
-      (t.prototype.whenAnyAncestorNamed = function (t) {
-        return this._bindingWhenSyntax.whenAnyAncestorNamed(t);
-      }),
-      (t.prototype.whenAnyAncestorTagged = function (t, e) {
-        return this._bindingWhenSyntax.whenAnyAncestorTagged(t, e);
-      }),
-      (t.prototype.whenNoAncestorNamed = function (t) {
-        return this._bindingWhenSyntax.whenNoAncestorNamed(t);
-      }),
-      (t.prototype.whenNoAncestorTagged = function (t, e) {
-        return this._bindingWhenSyntax.whenNoAncestorTagged(t, e);
-      }),
-      (t.prototype.whenAnyAncestorMatches = function (t) {
-        return this._bindingWhenSyntax.whenAnyAncestorMatches(t);
-      }),
-      (t.prototype.whenNoAncestorMatches = function (t) {
-        return this._bindingWhenSyntax.whenNoAncestorMatches(t);
-      }),
-      (t.prototype.onActivation = function (t) {
-        return this._bindingOnSyntax.onActivation(t);
-      }),
-      t
-    );
-  })(),
-  WB = (function () {
-    function t(t) {
-      this._binding = t;
-    }
-    return (
-      (t.prototype.to = function (t) {
-        return (
-          (this._binding.type = Yk.Instance),
-          (this._binding.implementationType = t),
-          new VB(this._binding)
-        );
-      }),
-      (t.prototype.toSelf = function () {
-        if ("function" != typeof this._binding.serviceIdentifier)
-          throw new Error(
-            "The toSelf function can only be applied when a constructor is used as service identifier"
-          );
-        var t = this._binding.serviceIdentifier;
-        return this.to(t);
-      }),
-      (t.prototype.toConstantValue = function (t) {
-        return (
-          (this._binding.type = Yk.ConstantValue),
-          (this._binding.cache = t),
-          (this._binding.dynamicValue = null),
-          (this._binding.implementationType = null),
-          new jB(this._binding)
-        );
-      }),
-      (t.prototype.toDynamicValue = function (t) {
-        return (
-          (this._binding.type = Yk.DynamicValue),
-          (this._binding.cache = null),
-          (this._binding.dynamicValue = t),
-          (this._binding.implementationType = null),
-          new VB(this._binding)
-        );
-      }),
-      (t.prototype.toConstructor = function (t) {
-        return (
-          (this._binding.type = Yk.Constructor),
-          (this._binding.implementationType = t),
-          new jB(this._binding)
-        );
-      }),
-      (t.prototype.toFactory = function (t) {
-        return (
-          (this._binding.type = Yk.Factory),
-          (this._binding.factory = t),
-          new jB(this._binding)
-        );
-      }),
-      (t.prototype.toFunction = function (t) {
-        if ("function" != typeof t)
-          throw new Error(
-            "Value provided to function binding must be a function!"
-          );
-        var e = this.toConstantValue(t);
-        return (this._binding.type = Yk.Function), e;
-      }),
-      (t.prototype.toAutoFactory = function (t) {
-        return (
-          (this._binding.type = Yk.Factory),
-          (this._binding.factory = function (e) {
-            return function () {
-              return e.container.get(t);
-            };
-          }),
-          new jB(this._binding)
-        );
-      }),
-      (t.prototype.toProvider = function (t) {
-        return (
-          (this._binding.type = Yk.Provider),
-          (this._binding.provider = t),
-          new jB(this._binding)
-        );
-      }),
-      (t.prototype.toService = function (t) {
-        this.toDynamicValue(function (e) {
-          return e.container.get(t);
-        });
-      }),
-      t
-    );
-  })(),
+
   qB = (function () {
     function t() {}
     return (
@@ -59610,284 +59321,7 @@ var FB = function (t, e) {
           })([o, s]);
         };
       }
-    },
-  ZB = (function () {
-    function t(t) {
-      var e = t || {};
-      if ("object" != typeof e)
-        throw new Error(
-          "Invalid Container constructor argument. Container options must be an object."
-        );
-      if (void 0 === e.defaultScope) e.defaultScope = qk;
-      else if (
-        e.defaultScope !== Wk &&
-        e.defaultScope !== qk &&
-        e.defaultScope !== Vk
-      )
-        throw new Error(
-          "Invalid Container option. Default scope must be a string ('singleton' or 'transient')."
-        );
-      if (void 0 === e.autoBindInjectable) e.autoBindInjectable = !1;
-      else if ("boolean" != typeof e.autoBindInjectable)
-        throw new Error(
-          "Invalid Container option. Auto bind injectable must be a boolean"
-        );
-      if (void 0 === e.skipBaseClassChecks) e.skipBaseClassChecks = !1;
-      else if ("boolean" != typeof e.skipBaseClassChecks)
-        throw new Error(
-          "Invalid Container option. Skip base check must be a boolean"
-        );
-      (this.options = {
-        autoBindInjectable: e.autoBindInjectable,
-        defaultScope: e.defaultScope,
-        skipBaseClassChecks: e.skipBaseClassChecks,
-      }),
-        (this.id = Zk()),
-        (this._bindingDictionary = new YB()),
-        (this._snapshots = []),
-        (this._middleware = null),
-        (this.parent = null),
-        (this._metadataReader = new lB());
     }
-    return (
-      (t.merge = function (e, i) {
-        var n = new t(),
-          r = DB(n),
-          o = DB(e),
-          a = DB(i);
-        function s(t, e) {
-          t.traverse(function (t, i) {
-            i.forEach(function (t) {
-              e.add(t.serviceIdentifier, t.clone());
-            });
-          });
-        }
-        return s(o, r), s(a, r), n;
-      }),
-      (t.prototype.load = function () {
-        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-        for (
-          var i = this._getContainerModuleHelpersFactory(), n = 0, r = t;
-          n < r.length;
-          n++
-        ) {
-          var o = r[n],
-            a = i(o.id);
-          o.registry(
-            a.bindFunction,
-            a.unbindFunction,
-            a.isboundFunction,
-            a.rebindFunction
-          );
-        }
-      }),
-      (t.prototype.loadAsync = function () {
-        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-        return XB(this, void 0, void 0, function () {
-          var e, i, n, r, o;
-          return QB(this, function (a) {
-            switch (a.label) {
-              case 0:
-                (e = this._getContainerModuleHelpersFactory()),
-                  (i = 0),
-                  (n = t),
-                  (a.label = 1);
-              case 1:
-                return i < n.length
-                  ? ((r = n[i]),
-                    (o = e(r.id)),
-                    [
-                      4,
-                      r.registry(
-                        o.bindFunction,
-                        o.unbindFunction,
-                        o.isboundFunction,
-                        o.rebindFunction
-                      ),
-                    ])
-                  : [3, 4];
-              case 2:
-                a.sent(), (a.label = 3);
-              case 3:
-                return i++, [3, 1];
-              case 4:
-                return [2];
-            }
-          });
-        });
-      }),
-      (t.prototype.unload = function () {
-        for (var t = this, e = [], i = 0; i < arguments.length; i++)
-          e[i] = arguments[i];
-        e.forEach(function (e) {
-          var i,
-            n =
-              ((i = e.id),
-              function (t) {
-                return t.moduleId === i;
-              });
-          t._bindingDictionary.removeByCondition(n);
-        });
-      }),
-      (t.prototype.bind = function (t) {
-        var e = this.options.defaultScope || qk,
-          i = new Jk(t, e);
-        return this._bindingDictionary.add(t, i), new WB(i);
-      }),
-      (t.prototype.rebind = function (t) {
-        return this.unbind(t), this.bind(t);
-      }),
-      (t.prototype.unbind = function (t) {
-        try {
-          this._bindingDictionary.remove(t);
-        } catch (e) {
-          throw new Error("Could not unbind serviceIdentifier: " + hB(t));
-        }
-      }),
-      (t.prototype.unbindAll = function () {
-        this._bindingDictionary = new YB();
-      }),
-      (t.prototype.isBound = function (t) {
-        var e = this._bindingDictionary.hasKey(t);
-        return !e && this.parent && (e = this.parent.isBound(t)), e;
-      }),
-      (t.prototype.isBoundNamed = function (t, e) {
-        return this.isBoundTagged(t, zk, e);
-      }),
-      (t.prototype.isBoundTagged = function (t, e, i) {
-        var n = !1;
-        if (this._bindingDictionary.hasKey(t)) {
-          var r = this._bindingDictionary.get(t),
-            o = (function (t, e, i, n) {
-              var r = new _B(Xk.Variable, "", e, new yB(i, n)),
-                o = new mB(t);
-              return new EB(e, o, null, [], r);
-            })(this, t, e, i);
-          n = r.some(function (t) {
-            return t.constraint(o);
-          });
-        }
-        return !n && this.parent && (n = this.parent.isBoundTagged(t, e, i)), n;
-      }),
-      (t.prototype.snapshot = function () {
-        this._snapshots.push(
-          qB.of(this._bindingDictionary.clone(), this._middleware)
-        );
-      }),
-      (t.prototype.restore = function () {
-        var t = this._snapshots.pop();
-        if (void 0 === t) throw new Error("No snapshot available to restore.");
-        (this._bindingDictionary = t.bindings),
-          (this._middleware = t.middleware);
-      }),
-      (t.prototype.createChild = function (e) {
-        var i = new t(e || this.options);
-        return (i.parent = this), i;
-      }),
-      (t.prototype.applyMiddleware = function () {
-        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
-        var i = this._middleware ? this._middleware : this._planAndResolve();
-        this._middleware = t.reduce(function (t, e) {
-          return e(t);
-        }, i);
-      }),
-      (t.prototype.applyCustomMetadataReader = function (t) {
-        this._metadataReader = t;
-      }),
-      (t.prototype.get = function (t) {
-        return this._get(!1, !1, Xk.Variable, t);
-      }),
-      (t.prototype.getTagged = function (t, e, i) {
-        return this._get(!1, !1, Xk.Variable, t, e, i);
-      }),
-      (t.prototype.getNamed = function (t, e) {
-        return this.getTagged(t, zk, e);
-      }),
-      (t.prototype.getAll = function (t) {
-        return this._get(!0, !0, Xk.Variable, t);
-      }),
-      (t.prototype.getAllTagged = function (t, e, i) {
-        return this._get(!1, !0, Xk.Variable, t, e, i);
-      }),
-      (t.prototype.getAllNamed = function (t, e) {
-        return this.getAllTagged(t, zk, e);
-      }),
-      (t.prototype.resolve = function (t) {
-        var e = this.createChild();
-        return e.bind(t).toSelf(), e.get(t);
-      }),
-      (t.prototype._getContainerModuleHelpersFactory = function () {
-        var t = this,
-          e = function (t, e) {
-            t._binding.moduleId = e;
-          },
-          i = function (i) {
-            return function (n) {
-              var r = t.rebind.bind(t)(n);
-              return e(r, i), r;
-            };
-          };
-        return function (n) {
-          return {
-            bindFunction:
-              ((r = n),
-              function (i) {
-                var n = t.bind.bind(t)(i);
-                return e(n, r), n;
-              }),
-            isboundFunction: function (e) {
-              return t.isBound.bind(t)(e);
-            },
-            rebindFunction: i(n),
-            unbindFunction: function (e) {
-              t.unbind.bind(t)(e);
-            },
-          };
-          var r;
-        };
-      }),
-      (t.prototype._get = function (t, e, i, n, r, o) {
-        var a = null,
-          s = {
-            avoidConstraints: t,
-            contextInterceptor: function (t) {
-              return t;
-            },
-            isMultiInject: e,
-            key: r,
-            serviceIdentifier: n,
-            targetType: i,
-            value: o,
-          };
-        if (this._middleware) {
-          if (null == (a = this._middleware(s)))
-            throw new Error(
-              "Invalid return type in middleware. Middleware must return!"
-            );
-        } else a = this._planAndResolve()(s);
-        return a;
-      }),
-      (t.prototype._planAndResolve = function () {
-        var t = this;
-        return function (e) {
-          var i = IB(
-            t._metadataReader,
-            t,
-            e.isMultiInject,
-            e.targetType,
-            e.serviceIdentifier,
-            e.key,
-            e.value,
-            e.avoidConstraints
-          );
-          return (function (t) {
-            return OB(t.plan.rootRequest.requestScope)(t.plan.rootRequest);
-          })((i = e.contextInterceptor(i)));
-        };
-      }),
-      t
-    );
-  })();
 function JB() {
   return function (t) {
     if (Reflect.hasOwnMetadata(jk, t))
@@ -59896,15 +59330,7 @@ function JB() {
     return Reflect.defineMetadata(jk, e, t), t;
   };
 }
-const KB = {
-  ITextService: Symbol.for("ITextService"),
-  ILogService: Symbol.for("ILogService"),
-  IEventEmitter: Symbol.for("IEventEmitter"),
-  SceneID: Symbol.for("SceneID"),
-  IEventService: Symbol.for("IEventService"),
-  ITextureService: Symbol.for("ITextureService"),
-  IShaderService: Symbol.for("IShaderService"),
-};
+
 const $B = 32 * window.devicePixelRatio,
   tG = 32 * $B,
   eG = 32 * $B;
@@ -60084,7 +59510,7 @@ class nG extends Cr {
       },
     }),
       (this.props = t),
-      (this.textureService = bG.get(KB.ITextureService));
+      (this.textureService = window.bG.get(window.KB.ITextureService));
   }
   async init() {
     const t = await iG.createTextImage(this.textureService, this.props),
@@ -60242,7 +59668,7 @@ let gG = class {
             })
             .catch(() => {});
       }),
-      (this.logService = bG.get(KB.ILogService));
+      (this.logService = window.bG.get(window.KB.ILogService));
   }
   addImage(t, e, i) {
     if (this.getImage(t)) return;
@@ -60276,6 +59702,7 @@ gG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && dG(e, i, o), o;
 })([JB()], gG);
+window.gG = gG;
 var mG = Object.defineProperty,
   yG = Object.getOwnPropertyDescriptor;
 let vG = class {
@@ -60369,83 +59796,13 @@ vG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && mG(e, i, o), o;
 })([JB()], vG);
-const bG = new ZB();
-bG.bind(KB.ILogService).to(pG).inSingletonScope(),
-  bG.bind(KB.ITextureService).to(gG).inSingletonScope(),
-  bG.bind(KB.IShaderService).to(vG).inSingletonScope(),
-  bG.bind(KB.ITextService).toConstantValue(new aG()),
-  bG.bind(KB.IEventEmitter).to(dt);
-const xG = (function (t, e) {
-    void 0 === e && (e = !0);
-    var i = (function (t, e) {
-        return function (i) {
-          return function (n, r) {
-            lG(
-              n,
-              r,
-              function () {
-                return t.get(i);
-              },
-              e
-            );
-          };
-        };
-      })(t, e),
-      n = (function (t, e) {
-        return function (i, n) {
-          return function (r, o) {
-            lG(
-              r,
-              o,
-              function () {
-                return t.getNamed(i, n);
-              },
-              e
-            );
-          };
-        };
-      })(t, e),
-      r = (function (t, e) {
-        return function (i, n, r) {
-          return function (o, a) {
-            lG(
-              o,
-              a,
-              function () {
-                return t.getTagged(i, n, r);
-              },
-              e
-            );
-          };
-        };
-      })(t, e),
-      o = (function (t, e) {
-        return function (i) {
-          return function (n, r) {
-            lG(
-              n,
-              r,
-              function () {
-                return t.getAll(i);
-              },
-              e
-            );
-          };
-        };
-      })(t, e);
-    return {
-      lazyInject: i,
-      lazyInjectNamed: n,
-      lazyInjectTagged: r,
-      lazyMultiInject: o,
-    };
-  })(bG, !1),
-  _G = (t) => {
-    const e = xG.lazyInject(t);
-    return function (t, i, n) {
-      e.call(this, t, i), n && (n.initializer = () => t[i]);
-    };
-  };
+
+window.bG.bind(window.KB.ILogService).to(pG).inSingletonScope(),
+  window.bG.bind(window.KB.ITextureService).to(gG).inSingletonScope(),
+  window.bG.bind(window.KB.IShaderService).to(vG).inSingletonScope(),
+  window.bG.bind(window.KB.ITextService).toConstantValue(new aG()),
+  window.bG.bind(window.KB.IEventEmitter).to(dt);
+
 var SG = Object.defineProperty,
   MG = Object.getOwnPropertyDescriptor;
 let CG = class {
@@ -60525,7 +59882,7 @@ let CG = class {
       (this._destroy = () => {
         this.ee.removeAllListeners(), this.__resetState();
       }),
-      (this.logService = bG.get(KB.ILogService));
+      (this.logService = window.bG.get(window.KB.ILogService));
   }
 };
 CG = ((t, e, i, n) => {
@@ -60537,6 +59894,7 @@ CG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && SG(e, i, o), o;
 })([JB()], CG);
+window.CG = CG;
 class wG {
   constructor(t) {
     (this.props = t),
@@ -60572,10 +59930,12 @@ class wG {
     (this.coreCamera = null), (this.hudCamera = null);
   }
 }
+window.wG = wG;
 var AG, EG;
 ((EG = AG || (AG = {})).WebGis = "webGis"),
   (EG.XGis = "xGis"),
   (EG.Engine = "engine");
+window.AG = AG;
 class DG {
   constructor(t) {
     (this.props = t),
@@ -60712,6 +60072,7 @@ class DG {
       this.gisStateApi.unsubjectAll();
   }
 }
+window.DG = DG;
 var TG = Object.defineProperty,
   PG = Object.getOwnPropertyDescriptor;
 class LG {
@@ -60742,7 +60103,7 @@ class LG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && TG(e, i, o);
-})([_G(KB.ILogService)], LG.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], LG.prototype, "logService", 2);
 var IG = Object.defineProperty,
   NG = Object.getOwnPropertyDescriptor;
 class RG {
@@ -60914,7 +60275,7 @@ class RG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && IG(e, i, o);
-})([_G(KB.ILogService)], RG.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], RG.prototype, "logService", 2);
 var OG = Object.defineProperty,
   FG = Object.getOwnPropertyDescriptor;
 class zG extends RG {
@@ -60971,7 +60332,7 @@ class zG extends RG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && OG(e, i, o);
-})([_G(KB.ILogService)], zG.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], zG.prototype, "logService", 2);
 class kG extends RG {
   constructor(t) {
     super(t),
@@ -61575,7 +60936,7 @@ class fU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && pU(e, i, o);
-})([_G(KB.ILogService)], fU.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], fU.prototype, "logService", 2);
 class gU {
   constructor(t) {
     (this.props = t),
@@ -61622,6 +60983,7 @@ class gU {
       this.props.eventManager._destroy();
   }
 }
+window.gU = gU;
 ((uU = lU || (lU = {}))[(uU.PLANE_LAYER = 0)] = "PLANE_LAYER"),
   (uU[(uU.SHADOW_PLANE = 1)] = "SHADOW_PLANE"),
   (uU[(uU.BASE_MAP_LAYER_BOTTOM_STROKE = 2)] = "BASE_MAP_LAYER_BOTTOM_STROKE"),
@@ -61657,6 +61019,9 @@ class gU {
   (hU[(hU.ATTACH_LAYER_STROKE_MESH = 3)] = "ATTACH_LAYER_STROKE_MESH"),
   (hU[(hU.ATTACH_LAYER_BORDER_MESH = 4)] = "ATTACH_LAYER_BORDER_MESH"),
   (hU[(hU.ATTACH_LAYER_POI = 5)] = "ATTACH_LAYER_POI");
+
+window.lU = lU;
+
 class mU {
   constructor(t) {
     (this.props = t), (this.type = "ambient"), this.__init();
@@ -61775,7 +61140,7 @@ class xU {
       this.initAmbient(),
       this.initDirectionsal(),
       this.initShadow(),
-      (this._propsWatch = kf.createPropsWatch()),
+      (this._propsWatch = window.kf.createPropsWatch()),
       this._initPropsWatchRule(),
       (this.ee = new dt()),
       this.ee.on("updateArea", () => {
@@ -61913,7 +61278,8 @@ class xU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && vU(e, i, o);
-})([_G(KB.ILogService)], xU.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], xU.prototype, "logService", 2);
+window.xU = xU;
 var _U = Object.defineProperty,
   SU = Object.getOwnPropertyDescriptor;
 class MU {
@@ -62012,7 +61378,8 @@ class MU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && _U(e, i, o);
-})([_G(KB.ILogService)], MU.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], MU.prototype, "logService", 2);
+window.MU = MU;
 const CU = new ln(16777215),
   wU = !1;
 new ln("grey");
@@ -62036,6 +61403,7 @@ class TU {
     this.status = EU.PAUSED;
   }
 }
+window.TU = TU;
 var PU = Object.defineProperty,
   LU = Object.getOwnPropertyDescriptor;
 class IU {
@@ -62102,6 +61470,7 @@ class IU {
       (this.hudScene = null);
   }
 }
+window.IU = IU;
 ((t, e, i, n) => {
   for (
     var r, o = n > 1 ? void 0 : n ? LU(e, i) : e, a = t.length - 1;
@@ -62110,7 +61479,7 @@ class IU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && PU(e, i, o);
-})([_G(KB.ITextureService)], IU.prototype, "textureService", 2);
+})([_G(window.KB.ITextureService)], IU.prototype, "textureService", 2);
 var NU = Object.defineProperty,
   RU = Object.getOwnPropertyDescriptor;
 let OU = class {
@@ -62124,7 +61493,7 @@ let OU = class {
     }),
       (this.__layers = new Map()),
       (this.BASE_MAP_Z = 0),
-      (this.logService = bG.get(KB.ILogService)),
+      (this.logService = window.bG.get(window.KB.ILogService)),
       (this.ee = new dt()),
       this.ee.on("updateArea", (t) => {
         for (const e of this.layers.values())
@@ -62231,6 +61600,7 @@ OU = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && NU(e, i, o), o;
 })([JB()], OU);
+window.OU = OU;
 var FU,
   zU = {
     Linear: {
@@ -62886,6 +62256,7 @@ class JU {
       );
   }
 }
+window.JU = JU;
 class KU {
   constructor(t) {
     (this.props = t), this.__initAexs();
@@ -62999,7 +62370,7 @@ function sj() {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && ej(e, i, o);
-})([_G(KB.ILogService)], nj.prototype, "logService", 2),
+})([_G(window.KB.ILogService)], nj.prototype, "logService", 2),
   ((tj = $U || ($U = {})).CONSTANT = "constant"),
   (tj.LINEAR = "linear"),
   (tj.THRESHOLD = "threshold"),
@@ -64485,6 +63856,7 @@ HH.scaleMap = {
     );
   },
 };
+window.HH = HH;
 const VH = (t, e) => t.map((t) => t[e]),
   WH = (t, e) =>
     VH(t, e).reduce((t, e) => Lf(null != t ? t : 0, null != e ? e : 0)),
@@ -64857,664 +64229,19 @@ class eV extends As {
       });
   }
 }
-tV([_G(KB.ITextService)], eV.prototype, "textService", 2),
-  tV([_G(KB.ILogService)], eV.prototype, "logService", 2);
-var iV = Object.defineProperty,
-  nV = Object.getOwnPropertyDescriptor,
-  rV = (t, e, i, n) => {
-    for (
-      var r, o = n > 1 ? void 0 : n ? nV(e, i) : e, a = t.length - 1;
-      a >= 0;
-      a--
-    )
-      (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
-    return n && o && iV(e, i, o), o;
-  };
-let oV = class {
-  constructor(t, e) {
-    (this.gis = t),
-      (this.props = e),
-      (this.animation = new TU()),
-      (this.ee = new dt()),
-      (this.scaleService = HH),
-      (this.listenerObj = new As()),
-      (this.comboTimeout = 200),
-      (this.activeArr = []),
-      (this.handleDblclick = (t) => {
-        clearTimeout(this.comboTimer),
-          (this.comboTimer = setTimeout(() => {
-            this.comboTimer = null;
-          }, this.comboTimeout));
-      }),
-      this._baseLayerinit();
-    const { containerDom: i } = this.gis.props;
-    i.addEventListener("dblclick", this.handleDblclick, !1);
-  }
-  _baseLayerinit() {
-    (this.group = new As()),
-      (this.group.userData.isRootLayer = !0),
-      (this.group.userData.invertedRelection = !1),
-      (this.id = this.group.uuid),
-      (this.dataView = new ak(this.gis.dataSet, {})),
-      (this.textureManager = Yd(this.textureService.getTextureManager)(
-        this.id
-      )),
-      (this._propsWatch = kf.createPropsWatch()),
-      this._initPropsWatchRule();
-  }
-  _initialState(t) {
-    this.state = af(t, this.props);
-  }
-  _initLayerGroup(t) {
-    const {
-        layerName: e,
-        layerType: i,
-        coreGroup: n,
-        label: r = {},
-        isHudScene: o = !1,
-      } = t,
-      { enabled: a = !1, markerType: s = "css2d" } = r,
-      { sceneSystem: l, layerManager: u } = this.gis;
-    (this.layerType = i),
-      o ? l.hudScene.add(this.group) : l.coreScene.add(this.group),
-      (this.group.name = e),
-      (this.coreGroup = null != n ? n : new As()),
-      (this.coreGroup.name = `core-${e}`),
-      this.group.add(this.coreGroup),
-      (this.poiGroup = new eV()),
-      (this.poiGroup.name = `${e}-poi-layer`),
-      l.hudScene.add(this.poiGroup),
-      u.add({
-        layerType: i,
-        layer: this,
-      }),
-      a &&
-        this.gis.eventManager.ee.emit("markerEnabled", {
-          markerType: s,
-        }),
-      this.updateBaseHeight();
-  }
-  _getParseData(t) {
-    const { rawData: e, layerType: i, coordsField: n } = t,
-      { clipMode: r } = this.state,
-      { globalOpts: o } = this.gis,
-      { boundary: a } = o,
-      s = Yw(e[0]) ? "geojson" : "bytejson",
-      l = !(!r || r === Qw.none),
-      u = this.dataView
-        .parse(e, {
-          type: s,
-          options: {
-            layerType: i,
-            coordsField: n,
-          },
-        })
-        .transform({
-          type: "filter",
-          options: {
-            callback: l && ((t) => Kw(t, a.features[0], r, i)),
-          },
-        })
-        .transform({
-          type: "webgis",
-          options: {
-            as: "coordinates",
-          },
-        }).latestData;
-    return this.state.parseData.push(...u), this;
-  }
-  _getScaleData(t) {
-    const { parseData: e } = this.state;
-    return (this.state.scaleData = this.scaleService.apply(t, e)), this;
-  }
-  _getRenderData(t) {}
-  add(t) {
-    return this;
-  }
-  remove() {
-    this._destroy();
-  }
-  set(t) {
-    return this._propsWatch.compare(this.state, t), this;
-  }
-  get() {
-    return this.state;
-  }
-  updateArea(t) {
-    this.updateBaseHeight(), this._updateOffset(this.state.common.offset);
-  }
-  updateBaseHeight() {
-    const { globalOpts: t } = this.gis;
-    if (t) {
-      const e = t.bboxOption.baseHeight;
-      this.coreGroup.position.setZ(e),
-        this.poiGroup.updateBaseHeight(e),
-        this._updatePOI(!0);
-    }
-  }
-  setContainer(t) {
-    this.container = t;
-  }
-  getContainer() {
-    return this.container;
-  }
-  clear() {
-    this.clearCoreGroup(),
-      this.clearPoiGroup(),
-      this.clearInteractionGroup(),
-      this._clearData();
-  }
-  clearCoreGroup() {
-    this.coreGroup.destroy(!1);
-  }
-  clearPoiGroup() {
-    this.poiGroup.abort(), this.poiGroup.destroy(!1);
-  }
-  clearInteractionGroup() {
-    this.unActive();
-  }
-  _clearData() {
-    (this.dataView.latestData = null),
-      (this.state.data = []),
-      (this.state.parseData = []),
-      (this.state.scaleData = []),
-      (this.state.renderData = []);
-  }
-  _destroy() {
-    var t;
-    const { sceneSystem: e, layerManager: i } = this.gis,
-      { containerDom: n } = this.gis.props;
-    n.removeEventListener("dblclick", this.handleDblclick),
-      this.clear(),
-      i.__removePure({
-        layerID: this.id,
-      }),
-      this.dataView.destroy(),
-      this.textureService.removeTextureManager(this.id),
-      null == (t = e.coreScene) || t.remove(this.group),
-      this.ee.removeAllListeners(),
-      (this._propsWatch = null);
-  }
-  on(t, e, i) {
-    Fk(t) || this.gis.eventManager.bindEvent(this.id, t), this.ee.on(t, e, i);
-  }
-  off(t, e) {
-    Fk(t) || this.gis.eventManager.removeMapEvent(this.id, t),
-      this.ee.removeListener(t),
-      e && e();
-  }
-  rotate(t, e) {
-    switch (t) {
-      case "x":
-        this.group.rotateX(De(e));
-        break;
-      case "y":
-        this.group.rotateY(De(e));
-        break;
-      case "z":
-        this.group.rotateZ(De(e));
-    }
-  }
-  handleAnimation(t) {}
-  emitPropsWatch(t = {}) {
-    this._propsWatch.compare(t, this.state);
-  }
-  _initPropsWatchRule() {
-    this._propsWatch.addWatch([
-      this._propsWatch.defaultRule("", "always", (t) => {
-        this.state = af(this.state, t);
-      }),
-      this._propsWatch.defaultRule(["common", "offset"], "diff", (t) => {
-        cf(t.common.offset) && this._updateOffset(t.common.offset);
-      }),
-      this._propsWatch.defaultRule(["common", "visible"], "diff", (t) => {
-        sf(t.common, "visible") && this._updateVisible(t.common.visible);
-      }),
-      this._propsWatch.defaultRule(["common", "zIndex"], "diff", (t) => {
-        sf(t.common, "zIndex") && this._updateZIndex(t.common.zIndex);
-      }),
-      this._propsWatch.defaultRule(["common", "zoomRange"], "diff", (t) => {
-        sf(t.common, "zoomRange") && this._updateZoomRange(t.common.zoomRange);
-      }),
-      this._propsWatch.defaultRule("interaction", "diffDeep", () => {
-        this._updateInteraction(this.state.interaction);
-      }),
-    ]);
-  }
-  _updateOffset(t) {
-    const [e, i, n] = t,
-      { globalOpts: r } = this.gis,
-      { size: o } = r.bboxOption,
-      a = TA(o.bboxSize, e),
-      s = TA(o.bboxSize, i),
-      l = TA(o.bboxSize, n);
-    this.extensions &&
-      Object.values(this.extensions).forEach((t) => {
-        t.group.position.setX(a),
-          t.group.position.setY(s),
-          t.group.position.setZ(l),
-          t._updatePOI(!0);
-      }),
-      this.group.position.setX(a),
-      this.group.position.setY(s),
-      this.group.position.setZ(l),
-      this._updatePOI(!0);
-  }
-  _updateVisible(t) {
-    this.extensions &&
-      Object.values(this.extensions).forEach((e) => {
-        e.group.visible = !!t && e.state.common.visible;
-      }),
-      "marker-layer" === this.group.name &&
-        requestAnimationFrame(() => {
-          const e = `data-layerid="${this.id}"`;
-          document.querySelectorAll(`[${e}]`).forEach((e) => {
-            e.firstChild.style.display = t ? "block" : "none";
-          });
-        }),
-      (this.group.visible = t),
-      (this.poiGroup.visible = t);
-  }
-  _updateZoomRange(t) {
-    this.extensions &&
-      Object.values(this.extensions).forEach((e) => {
-        (e.group.ext.zoomRange = t), (e.poiGroup.ext.zoomRange = t);
-      }),
-      (this.group.ext.zoomRange = t),
-      (this.poiGroup.ext.zoomRange = t);
-  }
-  _updateZIndex(t) {
-    this.extensions &&
-      Object.values(this.extensions).forEach((e) => {
-        e.group.zIndex = null != t ? t : e.group.zIndex;
-      }),
-      "marker-layer" === this.group.name &&
-        requestAnimationFrame(() => {
-          const e = `data-layerid="${this.id}"`;
-          document.querySelectorAll(`[${e}]`).forEach((e) => {
-            e.style.zIndex = t + "";
-          });
-        }),
-      (this.group.zIndex = null != t ? t : this.group.zIndex);
-  }
-  _updateInteraction(t) {
-    if (((this.interaction = t), !this.interaction)) return;
-    const { hover: e, select: i } = this.interaction;
-    [e, i].forEach((t) => {
-      t.enabled
-        ? this.gis.eventManager.bindEvent(this.id, t.trigger)
-        : this.gis.eventManager.removeMapEvent(this.id, t.trigger);
-    });
-  }
-  registerInteraction(t = this.state.interaction, e = this.coreGroup, i = !1) {
-    (this.interaction = t), (this.listenerObj = e), (this.recursive = i);
-  }
-  active(t) {
-    const {
-      type: e,
-      object: i,
-      id: n,
-      instanceId: r,
-      name: o,
-      color: a,
-      multi: s,
-    } = t;
-    return cf(n) || cf(o)
-      ? (o
-          ? o instanceof Array
-            ? o.forEach((t) => {
-                this._activeAtomic({
-                  name: t,
-                  object: i,
-                  color: a,
-                  type: e,
-                  multi: s,
-                });
-              })
-            : this._activeAtomic({
-                name: o,
-                object: i,
-                color: a,
-                type: e,
-                multi: s,
-              })
-          : n instanceof Array
-          ? n.forEach((t) => {
-              this._activeAtomic({
-                id: t,
-                object: i,
-                color: a,
-                type: e,
-                instanceId: r,
-                multi: s,
-              });
-            })
-          : this._activeAtomic({
-              id: n,
-              object: i,
-              color: a,
-              type: e,
-              instanceId: r,
-              multi: s,
-            }),
-        this)
-      : (this.logService.error("active 需要 传入 id 或 name"), this);
-  }
-  _activeAtomic(t) {
-    const { object: e } = t;
-    e && e.isInstancedMesh
-      ? this._activeInstanceAtomic(t)
-      : this._activeMeshAtomic(t);
-  }
-  _activeInstanceAtomic(t) {
-    const {
-      color: e,
-      type: i,
-      object: n,
-      instanceId: r,
-      id: o,
-      name: a,
-      multi: s,
-    } = t;
-    n.ext.activeArr || (n.ext.activeArr = []);
-    const l = n.ext.activeArr.findIndex(
-      (t) => t.isActive && t.instanceId === r
-    );
-    if (-1 != l) {
-      const t = n.ext.activeArr[l];
-      if ("select" === t.type && "hover" === i) return;
-      if ("select" === t.type && "select" === i) {
-        const { instanceId: e, rawColor: i } = t;
-        return (
-          ZD(n.geometry.attributes.color, e, i),
-          (n.ext.activeArr[l].type = ""),
-          (n.ext.activeArr[l].activeColor = ""),
-          void (n.ext.activeArr[l].isActive = !1)
-        );
-      }
-    }
-    "hover" === i &&
-      this.unActive({
-        type: "hover",
-      }),
-      "select" === i &&
-        !0 !== s &&
-        this.unActive({
-          type: "select",
-        });
-    const u = n.ext.activeArr.findIndex((t) => t.instanceId === r);
-    let c;
-    if (-1 === u) {
-      const { color: t } = n.geometry.attributes,
-        { array: o, itemSize: a } = t;
-      (c = Array.from(o).slice(r * a, r * a + a)),
-        t.normalized && (c = c.map((t) => t / 255)),
-        n.ext.activeArr.push({
-          rawColor: c,
-          activeColor: e,
-          instanceId: r,
-          isActive: !0,
-          type: i,
-        });
-    } else (n.ext.activeArr[u].type = i), (n.ext.activeArr[u].isActive = !0);
-    if (isNaN(Number(e))) {
-      const t = EA(e);
-      ZD(n.geometry.attributes.color, r, [
-        t.color.r,
-        t.color.g,
-        t.color.b,
-        t.opacity,
-      ]);
-    } else {
-      const t = Number(e),
-        i = n.ext.activeArr[u];
-      ZD(n.geometry.attributes.color, r, [
-        (null != c ? c : i.rawColor)[0] * t,
-        (null != c ? c : i.rawColor)[1] * t,
-        (null != c ? c : i.rawColor)[2] * t,
-        (null != c ? c : i.rawColor)[3],
-      ]);
-    }
-    const h = {
-      name: a,
-      id: o,
-      instanceId: r,
-      object: n,
-      type: i,
-      meshs: [],
-    };
-    this.activeArr.push(h);
-  }
-  _activeMeshAtomic(t) {
-    const { name: e, color: i, type: n, id: r, multi: o } = t,
-      a = this.activeArr.findIndex((t) =>
-        t.meshs.find((t) => JH(t, e, r) && t.ext.isActive)
-      );
-    if (-1 != a) {
-      const t = this.activeArr[a];
-      let i = !1;
-      if (
-        (t.meshs.forEach((o) => {
-          "select" === o.ext.type && "hover" === n
-            ? (i = !0)
-            : "select" === o.ext.type &&
-              "select" === n &&
-              (this._unactiveAtomic({
-                id: r,
-                name: e,
-                meshs: t.meshs,
-              }),
-              this.activeArr.splice(a, 1),
-              (i = !0));
-        }),
-        i)
-      )
-        return;
-    }
-    "hover" === n &&
-      this.unActive({
-        type: "hover",
-      }),
-      "select" === n &&
-        !0 !== o &&
-        this.unActive({
-          type: "select",
-        });
-    const s = this.listenerObj.getObjectsByFn((t) => JH(t, e, r));
-    if (0 === s.length) return void this.logService.error("active mesh 不存在");
-    const l = {
-      name: e,
-      id: r,
-      meshs: [],
-      type: n,
-    };
-    s.forEach((t) => {
-      const e = t,
-        r = e.material;
-      (e.ext.type = n),
-        (e.ext.isActive = !0),
-        (e.ext.activeColor = i),
-        e.ext.rawColor ||
-          ((e.ext.rawColor = r.color.clone()),
-          (e.ext.rawTransparent = r.transparent),
-          (e.ext.rawOpacity = r.opacity));
-      if (isNaN(Number(i))) {
-        const t = EA(i);
-        (r.color = t.color),
-          (r.transparent = t.transparent),
-          (r.opacity = t.opacity);
-      } else {
-        const t = Number(i),
-          n = e.ext.rawColor.clone();
-        r.color = n.multiplyScalar(t);
-      }
-      (r.needsUpdate = !0), l.meshs.push(t);
-    }),
-      this.activeArr.push(l);
-  }
-  unActive(t) {
-    for (let e = this.activeArr.length - 1; e >= 0; e--) {
-      const i = this.activeArr[e],
-        n = i.object,
-        r = i.type,
-        o = i.meshs;
-      if (cf(null == t ? void 0 : t.id)) {
-        const { id: i } = t;
-        i instanceof Array
-          ? i.forEach((t) => {
-              t === n.id &&
-                (this._unactiveAtomic({
-                  id: t,
-                  object: n,
-                  meshs: o,
-                }),
-                this.activeArr.splice(e, 1));
-            })
-          : i === n.id &&
-            (this._unactiveAtomic({
-              id: i,
-              object: n,
-              meshs: o,
-            }),
-            this.activeArr.splice(e, 1));
-      } else if (null == t ? void 0 : t.name) {
-        const { name: i } = t;
-        i instanceof Array
-          ? i.forEach((t) => {
-              t === n.name &&
-                (this._unactiveAtomic({
-                  name: t,
-                  object: n,
-                  meshs: o,
-                }),
-                this.activeArr.splice(e, 1));
-            })
-          : i === n.name &&
-            (this._unactiveAtomic({
-              name: i,
-              object: n,
-              meshs: o,
-            }),
-            this.activeArr.splice(e, 1));
-      } else
-        cf(null == t ? void 0 : t.type)
-          ? t.type === r &&
-            (this._unactiveAtomic({
-              type: t.type,
-              object: n,
-              meshs: o,
-            }),
-            this.activeArr.splice(e, 1))
-          : (this._unactiveAtomic({
-              type: r,
-              object: n,
-              meshs: o,
-            }),
-            this.activeArr.splice(e, 1));
-    }
-    return this;
-  }
-  _unactiveAtomic(t) {
-    const { object: e } = t;
-    e && e.isInstancedMesh
-      ? this._unactiveInstanceAtomic(t)
-      : this._unactiveMeshAtomic(t);
-  }
-  _unactiveInstanceAtomic(t) {
-    const { type: e, object: i } = t;
-    for (let n = i.ext.activeArr.length - 1; n >= 0; n--) {
-      const t = i.ext.activeArr[n],
-        { instanceId: r, isActive: o, rawColor: a } = t;
-      o &&
-        e === t.type &&
-        (ZD(i.geometry.attributes.color, r, a),
-        (t.type = ""),
-        (t.activeColor = ""),
-        (t.isActive = !1));
-    }
-  }
-  _unactiveMeshAtomic(t) {
-    const { id: e, type: i, name: n, meshs: r } = t;
-    r.forEach((t) => {
-      if ((JH(t, n, e) || (!!i && t.ext.type === i)) && t.ext.isActive) {
-        const e = t.material;
-        (e.color = t.ext.rawColor),
-          (e.transparent = t.ext.rawTransparent),
-          (e.opacity = t.ext.rawOpacity),
-          (e.needsUpdate = !0),
-          (t.ext.isActive = !1),
-          (t.ext.activeColor = ""),
-          (t.ext.type = "");
-      }
-    });
-  }
-  _updatePOI(t = !1) {
-    const { poi: e, interaction: i } = this.state;
-    if (!e || !e.enabled) return;
-    const { cameraSystem: n } = this.gis,
-      { coverEnable: r, hideOnMove: o } = e;
-    if (o && !t) return void (this.poiGroup.moving = !0);
-    t && (this.poiGroup.moving = !1),
-      this.group.updateWorldMatrix(!0, !1),
-      n.coreCamera.updateWorldMatrix(!0, !1),
-      this.poiGroup.updateTextPosition(this.group.matrixWorld, n);
-    (i.hover.enabled && i.hover.effect.poi) ||
-    (i.select.enabled && i.select.effect.poi)
-      ? this.poiGroup.hide({
-          each: !0,
-        })
-      : r || this.poiGroup.collision();
-  }
-  _mapSize(t, e) {
-    const { globalOpts: i } = this.gis;
-    let n = 100;
-    switch (e) {
-      case "straightline":
-        n = (t / 100) * i.layerFitValue.straightLineWidth;
-        break;
-      case "flyline":
-        n = (t / 100) * i.layerFitValue.flylineWidth;
-        break;
-      case "z":
-        n = (t / 100) * i.layerFitValue.z;
-        break;
-      default:
-        n = (t / 100) * i.layerFitValue.xy;
-    }
-    return n;
-  }
-};
+tV([_G(window.KB.ITextService)], eV.prototype, "textService", 2),
+  tV([_G(window.KB.ILogService)], eV.prototype, "logService", 2);
+
+window.eV = eV
+
 function aV(t) {
   return function (e, i) {
     e.__layerEvent__ || (e.__layerEvent__ = []), e.__layerEvent__.push([t, i]);
   };
 }
-rV([_G(KB.ILogService)], oV.prototype, "logService", 2),
-  rV([_G(KB.ITextService)], oV.prototype, "textService", 2),
-  rV([_G(KB.ITextureService)], oV.prototype, "textureService", 2),
-  (oV = rV(
-    [
-      function (t) {
-        return class extends t {
-          constructor(t, e) {
-            super(t, e),
-              this.__layerEvent__ &&
-                this.__layerEvent__.forEach(([t, e]) => {
-                  this.gis.ee.on(t, this[e]);
-                });
-          }
-          remove() {
-            super.remove(),
-              this.__layerEvent__ &&
-                this.__layerEvent__.forEach(([t, e]) => {
-                  this.gis.ee.off(t, this[e]);
-                });
-          }
-        };
-      },
-    ],
-    oV
-  ));
+
+
+
 const sV = 4800;
 function lV(t) {
   let e = af(t);
@@ -65617,6 +64344,7 @@ async function uV(t, e = "all") {
     });
   });
 }
+window.uV = uV;
 function cV(t, e) {
   if (sf(t, "stroke")) {
     const i = EA(t.stroke.color);
@@ -65631,6 +64359,7 @@ function cV(t, e) {
         });
   }
 }
+window.cV = cV;
 function hV(t, e) {
   if (sf(t, "bottomStroke")) {
     const i = EA(t.bottomStroke.color);
@@ -65644,6 +64373,7 @@ function hV(t, e) {
         });
   }
 }
+window.hV = hV;
 function pV(t) {
   const e = t[0],
     i = t[1],
@@ -65893,6 +64623,7 @@ function vV(t, e) {
       fV(g, g),
       ([u[_], u[_ + 1], u[_ + 2]] = g);
 }
+window.vV = vV;
 function bV(t, e) {
   const i = {
       index: [],
@@ -65929,6 +64660,7 @@ function bV(t, e) {
   };
   return xV(0, s, i), xV(1, s, n), s;
 }
+window.bV = bV;
 function xV(t, e, i) {
   _V(e, i, "index"),
     _V(e, i, "position"),
@@ -66104,7 +64836,6 @@ function AV(t) {
     const t = u[0][f];
     (d = wV(t[0], t[1], i)), c[0].push([d[0] - a[0], d[1] - a[1]]);
   }
-  console.log('c', c)
   for (
     l.globalCompositeOperation = "source-out", l.beginPath(), h = 0;
     h < c.length;
@@ -67042,6 +65773,7 @@ function RV(t) {
     e
   );
 }
+window.RV = RV;
 const OV = (t, e, i, n) => {
   let r, o, a;
   switch (n) {
@@ -67210,6 +65942,7 @@ function FV(t, e) {
     ? (OV(t, r, "normalMap", e), (a.normalScale = new Le(o, o)))
     : ((a.normalMap = null), (a.needsUpdate = !0));
 }
+window.FV = FV;
 function zV(t) {
   const {
     districtStyle: { innerShadow: e },
@@ -67240,7 +65973,6 @@ function zV(t) {
           p = Math.abs(u[1] - c[1]),
           d = document.createElement("canvas");
 
-        console.log('o',r, o);
         (d.width = h),
           (d.height = p),
           (d.style.width = h + "px"),
@@ -67254,7 +65986,6 @@ function zV(t) {
           },
           m = am.flatten(Object.assign({}, e));
         let y, v;
-        console.log('m.features', m.features);
 
         for (y = 0; y < m.features.length; y++) {
           v = m.features[y];
@@ -67273,18 +66004,6 @@ function zV(t) {
               height: r,
               offset: [e[0], i[1]],
             });
-            console.log({
-              feature: v,
-              zoom: l,
-              style: g,
-              width: n,
-              height: r,
-              offset: [e[0], i[1]],
-            },  t,
-              Math.abs(e[0] - u[0]),
-              Math.abs(i[1] - c[1]),
-              t.width,
-              t.height)
             f.drawImage(
               t,
               Math.abs(e[0] - u[0]),
@@ -67322,6 +66041,7 @@ function zV(t) {
       (t.extrudeInnerShadowMaterial.opacity = 0),
       (t.extrudeInnerShadowMaterial.needsUpdate = !0);
 }
+window.zV = zV;
 function kV(t) {
   var e;
   const {
@@ -67343,6 +66063,7 @@ function kV(t) {
     (t.boundaryStreamerLayer = a), a.set(o), t.districtStrokeGroup.add(a.group);
   }
 }
+window.kV = kV;
 function BV(t, e) {
   const { colorConfig: i } = e.sideConfig,
     { bottomColor: n, topColor: r, bottomOpacity: o, topOpacity: a } = GV(i);
@@ -67355,6 +66076,7 @@ function BV(t, e) {
       opacity: o,
     });
 }
+window.BV = BV;
 function GV(t) {
   let e, i, n, r;
   switch (t.range.length) {
@@ -67377,6 +66099,7 @@ function GV(t) {
     topOpacity: r,
   };
 }
+window.GV = GV;
 function UV(t, e) {
   const i = t.bboxProj,
     n = 1.4 * t.size.bboxSize,
@@ -67431,6 +66154,7 @@ function jV(t, e) {
   );
   n && ((n.scale.z = t || 1), (n.position.z = 0));
 }
+window.jV = jV;
 async function HV(t, e = "all") {
   var i;
   if (!t.subDistrictData) return;
@@ -67516,6 +66240,7 @@ async function HV(t, e = "all") {
         t.subDistrictInfoArr.push(h);
   });
 }
+window.HV = HV;
 function VV(t, e) {
   if (sf(t, "stroke")) {
     const i = EA(t.stroke.color);
@@ -67530,6 +66255,7 @@ function VV(t, e) {
         });
   }
 }
+window.VV = VV;
 function WV(t) {
   var e, i;
   t.clearPoiGroup(), t.clearInteractionGroup(), (t.coreGroup.visible = !1);
@@ -67937,6 +66663,7 @@ function KV(t) {
     },
   };
 }
+window.KV = KV;
 async function $V(t) {
   try {
     const { drill: e, data: i } = t.state;
@@ -68296,917 +67023,10 @@ function tW(t) {
     throw ((t.isDrilling = !1), new Error("地图数据生成失败"));
   }
 }
-class eW extends oV {
-  constructor(t, e, i) {
-    super(t, e),
-      (this.gis = t),
-      (this.props = e),
-      (this.cb = i),
-      (this.isDrilling = !1),
-      (this.drillData = {
-        default: [new Map()],
-        process: [new Map()],
-      }),
-      (this.currentCode = Mk),
-      (this.currentLevel = 0),
-      (this.currentParentCode = null),
-      (this.currentParentLevel = -1),
-      (this.drillCache = {}),
-      (this.subDistrictInfoArr = []),
-      (this.currentRegion = null);
-  }
-  async init() {
-    this._initialState(),
-      this._initLayerGroup(),
-      await this.__initMap(),
-      this.gis.__destroyed ||
-        (this.__initEvent(),
-        this.animation.start(),
-        super.registerInteraction(
-          this.state.interaction,
-          this.subDistrictFillGroup,
-          !1
-        ),
-        super.emitPropsWatch(),
-        this.registerHeightScale(),
-        this.ee.emit("loaded", this),
-        this.cb());
-  }
-  _initialState() {
-    super._initialState({});
-  }
-  _initLayerGroup() {
-    super._initLayerGroup({
-      layerName: "base-map-layer",
-      layerType: "base",
-    }),
-      this.__releaseLayerGroup();
-  }
-  __initEvent() {
-    const { drill: t } = this.state;
-    t.enabled &&
-      (t.preventMouse ||
-        (this.gis.eventManager.bindEvent(this.id, t.drillUpEvent),
-        this.gis.eventManager.bindEvent(this.id, t.drillDownEvent)));
-  }
-  __releaseLayerGroup() {
-    (this.districtStrokeGroup = new As()),
-      (this.districtStrokeGroup.name = "district-stroke"),
-      (this.districtBottomStrokeGroup = new As()),
-      (this.districtBottomStrokeGroup.name = "district-bottom-stroke"),
-      (this.districtFillGroup = new As()),
-      (this.districtFillGroup.name = "district-fill"),
-      (this.extrudeBackgroundFillGroup = new As()),
-      (this.extrudeBackgroundFillGroup.name = "extrude-background-fill"),
-      (this.subDistrictStrokeGroup = new As()),
-      (this.subDistrictStrokeGroup.name = "sub-district-stroke"),
-      (this.subDistrictFillGroup = new As()),
-      (this.subDistrictFillGroup.name = "sub-district-fill"),
-      (this.listenerObj = this.subDistrictFillGroup),
-      this.coreGroup.add(
-        this.districtStrokeGroup,
-        this.districtBottomStrokeGroup,
-        this.districtFillGroup,
-        this.extrudeBackgroundFillGroup,
-        this.subDistrictFillGroup,
-        this.subDistrictStrokeGroup
-      ),
-      (this.coreGroup.userData.invertedRelection = !0),
-      (this.districtStrokeGroup.userData.invertedRelection = !1),
-      (this.districtBottomStrokeGroup.userData.invertedRelection = !1),
-      (this.districtFillGroup.userData.invertedRelection = !0),
-      (this.extrudeBackgroundFillGroup.userData.invertedRelection = !0),
-      (this.subDistrictFillGroup.userData.invertedRelection = !1),
-      (this.subDistrictStrokeGroup.userData.invertedRelection = !1);
-  }
-  set(t) {
-    return super.set(t), this;
-  }
-  get() {
-    return super.get();
-  }
-  add() {
-    return this;
-  }
-  remove() {
-    super.remove();
-  }
-  updateArea(t) {
-    const { cameraStatus: e } = this.gis.globalOpts,
-      {
-        drill: { duration: i },
-      } = this.state,
-      { cameraChange: n, cameraTween: r } = af(Ok, t);
-    n &&
-      this.gis.viewportSystem.setCameraState(
-        e,
-        r
-          ? {
-              duration: i,
-              type: "straight",
-            }
-          : void 0
-      ),
-      this.updateBaseHeight(),
-      this._updatePOI(!0);
-  }
-  async initExtrude() {
-    const { bboxOption: t, boundary: e, boundaryProj: i } = this.gis.globalOpts,
-      { districtStyle: n, extrudeBackgroundStyle: r } = this.state;
-    if (
-      (n &&
-        n.enabled &&
-        (function (t, e) {
-          const { geojson: i, bboxOption: n } = t,
-            r = bV(i, n.bboxProj);
-          let o = 0,
-            a = 0,
-            s = 0,
-            l = 0;
-          const u = n.baseHeight ? n.baseHeight : 1;
-          for (let c = 0; c < r.group.length; c += 3)
-            switch (
-              ((o += s),
-              (a += l),
-              (s = r.group[c + 1]),
-              (l = r.group[c + 2]),
-              r.group[c])
-            ) {
-              case 0:
-                const t = RV({
-                    index: r.index.slice(o, 1 * (o + s)),
-                    position: r.position.slice(3 * a, 3 * (a + l)),
-                    normal: r.normal.slice(3 * a, 3 * (a + l)),
-                    uv: r.uv.slice(2 * a, 2 * (a + l)),
-                  }),
-                  i = new Wn(t, e.extrudeTopMaterial);
-                i.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
-                  (i.scale.z = u),
-                  (i.position.z = 0),
-                  (i.userData.faceType = "top"),
-                  (i.name = "map-top"),
-                  (i.frustumCulled = !1),
-                  e.districtFillGroup.add(i);
-                const n = new Wn(t, e.extrudeInnerShadowMaterial);
-                n.setRenderIndex(lU.BASE_MAP_LAYER_INNERSHADOW_MESH),
-                  (n.scale.z = 1.01 * u),
-                  (n.position.z = 0),
-                  (n.userData.faceType = "map-innerShadow"),
-                  (n.name = "map-innerShadow"),
-                  (n.frustumCulled = !1),
-                  e.districtFillGroup.add(n);
-                break;
-              case 1:
-                const c = RV({
-                    index: r.index.slice(o, 1 * (o + s)),
-                    position: r.position.slice(3 * a, 3 * (a + l)),
-                    normal: r.normal.slice(3 * a, 3 * (a + l)),
-                    uv: r.uv.slice(2 * a, 2 * (a + l)),
-                  }),
-                  h = new Wn(c, e.extrudeSideMaterial);
-                h.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
-                  (h.scale.z = u),
-                  (h.position.z = 0),
-                  (h.name = "map-side"),
-                  (h.userData.faceType = "side"),
-                  (h.userData.invertedRelection = !0),
-                  (h.castShadow = !0),
-                  (h.frustumCulled = !1),
-                  e.districtFillGroup.add(h);
-            }
-        })(
-          {
-            geojson: i,
-            bboxOption: t,
-          },
-          this
-        ),
-      r && r.enabled)
-    ) {
-      if (!this.bgGeoData) {
-        const t = {
-          type: xk.GEOBUF_URL,
-          data: `https://lf3-dpfe.${atob(
-            "Ynl0ZXRvcy5jb20="
-          )}/obj/gis/data/worldborderworldborder_gc.pbf`,
-        };
-        this.bgGeoData = await ZV(t, {
-          useProcess: !1,
-          useProject: !1,
-        });
-      }
-      const i = UV(t, this),
-        n = (function (t, e, i) {
-          const { bbox2: n } = t,
-            r = Ww.intersect(
-              {
-                type: "Feature",
-                properties: {},
-                geometry: {
-                  type: "Polygon",
-                  coordinates: [
-                    [
-                      [n[0], n[1]],
-                      [n[2], n[1]],
-                      [n[2], n[3]],
-                      [n[0], n[3]],
-                      [n[0], n[1]],
-                    ],
-                  ],
-                },
-              },
-              e.__geojson__.features[0]
-            );
-          let o = {
-            type: "FeatureCollection",
-            features: [r],
-          };
-          o = am.rewind(o);
-          const a = Ww.distance(
-              {
-                type: "Feature",
-                properties: {},
-                geometry: {
-                  type: "Point",
-                  coordinates: [t.bbox[0], t.bbox[1]],
-                },
-              },
-              {
-                type: "Feature",
-                properties: {},
-                geometry: {
-                  type: "Point",
-                  coordinates: [t.bbox[2], t.bbox[3]],
-                },
-              },
-              {
-                units: "meters",
-              }
-            ),
-            s = Ww.buffer(i.features[0], ~~(0.001 * a), {
-              units: "meters",
-              steps: 1,
-            });
-          return (
-            (o = {
-              type: "FeatureCollection",
-              features: [Ww.difference(r, s)],
-            }),
-            sm(lV(o), Qf)
-          );
-        })(i, this.bgGeoData, e);
-      !(function (t, e) {
-        const { geojson: i, bboxOption: n } = t,
-          r = bV(i, n.bboxProj);
-        let o = 0,
-          a = 0,
-          s = 0,
-          l = 0;
-        for (let u = 0; u < r.group.length; u += 3)
-          switch (
-            ((o += s),
-            (a += l),
-            (s = r.group[u + 1]),
-            (l = r.group[u + 2]),
-            r.group[u])
-          ) {
-            case 0:
-              const t = RV({
-                  index: r.index.slice(o, 1 * (o + s)),
-                  position: r.position.slice(3 * a, 3 * (a + l)),
-                  normal: r.normal.slice(3 * a, 3 * (a + l)),
-                  uv: r.uv.slice(2 * a, 2 * (a + l)),
-                }),
-                i = new Wn(t, e.extrudeBackgroundTopMaterial);
-              i.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
-                (i.scale.z = n.baseHeight ? n.baseHeight : 1),
-                (i.position.z = 0),
-                (i.userData.faceType = "top"),
-                (i.name = "map-top"),
-                (i.receiveShadow = !0),
-                (i.frustumCulled = !1),
-                e.extrudeBackgroundFillGroup.add(i);
-              break;
-            case 1:
-              const u = RV({
-                  index: r.index.slice(o, 1 * (o + s)),
-                  position: r.position.slice(3 * a, 3 * (a + l)),
-                  normal: r.normal.slice(3 * a, 3 * (a + l)),
-                  uv: r.uv.slice(2 * a, 2 * (a + l)),
-                }),
-                c = new Wn(u, e.extrudeBackgroundSideMaterial);
-              c.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
-                (c.scale.z = n.baseHeight ? n.baseHeight : 1),
-                (c.position.z = 0),
-                (c.name = "map-side"),
-                (c.userData.faceType = "side"),
-                (c.userData.invertedRelection = !0),
-                (c.castShadow = !0),
-                (c.frustumCulled = !1),
-                e.extrudeBackgroundFillGroup.add(c);
-          }
-      })(
-        {
-          geojson: n,
-          bboxOption: i,
-        },
-        this
-      );
-    }
-  }
-  async updateExtrudeStyle() {
-    const { districtStyle: t, extrudeBackgroundStyle: e } = this.state;
-    t && t.enabled && (FV(this, "extrude"), zV(this), kV(this)),
-      e && e.enabled && FV(this, "extrude-background");
-  }
-  updateBaseHeight() {
-    const { globalOpts: t } = this.gis;
-    if (t) {
-      const {
-        bboxOption: { baseHeight: e },
-      } = t;
-      this.districtStrokeGroup.position.setZ(e),
-        this.subDistrictStrokeGroup.position.setZ(e),
-        this.subDistrictFillGroup.position.setZ(e),
-        this.poiGroup.updateBaseHeight(e),
-        (function (t, e) {
-          e.districtFillGroup.children.forEach((e) => {
-            "map-innerShadow" === e.userData.faceType
-              ? (e.scale.z = 1.01 * (t || 1))
-              : (e.scale.z = t || 1),
-              (e.position.z = 0);
-          });
-        })(e, this),
-        jV(e, this);
-    }
-  }
-  async __initMap(t) {
-    const { districtStyle: e, extrudeBackgroundStyle: i } = this.state,
-      { sceneSystem: n } = this.gis;
-    await $V(this),
-      this.gis.__destroyed ||
-        (tW(this),
-        uV(this),
-        HV(this),
-        this.scaleAdaptation(!1),
-        t
-          ? this.gis.viewportSystem.init("xgis")
-          : this.gis.viewportSystem.init(),
-        this.scaleAdaptation(!1),
-        (function (t, e, i) {
-          const n = EA(e.state.background.color);
-          (i.extrudeTopMaterial = new zA({
-            color: n.color,
-            transparent: !0,
-            depthTest: !0,
-            depthWrite: !0,
-          })),
-            (i.extrudeInnerShadowMaterial = new zA({
-              transparent: !0,
-              depthTest: !0,
-              depthWrite: !0,
-            }));
-          const { colorConfig: r } = t.sideConfig,
-            {
-              bottomColor: o,
-              topColor: a,
-              bottomOpacity: s,
-              topOpacity: l,
-            } = GV(r);
-          i.extrudeSideMaterial = new Jn({
-            uniforms: {
-              type: {
-                type: "int",
-                value: ((t) => {
-                  switch (t) {
-                    case "linear":
-                      return 1;
-                    case "ordinal":
-                      return 2;
-                  }
-                })(r.type),
-              },
-              bottomColor: {
-                type: "vec3",
-                value: {
-                  color: o,
-                  opacity: s,
-                },
-              },
-              topColor: {
-                type: "vec3",
-                value: {
-                  color: a,
-                  opacity: l,
-                },
-              },
-            },
-            transparent: !0,
-            vertexShader:
-              "varying vec2 vUv;\n\n#include <common>  \n#include <uv_pars_vertex>  \n#include <uv2_pars_vertex>  \n#include <logdepthbuf_pars_vertex>  \n#include <clipping_planes_pars_vertex>   \n\nvoid main() {\n\n  #include <uv_vertex>    \n  #include <uv2_vertex>\n\n  vUv = uv;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n\n  #include <begin_vertex>    \n  \n  #include <skinning_vertex>    \n  #include <displacementmap_vertex>    \n  #include <project_vertex>    \n  #include <logdepthbuf_vertex>    \n  #include <clipping_planes_vertex>      \n  \n  #include <worldpos_vertex>    \n  \n  \n}",
-            fragmentShader:
-              "#ifdef GL_ES\nprecision highp float;\n#endif\n\nstruct colorObj {\n  vec3 color;\n  float opacity;\n};\n\nuniform colorObj topColor;\nuniform colorObj bottomColor;\nuniform int type;\n\nvarying vec2 vUv;\n\n#include <common>  \n#include <packing>\n#include <uv_pars_fragment>\n\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nvoid main() {\n    #include <clipping_planes_fragment>\n\n    gl_FragColor = vec4(mix(topColor.color, bottomColor.color, vUv.y), mix(topColor.opacity, bottomColor.opacity, vUv.y));\n\n    #include <premultiplied_alpha_fragment>  \n    #include <dithering_fragment>\n}",
-          });
-        })(e, n, this),
-        (function (t, e, i) {
-          const n = EA(e.state.background.color);
-          i.extrudeBackgroundTopMaterial = new zA({
-            color: n.color,
-            transparent: !0,
-            depthTest: !0,
-            depthWrite: !0,
-          });
-          const { colorConfig: r } = t.sideConfig,
-            {
-              bottomColor: o,
-              topColor: a,
-              bottomOpacity: s,
-              topOpacity: l,
-            } = GV(r);
-          i.extrudeBackgroundSideMaterial = new Jn({
-            uniforms: {
-              type: {
-                type: "int",
-                value: ((t) => {
-                  switch (t) {
-                    case "linear":
-                      return 1;
-                    case "ordinal":
-                      return 2;
-                  }
-                })(r.type),
-              },
-              bottomColor: {
-                type: "vec3",
-                value: {
-                  color: o,
-                  opacity: s,
-                },
-              },
-              topColor: {
-                type: "vec3",
-                value: {
-                  color: a,
-                  opacity: l,
-                },
-              },
-            },
-            transparent: !1,
-            vertexShader:
-              "varying vec2 vUv;\n\n#include <common>  \n#include <uv_pars_vertex>  \n#include <uv2_pars_vertex>  \n#include <logdepthbuf_pars_vertex>  \n#include <clipping_planes_pars_vertex>   \n\nvoid main() {\n\n  #include <uv_vertex>    \n  #include <uv2_vertex>\n\n  vUv = uv;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n\n  #include <begin_vertex>    \n  \n  #include <skinning_vertex>    \n  #include <displacementmap_vertex>    \n  #include <project_vertex>    \n  #include <logdepthbuf_vertex>    \n  #include <clipping_planes_vertex>      \n  \n  #include <worldpos_vertex>    \n  \n  \n}",
-            fragmentShader:
-              "#ifdef GL_ES\nprecision highp float;\n#endif\n\nstruct colorObj {\n    vec3 color;\n    float opacity;\n};\n\nuniform colorObj topColor;\nuniform colorObj bottomColor;\nuniform int type;\n\nvarying vec2 vUv;\n\n#include <common>  \n#include <packing>\n#include <uv_pars_fragment>\n\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nvoid main() {\n    #include <clipping_planes_fragment>\n\n    gl_FragColor = vec4(mix(topColor.color, bottomColor.color, vUv.y), mix(topColor.opacity, bottomColor.opacity, vUv.y));\n\n    #include <premultiplied_alpha_fragment>  \n    #include <dithering_fragment>\n}",
-            depthTest: !0,
-            depthWrite: !0,
-          });
-        })(i, n, this),
-        await this.initExtrude());
-  }
-  async drillDown(t, e) {
-    const { viewportSystem: i } = this.gis,
-      {
-        drill: {
-          enabled: n,
-          duration: r,
-          level: { range: o },
-        },
-      } = this.state;
-    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
-    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
-    const a = qV(this.drillData, t);
-    if (-1 === a)
-      return this.logService.warn(`钻取层级 ${a}不合法，下钻无效`), this;
-    if (a > o[1] || a < o[0])
-      return this.logService.warn(`钻取层级 ${a}超过最大限制，下钻无效`), this;
-    this.isDrilling = !0;
-    const s = {
-      adcode: this.currentCode,
-      viewPortInfo: i.get(),
-      group: this.coreGroup,
-      subDistrictInfoArr: this.subDistrictInfoArr,
-    };
-    (this.drillCache[s.adcode] = s),
-      (this.currentLevel = a),
-      (this.currentCode = t);
-    const l = XV.getParentInfoByAdCode(this.currentCode, this.gis);
-    (this.currentParentLevel = l.level),
-      (this.currentParentCode = l.adcode),
-      (this.currentRegion = null),
-      tW(this);
-    const u = {
-      type: "drillDown",
-      code: 200,
-      properties: {
-        currentCode: this.currentCode,
-        currentLevel: this.currentLevel,
-      },
-    };
-    return (
-      this.ee.emit("drill", u),
-      this.ee.emit("drillDown", u),
-      WV(this),
-      await new Promise((t) =>
-        setTimeout(() => {
-          e && e(),
-            (() => {
-              this.ee.emit("drillDownEnd", u),
-                this.ee.emit("drillEnd", u),
-                (this.isDrilling = !1);
-            })(),
-            t(this);
-        }, r)
-      )
-    );
-  }
-  async drillUp(t, e) {
-    const { viewportSystem: i } = this.gis,
-      {
-        drill: {
-          enabled: n,
-          duration: r,
-          level: { range: o },
-        },
-      } = this.state;
-    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
-    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
-    let a = this.currentParentLevel;
-    if ((t && (a = qV(this.drillData, t)), -1 === a))
-      return this.logService.warn(`钻取层级 ${a}不合法，上钻无效`), this;
-    if (a > o[1] || a < o[0])
-      return this.logService.warn(`钻取层级 ${a}超过最大限制，上钻无效`), this;
-    this.isDrilling = !0;
-    const s = {
-      adcode: this.currentCode,
-      viewPortInfo: i.get(),
-      group: this.coreGroup,
-      subDistrictInfoArr: this.subDistrictInfoArr,
-    };
-    (this.drillCache[s.adcode] = s), (this.currentLevel = a);
-    const l = XV.getParentInfoByAdCode(this.currentCode, this.gis);
-    this.currentCode = null != t ? t : l.adcode;
-    const u = XV.getParentInfoByAdCode(this.currentCode, this.gis);
-    (this.currentParentCode = u.adcode),
-      (this.currentParentLevel = u.level),
-      (this.currentRegion = null),
-      tW(this);
-    const c = {
-      type: "drillUp",
-      code: 200,
-      properties: {
-        currentCode: this.currentCode,
-        currentLevel: this.currentLevel,
-      },
-    };
-    return (
-      this.ee.emit("drill", c),
-      this.ee.emit("drillUp", c),
-      WV(this),
-      await new Promise((t) =>
-        setTimeout(() => {
-          e && e(),
-            (() => {
-              this.ee.emit("drillUpEnd", c),
-                this.ee.emit("drillEnd", c),
-                (this.isDrilling = !1);
-            })(),
-            t(this);
-        }, r)
-      )
-    );
-  }
-  async drillRegion(t, e) {
-    const { viewportSystem: i } = this.gis,
-      {
-        drill: { enabled: n, duration: r },
-      } = this.state;
-    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
-    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
-    (this.isDrilling = !0), (this.currentRegion = t);
-    const o = {
-      adcode: this.currentCode,
-      viewPortInfo: i.get(),
-      group: this.coreGroup,
-      subDistrictInfoArr: this.subDistrictInfoArr,
-    };
-    (this.drillCache[o.adcode] = o),
-      (this.currentLevel = 0),
-      (this.currentCode = t);
-    const a = XV.getParentInfoByAdCode(this.currentCode, this.gis);
-    (this.currentParentCode = a.adcode),
-      (this.currentParentLevel = a.level),
-      (async function (t) {
-        const e = t.state.data[t.currentRegion];
-        (t.rawSubDistrictData = e.rawSubDistrictData),
-          (t.subDistrictData = e.subDistrictData),
-          (t.rawDistrictData = e.rawDistrictData),
-          (t.districtData = e.districtData);
-      })(this);
-    const s = {
-      type: "drillRegion",
-      code: 200,
-      properties: {
-        currentCode: this.currentCode,
-        currentLevel: this.currentLevel,
-      },
-    };
-    return (
-      this.ee.emit("drill", s),
-      this.ee.emit("drillRegion", s),
-      WV(this),
-      await new Promise((t) =>
-        setTimeout(() => {
-          e && e(),
-            (() => {
-              this.ee.emit("drillEnd", s),
-                this.ee.emit("drillRegionEnd", s),
-                (this.isDrilling = !1);
-            })(),
-            t(this);
-        }, r)
-      )
-    );
-  }
-  async initPOI() {
-    const { poi: t } = this.state,
-      {
-        enabled: e,
-        background: i,
-        orient: n,
-        alignment: r,
-        offsetX: o,
-        offsetY: a,
-        major: s,
-      } = t;
-    if (!e || !s.enabled) return void this.clearPoiGroup();
-    this.clearPoiGroup();
-    const { baseHeight: l } = this.gis.globalOpts.bboxOption;
-    for (let u = 0; u < this.subDistrictInfoArr.length; u++) {
-      const t = this.subDistrictInfoArr[u],
-        { centroid: e, alias: c } = t;
-      if (!e) continue;
-      const h = new Ye(0, 0, 0);
-      await this.poiGroup.addText(
-        h,
-        n,
-        r,
-        i,
-        {
-          content: `${s.format ? s.format(c) : c}`,
-          props: s,
-        },
-        null,
-        o,
-        a,
-        {
-          position: [e[0], e[1], l],
-          offsetX: o,
-          offsetY: a,
-        }
-      );
-    }
-    this._updatePOI(!0);
-  }
-  scaleAdaptation(t = !0) {
-    const { project: e } = this.gis.layerManager.geo,
-      {
-        districtStyle: { heightScale: i },
-        viewClip: n,
-      } = this.state,
-      { drillSave: r } = this.gis.viewportSystem.get(),
-      o = this.drillCache[this.currentCode];
-    let a;
-    a = o && r ? o.viewPortInfo : this.gis.viewportSystem.get();
-    const { pitch: s, rotation: l, offset: u } = a,
-      c = Vf,
-      h = null == n ? void 0 : n[this.currentCode],
-      p = KV({
-        geojson: {
-          type: "FeatureCollection",
-          features: this.rawDistrictData,
-        },
-        geojsonProj: {
-          type: "FeatureCollection",
-          features: this.districtData,
-        },
-        project: e,
-        geojsonUtil: am,
-        worldBboxSize: c,
-        heightScale: i,
-        pitch: s,
-        rotation: l,
-        offset: u,
-        viewClip: h,
-      });
-    (this.gis.globalOpts = p),
-      this.gis.layerManager.ee.emit("updateArea", {
-        cameraTween: t,
-      }),
-      this.gis.lightSystem.ee.emit("updateArea");
-  }
-  registerHeightScale() {
-    this._propsWatch.addWatch([
-      this._propsWatch.defaultRule(
-        ["districtStyle", "heightScale"],
-        "diffDeep",
-        () => {
-          const { bboxOption: t } = this.gis.globalOpts;
-          (t.baseHeight =
-            t.size.bboxSize * this.state.districtStyle.heightScale * 0.05),
-            this.gis.layerManager.ee.emit("updateArea", {
-              cameraChange: !1,
-              cameraTween: !1,
-            }),
-            this.gis.lightSystem.ee.emit("updateArea");
-        }
-      ),
-    ]);
-  }
-  debugBbox() {
-    const {
-        bboxOption: {
-          size: { width: t, height: e },
-          centerProj: i,
-          baseHeight: n,
-        },
-      } = this.gis.globalOpts,
-      r = new dr(t, e),
-      o = new pn({
-        color: 16711680,
-        opacity: 0.1,
-        transparent: !0,
-        side: xt,
-      }),
-      a = new Wn(r, o);
-    a.position.set(i[0], i[1], n + 1),
-      a.setRenderIndex(lU.PARTICLE_LAYER),
-      this.coreGroup.add(a);
-  }
-  handleAnimation() {
-    this.boundaryStreamerLayer && this.boundaryStreamerLayer.handleAnimation();
-  }
-  clear() {
-    this.clearCoreGroup(),
-      this.clearPoiGroup(),
-      this.clearInteractionGroup(),
-      (this.isDrilling = !1),
-      (this.drillData = {
-        default: [new Map()],
-        process: [new Map()],
-      }),
-      (this.currentCode = Mk),
-      (this.currentLevel = 0),
-      (this.currentParentCode = null),
-      (this.currentParentLevel = -1),
-      (this.drillCache = {}),
-      (this.subDistrictStrokeGroup = null),
-      (this.subDistrictFillGroup = null),
-      (this.districtStrokeGroup = null),
-      (this.districtBottomStrokeGroup = null),
-      (this.districtFillGroup = null),
-      (this.extrudeBackgroundFillGroup = null),
-      (this.subDistrictInfoArr = []),
-      (this.districtData = null),
-      (this.subDistrictData = null),
-      (this.rawDistrictData = null),
-      (this.rawSubDistrictData = null),
-      (this.extrudeTopMaterial = null),
-      (this.extrudeSideMaterial = null),
-      (this.extrudeInnerShadowMaterial = null),
-      (this.extrudeBackgroundTopMaterial = null),
-      (this.extrudeBackgroundSideMaterial = null),
-      (this.currentRegion = null),
-      (this.bgGeoData = null),
-      (this.boundaryStreamerLayer = null),
-      (this.gis.globalOpts = null);
-  }
-  async release() {
-    if (
-      (this.clear(),
-      this._initLayerGroup(),
-      await this.__initMap(!0),
-      this.gis.__destroyed)
-    )
-      return;
-    this.__initEvent(),
-      this.animation.start(),
-      super.registerInteraction(
-        this.state.interaction,
-        this.subDistrictFillGroup,
-        !1
-      ),
-      super.emitPropsWatch(),
-      this.registerHeightScale(),
-      FV(this, "extrude"),
-      BV(this.extrudeSideMaterial, this.state.districtStyle),
-      zV(this),
-      kV(this),
-      cV(this.state.districtStyle, this),
-      hV(this.state.districtStyle, this),
-      VV(this.state.subDistrictStyle, this),
-      FV(this, "extrude-background"),
-      BV(this.extrudeBackgroundSideMaterial, this.state.extrudeBackgroundStyle);
-    const { backgroundBboxOption: t } = this.gis.globalOpts;
-    t &&
-      ((t.baseHeight =
-        t.size.bboxSize *
-        this.state.extrudeBackgroundStyle.heightScale *
-        0.05 *
-        0.2),
-      jV(t.baseHeight, this)),
-      await this.initPOI();
-  }
-  _initPropsWatchRule() {
-    super._initPropsWatchRule(),
-      this._propsWatch.addWatch([
-        this._propsWatch.defaultRule(["viewClip"], "diffDeep", () => {
-          (this.drillCache = {}), this.scaleAdaptation(!1);
-        }),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "fill"],
-          "diffDeep",
-          () => {
-            FV(this, "extrude");
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "sideConfig"],
-          "diffDeep",
-          () => {
-            BV(this.extrudeSideMaterial, this.state.districtStyle);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "innerShadow"],
-          "diffDeep",
-          () => {
-            zV(this);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "boundaryStreamer"],
-          "diffDeep",
-          () => {
-            kV(this);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "stroke"],
-          "diffDeep",
-          () => {
-            cV(this.state.districtStyle, this);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["districtStyle", "bottomStroke"],
-          "diffDeep",
-          () => {
-            hV(this.state.districtStyle, this);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["subDistrictStyle", "stroke"],
-          "diffDeep",
-          () => {
-            VV(this.state.subDistrictStyle, this);
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["extrudeBackgroundStyle", "fill"],
-          "diffDeep",
-          () => {
-            FV(this, "extrude-background");
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["extrudeBackgroundStyle", "sideConfig"],
-          "diffDeep",
-          () => {
-            BV(
-              this.extrudeBackgroundSideMaterial,
-              this.state.extrudeBackgroundStyle
-            );
-          }
-        ),
-        this._propsWatch.defaultRule(
-          ["extrudeBackgroundStyle", "heightScale"],
-          "diffDeep",
-          () => {
-            const { backgroundBboxOption: t } = this.gis.globalOpts;
-            t &&
-              ((t.baseHeight =
-                t.size.bboxSize *
-                this.state.extrudeBackgroundStyle.heightScale *
-                0.05 *
-                0.2),
-              jV(t.baseHeight, this));
-          }
-        ),
-        this._propsWatch.defaultRule("poi", "diffDeep", () => {
-          this.initPOI();
-        }),
-      ]);
-  }
-}
+
+window.$V = $V;
+window.tW = tW;
+
 const iW = {
     css2d: class {
       constructor(t = {}) {
@@ -69579,6 +67399,8 @@ const sW = oW.CPU,
       type: "straight",
     }
   );
+window.sW = sW;
+window.lW = lW;
 class cW {
   constructor() {
     this.tweenGroup = new BU();
@@ -70053,17 +67875,6 @@ class dW {
     this.ee.removeAllListeners();
   }
 }
-function fW(t) {
-  let e;
-  return (
-    (e = (null == t ? void 0 : t.mode)
-      ? t.mode
-      : (null == t ? void 0 : t.offset)
-      ? "xgis"
-      : ((null == t ? void 0 : t.zoom) && (null == t || t.center), "webgis")),
-    e
-  );
-}
 ((t, e, i, n) => {
   for (
     var r, o = n > 1 ? void 0 : n ? pW(e, i) : e, a = t.length - 1;
@@ -70072,7 +67883,8 @@ function fW(t) {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && hW(e, i, o);
-})([_G(KB.ILogService)], dW.prototype, "logService", 2);
+})([_G(window.KB.ILogService)], dW.prototype, "logService", 2);
+window.dW = dW;
 var gW = Math.PI / 3,
   mW = [0, gW, 2 * gW, 3 * gW, 4 * gW, 5 * gW];
 function yW(t) {
@@ -70614,6 +68426,8 @@ const bW = (t, e) => {
       })(a, s, l, u, i);
     return c;
   };
+window.bW = bW;
+window._W = _W;
 var SW = {
   exports: {},
 };
@@ -72152,355 +69966,9 @@ var EW,
       (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
     return n && o && TW(e, i, o), o;
   };
-class IW {
-  constructor(t) {
-    (this.props = t),
-      (this.id = we()),
-      (this.__cb = []),
-      (this.__errorCb = []),
-      (this.__isReady = !1),
-      (this.__destroyed = !1),
-      (this.version = ut),
-      (this.__maps = []),
-      (this.eventManager = new CG()),
-      (this.layerManager = new OU()),
-      (this.__initCameraSystem = () => {
-        const { viewportConfig: t, width: e, height: i } = this.state;
-        this.cameraSystem = new wG({
-          config: t,
-          width: e,
-          height: i,
-        });
-      }),
-      (this.__initSceneSystem = () => {
-        const {
-          sceneConfig: t,
-          viewportConfig: e,
-          containerDom: i,
-        } = this.state;
-        (this.sceneSystem = new IU({
-          containerDom: i,
-          config: t,
-          viewportConfig: e,
-          cameraSystem: this.cameraSystem,
-          layerManager: this.layerManager,
-        })),
-          this.ee.on("viewportChange", (t) => {
-            (this.sceneSystem.coreScene.ext.zoom = t.zoom),
-              (this.sceneSystem.hudScene.ext.zoom = t.zoom);
-          });
-      }),
-      (this.__initRenderSystem = () => {
-        const { width: t, height: e, containerDom: i } = this.state;
-        (this.renderSystem = new MU({
-          containerDom: i,
-          width: t,
-          height: e,
-          cameraSystem: this.cameraSystem,
-          sceneSystem: this.sceneSystem,
-        })),
-          this.shaderService.registerBasicModule(),
-          this.eventManager.ee.on("markerEnabled", ({ markerType: t }) => {
-            const { width: e, height: i, containerDom: n } = this.props;
-            this.renderSystem.markerRenderer ||
-              (this.renderSystem.markerRenderer = new rW({
-                sceneSystem: this.sceneSystem,
-                cameraSystem: this.cameraSystem,
-                controlsSystem: this.controlsSystem,
-                containerDom: n,
-                markerType: t,
-                width: e,
-                height: i,
-              }));
-          });
-      }),
-      (this.__initEventSystem = () => {
-        const { containerDom: t, autoSize: e } = this.state;
-        this.eventSystem = new gU({
-          engine: sW,
-          viewportSystem: this.viewportSystem,
-          cameraSystem: this.cameraSystem,
-          renderSystem: this.renderSystem,
-          sceneSystem: this.sceneSystem,
-          containerDom: t,
-          autoSize: e,
-          ee: this.ee,
-          layerManager: this.layerManager,
-          eventManager: this.eventManager,
-        });
-      }),
-      (this.__initLightSystem = () => {
-        const { lightConfig: t } = this.state;
-        this.lightSystem = new xU({
-          sceneSystem: this.sceneSystem,
-          gis: this,
-          config: t,
-        });
-      }),
-      (this.__initHelperSystem = () => {
-        const { dev: t } = this.state;
-        if (t) {
-          (this.renderSystem.coreRenderer.debug.checkShaderErrors = !1),
-            new KU({
-              length: 2e4,
-              sceneSystem: this.sceneSystem,
-            }),
-            new nj({
-              type: "cartesian",
-              sceneSystem: this.sceneSystem,
-              config: {
-                size: 100,
-                divisions: 10,
-              },
-            });
-          const t = new QE(this.cameraSystem.coreCamera);
-          this.sceneSystem.coreScene.add(t),
-            this.lightSystem.lights.forEach((t) => {
-              switch (t.type) {
-                case "directional": {
-                  const e = 5,
-                    i = new qE(t.light, e);
-                  return void this.sceneSystem.coreScene.add(i);
-                }
-                case "spot": {
-                  const e = new GE(t.light);
-                  return void this.sceneSystem.coreScene.add(e);
-                }
-              }
-            });
-        }
-      }),
-      (this.__syncMap = (t) => {
-        this.__maps.forEach((e) => {
-          e.setCenter(t.center, !0),
-            e.setZoom(t.zoom, !0),
-            e.setPitch(t.pitch, !0),
-            e.setRotation(t.rotation, !0);
-        });
-      }),
-      this.__init();
-  }
-  __init() {
-    if (!this.__checkEnv()) return;
-    this.__injectToGlobal(),
-      (this.ee = new dt()),
-      this.__initDataSet(),
-      this.__mergeDefaultConfig(),
-      this.__initCameraSystem(),
-      this.__initSceneSystem(),
-      this.__initRenderSystem(),
-      this.__initLightSystem(),
-      this.__initControlsSystem(),
-      this.__initViewportSystem(),
-      this.__initEventSystem();
-    new Promise((t, e) => {
-      this.__initBaseMapLayer(t, e);
-    })
-      .then(() => {
-        this.__iniTickSystem(),
-          this.tickSystem.start(),
-          this.__initHelperSystem(),
-          (this.__isReady = !0),
-          setTimeout(() => {
-            if (!this.__destroyed) {
-              for (let t = 0; t < this.__cb.length; t++) this.__cb[t](this);
-              (this.__cb = []), this.ee.emit("loaded", "");
-            }
-          }, 0);
-      })
-      .catch((t) => {
-        for (let e = 0; e < this.__errorCb.length; e++) this.__errorCb[e](t);
-        (this.__errorCb = []), this.ee.emit("loaded", "");
-      });
-  }
-  __checkEnv() {
-    return this.props.containerDom && this.props.containerDom.isConnected
-      ? QD.isWebGL2Available()
-        ? (QD.isGPUAcceleratorEnabled() ||
-            this.logService.error(
-              "检测到您已关闭浏览器硬件加速模式，请开启以获得更好的体验"
-            ),
-          !0)
-        : (this.logService.error(
-            "当前环境不支持 webgl2，请更新浏览器或显卡配置以获得更好的体验"
-          ),
-          !1)
-      : (this.logService.error("Plane3D containerDom is required"), !1);
-  }
-  __injectToGlobal() {
-    const { globalVariable: t = sk } = this.props;
-    t &&
-      ((window.__gis__ = this),
-      Array.isArray(window.__gises__)
-        ? window.__gises__.push(this)
-        : (window.__gises__ = [this]));
-  }
-  __initDataSet() {
-    const t = new ok();
-    t.registerParser("geojson", Kz),
-      t.registerParser("bytejson", Xw),
-      t.registerTransform("projection", ML),
-      t.registerTransform("hexagon", bW),
-      t.registerTransform("grid", _W),
-      t.registerTransform("filter", aT),
-      t.registerTransform("map", mF),
-      t.registerTransform("dissolve", gI),
-      t.registerTransform("webgis", lW),
-      (this.dataSet = t);
-  }
-  __mergeDefaultConfig() {
-    const {
-        autoSize: t,
-        containerDom: e,
-        baseMapLayer: i,
-        width: n,
-        height: r,
-      } = this.props,
-      o = null != t ? t : lk,
-      a = null != n ? n : 1920,
-      s = null != r ? r : 1080,
-      l = null == i ? void 0 : i.baseZoom;
-    this.state = af(
-      {
-        dev: false,
-        globalVariable: sk,
-        autoSize: lk,
-        sceneConfig: hk,
-        viewportConfig: af(uk, {
-          mode: fW(this.props.viewportConfig),
-        }),
-        baseMapLayer: af(Rk, {
-          baseZoom: l || -1,
-        }),
-        lightConfig: ck,
-        controlType: "orbit",
-      },
-      ot(rt({}, this.props), {
-        width: o ? e.clientWidth : a,
-        height: o ? e.clientHeight : s,
-      })
-    );
-  }
-  __initControlsSystem() {
-    const { viewportConfig: t } = this.state;
-    (this.controlsSystem = new DG({
-      sceneSystem: this.sceneSystem,
-      renderSystem: this.renderSystem,
-      cameraSystem: this.cameraSystem,
-      config: t,
-      layerManager: this.layerManager,
-      gis: this,
-    })),
-      this.controlsSystem.gisStateApi.subscribe(AG.WebGis, this.__syncMap);
-  }
-  __initViewportSystem() {
-    const { viewportConfig: t } = this.state;
-    this.viewportSystem = new dW({
-      sceneSystem: this.sceneSystem,
-      renderSystem: this.renderSystem,
-      cameraSystem: this.cameraSystem,
-      controlsSystem: this.controlsSystem,
-      config: t,
-      layerManager: this.layerManager,
-      gis: this,
-    });
-  }
-  __iniTickSystem() {
-    this.tickSystem = new JU({
-      sceneSystem: this.sceneSystem,
-      renderSystem: this.renderSystem,
-      cameraSystem: this.cameraSystem,
-      controlsSystem: this.controlsSystem,
-      layerManager: this.layerManager,
-    });
-  }
-  async __initBaseMapLayer(t, e) {
-    const { baseMapLayer: i } = this.state;
-    if (i.enabled)
-      try {
-        const e = new eW(this, i, t);
-        await e.init();
-      } catch (n) {
-        e(n);
-      }
-    else t();
-  }
-  then(t) {
-    return (
-      this.__isReady
-        ? setTimeout(() => {
-            t(this);
-          }, 0)
-        : this.__cb.push(t),
-      this
-    );
-  }
-  catch(t) {
-    return this.__errorCb.push(t), this;
-  }
-  on(t, e, i) {
-    Fk(t) || this.eventSystem.mapContainerEvent.bindEventListeners(t),
-      this.ee.on(t, e, i);
-  }
-  off(t, e) {
-    Fk(t) || this.eventManager.removeMapEvent(this.id, t),
-      this.ee.removeListener(t),
-      e && e();
-  }
-  get performance() {
-    return this.renderSystem.coreRenderer.info;
-  }
-  registerMap(t) {
-    if (!t.__destroyed)
-      if (this.__maps.find((e) => e.id === t.id))
-        this.logService.warn("请不要重复绑定第三方地图");
-      else {
-        this.__maps.push(t);
-        const e = this.controlsSystem.gisStateApi.getSourceState(),
-          i = t.getMaxPitch(),
-          n = t.getZooms();
-        this.viewportSystem.set({
-          maxPitch: Math.min(e.maxPitch, i),
-          minZoom: n[0],
-          maxZoom: n[1],
-        }),
-          this.__syncMap(this.controlsSystem.gisStateApi.get(AG.WebGis));
-      }
-  }
-  unregisterMap(t) {
-    this.__maps.splice(this.__maps.indexOf(t), 1);
-  }
-  destroy() {
-    var t, e, i, n, r, o, a, s, l, u, c, h, p, d;
-    if (this.__destroyed)
-      return void this.logService.warn("请勿重复调用 destroy");
-    (this.__destroyed = !0),
-      this.ee.emit("destroy", ""),
-      null == (t = this.eventSystem) || t.destroy(),
-      null == (e = this.controlsSystem) || e.destroy(),
-      null == (i = this.tickSystem) || i.destroy(),
-      null == (n = this.layerManager) || n.destroy(),
-      null == (r = this.lightSystem) || r.destroy(),
-      null == (o = this.sceneSystem) || o.destroy(),
-      null == (a = this.renderSystem) || a.destroy(),
-      null == (s = this.dataSet) || s.destroy(),
-      null == (l = this.controlsSystem) ||
-        l.gisStateApi.unsubscribe(AG.WebGis, this.__syncMap),
-      null == (u = this.viewportSystem) || u.destroy(),
-      null == (c = this.__maps) || c.forEach((t) => t.destroy()),
-      (null == (h = this.state) ? void 0 : h.containerDom) &&
-        (this.state.containerDom.innerHTML = ""),
-      (null == (p = window.__gis__) ? void 0 : p.id) === this.id &&
-        (window.__gis__ = null);
-    const f =
-      null == (d = window.__gises__)
-        ? void 0
-        : d.findIndex((t) => t.id === this.id);
-    f > -1 && window.__gises__.splice(f, 1);
-  }
-}
-LW([_G(KB.IShaderService)], IW.prototype, "shaderService", 2),
-  LW([_G(KB.ILogService)], IW.prototype, "logService", 2),
+
+LW([_G(window.KB.IShaderService)], IW.prototype, "shaderService", 2),
+  LW([_G(window.KB.ILogService)], IW.prototype, "logService", 2),
   ff("images", "waternormals.jpg"),
   ((DW = EW || (EW = {})).MIDDLE = "middle"),
   (DW.LEFT = "left"),
@@ -79928,6 +77396,7 @@ class TY extends NW {
       ]);
   }
 }
+window.TY = TY
 const PY = {
   common: Sk,
   data: [],
@@ -83104,6 +80573,7 @@ const { typo: OY } = i,
   JY = "460000",
   KY = 0.01,
   $Y = "Region:";
+window.ZY = ZY;
 var tX, eX, iX, nX;
 ((eX = tX || (tX = {})).CHINA_GIS = "gis_map"),
   (eX.WOLRD_GIS = "gis_world_map"),
@@ -83154,10 +80624,14 @@ const cX = {
     direction: "bottom-right",
   },
 };
+window.cX = cX;
 var hX, pX;
 ((pX = hX || (hX = {})).CHINA_GIS = "@dp/aeolian-package-geography://gis_map"),
   (pX.WOLRD_GIS = "@dp/aeolian-package-geography://gis_world_map"),
   (pX.CUSTOM_GIS = "@dp/aeolian-package-geography://gis_custom_map");
+
+window.hX = hX;
+
 const dX = [
     {
       key: "common",
@@ -84014,6 +81488,7 @@ const TX = {
     dataPresets: {},
     plot: [1024, 768],
   };
+window.PX = PX;
 function LX(t) {
   return void 0 !== t;
 }
@@ -84022,6 +81497,7 @@ const IX = function (t, ...e) {
     c(t) || c(e) ? e : void 0 === e ? null : void 0
   );
 };
+window.IX = IX;
 new Proxy(
   {},
   {
@@ -84036,6 +81512,8 @@ const NX = (t, e) => {
     "inherit" !== t
       ? t
       : "PingFang SC,Microsoft Yahei,system-ui,-apple-system,segoe ui,Roboto,Helvetica,Arial,sans-serif, apple color emoji,segoe ui emoji,segoe ui symbol";
+
+window.RX = RX;
 function OX(t, e, i, n, r = 0) {
   switch (i.source.type) {
     case h.VizQuery:
@@ -88504,6 +85982,9 @@ const zX = {
       中华人民共和国: "China",
     },
   };
+window.UX = UX;
+window.jX = jX;
+window.HX = HX;
 function qX(t, e) {
   var i, n;
   switch (t) {
@@ -88708,6 +86189,8 @@ const nQ = async (t, e) =>
 function aQ(t) {
   return `${oQ()}/${t}`;
 }
+window.aQ = aQ;
+window.nQ = nQ;
 function sQ(t, e) {
   var i;
   if (e) return !0;
@@ -94600,7 +92083,7 @@ const WQ = {
       nodePoint: {
         enable: !0,
         image:
-          "data:image/png;base64,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",
+          "data:image/png;base64,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.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",
         size: 10,
       },
       endPoint: {
@@ -100191,6 +97674,7 @@ const AZ = new (class {
     };
   }
 })();
+window.AZ = AZ;
 function EZ(t, e) {
   if ("string" == typeof e) return t[e];
   {
@@ -100325,6 +97809,7 @@ function UZ(t) {
   }
   return !0;
 }
+window.UZ = UZ
 function jZ() {
   if (this.editMode === g.Edit) this.setElementVisibility(this.plot.visible);
   else {
@@ -104487,1674 +101972,9 @@ class T2 extends b2 {
     C2();
   }
 }
-class P2 {
-  constructor({ executeCallback: t, revokeCallback: e }) {
-    Object.defineProperty(this, "executeCallback", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: void 0,
-    }),
-      Object.defineProperty(this, "revokeCallback", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      (this.executeCallback = t),
-      (this.revokeCallback = e);
-  }
-  execute() {
-    this.executeCallback();
-  }
-  revoke() {
-    this.revokeCallback();
-  }
-}
-const L2 = new Map();
-function I2(t) {
-  var e;
-  switch (t) {
-    case hX.CHINA_GIS:
-      return jX[null !== (e = x.getLocaleId()) && void 0 !== e ? e : "zh_CN"];
-    case hX.WOLRD_GIS:
-      return "zh_CN" !== x.getLocaleId() && WX[x.getLocaleId()]
-        ? WX[x.getLocaleId()]
-        : {};
-    case hX.CUSTOM_GIS:
-    default:
-      return {};
-  }
-}
-var N2, R2;
-((R2 = N2 || (N2 = {}))[(R2.NONE = 0)] = "NONE"),
-  (R2[(R2.ONCE = 1)] = "ONCE"),
-  (R2[(R2.LOOP = 2)] = "LOOP");
-class O2 extends z {
-  constructor(t, e) {
-    super(t, e),
-      Object.defineProperty(this, "lastDrillAdCode", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: null,
-      }),
-      Object.defineProperty(this, "tickMode", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: N2.NONE,
-      }),
-      Object.defineProperty(this, "tickTime", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 0,
-      }),
-      Object.defineProperty(this, "tickId", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 0,
-      }),
-      Object.defineProperty(this, "comboTimer", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "comboTimeout", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 200,
-      }),
-      Object.defineProperty(this, "drillEndCallback", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: [],
-      }),
-      Object.defineProperty(this, "drillStartCallback", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: [],
-      }),
-      Object.defineProperty(this, "preWidth", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 0,
-      }),
-      Object.defineProperty(this, "preHeight", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 0,
-      }),
-      Object.defineProperty(this, "currentSlice", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: null,
-      }),
-      Object.defineProperty(this, "preViewportConfig", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "editingPlot", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: {},
-      }),
-      Object.defineProperty(this, "isInit", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "isInitGis", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "isInitAmap", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "isInitNanhai", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "drillRange", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: [0, 3],
-      }),
-      Object.defineProperty(this, "propsWatch", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "preProperties", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: {},
-      }),
-      Object.defineProperty(this, "needDelayInit", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "elementDisplayObserver", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: null,
-      }),
-      Object.defineProperty(this, "lastCustomData", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "lastRegion", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "needUpgradeViewport", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      }),
-      Object.defineProperty(this, "asyncFontsTask", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: {
-          gis: !1,
-          nanhai: !1,
-        },
-      }),
-      Object.defineProperty(this, "previousConfig", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "gisContextMapKey", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "interactionOperationEmit", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: _(() => {
-          var t;
-          if (
-            !(null === (t = this.variableContext) || void 0 === t
-              ? void 0
-              : t.gis)
-          )
-            return;
-          const e = this.getRawViewportConfig();
-          if (this.POMNode.operationEmit) {
-            const t = new P2({
-              executeCallback: () => {
-                this.setViewportConfig(e);
-              },
-              revokeCallback: () => {
-                this.setViewportConfig(this.preViewportConfig);
-              },
-            });
-            this.POMNode.operationEmit(t);
-          }
-          this.preViewportConfig = e;
-        }, 200),
-      }),
-      Object.defineProperty(this, "drill", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: async (t) => {
-          if ("-1" === t) this.drillUp();
-          else if (rQ(t)) await this.drillUp(ZY);
-          else if (t.includes($Y)) {
-            const e = t.split($Y)[1];
-            this.variableContext.regionData[e] && (await this.drillRegion(e));
-          } else {
-            const e = await nQ(t, this.variableContext.gis);
-            await this.drillDownSingle(e);
-          }
-        },
-      }),
-      Object.defineProperty(this, "drillUp", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: async (t) => {
-          var e;
-          const { baseMapLayer: i } =
-            null === (e = this.variableContext.gis) || void 0 === e
-              ? void 0
-              : e.layerManager;
-          await i.drillUp(t, () => {});
-        },
-      }),
-      (this.propsWatch = AZ.createPropsWatch()),
-      this.initPropsWatchRule(),
-      this.observeElementDisplay();
-  }
-  render(t) {
-    super.render(t);
-    const e =
-      this.POMNode.width !== this.preWidth ||
-      this.POMNode.height !== this.preHeight;
-    if (t || !1 !== this.isInit || !e)
-      if (t || !1 === this.isInit) {
-        let t;
-        switch (
-          (this.editMode === g.View
-            ? (this.gisContextMapKey = `${this.renderer.getScreenId()}-${
-                this.POMNode.id
-              }`)
-            : (this.gisContextMapKey = this.POMNode.id),
-          this.upgradeCompatible(),
-          this.POMNode.renderType)
-        ) {
-          case hX.CHINA_GIS:
-            t = PX.presets;
-            break;
-          case hX.WOLRD_GIS:
-            t = yQ.presets;
-            break;
-          case hX.CUSTOM_GIS:
-            t = gQ.presets;
-        }
-        if (
-          ((this.POMNode.properties = IX(t, this.POMNode.properties)),
-          !UZ(this))
-        )
-          return void (this.needDelayInit = !0);
-        const e = L2.get(this.gisContextMapKey);
-        this.editMode === g.View && e ? this.animateInit() : this.createInit(),
-          this.POMNode.viz || (this.POMNode.viz = {});
-      } else
-        this.isInit &&
-          (e
-            ? ((this.preWidth = this.POMNode.width),
-              (this.preHeight = this.POMNode.height))
-            : this.update());
-  }
-  upgradeCompatible() {
-    !this.POMNode.properties.viewport &&
-      this.POMNode.data.viewportConfig &&
-      (this.needUpgradeViewport = !0);
-  }
-  observeElementDisplay() {
-    const t = this.dom;
-    (this.elementDisplayObserver = new MutationObserver((t) => {
-      t.forEach((t) => {
-        var e = t.target;
-        e &&
-          "block" == e.style.display &&
-          this.needDelayInit &&
-          (this.render(!0), (this.needDelayInit = !1));
-      });
-    })),
-      this.elementDisplayObserver.observe(t, {
-        attributes: !0,
-        childList: !1,
-        subtree: !1,
-        attributeOldValue: !1,
-        attributeFilter: ["style"],
-      });
-  }
-  createInit() {
-    (this.dom.innerHTML = ""), this.clearError(), this.initState();
-    const t = document.createElement("div"),
-      e = document.createElement("div");
-    (e.style.width = "100%"),
-      (e.style.height = "100%"),
-      (e.style.willChange = "width,height"),
-      (this.variableContext = {
-        ...this.variableContext,
-        div: e,
-        ghostDiv: t,
-        tipsPool: {},
-        gis: null,
-        amapLayer: null,
-        nanhaiLayer: null,
-        regionData: {},
-      }),
-      this.dom.append(e),
-      this.initGis();
-  }
-  animateInit() {
-    var t;
-    (this.currentSlice = this.POMNode.slices[0]),
-      (this.preViewportConfig = this.POMNode.data.viewportConfig),
-      this.POMNode.slices.forEach((t) => {
-        t.editingSpace = "gisSurface";
-      });
-    const e = L2.get(this.gisContextMapKey);
-    (this.variableContext = e),
-      this.dom.append(this.variableContext.div),
-      null === (t = this.variableContext.gis) ||
-        void 0 === t ||
-        t.tickSystem.start(),
-      this.initHandle();
-  }
-  initState() {
-    var t;
-    (this.isInit = !1),
-      (this.isInitGis = !1),
-      (this.isInitAmap = !1),
-      (this.isInitNanhai = !1),
-      (this.lastDrillAdCode = null),
-      (this.drillEndCallback = []),
-      (this.drillStartCallback = []),
-      null === (t = this.variableContext.gis) || void 0 === t || t.destroy(),
-      (this.variableContext = {
-        ...this.variableContext,
-        div: null,
-        ghostDiv: null,
-        tipsPool: {},
-        gis: null,
-        amapLayer: null,
-        nanhaiLayer: null,
-        regionData: {},
-      }),
-      (this.preProperties = u(this.properties)),
-      (this.preWidth = this.POMNode.width),
-      (this.preHeight = this.POMNode.height),
-      (this.currentSlice = this.POMNode.slices[0]),
-      (this.preViewportConfig = this.POMNode.data.viewportConfig),
-      this.POMNode.slices.forEach((t) => {
-        t.editingSpace = "gisSurface";
-      });
-  }
-  getRealDPR() {
-    return (
-      (window.devicePixelRatio ? window.devicePixelRatio : 1) *
-      this.renderer.getScale()[0]
-    );
-  }
-  async initGis() {
-    const {
-        amap: { enable: e },
-        nanhai: { enable: i },
-      } = this.properties,
-      { div: n } = this.variableContext,
-      r = {
-        common: {
-          visible: !1,
-        },
-        districtStyle: {
-          heightScale: 0,
-          bottomStroke: {
-            width: 0,
-          },
-        },
-        data: await this.getDataConfig(),
-        drill: await this.getDrillConfig(),
-        viewClip: this.getViewClipConfig(),
-        poi: {
-          major: {
-            aliasMap: I2(this.POMNode.renderType),
-          },
-        },
-      },
-      o = {
-        containerDom: n,
-        globalVariable:
-          this.editMode === g.Edit ||
-          window.location.href.includes("showToolbar=true"),
-        viewportConfig: this.getViewportConfig(),
-        lightConfig: this.getLightConfig(),
-        sceneConfig: IX(
-          {
-            logo: {
-              visible: !1,
-            },
-            background: {
-              transparent: !0,
-            },
-          },
-          this.getSceneConfig()
-        ),
-        baseMapLayer: IX(r, this.getBaseLayerConfig()),
-      };
-    (this.variableContext.gis = new IW(o)),
-      this.variableContext.gis
-        .then(() => {
-          var n;
-          if (((this.isInitGis = !0), this.needUpgradeViewport)) {
-            const e =
-              null === (n = this.variableContext.gis) || void 0 === n
-                ? void 0
-                : n.viewportSystem.get();
-            (this.POMNode.properties.viewport = {
-              centerLng: t(e.center[0], 6),
-              centerLat: t(e.center[1], 6),
-              zoom: t(e.zoom, 2),
-              pitch: t(e.pitch, 0),
-              rotation: t(e.rotation, 0),
-            }),
-              (this.needUpgradeViewport = !1);
-          }
-          e || i || this.initHandle(),
-            i && this.setNanhaiEnable(),
-            e && this.setAMapEnable();
-        })
-        .catch((t) => {
-          let e = t.message;
-          if ("地图数据加载失败" === e)
-            e = S("地图数据加载失败，请确保地图数据源配置正常");
-          this.renderGisError(e);
-        });
-  }
-  renderGisError(t) {
-    const e = new y(v.RenderError, t);
-    this.variableContext &&
-      ((this.variableContext.tipsPool[this.POMNode.id] = e), this.renderTips()),
-      console.error(t);
-  }
-  tickOnce() {
-    this.editMode !== g.View &&
-      this.tickMode === N2.NONE &&
-      ((this.tickMode = N2.ONCE),
-      (this.tickId = window.requestAnimationFrame(() => {
-        if (this.variableContext) {
-          const { gis: t } = this.variableContext;
-          null == t || t.tickSystem.tick();
-        }
-        this.tickMode = N2.NONE;
-      })));
-  }
-  tickLoop(t) {
-    if (this.editMode !== g.View)
-      if (this.tickMode !== N2.LOOP) {
-        const e = Date.now(),
-          i = () => {
-            this.tickTime < 4e3
-              ? ((this.tickMode = N2.LOOP),
-                (this.tickId = window.requestAnimationFrame(() => {
-                  if (this.variableContext) {
-                    const { gis: t } = this.variableContext;
-                    null == t || t.tickSystem.tick();
-                  }
-                  const t = Date.now();
-                  (this.tickTime = t - e), i();
-                })))
-              : ((this.tickTime = 0), (this.tickMode = N2.NONE), t && t());
-          };
-        i();
-      } else this.tickTime = 0;
-  }
-  initHandle(t = !0) {
-    var e;
-    const { gis: i } = this.variableContext;
-    this.asyncFontsTask.gis && this.updateGisFonts(),
-      this.asyncFontsTask.nanhai && this.updateNanhaiFonts(),
-      this.editMode !== g.View &&
-        (null == i || i.tickSystem.pause(), this.tickLoop()),
-      this.renderLayer(),
-      M(this.preViewportConfig) &&
-        (this.preViewportConfig =
-          null === (e = this.variableContext.gis) || void 0 === e
-            ? void 0
-            : e.viewportSystem.get()),
-      this.initEventListener(),
-      (this.isInit = !0),
-      s.call(this, b.Loaded),
-      L2.set(this.gisContextMapKey, this.variableContext);
-  }
-  initEventListener() {
-    const { gis: t } = this.variableContext;
-    null == t ||
-      t.on("resize", (e) => {
-        var i;
-        e.width &&
-          e.height &&
-          (this.setViewportConfig(),
-          null == t || t.layerManager.baseMapLayer.scaleAdaptation(!1),
-          null === (i = this.POMNode) ||
-            void 0 === i ||
-            i.slices.forEach((t) => {
-              t.children
-                .filter(
-                  (t) =>
-                    "@dp/aeolian-package-geography://informationLabel" ===
-                    t.renderType
-                )
-                .forEach((t) => {
-                  var e;
-                  null === (e = t.layer) ||
-                    void 0 === e ||
-                    e.updateLayerInteractive();
-                });
-            }),
-          this.tickOnce());
-      }),
-      null == t ||
-        t.layerManager.baseMapLayer.on("click", (e) => {
-          var i;
-          if (this.comboTimer)
-            if (
-              (clearTimeout(this.comboTimer),
-              (this.comboTimer = setTimeout(() => {
-                this.comboTimer = void 0;
-              }, this.comboTimeout)),
-              e)
-            ) {
-              let n = e.properties.alias;
-              const r =
-                !(null == t
-                  ? void 0
-                  : t.layerManager.baseMapLayer.currentRegion) &&
-                Object.values(this.variableContext.regionData).find((t) =>
-                  t.child.includes(e.properties.id)
-                );
-              r && (n = $Y + r.name);
-              const o =
-                null !== (i = t.layerManager.baseMapLayer.currentLevel) &&
-                void 0 !== i
-                  ? i
-                  : iX.country;
-              s.call(this, b.AreaDbClick, {
-                region: n,
-                currentLevel: o,
-                maxLevel: 4,
-              });
-            } else s.call(this, b.OutSideAreaDbClick, {});
-          else
-            this.comboTimer = setTimeout(() => {
-              var i;
-              if (((this.comboTimer = void 0), e)) {
-                let n = e.properties.alias;
-                const r =
-                  !(null == t
-                    ? void 0
-                    : t.layerManager.baseMapLayer.currentRegion) &&
-                  Object.values(this.variableContext.regionData).find((t) =>
-                    t.child.includes(e.properties.id)
-                  );
-                r && (n = $Y + r.name);
-                const o =
-                  null !== (i = t.layerManager.baseMapLayer.currentLevel) &&
-                  void 0 !== i
-                    ? i
-                    : iX.country;
-                s.call(this, b.AreaClick, {
-                  region: n,
-                  currentLevel: o,
-                  maxLevel: 4,
-                });
-              } else s.call(this, b.OutSideAreaClick, {});
-            }, this.comboTimeout);
-        }),
-      null == t ||
-        t.layerManager.baseMapLayer.on("drill", async (t) => {
-          this.setNanhaiVisible(t.properties.currentCode),
-            this.drillStartCallback.forEach((e) => e(t.properties.currentCode));
-        }),
-      null == t ||
-        t.layerManager.baseMapLayer.on("drillEnd", async (t) => {
-          this.storeViewport(),
-            this.drillEndCallback.forEach((e) => e(t.properties.currentCode));
-        }),
-      null == t ||
-        t.controlsSystem.controls.addEventListener(
-          "start",
-          this.interactionOperationEmit
-        ),
-      this.editMode !== g.View &&
-        (null == t ||
-          t.on("viewportChange", () => {
-            "gisSurface" === this.renderer.page.editingSpace && this.tickOnce();
-          }));
-  }
-  clearEventListener() {
-    var t, e, i, n, r, o;
-    if (null === (t = this.variableContext) || void 0 === t ? void 0 : t.gis) {
-      const t =
-        null ===
-          (i =
-            null === (e = this.variableContext.gis) || void 0 === e
-              ? void 0
-              : e.layerManager) || void 0 === i
-          ? void 0
-          : i.baseMapLayer;
-      t &&
-        (t.off("click"),
-        t.off("dblclick"),
-        t.off("drill"),
-        t.off("drillEnd"),
-        t.off("drillUpEnd"),
-        t.off("drillDownEnd")),
-        null === (n = this.variableContext.gis) ||
-          void 0 === n ||
-          n.controlsSystem.controls.removeEventListener(
-            "start",
-            this.interactionOperationEmit
-          ),
-        null ===
-          (o =
-            null === (r = this.variableContext) || void 0 === r
-              ? void 0
-              : r.gis) ||
-          void 0 === o ||
-          o.off("viewportChange");
-    }
-  }
-  async update() {
-    const { gis: t } = this.variableContext;
-    t &&
-      (this.propsWatch.compare(this.preProperties, this.properties),
-      (this.preProperties = u(this.properties)));
-  }
-  renderTips() {
-    if (this.variableContext) {
-      const t = this.variableContext.tipsPool;
-      if (Object.keys(t).length > 0) {
-        const e = Object.values(t),
-          i = e.reduce((t, e) => t + e.message, ""),
-          n = e[e.length - 1].type;
-        super.renderTips(new y(n, i));
-      } else this.removeTips();
-    }
-  }
-  getSceneConfig() {
-    const { componentBackground: t } = this.properties;
-    return {
-      dpr: this.getRealDPR(),
-      background: {
-        transparent: !(null == t ? void 0 : t.hasColor),
-        color: t.backgroundColor,
-      },
-    };
-  }
-  setSceneConfig() {
-    const { gis: t } = this.variableContext,
-      e = this.getSceneConfig();
-    null == t || t.sceneSystem.set(e);
-  }
-  getViewportConfig() {
-    const { interaction: t } = this.properties,
-      {
-        sceneChangeEnable: e,
-        zoomEnable: i,
-        translationEnable: n,
-        pitchEnable: r,
-        rotationEnable: o,
-      } = t,
-      a = this.editMode !== g.View;
-    let s;
-    if (this.needUpgradeViewport)
-      s = {
-        ...this.POMNode.data.viewportConfig,
-        enableZoom: a || i,
-        enablePitch: a || r,
-        enableRotate: a || o,
-        enablePan: a || n,
-        lock: !a && !e,
-        drillSave: !0,
-      };
-    else {
-      const { viewport: t } = this.properties,
-        { centerLng: l, centerLat: u } = t;
-      s = {
-        ...t,
-        center: [l, u],
-        enableZoom: a || i,
-        enablePitch: a || r,
-        enableRotate: a || o,
-        enablePan: a || n,
-        lock: !a && !e,
-        drillSave: !0,
-      };
-    }
-    return s;
-  }
-  getRawViewportConfig() {
-    var e;
-    const i =
-      null === (e = this.variableContext.gis) || void 0 === e
-        ? void 0
-        : e.viewportSystem.get();
-    return {
-      center: [t(i.center[0], 6), t(i.center[1], 6)],
-      zoom: t(i.zoom, 2),
-      pitch: t(i.pitch, 0),
-      rotation: t(i.rotation, 0),
-      maxZoom: i.maxZoom,
-      minZoom: i.minZoom,
-      maxPitch: i.maxPitch,
-      minPitch: i.minPitch,
-      maxRotation: i.maxRotation,
-      minRotation: i.minRotation,
-    };
-  }
-  setViewportConfig(t) {
-    if (this.variableContext) {
-      const { gis: e } = this.variableContext,
-        i = null != t ? t : this.getViewportConfig();
-      null == e || e.viewportSystem.setWebGisCameraState(i);
-    }
-  }
-  ayncViewportConfig(t) {
-    (this.properties.viewport.centerLng = t.center[0]),
-      (this.properties.viewport.centerLat = t.center[1]),
-      (this.properties.viewport.zoom = t.zoom),
-      (this.properties.viewport.pitch = t.pitch),
-      (this.properties.viewport.rotation = t.rotation);
-  }
-  setLightConfig() {
-    const { gis: t } = this.variableContext,
-      e = this.getLightConfig();
-    null == t || t.lightSystem.set(e);
-  }
-  getLightConfig() {
-    const { light: t } = this.properties;
-    return {
-      ambient: {
-        color: t.ambient.color,
-        intensity: t.ambient.intensity,
-      },
-      directional: {
-        color: t.directional.color,
-        intensity: t.directional.intensity,
-        x: t.directional.x,
-        y: t.directional.y,
-        z: t.directional.z,
-        shadow: {
-          enabled: t.shadow.enabled,
-          color: t.shadow.color,
-        },
-      },
-    };
-  }
-  getBaseLayerConfig() {
-    const {
-        baseMapLayer: t,
-        districtOutline: e,
-        innerShadow: i,
-        extrude: n,
-        boundaryStreamer: r,
-        provinceOutline: o,
-        mapStyle: a,
-        common: s,
-      } = this.properties,
-      { labelEnable: l = !0 } = a,
-      u = null == t ? void 0 : t.show,
-      c = {
-        common: {
-          visible: u,
-          zoomRange: [s.zoomMin, s.zoomMax],
-        },
-        districtStyle: {
-          enabled: !0,
-          stroke: {
-            color: a.borderColor,
-          },
-          fill: {
-            color: a.backgroundColor,
-            metalness: a.metalness,
-            roughness: a.roughness,
-            map:
-              "mapStyle-image-tab-1" === a.backgroundType
-                ? this.replaceStaticTemplatePath(a.backgroundImage)
-                : a.backgroundTile,
-            normalMap:
-              "mapStyle-tile-tab-1" === a.normalType
-                ? this.replaceStaticTemplatePath(a.normalImage)
-                : a.normalTile,
-            normalScale: a.normalScale,
-          },
-          innerShadow: {
-            enabled: i.enable,
-            // shadowColor: i.color,
-            // shadowBlurScale: i.width,
-            shadowColor: 'rgba(252,228,14,1)',
-            shadowBlurScale: 0.1,
-          },
-          boundaryStreamer: {
-            enabled: r.enable,
-            lineLength: r.length,
-            lineWidth: r.width,
-            lineColor: r.endColor,
-            lineHeadColor: r.headColor,
-            lineHeadRatio: 0.2,
-            speed: r.speed,
-          },
-        },
-        drill: {},
-        poi: {
-          major: {
-            enabled: l,
-            color: a.fontStyle.color,
-            fontWeight: a.fontStyle.fontWeight,
-            fontSize: a.fontStyle.fontSize,
-            aliasMap: I2(this.POMNode.renderType),
-            fontFamily: RX(a.fontStyle.fontFamily),
-          },
-          coverEnable: !a.coverEnable,
-        },
-      };
-    return (
-      (c.districtStyle.heightScale = u ? n.height : 0),
-      (c.districtStyle.sideConfig = {
-        colorConfig: {
-          range: [n.topColor, n.bottomColor],
-        },
-      }),
-      e &&
-        (c.districtStyle.stroke = {
-          ...c.districtStyle.stroke,
-          opacity: e.opacity,
-          width: e.width,
-        }),
-      o &&
-        (c.subDistrictStyle = {
-          stroke: {
-            opacity: o.opacity,
-            width: o.width,
-            color: o.borderColor,
-          },
-        }),
-      c
-    );
-  }
-  async setBaseLayer() {
-    const { gis: t } = this.variableContext,
-      e = this.getBaseLayerConfig();
-    f(e, this.previousConfig) ||
-      ((this.previousConfig = e),
-      null == t || t.layerManager.baseMapLayer.set(e));
-  }
-  async getDataConfig() {
-    const {
-      data: { region: t },
-    } = this.properties;
-    let e;
-    switch (
-      (this.buildRegionData(), (this.lastRegion = t), this.POMNode.renderType)
-    ) {
-      case hX.CHINA_GIS:
-        e = {
-          district: {
-            type: xk.GEOBUF_URL,
-            data: aQ("countryborder_208_gc.pbf"),
-          },
-          subDistrict: {
-            type: xk.GEOBUF_URL,
-            data: aQ("district_100000_1_gc.pbf"),
-          },
-          region: this.variableContext.regionData,
-          nameMap: UX,
-        };
-        break;
-      case hX.WOLRD_GIS:
-        e = {
-          district: null,
-          subDistrict: {
-            type: xk.GEOBUF_URL,
-            data: aQ("bd_world_without_antarctica.pbf"),
-            simplify: {
-              enabled: !0,
-              tolerance: 0.1,
-            },
-          },
-          region: this.variableContext.regionData,
-        };
-        break;
-      case hX.CUSTOM_GIS:
-        const {
-            data: {
-              custom: { data: t },
-            },
-          } = this.properties,
-          i = await fetch(this.replaceStaticTemplatePath(t.url)),
-          n = await i.json();
-        (e = {
-          district: null,
-          subDistrict: {
-            type: "geojson",
-            data: n[n.rootId],
-            simplify: {
-              enabled: !1,
-            },
-          },
-          region: this.variableContext.regionData,
-        }),
-          (this.lastCustomData = u(t));
-    }
-    return e;
-  }
-  getViewClipConfig() {
-    const {
-      nanhai: { enable: t },
-    } = this.properties;
-    if (t) {
-      const t = cX,
-        e = Object.values(this.variableContext.regionData).find((t) =>
-          t.child.includes(JY)
-        );
-      return e && (t[e.adcode] = cX[ZY]), t;
-    }
-    return null;
-  }
-  async getDrillConfig() {
-    const {
-      interaction: { initialLevelName: t },
-    } = this.properties;
-    let e;
-    switch (this.POMNode.renderType) {
-      case hX.CHINA_GIS:
-        const i = await nQ(t, this.variableContext.gis);
-        (e = {
-          enabled: !0,
-          level: {
-            range: this.drillRange,
-            adcode: i,
-          },
-          data: {
-            0: {
-              type: xk.GEOBUF_URL,
-              data: aQ("districtaggregate_province_kld_gc.pbf"),
-            },
-            1: {
-              type: xk.GEOBUF_URL,
-              data: aQ("districtaggregate_city_kld_gc.pbf"),
-            },
-            2: {
-              type: xk.GEOBUF_URL,
-              data: aQ("districtaggregate_county_kld_gc.pbf"),
-            },
-          },
-          duration: 500,
-          preventMouse: !0,
-        }),
-          (this.lastDrillAdCode = i);
-        break;
-      case hX.WOLRD_GIS:
-        (e = {
-          enabled: !1,
-          data: null,
-          duration: 500,
-          preventMouse: !0,
-        }),
-          (this.lastDrillAdCode = QY);
-        break;
-      case hX.CUSTOM_GIS:
-        (e = {
-          enabled: !1,
-          data: null,
-          duration: 500,
-          preventMouse: !0,
-        }),
-          (this.lastDrillAdCode = "999999");
-    }
-    return e;
-  }
-  async modifyCustomData() {
-    const { gis: t } = this.variableContext,
-      {
-        data: {
-          custom: { data: e },
-        },
-      } = this.properties;
-    f(e, this.lastCustomData) ||
-      (null == t ||
-        t.layerManager.baseMapLayer.ee.emit("modifyCustomDataStart"),
-      null == t ||
-        t.layerManager.baseMapLayer.set({
-          data: await this.getDataConfig(),
-          drill: await this.getDrillConfig(),
-        }),
-      await (null == t ? void 0 : t.layerManager.baseMapLayer.release()),
-      this.storeViewport(),
-      null == t ||
-        t.layerManager.baseMapLayer.ee.emit(
-          "modifyCustomDataEnd",
-          this.lastDrillAdCode
-        ),
-      (this.lastCustomData = u(e)));
-  }
-  async updateDefaultData() {
-    const {
-      interaction: { initialLevelName: t },
-    } = this.properties;
-    if (this.POMNode.renderType !== hX.CHINA_GIS) return;
-    const e = await nQ(t, this.variableContext.gis);
-    this.lastDrillAdCode !== e &&
-      (e === ZY ? await this.drillUp(ZY) : await this.drillDownSingle(e),
-      (this.lastDrillAdCode = e));
-  }
-  setAMapEnable(t = !0) {
-    const {
-        amap: e,
-        nanhai: { enable: i },
-      } = this.properties,
-      {
-        style: n,
-        enable: r,
-        content: o,
-        custom: { key: a, securityJsCode: s, id: l },
-        type: u,
-        filter: c,
-      } = e,
-      { gis: h, div: p } = this.variableContext;
-    if ((this.destroyAMap(), r)) {
-      const e = new T2({
-        id: p,
-        key: "amap.default" === u ? "255b6b2933a0084ac1ea75faf6994e47" : a,
-        securityJsCode:
-          "amap.default" === u ? "22658a511592b5249bf6a69b9911e149" : s,
-        style: "amap.default" === u ? n : this.getAMapCustomStyle(l),
-        showLabel: !0,
-        terrain: o.terrain,
-        layers: {
-          nebula: {
-            visible: o.nebula,
-          },
-          traffic: {
-            visible: o.traffic,
-          },
-          roadnet: {
-            visible: o.roadnet,
-          },
-          buildings: {
-            visible: o.buildings,
-          },
-        },
-        filter: {
-          ...c,
-          enabled: c.enable,
-        },
-      });
-      (this.variableContext.amapLayer = e),
-        e.then(() => {
-          null == h || h.registerMap(e),
-            o.label ? e.show("label") : e.hide("label"),
-            (this.isInitAmap = !0),
-            t && (!i || (i && this.isInitNanhai)) && this.initHandle();
-        });
-    }
-  }
-  getAMapCustomStyle(t) {
-    return `amap://styles/${t}`;
-  }
-  setAMapContent() {
-    const { amap: t } = this.properties,
-      { content: e } = t,
-      { amapLayer: i } = this.variableContext;
-    this.isInitAmap &&
-      Object.entries(e).forEach((t) => {
-        "terrain" !== t[0] && (!0 === t[1] ? i.show(t[0]) : i.hide(t[0]));
-      });
-  }
-  setAMapFilter() {
-    const { amap: t } = this.properties,
-      { filter: e } = t,
-      { amapLayer: i } = this.variableContext;
-    this.isInitAmap &&
-      (null == i ||
-        i.setFilter({
-          ...e,
-          enabled: e.enable,
-        }));
-  }
-  updateViewClip(t) {
-    const { gis: e } = this.variableContext;
-    null == e ||
-      e.layerManager.baseMapLayer.set({
-        viewClip: t,
-      }),
-      null == e || e.layerManager.baseMapLayer.scaleAdaptation(!1),
-      this.storeViewport();
-  }
-  setNanhaiEnable(t = !0) {
-    const {
-        nanhai: e,
-        amap: { enable: i },
-      } = this.properties,
-      {
-        enable: n,
-        offsetX: r,
-        offsetY: o,
-        scale: a,
-        fill: s,
-        background: l,
-        position: u,
-        stroke: c,
-        border: h,
-        fontStyle: p,
-      } = e,
-      { nanhaiLayer: d, gis: f } = this.variableContext;
-    if (n) {
-      if ((this.updateViewClip(cX), d)) return;
-      const e = {
-          common: {
-            offset: [r, o, 0],
-          },
-          scale: a,
-          position: u,
-          data: {
-            type: xk.GEOBUF_URL,
-            data: aQ("chinasouthseaaggregate_aggregatecssea_kld_gc.pbf"),
-          },
-          style: {
-            fill: {
-              color: s,
-            },
-            background: {
-              color: l,
-            },
-            stroke: {
-              color: c.color,
-              width: c.width,
-            },
-            border: {
-              color: h.color,
-              width: h.width,
-            },
-          },
-          poi: {
-            enabled: !0,
-            data: {
-              type: xk.GEOBUF_URL,
-              data: aQ("chinasouthseaaggregate_aggregatecssea_name_kld_gc.pbf"),
-            },
-            major: {
-              enabled: p.enable,
-              color: p.color,
-              fontSize: p.fontSize,
-              fontWeight: p.fontWeight,
-              fontFamily: RX(p.fontFamily),
-              aliasMap: HX[x.getLocaleId() || "zh_CN"],
-            },
-          },
-        },
-        n = new TY(f, e);
-      n.then(() => {
-        (this.variableContext.nanhaiLayer = n),
-          (this.isInitNanhai = !0),
-          this.setNanhaiVisible(this.lastDrillAdCode),
-          t || this.tickOnce(),
-          t && (!i || (i && this.isInitAmap)) && this.initHandle();
-      });
-    } else {
-      if ((this.updateViewClip(null), !d)) return;
-      d.remove(), (this.variableContext.nanhaiLayer = null), this.tickOnce();
-    }
-  }
-  setNanhaiVisible(t) {
-    const { nanhaiLayer: e } = this.variableContext,
-      {
-        nanhai: { enable: i },
-      } = this.properties;
-    if (!i) return;
-    if (!e) return;
-    const n = Object.values(this.variableContext.regionData).find((t) =>
-      t.child.includes(JY)
-    );
-    t === (null == n ? void 0 : n.adcode) || ZY === t || JY === t
-      ? e.set({
-          common: {
-            visible: !0,
-          },
-        })
-      : e.set({
-          common: {
-            visible: !1,
-          },
-        });
-  }
-  setNanhaiContent() {
-    const { nanhai: t } = this.properties,
-      {
-        offsetX: e,
-        offsetY: i,
-        scale: n,
-        fill: r,
-        background: o,
-        position: a,
-        stroke: s,
-        border: l,
-        fontStyle: u,
-      } = t,
-      { nanhaiLayer: c } = this.variableContext;
-    if (!c) return;
-    const h = {
-      common: {
-        offset: [e, i, 0],
-      },
-      scale: n,
-      position: a,
-      style: {
-        fill: {
-          color: r,
-        },
-        background: {
-          color: o,
-        },
-        stroke: {
-          color: s.color,
-          width: s.width,
-        },
-        border: {
-          color: l.color,
-          width: l.width,
-        },
-      },
-      poi: {
-        enabled: !0,
-        major: {
-          enabled: u.enable,
-          color: u.color,
-          fontSize: u.fontSize,
-          fontWeight: u.fontWeight,
-          fontFamily: RX(u.fontFamily),
-          aliasMap: HX[x.getLocaleId() || "zh_CN"],
-        },
-      },
-    };
-    c.set(h);
-  }
-  setAMapStyle() {
-    const { amap: t } = this.properties,
-      {
-        style: e,
-        type: i,
-        custom: { id: n },
-      } = t,
-      { amapLayer: r } = this.variableContext;
-    this.isInitAmap &&
-      (null == r ||
-        r.setMapStyle("amap.default" === i ? e : this.getAMapCustomStyle(n)));
-  }
-  animate() {
-    var t;
-    (this.gisContextMapKey = `${this.renderer.getScreenId()}-${
-      this.POMNode.id
-    }`),
-      null === (t = this.currentSlice) ||
-        void 0 === t ||
-        t.children.forEach((t) => {
-          var e, i, n;
-          null ===
-            (i =
-              null === (e = this.renderer.page) || void 0 === e
-                ? void 0
-                : e.clear) ||
-            void 0 === i ||
-            i.call(e, t.id),
-            null === (n = t.layer) || void 0 === n || n.destroy(),
-            (t.layer = void 0);
-        }),
-      (this.currentSlice = this.POMNode.slices[0]),
-      (this.drillEndCallback = []),
-      (this.drillStartCallback = []),
-      this.update(),
-      this.renderLayer();
-  }
-  renderLayer() {
-    const t = this.POMNode.slices[0];
-    this.renderer.renderLayer(t, this.variableContext.ghostDiv);
-  }
-  modifyNodePlots() {
-    (this.editingPlot = {
-      x: this.POMNode.x,
-      y: this.POMNode.y,
-    }),
-      this.POMNode.slices.forEach((t) => {
-        (t.width = this.POMNode.width), (t.height = this.POMNode.height);
-      }),
-      (this.dom.style.transform = "translate(0,0)");
-    const t = this.POMNode.page,
-      [e] = t.properties;
-    e && (this.dom.style.backgroundColor = e);
-  }
-  resetNodePlots() {
-    const { x: t, y: e } = this.editingPlot;
-    (this.dom.style.transform = `translate(${t}px,${e}px)`),
-      (this.dom.style.backgroundColor = "transparent");
-  }
-  enterEdit() {
-    return (
-      UZ(this) ||
-        ((this.dom.style.display = "block"), this.isInit || this.render(!0)),
-      this.renderer.elementRequestStage(this),
-      this.modifyNodePlots(),
-      this.renderer.enterSlice(this.POMNode.slices[0], !0),
-      setTimeout(() => {
-        this.renderer.editing = this.POMNode;
-      }, 0),
-      !0
-    );
-  }
-  storeViewport() {
-    const { gis: t } = this.variableContext;
-    t &&
-      ((this.preViewportConfig = this.getRawViewportConfig()),
-      this.ayncViewportConfig(this.preViewportConfig));
-  }
-  quitEdit() {
-    UZ(this) || (this.dom.style.display = "none");
-    let t = this.POMNode.slices[0].host.parent;
-    for (; !t.isSlice; ) t = t.parent;
-    this.storeViewport(),
-      this.resetNodePlots(),
-      this.renderer.elementExitStage(),
-      this.renderer.exitSlice(t);
-  }
-  forwardToPage() {
-    UZ(this) || (this.dom.style.display = "none");
-    let t = this.POMNode.slices[0].host.parent;
-    for (; !t.isSlice || !t.isPage; )
-      t.isSlice ? t.isPage || (t = t.host.parent) : (t = t.parent);
-    this.storeViewport(),
-      this.resetNodePlots(),
-      this.renderer.elementExitStage(),
-      this.renderer.exitSlice(t),
-      (this.renderer.editing = void 0);
-  }
-  async drillDownSingle(t) {
-    var e;
-    const { baseMapLayer: i } =
-      null === (e = this.variableContext.gis) || void 0 === e
-        ? void 0
-        : e.layerManager;
-    await i.drillDown(t, () => {});
-  }
-  async drillRegion(t) {
-    var e;
-    const { baseMapLayer: i } =
-      null === (e = this.variableContext.gis) || void 0 === e
-        ? void 0
-        : e.layerManager;
-    await i.drillRegion(t, () => {});
-  }
-  buildRegionData() {
-    const {
-      data: { region: t },
-    } = this.properties;
-    (this.variableContext.regionData = {}),
-      t.forEach((t) => {
-        let e = t.name;
-        const [i, n] = t.position.split(",");
-        this.variableContext.regionData[e] = {
-          adcode: e,
-          name: e,
-          position: [Number(i), Number(n)],
-          child: t.child,
-        };
-      });
-  }
-  updateRegion() {
-    var t;
-    const {
-        data: { region: e },
-      } = this.properties,
-      { baseMapLayer: i } =
-        null === (t = this.variableContext.gis) || void 0 === t
-          ? void 0
-          : t.layerManager;
-    f(e, this.lastRegion) ||
-      (this.buildRegionData(),
-      (i.state.data.region = {}),
-      i.set({
-        data: {
-          region: this.variableContext.regionData,
-        },
-      }),
-      i.ee.emit("modifyCustomDataStart"),
-      i.ee.emit("modifyCustomDataEnd", this.lastDrillAdCode),
-      (this.lastRegion = u(e)));
-  }
-  initPropsWatchRule() {
-    this.propsWatch.addWatch([
-      this.propsWatch.defaultRule(
-        [
-          "common",
-          "baseMapLayer",
-          "districtOutline",
-          "extrude",
-          "shadow",
-          "innerShadow",
-          ["mapStyle", "backgroundColor"],
-          ["mapStyle", "metalness"],
-          ["mapStyle", "roughness"],
-          ["mapStyle", "normalScale"],
-          ["mapStyle", "borderColor"],
-          ["mapStyle", "fontStyle"],
-          ["mapStyle", "coverEnable"],
-          ["mapStyle", "labelEnable"],
-          "provinceOutline",
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setBaseLayer(), this.tickOnce();
-        }
-      ),
-      this.propsWatch.defaultRule(
-        [
-          ["mapStyle", "backgroundType"],
-          ["mapStyle", "backgroundImage"],
-          ["mapStyle", "backgroundTile"],
-          ["mapStyle", "normalType"],
-          ["mapStyle", "normalImage"],
-          ["mapStyle", "normalTile"],
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setBaseLayer(), this.tickLoop();
-        }
-      ),
-      this.propsWatch.defaultRule(
-        ["boundaryStreamer", "enable"],
-        "diffDeep",
-        (t) => {
-          this.setBaseLayer(),
-            (null == t ? void 0 : t.boundaryStreamer.enable)
-              ? this.tickLoop()
-              : this.tickOnce();
-        }
-      ),
-      this.propsWatch.defaultRule(
-        [
-          ["boundaryStreamer", "headColor"],
-          ["boundaryStreamer", "endColor"],
-          ["boundaryStreamer", "width"],
-          ["boundaryStreamer", "speed"],
-          ["boundaryStreamer", "length"],
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setBaseLayer(), this.tickLoop();
-        }
-      ),
-      this.propsWatch.defaultRule(
-        [["data", "custom", "data"]],
-        "diffAnyoneDeep",
-        async () => {
-          await this.modifyCustomData(), this.tickOnce();
-        }
-      ),
-      this.propsWatch.defaultRule(["data", "region"], "diffDeep", () => {
-        this.updateRegion();
-      }),
-      this.propsWatch.defaultRule(
-        ["interaction", "initialLevelName"],
-        "diffDeep",
-        async () => {
-          this.updateDefaultData(), this.tickLoop();
-        }
-      ),
-      this.propsWatch.defaultRule("componentBackground", "diffDeep", () => {
-        this.setSceneConfig(), this.tickOnce();
-      }),
-      this.propsWatch.defaultRule("light", "diffDeep", () => {
-        this.setLightConfig(), this.tickOnce();
-      }),
-      this.propsWatch.defaultRule(
-        ["interaction", "viewport"],
-        "diffAnyoneDeep",
-        () => {
-          this.setViewportConfig(), this.tickOnce();
-        }
-      ),
-      this.propsWatch.defaultRule(["nanhai", "enable"], "diffDeep", () => {
-        this.setNanhaiEnable(!1);
-      }),
-      this.propsWatch.defaultRule(
-        [
-          ["nanhai", "position"],
-          ["nanhai", "offsetX"],
-          ["nanhai", "offsetY"],
-          ["nanhai", "scale"],
-          ["nanhai", "fill"],
-          ["nanhai", "stroke"],
-          ["nanhai", "border"],
-          ["nanhai", "background"],
-          ["nanhai", "fontStyle"],
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setNanhaiContent(), this.tickOnce();
-        }
-      ),
-      this.propsWatch.defaultRule(
-        ["amap", "custom", "key"],
-        "diffDeep",
-        () => {
-          C2(), this.setAMapEnable(!1);
-        },
-        !0
-      ),
-      this.propsWatch.defaultRule(
-        [
-          ["amap", "enable"],
-          ["amap", "type"],
-          ["amap", "custom", "securityJsCode"],
-          ["amap", "content", "terrain"],
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setAMapEnable(!1);
-        },
-        !0
-      ),
-      this.propsWatch.defaultRule(
-        [
-          ["amap", "style"],
-          ["amap", "custom", "id"],
-        ],
-        "diffAnyoneDeep",
-        () => {
-          this.setAMapStyle();
-        }
-      ),
-      this.propsWatch.defaultRule(["amap", "content"], "diffDeep", () => {
-        this.setAMapContent();
-      }),
-      this.propsWatch.defaultRule(["amap", "filter"], "diffDeep", () => {
-        this.setAMapFilter();
-      }),
-    ]);
-  }
-  onFontsUpdated() {
-    this.updateGisFonts(), this.updateNanhaiFonts();
-  }
-  updateGisFonts() {
-    const { gis: t } = this.variableContext;
-    (this.asyncFontsTask.gis = !0),
-      t &&
-        this.isInitGis &&
-        ((this.asyncFontsTask.gis = !1),
-        null == t || t.layerManager.baseMapLayer.initPOI());
-  }
-  updateNanhaiFonts() {
-    const { nanhaiLayer: t } = this.variableContext;
-    (this.asyncFontsTask.nanhai = !0),
-      t &&
-        this.isInitNanhai &&
-        ((this.asyncFontsTask.nanhai = !1), t.initPOI());
-  }
-  toDataURL(t = "image/jpeg", e = 0.92) {
-    const { gis: i } = this.variableContext;
-    if (i) return null == i ? void 0 : i.renderSystem.toDataURL(t, e);
-  }
-  destroyAMap() {
-    const { amapLayer: t, gis: e } = this.variableContext;
-    null == e || e.unregisterMap(t),
-      null == t || t.destroy(),
-      (this.variableContext.amapLayer = null),
-      (this.isInitAmap = !1);
-  }
-  suspend() {
-    this.variableContext.gis && this.variableContext.gis.tickSystem.pause();
-  }
-  resume() {
-    this.variableContext.gis && this.variableContext.gis.tickSystem.start();
-  }
-  async destroy(t) {
-    var e, i, n, r, o;
-    this.clearEventListener();
-    for (let a = 0; a < this.POMNode.slices.length; a++) {
-      const n = this.POMNode.slices[a];
-      await (null === (i = (e = this.renderer).destroyLayer) || void 0 === i
-        ? void 0
-        : i.call(e, n, void 0, t)),
-        n.children.forEach((t) => {
-          var e, i, n;
-          null ===
-            (i =
-              null === (e = this.renderer.page) || void 0 === e
-                ? void 0
-                : e.clear) ||
-            void 0 === i ||
-            i.call(e, t.id),
-            null === (n = t.layer) || void 0 === n || n.destroy(),
-            (t.layer = void 0);
-        });
-    }
-    this.isInit && t === C.Flip
-      ? null === (n = this.variableContext.gis) ||
-        void 0 === n ||
-        n.tickSystem.pause()
-      : (window.cancelAnimationFrame(this.tickId),
-        this.destroyAMap(),
-        null === (r = this.variableContext.gis) || void 0 === r || r.destroy(),
-        (this.variableContext.gis = null),
-        L2.delete(this.gisContextMapKey),
-        null === (o = this.elementDisplayObserver) ||
-          void 0 === o ||
-          o.disconnect()),
-      super.destroy(t);
-  }
-}
+
+
+
 Object.defineProperty(O2, "panelConfig", {
   enumerable: !0,
   configurable: !0,
