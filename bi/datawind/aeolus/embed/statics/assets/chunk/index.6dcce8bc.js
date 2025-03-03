@@ -44,6 +44,7 @@ import './_G.js';
 import './kf.js';
 import './bv.js';
 import './oV.js';
+import './KV.js';
 import { O2 } from './O2.js';
 import './IW.js';
 
@@ -21920,6 +21921,7 @@ function ef(t) {
       })(t, Kl, $d)
     : void 0;
 }
+window.ef = ef;
 var nf = $c(function (t, e, i) {
   Jd(t, e, i);
 });
@@ -22246,6 +22248,7 @@ function Qf(t) {
     return i.push(t[2]), i;
   }
 }
+window.Qf = Qf;
 function Zf(t) {
   const e = Jf;
   if (void 0 === t[2]) {
@@ -22256,6 +22259,7 @@ function Zf(t) {
     return i.push(t[2]), i;
   }
 }
+window.Zf = Zf;
 class Jf {
   static project(t, e) {
     const i = 85.0511287798;
@@ -46479,6 +46483,7 @@ function oA(t, e) {
     [Math.sin(t) * Math.sin(e), -1 * Math.sin(t) * Math.cos(e), Math.cos(t)]
   );
 }
+window.oA = oA;
 function aA(t, e) {
   return (
     (t = eA(t)),
@@ -46486,6 +46491,7 @@ function aA(t, e) {
     [-1 * Math.cos(t) * Math.sin(e), Math.cos(t) * Math.cos(e), Math.sin(t)]
   );
 }
+window.aA = aA;
 class sA {
   constructor(t) {
     (this._getEffectState = t), (this.transform = this.transform.bind(this));
@@ -66249,129 +66255,8 @@ async function ZV(t, e) {
     t
   );
 }
-const JV = {
-  bboxSize: 68016,
-  height: 50503.97002946732,
-  maxSize: 68565.51601500002,
-  minSize: 50503.97002946732,
-  width: 68565.51601500002,
-};
-function KV(t) {
-  const {
-      geojson: e,
-      geojsonProj: i,
-      geojsonUtil: n,
-      worldBboxSize: r,
-      heightScale: o,
-      pitch: a,
-      rotation: s,
-      offset: l,
-      viewClip: u,
-    } = t,
-    c = n.bbox(i);
-  let h = c;
-  u &&
-    (h = (function (t, e, i) {
-      const n = [0, 0, 0, 0];
-      switch (i) {
-        case "bottom-right":
-          (n[0] = t[0]),
-            (n[1] = Math.max(t[1], e[3])),
-            (n[2] = Math.min(t[2], e[0])),
-            (n[3] = t[3]);
-          break;
-        case "bottom":
-          (n[0] = t[0]),
-            (n[1] = Math.max(t[1], e[3])),
-            (n[2] = t[2]),
-            (n[3] = t[3]);
-          break;
-        case "top":
-          (n[0] = t[0]),
-            (n[1] = t[1]),
-            (n[2] = t[2]),
-            (n[3] = Math.min(t[3], e[1]));
-          break;
-        case "left":
-          (n[0] = Math.max(t[0], e[2])),
-            (n[1] = t[1]),
-            (n[2] = t[2]),
-            (n[3] = t[3]);
-          break;
-        case "right":
-          (n[0] = t[0]),
-            (n[1] = t[1]),
-            (n[2] = Math.min(t[2], e[0])),
-            (n[3] = t[3]);
-      }
-      return n;
-    })(
-      c,
-      [...Qf([u.bbox[0], u.bbox[1]]), ...Qf([u.bbox[2], u.bbox[3]])],
-      u.direction
-    ));
-  const p = (function (t, e, i) {
-      const n = [(t[0] + t[2]) / 2, (t[1] + t[3]) / 2, 0],
-        r = [t[0], t[1]],
-        o = [t[2], t[3]],
-        a = [...Zf(r), ...Zf(o)],
-        s = [(a[0] + a[2]) / 2, (a[1] + a[3]) / 2, 0],
-        l = Math.abs(t[0] - t[2]),
-        u = Math.abs(t[1] - t[3]),
-        c = Math.min(l, u),
-        h = Math.max(l, u),
-        p = JV.width,
-        d = JV.height,
-        f = JV.bboxSize,
-        g = ef([l / p, u / d]) * f,
-        m = g / e,
-        y = g * i * 0.05;
-      return {
-        bbox: a,
-        bboxProj: t,
-        center: s,
-        centerProj: n,
-        size: {
-          width: l,
-          height: u,
-          minSize: c,
-          maxSize: h,
-          bboxSize: g,
-        },
-        bboxScale: m,
-        baseHeight: y,
-      };
-    })(h, r, o),
-    d = [(h[0] + h[2]) / 2, (h[1] + h[3]) / 2, 0],
-    f = p.size.bboxSize * l[2],
-    g = oA(a, s).map((t) => t * f);
-  (g[0] += d[0]), (g[1] += d[1]), (g[2] += d[2]);
-  const m = aA(a, s);
-  return {
-    boundary: e,
-    boundaryProj: i,
-    bboxOption: p,
-    viewBBoxOption: p,
-    cameraStatus: {
-      near: Math.max(p.size.bboxSize, 0.001),
-      far: 10 * p.size.bboxSize,
-      target: [d[0] + l[0] * p.size.bboxSize, d[1] + l[1] * p.size.bboxSize, 0],
-      position: [
-        g[0] + l[0] * p.size.bboxSize,
-        g[1] + l[1] * p.size.bboxSize,
-        g[2],
-      ],
-      up: m,
-    },
-    layerFitValue: {
-      xy: p.size.bboxSize >> 4,
-      z: p.size.bboxSize >> 3,
-      flylineWidth: p.size.bboxSize >> 12,
-      straightLineWidth: p.size.bboxSize >> 6,
-    },
-  };
-}
-window.KV = KV;
+
+
 async function $V(t) {
   try {
     const { drill: e, data: i } = t.state;
