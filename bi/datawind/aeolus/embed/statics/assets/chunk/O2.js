@@ -912,7 +912,8 @@ export class O2 extends z {
       (c.districtStyle.heightScale = u ? n.height : 0),
       (c.districtStyle.sideConfig = {
         colorConfig: {
-          range: [n.topColor, n.bottomColor],
+          range: ['rgb(255, 204, 255)', n.bottomColor],
+          // range: [n.topColor, n.bottomColor],
         },
       }),
       e &&

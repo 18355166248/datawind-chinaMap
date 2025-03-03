@@ -116,15 +116,19 @@ class eW extends window.oV {
       this.updateBaseHeight(),
       this._updatePOI(!0);
   }
+  // 实现一个具有渐变颜色效果的材质, Jn 是 THREE.ShaderMaterial
   async initExtrude() {
     const { bboxOption: t, boundary: e, boundaryProj: i } = this.gis.globalOpts,
       { districtStyle: n, extrudeBackgroundStyle: r } = this.state;
+    console.log("🚀 ~ eW ~ initExtrude ~ extrudeBackgroundStyle:", r);
+    console.log("🚀 ~ eW ~ initExtrude ~ districtStyle:", n);
     if (
       (n &&
         n.enabled &&
         (function (t, e) {
-          const { geojson: i, bboxOption: n } = t,
-            r = window.bV(i, n.bboxProj);
+          const { geojson: i, bboxOption: n } = t;
+          console.log("🚀 ~ eW ~ initExtrude ~ bboxOption:", n);
+          const r = window.bV(i, n.bboxProj);
           let o = 0,
             a = 0,
             s = 0,
@@ -139,12 +143,14 @@ class eW extends window.oV {
               r.group[c])
             ) {
               case 0:
+                // BufferGeometry
                 const t = window.RV({
                     index: r.index.slice(o, 1 * (o + s)),
                     position: r.position.slice(3 * a, 3 * (a + l)),
                     normal: r.normal.slice(3 * a, 3 * (a + l)),
                     uv: r.uv.slice(2 * a, 2 * (a + l)),
                   }),
+                  // Mesh
                   i = new window.Wn(t, e.extrudeTopMaterial);
                 i.setRenderIndex(window.lU.BASE_MAP_LAYER_EXTRUDE_MESH),
                   (i.scale.z = u),
@@ -163,22 +169,26 @@ class eW extends window.oV {
                   e.districtFillGroup.add(n);
                 break;
               case 1:
+                // 渐变拉伸材质 BufferGeometry
+                console.log("🚀 ~ eW ~ initExtrude ~ r:", r);
                 const c = window.RV({
                     index: r.index.slice(o, 1 * (o + s)),
                     position: r.position.slice(3 * a, 3 * (a + l)),
                     normal: r.normal.slice(3 * a, 3 * (a + l)),
                     uv: r.uv.slice(2 * a, 2 * (a + l)),
                   }),
+                  // Mesh
                   h = new window.Wn(c, e.extrudeSideMaterial);
-                h.setRenderIndex(window.lU.BASE_MAP_LAYER_EXTRUDE_MESH),
-                  (h.scale.z = u),
-                  (h.position.z = 0),
-                  (h.name = "map-side"),
-                  (h.userData.faceType = "side"),
-                  (h.userData.invertedRelection = !0),
-                  (h.castShadow = !0),
-                  (h.frustumCulled = !1),
-                  e.districtFillGroup.add(h);
+                h.setRenderIndex(window.lU.BASE_MAP_LAYER_EXTRUDE_MESH);
+                h.scale.z = u;
+                h.position.z = 0;
+                h.name = "map-side";
+                h.userData.faceType = "side";
+                h.userData.invertedRelection = !0;
+                h.castShadow = !0;
+                h.frustumCulled = !1;
+                console.log("🚀 ~ eW ~ initExtrude ~ h:", h);
+                e.districtFillGroup.add(h);
             }
         })(
           {
@@ -361,17 +371,17 @@ class eW extends window.oV {
         this.scaleAdaptation(!1),
         (function (t, e, i) {
           const n = window.EA(e.state.background.color);
-          (i.extrudeTopMaterial = new window.zA({
+          i.extrudeTopMaterial = new window.zA({
             color: n.color,
             transparent: !0,
             depthTest: !0,
             depthWrite: !0,
-          })),
-            (i.extrudeInnerShadowMaterial = new window.zA({
-              transparent: !0,
-              depthTest: !0,
-              depthWrite: !0,
-            }));
+          });
+          i.extrudeInnerShadowMaterial = new window.zA({
+            transparent: !0,
+            depthTest: !0,
+            depthWrite: !0,
+          });
           const { colorConfig: r } = t.sideConfig,
             {
               bottomColor: o,
@@ -379,6 +389,7 @@ class eW extends window.oV {
               bottomOpacity: s,
               topOpacity: l,
             } = window.GV(r);
+          // 实现一个具有渐变颜色效果的材质, Jn 是 THREE.ShaderMaterial
           i.extrudeSideMaterial = new window.Jn({
             uniforms: {
               type: {
@@ -465,8 +476,8 @@ class eW extends window.oV {
             depthTest: !0,
             depthWrite: !0,
           });
-        })(i, n, this),
-        await this.initExtrude());
+        })(i, n, this));
+    await this.initExtrude();
   }
   async drillDown(t, e) {
     const { viewportSystem: i } = this.gis,
@@ -703,11 +714,12 @@ class eW extends window.oV {
         offset: u,
         viewClip: h,
       });
-    (this.gis.globalOpts = p),
-      this.gis.layerManager.ee.emit("updateArea", {
-        cameraTween: t,
-      }),
-      this.gis.lightSystem.ee.emit("updateArea");
+    // 初始化 this.gis.globalOpts
+    this.gis.globalOpts = p;
+    this.gis.layerManager.ee.emit("updateArea", {
+      cameraTween: t,
+    });
+    this.gis.lightSystem.ee.emit("updateArea");
   }
   registerHeightScale() {
     this._propsWatch.addWatch([
@@ -810,7 +822,10 @@ class eW extends window.oV {
       hV(this.state.districtStyle, this),
       VV(this.state.subDistrictStyle, this),
       window.FV(this, "extrude-background"),
-      window.BV(this.extrudeBackgroundSideMaterial, this.state.extrudeBackgroundStyle);
+      window.BV(
+        this.extrudeBackgroundSideMaterial,
+        this.state.extrudeBackgroundStyle
+      );
     const { backgroundBboxOption: t } = this.gis.globalOpts;
     t &&
       ((t.baseHeight =

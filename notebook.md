@@ -11,7 +11,7 @@ z 来自 EntityHostElement.e9904ea6.js
 ## 文件 index.6dcce8bc.js
 
 zV 方法 画阴影 生成图片
-在内部的 AV方法里面 生成每个区域的阴影
+在内部的 AV 方法里面 生成每个区域的阴影
 
 IW
 t.baseMapLayer.common.visible = false; // 控制地图隐藏
@@ -22,6 +22,8 @@ t.baseMapLayer.common.visible = false; // 控制地图隐藏
 districtStyle.innerShadow.enabled
 districtStyle.innerShadow.shadowColor
 
+extrude
+
 getBaseLayerConfig 获取初始化值
 
 ## 初始化地图数据
@@ -31,3 +33,5 @@ index.7886b0f6.js
 处理数据 parsingSchemaData
 
 TextDecoder
+
+index.6dcce8bc.js
