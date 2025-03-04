@@ -45,6 +45,7 @@ import './kf.js';
 import './bv.js';
 import './oV.js';
 import './KV.js';
+import './$V.js';
 import { O2 } from './O2.js';
 import './IW.js';
 
@@ -58101,6 +58102,9 @@ const Sk = {
     zoomRange: [0, 24],
   },
   Mk = "100000";
+
+window.Mk = Mk;
+
 var Ck, wk, Ak, Ek, Dk, Tk;
 ((wk = Ck || (Ck = {}))[(wk.wgs84 = 0)] = "wgs84"),
   (wk[(wk.gcj = 1)] = "gcj"),
@@ -58303,6 +58307,7 @@ const Pk = {
   };
 window.Rk = Rk;
 window.Ok = Ok;
+window.Lk = Lk;
 
 var zk = "named",
   kk = "name",
@@ -65615,7 +65620,6 @@ const OV = (t, e, i, n) => {
       );
 };
 function FV(t, e) {
-  console.log("🚀 ~ FV ~ t, e:", t, e)
   let i, n, r, o, a;
   switch (e) {
     case "extrude":
@@ -66022,13 +66026,14 @@ function qV(t, e) {
   if (!t) return -1;
   return t.default.findIndex((t) => !!t.get(e));
 }
+window.qV = qV;
 const YV = class {
   static async getGeoBuf2GeoJsonByUrl(t, e) {
     try {
-      const i = await fetch(t),
-        n = await i.arrayBuffer(),
-        r = new ak(YV.dataSet),
-        o = r.parse(n, {
+      const i = await fetch(t);
+      const n = await i.arrayBuffer();
+      const r = new ak(YV.dataSet);
+      const o = r.parse(n, {
           type: "geobuf",
           options: e,
         }).latestData;
@@ -66218,6 +66223,9 @@ let XV = YV;
     return Kz(r, n, i);
   }),
   XV.dataSet.registerParser("geojson", Kz);
+
+window.XV = XV;
+
 const QV = {
   useProcess: !0,
   useProject: !0,
@@ -66255,314 +66263,8 @@ async function ZV(t, e) {
     t
   );
 }
+window.ZV = ZV;
 
-
-async function $V(t) {
-  try {
-    const { drill: e, data: i } = t.state;
-    e.enabled && e.data
-      ? await (async function (t) {
-          const { drill: e } = t.state;
-          (t.drillData = await (async function (t, e, i) {
-            const n = [];
-            for (let r = e[0]; r <= e[1]; r++) {
-              const e = t[String(r)];
-              if (e) {
-                const { data: t, type: i } = e;
-                let r = t;
-                switch (i) {
-                  case xk.GEOJSON:
-                    n.push(
-                      new Promise((e) => {
-                        e(t);
-                      })
-                    );
-                    break;
-                  case xk.GEOBUF_URL:
-                    (r = t), n.push(XV.getGeoBuf2GeoJsonByUrl(r));
-                    break;
-                  case xk.GEOJSON_URL:
-                    (r = t), n.push(XV.getGeoJsonByUrl(r));
-                    break;
-                  case xk.GEOBUF:
-                  default:
-                    console.error("[xGis]", `地图数据 url ${r} 格式无法解析`);
-                }
-              } else
-                3 === r ||
-                  console.error(
-                    "[xGis]",
-                    `钻取地图 level ${r} 无法匹配对应数据`
-                  );
-            }
-            return Promise.all(n)
-              .then((t) => {
-                const n = (function (t, e, i) {
-                  const n = {
-                    default: [],
-                    process: [],
-                  };
-                  if (
-                    (t.forEach((e, r) => {
-                      const o = new Map();
-                      let a = new Map();
-                      const s = i[String(r)];
-                      if (s <= r)
-                        console.error(
-                          "[xGis]",
-                          `配置 granularity ${s} 必须大于 level ${r} `
-                        );
-                      else {
-                        let i;
-                        switch (r) {
-                          case 0:
-                            switch ((o.set(Mk, t[0].features), s)) {
-                              case 1:
-                                (i = t[0]), a.set(Mk, i.features);
-                                break;
-                              case 2:
-                                const e = [];
-                                (i = t[1]),
-                                  i.features.forEach((i) => {
-                                    const n = i.properties.parent;
-                                    if (Lk.includes(n)) {
-                                      const i = t[0].features.find(
-                                        (t) => t.properties.id === n
-                                      );
-                                      e.find(
-                                        (t) =>
-                                          t.properties.id === i.properties.id
-                                      ) || e.push(i);
-                                    } else e.push(i);
-                                  }),
-                                  a.set(Mk, e);
-                                break;
-                              default:
-                                (i = t[2]), a.set(Mk, i.features);
-                            }
-                            break;
-                          case 1:
-                            if (
-                              ((i = t[s - 1]),
-                              e.features.forEach((t) => {
-                                const e = t.properties.parent,
-                                  i = o.get(e);
-                                Array.isArray(i) ? i.push(t) : o.set(e, [t]);
-                              }),
-                              2 === s)
-                            )
-                              a = o;
-                            else
-                              i &&
-                                e.features.forEach((t) => {
-                                  const e = t.properties.parent;
-                                  let n = a.get(e);
-                                  Array.isArray(n) || a.set(e, []),
-                                    (n = a.get(e)),
-                                    Lk.includes(e)
-                                      ? n.push(t)
-                                      : i.features.forEach((t) => {
-                                          const i = t.properties.acroutes;
-                                          if (i) {
-                                            i.split(",")[1] === e && n.push(t);
-                                          }
-                                        });
-                                });
-                            break;
-                          case 2:
-                            e.features.forEach((t) => {
-                              const e = t.properties.parent,
-                                i = o.get(e);
-                              Array.isArray(i) ? i.push(t) : o.set(e, [t]);
-                            }),
-                              (a = o);
-                            break;
-                          default:
-                            console.error(
-                              "[xGis]",
-                              "钻取地图 数据 data 超出三级结构"
-                            );
-                        }
-                      }
-                      n.default.push(o), n.process.push(a);
-                    }),
-                    t[1] && t[2] && 3 === e[e.length - 1])
-                  ) {
-                    const e = new Map();
-                    let i = new Map();
-                    t[1].features.forEach((t) => {
-                      if (Lk.includes(t.properties.parent)) {
-                        const i = t.properties.id,
-                          n = e.get(i);
-                        Array.isArray(n)
-                          ? n.push(t)
-                          : e.set(t.properties.id, [t]);
-                      }
-                    }),
-                      t[2].features.forEach((t) => {
-                        const i = t.properties.id,
-                          n = e.get(i);
-                        Array.isArray(n) ? n.push(t) : e.set(i, [t]);
-                      }),
-                      (i = e),
-                      n.default.push(e),
-                      n.process.push(i);
-                  }
-                  return n;
-                })(t, e, i);
-                return n;
-              })
-              .catch(
-                (t) => (
-                  console.error("[xGis]", t),
-                  {
-                    default: [],
-                    process: [],
-                  }
-                )
-              );
-          })(e.data, e.level.range, e.granularity)),
-            (t.currentCode = e.level.adcode),
-            (t.currentLevel = qV(t.drillData, t.currentCode));
-          const i = XV.getParentInfoByAdCode(t.currentCode, t.gis);
-          (t.currentParentLevel = i.level), (t.currentParentCode = i.adcode);
-        })(t)
-      : await ZV(null == i ? void 0 : i.subDistrict),
-      i.district ||
-        (i.district = {
-          type: xk.GEOJSON,
-          data: {
-            type: "FeatureCollection",
-            features: [
-              {
-                type: "Feature",
-                properties: {},
-                geometry: am.dissolve(i.subDistrict.__raw_geojson__),
-              },
-            ],
-          },
-        }),
-      await ZV(null == i ? void 0 : i.district),
-      (async function (t) {
-        const {
-            data: { region: e, subDistrict: i },
-            drill: { data: n, granularity: r, enabled: o },
-          } = t.state,
-          a = o && n;
-        e &&
-          Object.values(e).forEach((e) => {
-            let n, o, s, l, u;
-            if (a) {
-              if (
-                ((u = t.drillData.default[0]
-                  .get(Mk)
-                  .filter((t) => e.child.includes(t.properties.id))),
-                u.length > 0)
-              ) {
-                let i;
-                switch (r.region) {
-                  case 1:
-                    i = u;
-                    break;
-                  case 2:
-                    const n = [];
-                    for (const [i, o] of t.drillData.default[1].entries())
-                      e.child.includes(i) &&
-                        (Lk.includes(i)
-                          ? n.push(
-                              t.drillData.default[0]
-                                .get(Mk)
-                                .find((t) => t.properties.id === i)
-                            )
-                          : n.push(...o));
-                    i = n;
-                    break;
-                  case 3:
-                    const r = [];
-                    for (const [i, o] of t.drillData.default[2].entries()) {
-                      const t = o[0].properties.acroutes;
-                      if (t) {
-                        const i = t.split(",")[1];
-                        e.child.includes(i) && r.push(...o);
-                      }
-                    }
-                    i = r;
-                }
-                t.drillData.default[0].set(e.adcode, u),
-                  t.drillData.process[0].set(e.adcode, i);
-                const a = t.drillData.process[0].get(e.adcode);
-                (n = [
-                  {
-                    type: "Feature",
-                    properties: {},
-                    geometry: am.dissolve(a),
-                  },
-                ]),
-                  (o = sm(
-                    lV({
-                      type: "FeatureCollection",
-                      features: n,
-                    }),
-                    Qf
-                  ).features),
-                  (s = t.drillData.process[0].get(e.adcode)),
-                  (l = sm(
-                    lV({
-                      type: "FeatureCollection",
-                      features: s,
-                    }),
-                    Qf
-                  ).features);
-              }
-            } else if (
-              ((u = i.__geojson__.features.filter((t) =>
-                e.child.includes(t.properties.id)
-              )),
-              u.length > 0)
-            ) {
-              const i = u;
-              t.drillData.default[0].set(e.adcode, u),
-                t.drillData.process[0].set(e.adcode, i),
-                (n = [
-                  {
-                    type: "Feature",
-                    properties: {},
-                    geometry: am.dissolve(i),
-                  },
-                ]),
-                (o = sm(
-                  lV({
-                    type: "FeatureCollection",
-                    features: n,
-                  }),
-                  Qf
-                ).features),
-                (s = i),
-                (l = sm(
-                  lV({
-                    type: "FeatureCollection",
-                    features: s,
-                  }),
-                  Qf
-                ).features);
-            }
-            u.length > 0 &&
-              (t.state = af(t.state, {
-                data: {
-                  [e.adcode]: {
-                    districtData: o,
-                    rawDistrictData: n,
-                    subDistrictData: l,
-                    rawSubDistrictData: s,
-                  },
-                },
-              }));
-          });
-      })(t);
-  } catch (e) {
-    throw new Error("地图数据加载失败");
-  }
-}
 function tW(t) {
   var e, i, n;
   try {
@@ -66617,7 +66319,6 @@ function tW(t) {
   }
 }
 
-window.$V = $V;
 window.tW = tW;
 
 const iW = {

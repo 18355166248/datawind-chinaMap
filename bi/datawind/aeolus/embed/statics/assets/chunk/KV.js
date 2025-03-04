@@ -6,122 +6,212 @@ const JV = {
   width: 68565.51601500002,
 };
 
+/**
+ * 计算并返回地图视图和相机状态的配置信息
+ * @param {Object} t - 输入配置参数
+ * @param {Object} t.geojson - 原始GeoJSON数据
+ * @param {Object} t.geojsonProj - 投影后的GeoJSON数据
+ * @param {Object} t.geojsonUtil - GeoJSON工具对象
+ * @param {number} t.worldBboxSize - 世界边界框尺寸
+ * @param {number} t.heightScale - 高度缩放系数
+ * @param {number} t.pitch - 相机俯仰角
+ * @param {number} t.rotation - 相机旋转角
+ * @param {Array} t.offset - 相机偏移量 [x, y, z]
+ * @param {Object} t.viewClip - 视图裁剪配置
+ * @returns {Object} 地图视图配置和相机状态
+ */
 function KV(t) {
+  // 解构输入参数
   const {
-      geojson: e,
-      geojsonProj: i,
-      geojsonUtil: n,
-      worldBboxSize: r,
-      heightScale: o,
-      pitch: a,
-      rotation: s,
-      offset: l,
-      viewClip: u,
-    } = t,
-    c = n.bbox(i);
-  let h = c;
-  u &&
-    (h = (function (t, e, i) {
-      const n = [0, 0, 0, 0];
-      switch (i) {
-        case "bottom-right":
-          (n[0] = t[0]),
-            (n[1] = Math.max(t[1], e[3])),
-            (n[2] = Math.min(t[2], e[0])),
-            (n[3] = t[3]);
-          break;
-        case "bottom":
-          (n[0] = t[0]),
-            (n[1] = Math.max(t[1], e[3])),
-            (n[2] = t[2]),
-            (n[3] = t[3]);
-          break;
-        case "top":
-          (n[0] = t[0]),
-            (n[1] = t[1]),
-            (n[2] = t[2]),
-            (n[3] = Math.min(t[3], e[1]));
-          break;
-        case "left":
-          (n[0] = Math.max(t[0], e[2])),
-            (n[1] = t[1]),
-            (n[2] = t[2]),
-            (n[3] = t[3]);
-          break;
-        case "right":
-          (n[0] = t[0]),
-            (n[1] = t[1]),
-            (n[2] = Math.min(t[2], e[0])),
-            (n[3] = t[3]);
-      }
-      return n;
-    })(
-      c,
+    geojson: geoData,
+    geojsonProj: projectedData,
+    geojsonUtil: geoUtil,
+    worldBboxSize: worldSize,
+    heightScale: heightFactor,
+    pitch: cameraPitch,
+    rotation: cameraRotation,
+    offset: cameraOffset,
+    viewClip: clipConfig,
+  } = t;
+
+  // 获取投影数据的边界框
+  const originalBbox = geoUtil.bbox(projectedData);
+  let finalBbox = originalBbox;
+
+  // 如果需要视图裁剪，计算裁剪后的边界框
+  if (clipConfig) {
+    finalBbox = calculateClippedBbox(
+      originalBbox,
       [
-        ...window.Qf([u.bbox[0], u.bbox[1]]),
-        ...window.Qf([u.bbox[2], u.bbox[3]]),
+        ...window.Qf([clipConfig.bbox[0], clipConfig.bbox[1]]),
+        ...window.Qf([clipConfig.bbox[2], clipConfig.bbox[3]]),
       ],
-      u.direction
-    ));
-  const p = (function (t, e, i) {
-      const n = [(t[0] + t[2]) / 2, (t[1] + t[3]) / 2, 0],
-        r = [t[0], t[1]],
-        o = [t[2], t[3]],
-        a = [...window.Zf(r), ...window.Zf(o)],
-        s = [(a[0] + a[2]) / 2, (a[1] + a[3]) / 2, 0],
-        l = Math.abs(t[0] - t[2]),
-        u = Math.abs(t[1] - t[3]),
-        c = Math.min(l, u),
-        h = Math.max(l, u),
-        p = JV.width,
-        d = JV.height,
-        f = JV.bboxSize,
-        g = window.ef([l / p, u / d]) * f,
-        m = g / e,
-        y = g * i * 0.05;
-      return {
-        bbox: a,
-        bboxProj: t,
-        center: s,
-        centerProj: n,
-        size: {
-          width: l,
-          height: u,
-          minSize: c,
-          maxSize: h,
-          bboxSize: g,
-        },
-        bboxScale: m,
-        baseHeight: y,
-      };
-    })(h, r, o),
-    d = [(h[0] + h[2]) / 2, (h[1] + h[3]) / 2, 0],
-    f = p.size.bboxSize * l[2],
-    g = window.oA(a, s).map((t) => t * f);
-  (g[0] += d[0]), (g[1] += d[1]), (g[2] += d[2]);
-  const m = window.aA(a, s);
+      clipConfig.direction
+    );
+  }
+
+  // 计算边界框选项
+  const bboxOptions = calculateBboxOptions(finalBbox, worldSize, heightFactor);
+
+  // 计算边界框中心点
+  const bboxCenter = [
+    (finalBbox[0] + finalBbox[2]) / 2,
+    (finalBbox[1] + finalBbox[3]) / 2,
+    0,
+  ];
+
+  // 计算基于边界框大小的缩放值
+  const scaledSize = bboxOptions.size.bboxSize * cameraOffset[2];
+
+  // 计算相机位置
+  const cameraPosition = window
+    .oA(cameraPitch, cameraRotation)
+    .map((value) => value * scaledSize);
+  cameraPosition[0] += bboxCenter[0];
+  cameraPosition[1] += bboxCenter[1];
+  cameraPosition[2] += bboxCenter[2];
+
+  // 计算相机上方向
+  const cameraUp = window.aA(cameraPitch, cameraRotation);
+
+  // 构建并返回结果对象
   return {
-    boundary: e,
-    boundaryProj: i,
-    bboxOption: p,
-    viewBBoxOption: p,
+    boundary: geoData,
+    boundaryProj: projectedData,
+    bboxOption: bboxOptions,
+    viewBBoxOption: bboxOptions,
     cameraStatus: {
-      near: Math.max(p.size.bboxSize, 0.001),
-      far: 10 * p.size.bboxSize,
-      target: [d[0] + l[0] * p.size.bboxSize, d[1] + l[1] * p.size.bboxSize, 0],
-      position: [
-        g[0] + l[0] * p.size.bboxSize,
-        g[1] + l[1] * p.size.bboxSize,
-        g[2],
+      near: Math.max(bboxOptions.size.bboxSize, 0.001),
+      far: 10 * bboxOptions.size.bboxSize,
+      target: [
+        bboxCenter[0] + cameraOffset[0] * bboxOptions.size.bboxSize,
+        bboxCenter[1] + cameraOffset[1] * bboxOptions.size.bboxSize,
+        0,
       ],
-      up: m,
+      position: [
+        cameraPosition[0] + cameraOffset[0] * bboxOptions.size.bboxSize,
+        cameraPosition[1] + cameraOffset[1] * bboxOptions.size.bboxSize,
+        cameraPosition[2],
+      ],
+      up: cameraUp,
     },
     layerFitValue: {
-      xy: p.size.bboxSize >> 4,
-      z: p.size.bboxSize >> 3,
-      flylineWidth: p.size.bboxSize >> 12,
-      straightLineWidth: p.size.bboxSize >> 6,
+      xy: bboxOptions.size.bboxSize >> 4,
+      z: bboxOptions.size.bboxSize >> 3,
+      flylineWidth: bboxOptions.size.bboxSize >> 12,
+      straightLineWidth: bboxOptions.size.bboxSize >> 6,
     },
   };
 }
+
+/**
+ * 计算视图裁剪后的边界框
+ * @param {Array} originalBbox - 原始边界框 [xMin, yMin, xMax, yMax]
+ * @param {Array} clipBbox - 裁剪边界框
+ * @param {string} direction - 裁剪方向："bottom-right", "bottom", "top", "left", "right"
+ * @returns {Array} 裁剪后的边界框
+ */
+function calculateClippedBbox(originalBbox, clipBbox, direction) {
+  const resultBbox = [0, 0, 0, 0];
+
+  switch (direction) {
+    case "bottom-right":
+      resultBbox[0] = originalBbox[0];
+      resultBbox[1] = Math.max(originalBbox[1], clipBbox[3]);
+      resultBbox[2] = Math.min(originalBbox[2], clipBbox[0]);
+      resultBbox[3] = originalBbox[3];
+      break;
+    case "bottom":
+      resultBbox[0] = originalBbox[0];
+      resultBbox[1] = Math.max(originalBbox[1], clipBbox[3]);
+      resultBbox[2] = originalBbox[2];
+      resultBbox[3] = originalBbox[3];
+      break;
+    case "top":
+      resultBbox[0] = originalBbox[0];
+      resultBbox[1] = originalBbox[1];
+      resultBbox[2] = originalBbox[2];
+      resultBbox[3] = Math.min(originalBbox[3], clipBbox[1]);
+      break;
+    case "left":
+      resultBbox[0] = Math.max(originalBbox[0], clipBbox[2]);
+      resultBbox[1] = originalBbox[1];
+      resultBbox[2] = originalBbox[2];
+      resultBbox[3] = originalBbox[3];
+      break;
+    case "right":
+      resultBbox[0] = originalBbox[0];
+      resultBbox[1] = originalBbox[1];
+      resultBbox[2] = Math.min(originalBbox[2], clipBbox[0]);
+      resultBbox[3] = originalBbox[3];
+      break;
+  }
+
+  return resultBbox;
+}
+
+/**
+ * 计算边界框的各种选项和参数
+ * @param {Array} bbox - 边界框 [xMin, yMin, xMax, yMax]
+ * @param {number} worldSize - 世界大小比例
+ * @param {number} heightFactor - 高度比例因子
+ * @returns {Object} 包含边界框各种计算参数的对象
+ */
+function calculateBboxOptions(bbox, worldSize, heightFactor) {
+  // 计算投影坐标系中的中心点
+  const centerProj = [(bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2, 0];
+
+  // 计算边界框角点
+  const corner1 = [bbox[0], bbox[1]];
+  const corner2 = [bbox[2], bbox[3]];
+
+  // 使用窗口函数转换坐标
+  const transformedBbox = [...window.Zf(corner1), ...window.Zf(corner2)];
+
+  // 计算转换后边界框的中心
+  const center = [
+    (transformedBbox[0] + transformedBbox[2]) / 2,
+    (transformedBbox[1] + transformedBbox[3]) / 2,
+    0,
+  ];
+
+  // 计算宽度和高度
+  const width = Math.abs(bbox[0] - bbox[2]);
+  const height = Math.abs(bbox[1] - bbox[3]);
+
+  // 计算最小和最大尺寸
+  const minSize = Math.min(width, height);
+  const maxSize = Math.max(width, height);
+
+  // 使用预定义的常量进行比例计算
+  const constantWidth = JV.width;
+  const constantHeight = JV.height;
+  const constantBboxSize = JV.bboxSize;
+
+  // 计算实际的边界框大小
+  const bboxSize =
+    window.ef([width / constantWidth, height / constantHeight]) *
+    constantBboxSize;
+
+  // 计算边界框比例和基础高度
+  const bboxScale = bboxSize / worldSize;
+  const baseHeight = bboxSize * heightFactor * 0.05;
+
+  return {
+    bbox: transformedBbox,
+    bboxProj: bbox,
+    center: center,
+    centerProj: centerProj,
+    size: {
+      width: width,
+      height: height,
+      minSize: minSize,
+      maxSize: maxSize,
+      bboxSize: bboxSize,
+    },
+    bboxScale: bboxScale,
+    baseHeight: baseHeight,
+  };
+}
+
 window.KV = KV;

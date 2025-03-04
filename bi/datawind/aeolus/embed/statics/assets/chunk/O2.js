@@ -77,7 +77,6 @@ var N2, R2;
 
 export class O2 extends z {
   constructor(t, e) {
-    console.log("🚀 ~ O2:");
     super(t, e),
       Object.defineProperty(this, "lastDrillAdCode", {
         enumerable: !0,
@@ -514,6 +513,7 @@ export class O2 extends z {
             e && this.setAMapEnable();
         })
         .catch((t) => {
+          console.log("🚀 ~ O2 ~ initGis ~ t:", t);
           let e = t.message;
           if ("地图数据加载失败" === e)
             e = S("地图数据加载失败，请确保地图数据源配置正常");
@@ -912,7 +912,7 @@ export class O2 extends z {
       (c.districtStyle.heightScale = u ? n.height : 0),
       (c.districtStyle.sideConfig = {
         colorConfig: {
-          range: ['rgb(255, 204, 255)', n.bottomColor],
+          range: ["rgb(255, 204, 255)", n.bottomColor],
           // range: [n.topColor, n.bottomColor],
         },
       }),
