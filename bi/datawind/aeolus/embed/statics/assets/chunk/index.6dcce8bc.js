@@ -44,6 +44,7 @@ import './_G.js';
 import './kf.js';
 import './bv.js';
 import './oV.js';
+import './zV.js';
 import './KV.js';
 import './$V.js';
 import { O2 } from './O2.js';
@@ -18787,6 +18788,7 @@ class Es extends Ge {
       (this.needsUpdate = !0);
   }
 }
+window.Es = Es;
 new Ye(), new Ye(), new Ye(), new tn();
 class Ds {
   constructor() {
@@ -22185,6 +22187,7 @@ const Bf = 0.01,
   Hf = 1565.4303392804097,
   Vf = jf * Math.PI * 2,
   Wf = [];
+window.Vf = Vf;
 for (let p7 = 0; p7 <= 31; p7++) {
   const t = Xf(p7, 1),
     e = [];
@@ -64523,6 +64526,7 @@ function MV(t) {
     zoom: l,
   };
 }
+window.MV = MV;
 function CV(t) {
   return Math.pow(2, t);
 }
@@ -64538,41 +64542,8 @@ function wV(t, e, i) {
     })(e, i);
   return [n, r];
 }
-function AV(t) {
-  const { feature: e, zoom: i, style: n, width: r, height: o, offset: a } = t,
-    s = document.createElement("canvas"),
-    l = s.getContext("2d");
-  (s.width = r),
-    (s.height = o),
-    (s.style.width = r + "px"),
-    (s.style.height = o + "px");
-  const u = e.geometry.coordinates,
-    c = [];
-  let h, p, d;
-  c.push([]);
-  for (let f = 0; f < u[0].length; f++) {
-    const t = u[0][f];
-    (d = wV(t[0], t[1], i)), c[0].push([d[0] - a[0], d[1] - a[1]]);
-  }
-  for (
-    l.globalCompositeOperation = "source-out", l.beginPath(), h = 0;
-    h < c.length;
-    h++
-  ) {
-    for (p = 0; p < c[h].length; p++) {
-      const t = c[h][p];
-      l[p ? "lineTo" : "moveTo"](t[0], t[1]);
-    }
-    l.closePath();
-  }
-  return (
-    (l.shadowBlur = n.shadowBlur),
-    (l.shadowColor = n.shadowColor),
-    (l.fillStyle = n.fillColor),
-    l.fill(),
-    s
-  );
-}
+window.wV = wV;
+
 function EV(t, e, i, n, r) {
   let o;
   if (
@@ -65661,105 +65632,7 @@ function FV(t, e) {
     : ((a.normalMap = null), (a.needsUpdate = !0));
 }
 window.FV = FV;
-function zV(t) {
-  const {
-    districtStyle: { innerShadow: e },
-  } = t.state;
-  if (e && e.enabled && e.shadowColor && e.shadowBlurScale) {
-    const { bboxOption: i, boundary: n } = t.gis.globalOpts,
-      r = (function (t) {
-        const {
-            geojson: e,
-            bboxOption: i,
-            maxZoom: n,
-            shadowColor: r,
-            shadowBlurScale: o,
-          } = t,
-          { bbox: a } = i,
-          s = MV({
-            tileUrl: "",
-            bbox: a,
-            maxZoom: n,
-            worldBboxSize: Vf,
-            bboxOption: i,
-            isExtrudeBackground: !1,
-          }),
-          { zoom: l } = s,
-          u = wV(a[0], a[1], l),
-          c = wV(a[2], a[3], l),
-          h = Math.abs(u[0] - c[0]),
-          p = Math.abs(u[1] - c[1]),
-          d = document.createElement("canvas");
 
-        (d.width = h),
-          (d.height = p),
-          (d.style.width = h + "px"),
-          (d.style.height = p + "px");
-        const f = d.getContext("2d"),
-          g = {
-            fill: !0,
-            fillColor: r,
-            shadowColor: r,
-            shadowBlur: 100,
-          },
-          m = am.flatten(Object.assign({}, e));
-        let y, v;
-
-        for (y = 0; y < m.features.length; y++) {
-          v = m.features[y];
-          const t = am.bbox(v),
-            e = wV(t[0], t[1], l),
-            i = wV(t[2], t[3], l),
-            n = Math.abs(e[0] - i[0]),
-            r = Math.abs(e[1] - i[1]);
-          if (n > 0 && r > 0) {
-            g.shadowBlur = Math.min(n, r) * o;
-            const t = AV({
-              feature: v,
-              zoom: l,
-              style: g,
-              width: n,
-              height: r,
-              offset: [e[0], i[1]],
-            });
-            f.drawImage(
-              t,
-              Math.abs(e[0] - u[0]),
-              Math.abs(i[1] - c[1]),
-              t.width,
-              t.height
-            );
-          }
-        }
-        // // 生成图片数据URL（PNG格式，默认质量0.9）
-        // const dataUrl = d.toDataURL('image/png', 0.9);
-
-        // // 创建隐藏的下载链接
-        // const link = document.createElement('a');
-        // link.href = dataUrl;
-        // link.download = `myImage-${y}.png`; // 自定义文件名
-        // // 触发下载
-        // document.body.appendChild(link);
-        // link.click();
-        // document.body.removeChild(link);
-
-        return d;
-      })({
-        geojson: n,
-        bboxOption: i,
-        maxZoom: 12,
-        shadowColor: e.shadowColor,
-        shadowBlurScale: e.shadowBlurScale,
-      });
-    (t.extrudeInnerShadowMaterial.map = new Es(r)),
-      (t.extrudeInnerShadowMaterial.opacity = 1),
-      (t.extrudeInnerShadowMaterial.needsUpdate = !0);
-  } else
-    (t.extrudeInnerShadowMaterial.map = null),
-      (t.extrudeInnerShadowMaterial.opacity = 0),
-      (t.extrudeInnerShadowMaterial.needsUpdate = !0);
-}
-window.zV = zV;
 function kV(t) {
   var e;
   const {

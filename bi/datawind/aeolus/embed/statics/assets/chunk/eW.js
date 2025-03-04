@@ -315,7 +315,7 @@ class eW extends window.oV {
               topMesh.frustumCulled = false;
               context.districtFillGroup.add(topMesh);
 
-              // 创建内阴影网格
+              // 创建内阴影网格 Mesh
               const innerShadowMesh = new window.Wn(
                 topGeometry,
                 context.extrudeInnerShadowMaterial
@@ -705,7 +705,7 @@ class eW extends window.oV {
         depthWrite: true,
       });
 
-      // 创建内阴影材质
+      // 创建内阴影材质 MeshStandardMaterial
       context.extrudeInnerShadowMaterial = new window.zA({
         transparent: true,
         depthTest: true,
