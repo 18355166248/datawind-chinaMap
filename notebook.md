@@ -41,3 +41,19 @@ index.6dcce8bc.js
 创建内阴影渐变网格 eW.js initExtrude
 
 zV.js 通过 canvas 画地图渐变阴影
+
+bboxProj 数据来源于 finalBbox
+
+```js
+// 如果需要视图裁剪，计算裁剪后的边界框
+if (clipConfig) {
+  finalBbox = calculateClippedBbox(
+    originalBbox,
+    [
+      ...window.Qf([clipConfig.bbox[0], clipConfig.bbox[1]]),
+      ...window.Qf([clipConfig.bbox[2], clipConfig.bbox[3]]),
+    ],
+    clipConfig.direction
+  );
+}
+```

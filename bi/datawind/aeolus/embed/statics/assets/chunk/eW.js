@@ -247,15 +247,6 @@ class eW extends window.oV {
         const { geojson: geoJsonData, bboxOption: bboxOptions } = options;
         // 处理地理数据
         const processedData = window.bV(geoJsonData, bboxOptions.bboxProj);
-        console.log(
-          "🚀 ~ eW ~ createDistrictExtrude ~ processedData:",
-          processedData
-        );
-        console.log(
-          "🚀 ~ eW ~ createDistrictExtrude ~ bboxOptions.bboxProj:",
-          bboxOptions.bboxProj
-        );
-        console.log("🚀 ~ eW ~ initExtrude ~ geoJsonData:", geoJsonData);
 
         // 初始化索引和位置计数器
         let indexOffset = 0,
@@ -266,7 +257,6 @@ class eW extends window.oV {
         // 获取基础高度
         const baseHeight = bboxOptions.baseHeight ? bboxOptions.baseHeight : 1;
 
-        console.log("🚀 ~ eW ~ initExtrude ~ processedData:", processedData);
         // 遍历几何数据组
         for (
           let groupIndex = 0;
@@ -282,7 +272,7 @@ class eW extends window.oV {
           // 根据几何类型创建不同的网格
           switch (processedData.group[groupIndex]) {
             case 0: // 顶部面
-              // 创建顶部几何体
+              // 创建顶部几何体 BufferGeometry
               const topGeometry = window.RV({
                 index: processedData.index.slice(
                   indexOffset,
@@ -319,6 +309,10 @@ class eW extends window.oV {
               const innerShadowMesh = new window.Wn(
                 topGeometry,
                 context.extrudeInnerShadowMaterial
+              );
+              console.log(
+                "🚀 ~ eW ~ createDistrictExtrude ~ topGeometry:",
+                topGeometry
               );
               innerShadowMesh.setRenderIndex(
                 window.lU.BASE_MAP_LAYER_INNERSHADOW_MESH
@@ -769,7 +763,7 @@ class eW extends window.oV {
       // 获取背景颜色
       const backgroundColor = window.EA(scene.state.background.color);
 
-      // 创建背景顶部材质
+      // 创建背景顶部材质 MeshStandardMaterial
       context.extrudeBackgroundTopMaterial = new window.zA({
         color: backgroundColor.color,
         transparent: true,
@@ -786,7 +780,7 @@ class eW extends window.oV {
         topOpacity: sideTopOpacity,
       } = window.GV(sideColorConfig);
 
-      // 创建背景侧面渐变材质
+      // 创建背景侧面渐变材质 ShaderMaterial
       context.extrudeBackgroundSideMaterial = new window.Jn({
         uniforms: {
           type: {

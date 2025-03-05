@@ -93,11 +93,11 @@ function createDistrictInnerShadow(mapInstance) {
     const shadowTexture = (function generateShadowTexture(options) {
       // 解构配置参数
       const {
-        geojson: geoJsonData,
-        bboxOption: bboxOptions,
-        maxZoom: maxZoomLevel,
-        shadowColor: shadowColorValue,
-        shadowBlurScale: blurScale,
+        geojson: geoJsonData, // 地图数据
+        bboxOption: bboxOptions, // 边界框配置
+        maxZoom: maxZoomLevel, // 最大缩放级别
+        shadowColor: shadowColorValue, // 阴影颜色
+        shadowBlurScale: blurScale, // 阴影模糊程度
       } = options;
 
       const { bbox: boundingBox } = bboxOptions;
@@ -149,7 +149,7 @@ function createDistrictInnerShadow(mapInstance) {
         shadowBlur: 100,
       };
 
-      // 扁平化GeoJSON数据
+      // 扁平化GeoJSON 地图数据
       const flattenedGeoJson = am.flatten(Object.assign({}, geoJsonData));
       let featureIndex, currentFeature;
 
@@ -209,7 +209,7 @@ function createDistrictInnerShadow(mapInstance) {
         }
       }
 
-      // 注释掉的导出图片功能
+      // // 注释掉的导出图片功能
       // // 生成图片数据URL（PNG格式，默认质量0.9）
       // const dataUrl = resultCanvas.toDataURL('image/png', 0.9);
       // // 创建隐藏的下载链接
@@ -230,7 +230,7 @@ function createDistrictInnerShadow(mapInstance) {
       shadowBlurScale: shadowConfig.shadowBlurScale,
     });
 
-    // 更新材质的纹理贴图
+    // 更新材质的纹理贴图 Es = Texture
     mapInstance.extrudeInnerShadowMaterial.map = new Es(shadowTexture);
     mapInstance.extrudeInnerShadowMaterial.opacity = 1;
     mapInstance.extrudeInnerShadowMaterial.needsUpdate = true;

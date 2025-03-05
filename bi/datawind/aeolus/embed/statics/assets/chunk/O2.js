@@ -1001,16 +1001,23 @@ export class O2 extends z {
   }
   getViewClipConfig() {
     const {
-      nanhai: { enable: t },
+      nanhai: { enable },
     } = this.properties;
-    if (t) {
-      const t = window.cX,
-        e = Object.values(this.variableContext.regionData).find((t) =>
-          t.child.includes(JY)
-        );
-      return e && (t[e.adcode] = window.cX[window.ZY]), t;
+
+    if (!enable) {
+      return null;
     }
-    return null;
+
+    const viewClipData = window.cX;
+    const regionWithJY = Object.values(this.variableContext.regionData).find(
+      (region) => region.child.includes(JY)
+    );
+
+    if (regionWithJY) {
+      viewClipData[regionWithJY.adcode] = window.cX[window.ZY];
+    }
+
+    return viewClipData;
   }
   async getDrillConfig() {
     const {
