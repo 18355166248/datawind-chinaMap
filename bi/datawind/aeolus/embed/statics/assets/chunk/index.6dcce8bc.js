@@ -39,16 +39,17 @@ import { i as R } from "./invert.8c0ac90e.js";
 import { G as O, a as F } from "./GhostElement.0a01c8ce.js";
 import { E as z } from "./EntityHostElement.e9904ea6.js";
 
-import './utils.js';
-import './_G.js';
-import './kf.js';
-import './bv.js';
-import './oV.js';
-import './zV.js';
-import './KV.js';
-import './$V.js';
-import { O2 } from './O2.js';
-import './IW.js';
+import "./utils.js";
+import './sm.js';
+import "./_G.js";
+import "./kf.js";
+import "./bv.js";
+import "./oV.js";
+import "./zV.js";
+import "./KV.js";
+import "./$V.js";
+import { O2 } from "./O2.js";
+import "./IW.js";
 
 import "./typo.146e79ca.js";
 import "./destroy.6bac23ca.js";
@@ -2185,7 +2186,7 @@ var st,
       ? global
       : "undefined" != typeof self
       ? self
-            : {};
+      : {};
 window.ut = ut;
 function ht(t) {
   if (t.__esModule) return t;
@@ -3145,7 +3146,7 @@ function we() {
     Se[(n >> 24) & 255]
   ).toUpperCase();
 }
-window.we = we
+window.we = we;
 function Ae(t, e, i) {
   return Math.max(e, Math.min(i, t));
 }
@@ -21832,7 +21833,7 @@ function Yd(t, e, i) {
   );
   return (n.placeholder = Yd.placeholder), n;
 }
-window.Yd = Yd
+window.Yd = Yd;
 function Xd(t, e, i) {
   ((void 0 !== i && !Vc(t[e], i)) || (void 0 === i && !(e in t))) &&
     Hc(t, e, i);
@@ -24071,49 +24072,7 @@ const am = {
   simplify: em.exports,
 };
 window.am = am;
-function sm(t, e) {
-  const i = (t) => {
-      const i = e(t);
-      (t[0] = +i[0].toFixed(6)), (t[1] = +i[1].toFixed(6));
-    },
-    n = JSON.parse(JSON.stringify(t));
-  switch (n.type) {
-    case "FeatureCollection":
-      for (let t = 0; t < n.features.length; t++) lm(n.features[t].geometry, i);
-      break;
-    case "Feature":
-      lm(n.geometry, i);
-      break;
-    case "GeometryCollection":
-      for (let t = 0; t < n.geometries.length; t++) lm(n.geometries[t], i);
-      break;
-    default:
-      lm(n, i);
-  }
-  return n;
-}
-function lm(t, e) {
-  let i, n, r;
-  const o = t.coordinates;
-  switch (t.type) {
-    case "Point":
-      e(o);
-      break;
-    case "LineString":
-    case "MultiPoint":
-      for (i = 0; i < o.length; i++) e(o[i]);
-      break;
-    case "Polygon":
-    case "MultiLineString":
-      for (i = 0; i < o.length; i++)
-        for (n = 0; n < o[i].length; n++) e(o[i][n]);
-      break;
-    case "MultiPolygon":
-      for (i = 0; i < o.length; i++)
-        for (n = 0; n < o[i].length; n++)
-          for (r = 0; r < o[i][n].length; r++) e(o[i][n][r]);
-  }
-}
+
 var um = 6371008.8,
   cm = {
     centimeters: 100 * um,
@@ -58336,7 +58295,7 @@ var zk = "named",
     ClassProperty: "ClassProperty",
     ConstructorArgument: "ConstructorArgument",
     Variable: "Variable",
-  }
+  };
 
 var Kk = "NULL argument",
   $k = "Key Not Found",
@@ -59145,7 +59104,6 @@ var FB = function (t, e) {
       t
     );
   })(),
-
   qB = (function () {
     function t() {}
     return (
@@ -59338,7 +59296,7 @@ var FB = function (t, e) {
           })([o, s]);
         };
       }
-    }
+    };
 function JB() {
   return function (t) {
     if (Reflect.hasOwnMetadata(jk, t))
@@ -64249,15 +64207,13 @@ class eV extends As {
 tV([_G(window.KB.ITextService)], eV.prototype, "textService", 2),
   tV([_G(window.KB.ILogService)], eV.prototype, "logService", 2);
 
-window.eV = eV
+window.eV = eV;
 
 function aV(t) {
   return function (e, i) {
     e.__layerEvent__ || (e.__layerEvent__ = []), e.__layerEvent__.push([t, i]);
   };
 }
-
-
 
 const sV = 4800;
 function lV(t) {
@@ -65334,7 +65290,7 @@ class NV {
         lineHeadColor: s,
         lineHeadRatio: l,
       } = n,
-      u = sm(
+      u = window.sm(
         lV({
           type: "FeatureCollection",
           features: am.flatten(Object.assign({}, i)).features,
@@ -65907,9 +65863,9 @@ const YV = class {
       const n = await i.arrayBuffer();
       const r = new ak(YV.dataSet);
       const o = r.parse(n, {
-          type: "geobuf",
-          options: e,
-        }).latestData;
+        type: "geobuf",
+        options: e,
+      }).latestData;
       return r.destroy(), o;
     } catch (i) {
       return console.error("[xGis]", `${i}`), null;
@@ -66104,9 +66060,10 @@ const QV = {
   useProject: !0,
 };
 async function ZV(t, e) {
+  console.log("🚀 ~ ZV ~ t:", t)
   if (!(null == t ? void 0 : t.data)) return null;
-  const { type: i, data: n, simplify: r } = t,
-    { useProject: o, useProcess: a } = af(QV, e);
+  const { type: i, data: n, simplify: r } = t;
+  const { useProject: o, useProcess: a } = af(QV, e);
   let s, l;
   switch (i) {
     case xk.GEOJSON:
@@ -66122,19 +66079,22 @@ async function ZV(t, e) {
     default:
       console.error("[xGis]", `地图数据 url ${l} 格式无法解析`);
   }
-  return (
-    (t.__raw_geojson__ = s),
-    (t.__geojson__ = s),
-    (null == r ? void 0 : r.enabled) &&
-      (t.__geojson__ = am.simplify(t.__geojson__, r.tolerance)),
-    a && (t.__geojson_process__ = lV(t.__geojson__)),
-    o &&
-      (t.__geojson_process_proj__ = sm(
-        a ? t.__geojson_process__ : t.__geojson__,
-        Qf
-      )),
-    t
-  );
+  t.__raw_geojson__ = s;
+  t.__geojson__ = s;
+  if (null == r ? void 0 : r.enabled) {
+    t.__geojson__ = am.simplify(t.__geojson__, r.tolerance);
+  }
+  if (a) {
+    t.__geojson_process__ = lV(t.__geojson__);
+  }
+  if (o) {
+    t.__geojson_process_proj__ = window.sm(
+      a ? t.__geojson_process__ : t.__geojson__,
+      Qf
+    );
+  }
+
+  return t;
 }
 window.ZV = ZV;
 
@@ -66148,19 +66108,22 @@ function tW(t) {
         const e =
           !!o.region &&
           Object.values(o.region).find((e) => e.adcode === t.currentCode);
-        e
-          ? ((t.rawDistrictData = o[e.adcode].rawDistrictData),
-            (t.districtData = o[e.adcode].districtData),
-            (t.currentRegion = e.adcode))
-          : ((t.rawDistrictData = o.district.__geojson__.features),
-            (t.districtData = o.district.__geojson_process_proj__.features));
+
+        if (e) {
+          t.rawDistrictData = o[e.adcode].rawDistrictData;
+          t.districtData = o[e.adcode].districtData;
+          t.currentRegion = e.adcode;
+        } else {
+          t.rawDistrictData = o.district.__geojson__.features;
+          t.districtData = o.district.__geojson_process_proj__.features;
+        }
       } else
         (t.rawDistrictData = [
           t.drillData.default[t.currentParentLevel]
             .get(t.currentParentCode)
             .find((e) => e.properties.id === t.currentCode),
         ]),
-          (t.districtData = sm(
+          (t.districtData = window.sm(
             lV({
               type: "FeatureCollection",
               features: t.rawDistrictData,
@@ -66182,7 +66145,7 @@ function tW(t) {
       const n =
         null == (i = t.state.drill.data[t.currentLevel]) ? void 0 : i.simplify;
       (null == n ? void 0 : n.enabled) && (e = am.simplify(e, n.tolerance)),
-        (t.subDistrictData = sm(lV(e), Qf).features);
+        (t.subDistrictData = window.sm(lV(e), Qf).features);
     } else
       (null == (n = o.subDistrict) ? void 0 : n.data) &&
         ((t.subDistrictData = o.subDistrict.__geojson_process_proj__.features),
@@ -67063,7 +67026,7 @@ function vW(t) {
 const bW = (t, e) => {
     const { size: i = 10, boundary: n, tessellate: r } = e;
     if (0 === t.length) return t;
-    const o = sm(n, Qf);
+    const o = window.sm(n, Qf);
     let a = am.bbox(o);
     a = [
       [a[0], a[1]],
@@ -67496,7 +67459,7 @@ const bW = (t, e) => {
     if (0 === t.length) return t;
     let o = [];
     if (r) {
-      const e = sm(n, Qf);
+      const e = window.sm(n, Qf);
       o = ((t, e, i, n) => {
         const r = [],
           [o, a, s, l] = t,
@@ -76563,7 +76526,7 @@ class TY extends NW {
       ]);
   }
 }
-window.TY = TY
+window.TY = TY;
 const PY = {
   common: Sk,
   data: [],
@@ -96976,7 +96939,7 @@ function UZ(t) {
   }
   return !0;
 }
-window.UZ = UZ
+window.UZ = UZ;
 function jZ() {
   if (this.editMode === g.Edit) this.setElementVisibility(this.plot.visible);
   else {
@@ -101139,8 +101102,6 @@ class T2 extends b2 {
     C2();
   }
 }
-
-
 
 Object.defineProperty(O2, "panelConfig", {
   enumerable: !0,

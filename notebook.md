@@ -57,3 +57,13 @@ if (clipConfig) {
   );
 }
 ```
+
+处理数据
+
+```js
+districtData的数据来自下面的处理
+
+t.districtData = o.district.__geojson_process_proj__.features;
+
+t.__geojson_process_proj__ = window.sm(
+```
