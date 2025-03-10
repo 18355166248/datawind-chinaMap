@@ -10,7 +10,6 @@ const DEFAULT_CONFIG = {
  * @returns {Object|null} - 处理后的地图数据对象或null
  */
 async function processGeoData(mapData, config) {
-  console.log("🚀 ~ processGeoData ~ mapData:", mapData);
   // 检查数据是否存在
   if (!(null == mapData ? void 0 : mapData.data)) return null;
 
@@ -50,12 +49,12 @@ async function processGeoData(mapData, config) {
   mapData.__geojson__ = geoJsonData;
 
   // 如果启用了简化选项，对GeoJSON数据进行简化处理
-  if (null == simplifyOptions ? void 0 : simplifyOptions.enabled) {
-    mapData.__geojson__ = am.simplify(
-      mapData.__geojson__,
-      simplifyOptions.tolerance
-    );
-  }
+  // if (null == simplifyOptions ? void 0 : simplifyOptions.enabled) {
+  //   mapData.__geojson__ = am.simplify(
+  //     mapData.__geojson__,
+  //     simplifyOptions.tolerance
+  //   );
+  // }
 
   // 如果启用了处理选项，对GeoJSON数据进行处理
   if (enableProcessing) {

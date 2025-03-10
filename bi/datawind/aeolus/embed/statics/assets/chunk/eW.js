@@ -310,10 +310,7 @@ class eW extends window.oV {
                 topGeometry,
                 context.extrudeInnerShadowMaterial
               );
-              console.log(
-                "🚀 ~ eW ~ createDistrictExtrude ~ topGeometry:",
-                topGeometry
-              );
+     
               innerShadowMesh.setRenderIndex(
                 window.lU.BASE_MAP_LAYER_INNERSHADOW_MESH
               );

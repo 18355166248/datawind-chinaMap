@@ -36,7 +36,6 @@ function KV(t) {
 
   // 获取投影数据的边界框
   const originalBbox = geoUtil.bbox(projectedData);
-  console.log("🚀 ~ KV ~ projectedData:", projectedData)
   let finalBbox = originalBbox;
 
   // 如果需要视图裁剪，计算裁剪后的边界框

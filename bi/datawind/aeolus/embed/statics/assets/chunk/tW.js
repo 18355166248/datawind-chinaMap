@@ -1,5 +1,4 @@
 function tW(t) {
-  console.log("🚀 ~ tW ~ t:", t);
   var e, i, n;
   try {
     const { drill: r, data: o } = t.state,
