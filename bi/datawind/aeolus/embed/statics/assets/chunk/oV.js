@@ -43,23 +43,23 @@ let oV = class {
       } = t,
       { enabled: a = !1, markerType: s = "css2d" } = r,
       { sceneSystem: l, layerManager: u } = this.gis;
-    (this.layerType = i),
-      o ? l.hudScene.add(this.group) : l.coreScene.add(this.group),
-      (this.group.name = e),
-      (this.coreGroup = null != n ? n : new window.As()),
-      (this.coreGroup.name = `core-${e}`),
-      this.group.add(this.coreGroup),
-      (this.poiGroup = new window.eV()),
-      (this.poiGroup.name = `${e}-poi-layer`),
-      l.hudScene.add(this.poiGroup),
-      u.add({
-        layerType: i,
-        layer: this,
+    this.layerType = i;
+    o ? l.hudScene.add(this.group) : l.coreScene.add(this.group);
+    this.group.name = e;
+    this.coreGroup = null != n ? n : new window.As();
+    this.coreGroup.name = `core-${e}`;
+    this.group.add(this.coreGroup);
+    this.poiGroup = new window.eV();
+    this.poiGroup.name = `${e}-poi-layer`;
+    l.hudScene.add(this.poiGroup);
+    u.add({
+      layerType: i,
+      layer: this,
+    });
+    a &&
+      this.gis.eventManager.ee.emit("markerEnabled", {
+        markerType: s,
       }),
-      a &&
-        this.gis.eventManager.ee.emit("markerEnabled", {
-          markerType: s,
-        }),
       this.updateBaseHeight();
   }
   _getParseData(t) {
@@ -202,7 +202,8 @@ let oV = class {
         window.sf(t.common, "zIndex") && this._updateZIndex(t.common.zIndex);
       }),
       this._propsWatch.defaultRule(["common", "zoomRange"], "diff", (t) => {
-        window.sf(t.common, "zoomRange") && this._updateZoomRange(t.common.zoomRange);
+        window.sf(t.common, "zoomRange") &&
+          this._updateZoomRange(t.common.zoomRange);
       }),
       this._propsWatch.defaultRule("interaction", "diffDeep", () => {
         this._updateInteraction(this.state.interaction);

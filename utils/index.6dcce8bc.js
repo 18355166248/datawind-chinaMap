@@ -38,21 +38,6 @@ import {
 import { i as R } from "./invert.8c0ac90e.js";
 import { G as O, a as F } from "./GhostElement.0a01c8ce.js";
 import { E as z } from "./EntityHostElement.e9904ea6.js";
-
-import "./utils.js";
-import './sm.js';
-import './upperZV.js';
-import './tW.js';
-import "./_G.js";
-import "./kf.js";
-import "./bv.js";
-import "./oV.js";
-import "./zV.js";
-import "./KV.js";
-import "./$V.js";
-import { O2 } from "./O2.js";
-import "./IW.js";
-
 import "./typo.146e79ca.js";
 import "./destroy.6bac23ca.js";
 import "./removeTips.d0c4745f.js";
@@ -85,11 +70,7 @@ function U(t) {
     const [e, i] = t.split(","),
       n = Number(e),
       r = Number(i),
-      o = {
-        min: n,
-        max: r,
-        step: j(n, r),
-      };
+      o = { min: n, max: r, step: j(n, r) };
     return (G[t] = o), o;
   }
 }
@@ -167,21 +148,9 @@ function V(t) {
         key: "poi.trigger",
         path: "poi.trigger",
         items: [
-          {
-            title_cn: "全显",
-            title_en: "show",
-            value: "show",
-          },
-          {
-            title_cn: "单击",
-            title_en: "click",
-            value: "click",
-          },
-          {
-            title_cn: "悬浮",
-            title_en: "hover",
-            value: "hover",
-          },
+          { title_cn: "全显", title_en: "show", value: "show" },
+          { title_cn: "单击", title_en: "click", value: "click" },
+          { title_cn: "悬浮", title_en: "hover", value: "hover" },
         ],
       },
       {
@@ -194,16 +163,8 @@ function V(t) {
         key: "poi.orient",
         path: "poi.orient",
         items: [
-          {
-            title_cn: "上下",
-            title_en: "vertical",
-            value: "vertical",
-          },
-          {
-            title_cn: "左右",
-            title_en: "horizontal",
-            value: "horizontal",
-          },
+          { title_cn: "上下", title_en: "vertical", value: "vertical" },
+          { title_cn: "左右", title_en: "horizontal", value: "horizontal" },
         ],
       },
       {
@@ -216,21 +177,9 @@ function V(t) {
         key: "poi.alignment",
         path: "poi.alignment",
         items: [
-          {
-            title_cn: "顶部",
-            title_en: "top",
-            value: "top",
-          },
-          {
-            title_cn: "居中",
-            title_en: "middle",
-            value: "middle",
-          },
-          {
-            title_cn: "底部",
-            title_en: "bottom",
-            value: "bottom",
-          },
+          { title_cn: "顶部", title_en: "top", value: "top" },
+          { title_cn: "居中", title_en: "middle", value: "middle" },
+          { title_cn: "底部", title_en: "bottom", value: "bottom" },
         ],
       },
       {
@@ -654,21 +603,9 @@ function V(t) {
         key: "poi.anchor",
         path: "poi.anchor",
         items: [
-          {
-            title_cn: "顶部",
-            title_en: "top",
-            value: "top",
-          },
-          {
-            title_cn: "居中",
-            title_en: "middle",
-            value: "middle",
-          },
-          {
-            title_cn: "底部",
-            title_en: "bottom",
-            value: "bottom",
-          },
+          { title_cn: "顶部", title_en: "top", value: "top" },
+          { title_cn: "居中", title_en: "middle", value: "middle" },
+          { title_cn: "底部", title_en: "bottom", value: "bottom" },
         ],
       }),
     e
@@ -1059,11 +996,7 @@ const W = [
           "bold",
           "bolder",
           "normal",
-        ].map((t) => ({
-          value: t,
-          title_en: t,
-          title_cn: t,
-        })),
+        ].map((t) => ({ value: t, title_en: t, title_cn: t })),
         path: "tips.fontWeight",
       },
       {
@@ -1900,10 +1833,7 @@ const W = [
               path: "amap-style",
               layout_size: r.Large,
               properties: [
-                {
-                  key: "amap.type",
-                  path: "amap.type",
-                },
+                { key: "amap.type", path: "amap.type" },
                 {
                   key: "amap.default",
                   type: n.Panel,
@@ -2154,12 +2084,7 @@ var J = Object.defineProperty,
   it = Object.prototype.propertyIsEnumerable,
   nt = (t, e, i) =>
     e in t
-      ? J(t, e, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: i,
-        })
+      ? J(t, e, { enumerable: !0, configurable: !0, writable: !0, value: i })
       : (t[e] = i),
   rt = (t, e) => {
     for (var i in e || (e = {})) et.call(e, i) && nt(t, i, e[i]);
@@ -2174,8 +2099,6 @@ var J = Object.defineProperty,
       for (var n of tt(t)) e.indexOf(n) < 0 && it.call(t, n) && (i[n] = t[n]);
     return i;
   };
-window.ot = ot;
-window.rt = rt;
 var st,
   lt,
   ut = "0.10.50",
@@ -2189,12 +2112,9 @@ var st,
       : "undefined" != typeof self
       ? self
       : {};
-window.ut = ut;
 function ht(t) {
   if (t.__esModule) return t;
-  var e = Object.defineProperty({}, "__esModule", {
-    value: !0,
-  });
+  var e = Object.defineProperty({}, "__esModule", { value: !0 });
   return (
     Object.keys(t).forEach(function (i) {
       var n = Object.getOwnPropertyDescriptor(t, i);
@@ -2227,8 +2147,8 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
-***************************************************************************** */
-(lt = st || (st = {})),
+***************************************************************************** */ (lt =
+  st || (st = {})),
   (function (t) {
     var e =
         "object" == typeof ct
@@ -2260,10 +2180,7 @@ and limitations under the License.
               : "@@toPrimitive",
           r = i && void 0 !== Symbol.iterator ? Symbol.iterator : "@@iterator",
           o = "function" == typeof Object.create,
-          a =
-            {
-              __proto__: [],
-            } instanceof Array,
+          a = { __proto__: [] } instanceof Array,
           s = !o && !a,
           l = {
             create: o
@@ -2272,9 +2189,7 @@ and limitations under the License.
                 }
               : a
               ? function () {
-                  return nt({
-                    __proto__: null,
-                  });
+                  return nt({ __proto__: null });
                 }
               : function () {
                   return nt({});
@@ -2616,16 +2531,10 @@ and limitations under the License.
                           (this._keys = e),
                           (this._values = e))
                         : this._index++,
-                      {
-                        value: i,
-                        done: !1,
-                      }
+                      { value: i, done: !1 }
                     );
                   }
-                  return {
-                    value: void 0,
-                    done: !0,
-                  };
+                  return { value: void 0, done: !0 };
                 }),
                 (t.prototype.throw = function (t) {
                   throw (
@@ -2642,10 +2551,7 @@ and limitations under the License.
                       ((this._index = -1),
                       (this._keys = e),
                       (this._values = e)),
-                    {
-                      value: t,
-                      done: !0,
-                    }
+                    { value: t, done: !0 }
                   );
                 }),
                 t
@@ -2825,9 +2731,7 @@ and limitations under the License.
           function o(t, i) {
             if (!e.call(t, n)) {
               if (!i) return;
-              Object.defineProperty(t, n, {
-                value: l.create(),
-              });
+              Object.defineProperty(t, n, { value: l.create() });
             }
             return t[n];
           }
@@ -2871,9 +2775,7 @@ and limitations under the License.
           t("deleteMetadata", M);
       })(i);
   })();
-var pt = {
-  exports: {},
-};
+var pt = { exports: {} };
 !(function (t) {
   var e = Object.prototype.hasOwnProperty,
     i = "~";
@@ -3016,7 +2918,6 @@ var pt = {
     (t.exports = s);
 })(pt);
 var dt = pt.exports;
-window.dt = dt;
 var ft, gt, mt, yt;
 class vt {
   addEventListener(t, e) {
@@ -3148,7 +3049,6 @@ function we() {
     Se[(n >> 24) & 255]
   ).toUpperCase();
 }
-window.we = we;
 function Ae(t, e, i) {
   return Math.max(e, Math.min(i, t));
 }
@@ -3729,9 +3629,7 @@ const Be = class extends vt {
   ) {
     super(),
       (this.isTexture = !0),
-      Object.defineProperty(this, "id", {
-        value: ke++,
-      }),
+      Object.defineProperty(this, "id", { value: ke++ }),
       (this.uuid = we()),
       (this.name = ""),
       (this.image = t),
@@ -3808,11 +3706,7 @@ const Be = class extends vt {
     const e = void 0 === t || "string" == typeof t;
     if (!e && void 0 !== t.textures[this.uuid]) return t.textures[this.uuid];
     const i = {
-      metadata: {
-        version: 4.5,
-        type: "Texture",
-        generator: "Texture.toJSON",
-      },
+      metadata: { version: 4.5, type: "Texture", generator: "Texture.toJSON" },
       uuid: this.uuid,
       name: this.name,
       mapping: this.mapping,
@@ -3843,10 +3737,7 @@ const Be = class extends vt {
           for (let t = 0, i = n.length; t < i; t++)
             n[t].isDataTexture ? e.push(Ue(n[t].image)) : e.push(Ue(n[t]));
         } else e = Ue(n);
-        t.images[n.uuid] = {
-          uuid: n.uuid,
-          url: e,
-        };
+        t.images[n.uuid] = { uuid: n.uuid, url: e };
       }
       i.image = n.uuid;
     }
@@ -3857,9 +3748,7 @@ const Be = class extends vt {
     );
   }
   dispose() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
   }
   transformUv(t) {
     if (300 !== this.mapping) return t;
@@ -4327,11 +4216,7 @@ class He extends vt {
         i.encoding
       )),
       (this.texture.isRenderTargetTexture = !0),
-      (this.texture.image = {
-        width: t,
-        height: e,
-        depth: 1,
-      }),
+      (this.texture.image = { width: t, height: e, depth: 1 }),
       (this.texture.generateMipmaps =
         void 0 !== i.generateMipmaps && i.generateMipmaps),
       (this.texture.internalFormat =
@@ -4342,11 +4227,7 @@ class He extends vt {
       (this.depthTexture = void 0 !== i.depthTexture ? i.depthTexture : null);
   }
   setTexture(t) {
-    (t.image = {
-      width: this.width,
-      height: this.height,
-      depth: this.depth,
-    }),
+    (t.image = { width: this.width, height: this.height, depth: this.depth }),
       (this.texture = t);
   }
   setSize(t, e, i = 1) {
@@ -4379,9 +4260,7 @@ class He extends vt {
     );
   }
   dispose() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
   }
 }
 class Ve extends He {
@@ -5233,7 +5112,6 @@ class Ye {
     yield this.x, yield this.y, yield this.z;
   }
 }
-window.Ye = Ye;
 const Xe = new Ye(),
   Qe = [
     new Ye(),
@@ -6827,12 +6705,8 @@ const Pi = new Ye(),
   zi = new Ye(1, 0, 0),
   ki = new Ye(0, 1, 0),
   Bi = new Ye(0, 0, 1),
-  Gi = {
-    type: "added",
-  },
-  Ui = {
-    type: "removed",
-  },
+  Gi = { type: "added" },
+  Ui = { type: "removed" },
   ji = class extends vt {
     constructor() {
       super(),
@@ -7638,16 +7512,8 @@ const en = {
     yellow: 16776960,
     yellowgreen: 10145074,
   },
-  nn = {
-    h: 0,
-    s: 0,
-    l: 0,
-  },
-  rn = {
-    h: 0,
-    s: 0,
-    l: 0,
-  };
+  nn = { h: 0, s: 0, l: 0 },
+  rn = { h: 0, s: 0, l: 0 };
 function on(t, e, i) {
   return (
     i < 0 && (i += 1),
@@ -7967,9 +7833,7 @@ class hn extends vt {
   constructor() {
     super(),
       (this.isMaterial = !0),
-      Object.defineProperty(this, "id", {
-        value: un++,
-      }),
+      Object.defineProperty(this, "id", { value: un++ }),
       (this.uuid = we()),
       (this.name = ""),
       (this.type = "Material"),
@@ -8057,11 +7921,7 @@ class hn extends vt {
   }
   toJSON(t) {
     const e = void 0 === t || "string" == typeof t;
-    e &&
-      (t = {
-        textures: {},
-        images: {},
-      });
+    e && (t = { textures: {}, images: {} });
     const i = {
       metadata: {
         version: 4.5,
@@ -8315,14 +8175,10 @@ class hn extends vt {
     );
   }
   dispose() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
   }
   disposeAll() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
     for (const t of Object.keys(this)) {
       const e = this[t];
       e && "object" == typeof e && "minFilter" in e && e.dispose();
@@ -8392,10 +8248,7 @@ class gn {
       (this.count = void 0 !== t ? t.length / e : 0),
       (this.normalized = !0 === i),
       (this.usage = be),
-      (this.updateRange = {
-        offset: 0,
-        count: -1,
-      }),
+      (this.updateRange = { offset: 0, count: -1 }),
       (this.version = 0);
   }
   onUploadCallback() {}
@@ -8615,9 +8468,7 @@ class En extends vt {
   constructor() {
     super(),
       (this.isBufferGeometry = !0),
-      Object.defineProperty(this, "id", {
-        value: xn++,
-      }),
+      Object.defineProperty(this, "id", { value: xn++ }),
       (this.uuid = we()),
       (this.name = ""),
       (this.type = "BufferGeometry"),
@@ -8628,10 +8479,7 @@ class En extends vt {
       (this.groups = []),
       (this.boundingBox = null),
       (this.boundingSphere = null),
-      (this.drawRange = {
-        start: 0,
-        count: 1 / 0,
-      }),
+      (this.drawRange = { start: 0, count: 1 / 0 }),
       (this.userData = {});
   }
   getIndex() {
@@ -8658,11 +8506,7 @@ class En extends vt {
     return void 0 !== this.attributes[t];
   }
   addGroup(t, e, i = 0) {
-    this.groups.push({
-      start: t,
-      count: e,
-      materialIndex: i,
-    });
+    this.groups.push({ start: t, count: e, materialIndex: i });
   }
   clearGroups() {
     this.groups = [];
@@ -8869,13 +8713,7 @@ class En extends vt {
         u[i].add(y));
     }
     let b = this.groups;
-    0 === b.length &&
-      (b = [
-        {
-          start: 0,
-          count: i.length,
-        },
-      ]);
+    0 === b.length && (b = [{ start: 0, count: i.length }]);
     for (let w = 0, A = b.length; w < A; ++w) {
       const t = b[w],
         e = t.start;
@@ -9044,9 +8882,7 @@ class En extends vt {
       for (const i in e) void 0 !== e[i] && (t[i] = e[i]);
       return t;
     }
-    t.data = {
-      attributes: {},
-    };
+    t.data = { attributes: {} };
     const e = this.index;
     null !== e &&
       (t.data.index = {
@@ -9130,9 +8966,7 @@ class En extends vt {
     );
   }
   dispose() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
   }
 }
 const Dn = new Mi(),
@@ -9307,7 +9141,6 @@ class Wn extends Hi {
         );
   }
 }
-window.Wn = Wn;
 function qn(t, e, i, n, r, o, a, s, l, u, c, h) {
   Ln.fromBufferAttribute(r, u),
     In.fromBufferAttribute(r, c),
@@ -9348,11 +9181,7 @@ function qn(t, e, i, n, r, o, a, s, l, u, c, h) {
     const u = i.ray.origin.distanceTo(Vn);
     return u < i.near || u > i.far
       ? null
-      : {
-          distance: u,
-          point: Vn.clone(),
-          object: t,
-        };
+      : { distance: u, point: Vn.clone(), object: t };
   })(t, e, i, n, Ln, In, Nn, Hn);
   if (d) {
     s &&
@@ -9365,13 +9194,7 @@ function qn(t, e, i, n, r, o, a, s, l, u, c, h) {
         Un.fromBufferAttribute(l, c),
         jn.fromBufferAttribute(l, h),
         (d.uv2 = tn.getUV(Hn, Ln, In, Nn, Gn, Un, jn, new Le())));
-    const t = {
-      a: u,
-      b: c,
-      c: h,
-      normal: new Ye(),
-      materialIndex: 0,
-    };
+    const t = { a: u, b: c, c: h, normal: new Ye(), materialIndex: 0 };
     tn.getNormal(Ln, In, Nn, t.normal), (d.face = t);
   }
   return d;
@@ -9487,10 +9310,7 @@ function Qn(t) {
   }
   return e;
 }
-const Zn = {
-  clone: Xn,
-  merge: Qn,
-};
+const Zn = { clone: Xn, merge: Qn };
 class Jn extends hn {
   constructor(t) {
     super(),
@@ -9545,43 +9365,20 @@ class Jn extends hn {
     for (const n in this.uniforms) {
       const i = this.uniforms[n].value;
       i && i.isTexture
-        ? (e.uniforms[n] = {
-            type: "t",
-            value: i.toJSON(t).uuid,
-          })
+        ? (e.uniforms[n] = { type: "t", value: i.toJSON(t).uuid })
         : i && i.isColor
-        ? (e.uniforms[n] = {
-            type: "c",
-            value: i.getHex(),
-          })
+        ? (e.uniforms[n] = { type: "c", value: i.getHex() })
         : i && i.isVector2
-        ? (e.uniforms[n] = {
-            type: "v2",
-            value: i.toArray(),
-          })
+        ? (e.uniforms[n] = { type: "v2", value: i.toArray() })
         : i && i.isVector3
-        ? (e.uniforms[n] = {
-            type: "v3",
-            value: i.toArray(),
-          })
+        ? (e.uniforms[n] = { type: "v3", value: i.toArray() })
         : i && i.isVector4
-        ? (e.uniforms[n] = {
-            type: "v4",
-            value: i.toArray(),
-          })
+        ? (e.uniforms[n] = { type: "v4", value: i.toArray() })
         : i && i.isMatrix3
-        ? (e.uniforms[n] = {
-            type: "m3",
-            value: i.toArray(),
-          })
+        ? (e.uniforms[n] = { type: "m3", value: i.toArray() })
         : i && i.isMatrix4
-        ? (e.uniforms[n] = {
-            type: "m4",
-            value: i.toArray(),
-          })
-        : (e.uniforms[n] = {
-            value: i,
-          });
+        ? (e.uniforms[n] = { type: "m4", value: i.toArray() })
+        : (e.uniforms[n] = { value: i });
     }
     Object.keys(this.defines).length > 0 && (e.defines = this.defines),
       (e.vertexShader = this.vertexShader),
@@ -9591,7 +9388,6 @@ class Jn extends hn {
     return Object.keys(i).length > 0 && (e.extensions = i), e;
   }
 }
-window.Jn = Jn;
 class Kn extends Hi {
   constructor() {
     super(),
@@ -9859,11 +9655,7 @@ class nr extends He {
       (this.texture.minFilter = e.minFilter),
       (this.texture.magFilter = e.magFilter);
     const i = {
-        uniforms: {
-          tEquirect: {
-            value: null,
-          },
-        },
+        uniforms: { tEquirect: { value: null } },
         vertexShader:
           "\n\n\t\t\t\tvarying vec3 vWorldDirection;\n\n\t\t\t\tvec3 transformDirection( in vec3 dir, in mat4 matrix ) {\n\n\t\t\t\t\treturn normalize( ( matrix * vec4( dir, 0.0 ) ).xyz );\n\n\t\t\t\t}\n\n\t\t\t\tvoid main() {\n\n\t\t\t\t\tvWorldDirection = transformDirection( position, modelMatrix );\n\n\t\t\t\t\t#include <begin_vertex>\n\t\t\t\t\t#include <project_vertex>\n\n\t\t\t\t}\n\t\t\t",
         fragmentShader:
@@ -10237,140 +10029,50 @@ class dr extends En {
 }
 const fr = {
     common: {
-      diffuse: {
-        value: new ln(16777215),
-      },
-      opacity: {
-        value: 1,
-      },
-      map: {
-        value: null,
-      },
-      uvTransform: {
-        value: new Ie(),
-      },
-      uv2Transform: {
-        value: new Ie(),
-      },
-      alphaMap: {
-        value: null,
-      },
-      alphaTest: {
-        value: 0,
-      },
+      diffuse: { value: new ln(16777215) },
+      opacity: { value: 1 },
+      map: { value: null },
+      uvTransform: { value: new Ie() },
+      uv2Transform: { value: new Ie() },
+      alphaMap: { value: null },
+      alphaTest: { value: 0 },
     },
-    specularmap: {
-      specularMap: {
-        value: null,
-      },
-    },
+    specularmap: { specularMap: { value: null } },
     envmap: {
-      envMap: {
-        value: null,
-      },
-      flipEnvMap: {
-        value: -1,
-      },
-      reflectivity: {
-        value: 1,
-      },
-      ior: {
-        value: 1.5,
-      },
-      refractionRatio: {
-        value: 0.98,
-      },
+      envMap: { value: null },
+      flipEnvMap: { value: -1 },
+      reflectivity: { value: 1 },
+      ior: { value: 1.5 },
+      refractionRatio: { value: 0.98 },
     },
-    aomap: {
-      aoMap: {
-        value: null,
-      },
-      aoMapIntensity: {
-        value: 1,
-      },
-    },
-    lightmap: {
-      lightMap: {
-        value: null,
-      },
-      lightMapIntensity: {
-        value: 1,
-      },
-    },
-    emissivemap: {
-      emissiveMap: {
-        value: null,
-      },
-    },
-    bumpmap: {
-      bumpMap: {
-        value: null,
-      },
-      bumpScale: {
-        value: 1,
-      },
-    },
+    aomap: { aoMap: { value: null }, aoMapIntensity: { value: 1 } },
+    lightmap: { lightMap: { value: null }, lightMapIntensity: { value: 1 } },
+    emissivemap: { emissiveMap: { value: null } },
+    bumpmap: { bumpMap: { value: null }, bumpScale: { value: 1 } },
     normalmap: {
-      normalMap: {
-        value: null,
-      },
-      normalScale: {
-        value: new Le(1, 1),
-      },
+      normalMap: { value: null },
+      normalScale: { value: new Le(1, 1) },
     },
     displacementmap: {
-      displacementMap: {
-        value: null,
-      },
-      displacementScale: {
-        value: 1,
-      },
-      displacementBias: {
-        value: 0,
-      },
+      displacementMap: { value: null },
+      displacementScale: { value: 1 },
+      displacementBias: { value: 0 },
     },
-    roughnessmap: {
-      roughnessMap: {
-        value: null,
-      },
-    },
-    metalnessmap: {
-      metalnessMap: {
-        value: null,
-      },
-    },
-    gradientmap: {
-      gradientMap: {
-        value: null,
-      },
-    },
+    roughnessmap: { roughnessMap: { value: null } },
+    metalnessmap: { metalnessMap: { value: null } },
+    gradientmap: { gradientMap: { value: null } },
     fog: {
-      fogDensity: {
-        value: 25e-5,
-      },
-      fogNear: {
-        value: 1,
-      },
-      fogFar: {
-        value: 2e3,
-      },
-      fogColor: {
-        value: new ln(16777215),
-      },
+      fogDensity: { value: 25e-5 },
+      fogNear: { value: 1 },
+      fogFar: { value: 2e3 },
+      fogColor: { value: new ln(16777215) },
     },
     lights: {
-      ambientLightColor: {
-        value: [],
-      },
-      lightProbe: {
-        value: [],
-      },
+      ambientLightColor: { value: [] },
+      lightProbe: { value: [] },
       directionalLights: {
         value: [],
-        properties: {
-          direction: {},
-          color: {},
-        },
+        properties: { direction: {}, color: {} },
       },
       directionalLightShadows: {
         value: [],
@@ -10381,12 +10083,8 @@ const fr = {
           shadowMapSize: {},
         },
       },
-      directionalShadowMap: {
-        value: [],
-      },
-      directionalShadowMatrix: {
-        value: [],
-      },
+      directionalShadowMap: { value: [] },
+      directionalShadowMatrix: { value: [] },
       spotLights: {
         value: [],
         properties: {
@@ -10408,20 +10106,11 @@ const fr = {
           shadowMapSize: {},
         },
       },
-      spotShadowMap: {
-        value: [],
-      },
-      spotShadowMatrix: {
-        value: [],
-      },
+      spotShadowMap: { value: [] },
+      spotShadowMatrix: { value: [] },
       pointLights: {
         value: [],
-        properties: {
-          color: {},
-          position: {},
-          decay: {},
-          distance: {},
-        },
+        properties: { color: {}, position: {}, decay: {}, distance: {} },
       },
       pointLightShadows: {
         value: [],
@@ -10434,87 +10123,38 @@ const fr = {
           shadowCameraFar: {},
         },
       },
-      pointShadowMap: {
-        value: [],
-      },
-      pointShadowMatrix: {
-        value: [],
-      },
+      pointShadowMap: { value: [] },
+      pointShadowMatrix: { value: [] },
       hemisphereLights: {
         value: [],
-        properties: {
-          direction: {},
-          skyColor: {},
-          groundColor: {},
-        },
+        properties: { direction: {}, skyColor: {}, groundColor: {} },
       },
       rectAreaLights: {
         value: [],
-        properties: {
-          color: {},
-          position: {},
-          width: {},
-          height: {},
-        },
+        properties: { color: {}, position: {}, width: {}, height: {} },
       },
-      ltc_1: {
-        value: null,
-      },
-      ltc_2: {
-        value: null,
-      },
+      ltc_1: { value: null },
+      ltc_2: { value: null },
     },
     points: {
-      diffuse: {
-        value: new ln(16777215),
-      },
-      opacity: {
-        value: 1,
-      },
-      size: {
-        value: 1,
-      },
-      scale: {
-        value: 1,
-      },
-      map: {
-        value: null,
-      },
-      alphaMap: {
-        value: null,
-      },
-      alphaTest: {
-        value: 0,
-      },
-      uvTransform: {
-        value: new Ie(),
-      },
+      diffuse: { value: new ln(16777215) },
+      opacity: { value: 1 },
+      size: { value: 1 },
+      scale: { value: 1 },
+      map: { value: null },
+      alphaMap: { value: null },
+      alphaTest: { value: 0 },
+      uvTransform: { value: new Ie() },
     },
     sprite: {
-      diffuse: {
-        value: new ln(16777215),
-      },
-      opacity: {
-        value: 1,
-      },
-      center: {
-        value: new Le(0.5, 0.5),
-      },
-      rotation: {
-        value: 0,
-      },
-      map: {
-        value: null,
-      },
-      alphaMap: {
-        value: null,
-      },
-      alphaTest: {
-        value: 0,
-      },
-      uvTransform: {
-        value: new Ie(),
-      },
+      diffuse: { value: new ln(16777215) },
+      opacity: { value: 1 },
+      center: { value: new Le(0.5, 0.5) },
+      rotation: { value: 0 },
+      map: { value: null },
+      alphaMap: { value: null },
+      alphaTest: { value: 0 },
+      uvTransform: { value: new Ie() },
     },
   },
   gr = {
@@ -10809,11 +10449,7 @@ const fr = {
         fr.emissivemap,
         fr.fog,
         fr.lights,
-        {
-          emissive: {
-            value: new ln(0),
-          },
-        },
+        { emissive: { value: new ln(0) } },
       ]),
       vertexShader: gr.meshlambert_vert,
       fragmentShader: gr.meshlambert_frag,
@@ -10832,15 +10468,9 @@ const fr = {
         fr.fog,
         fr.lights,
         {
-          emissive: {
-            value: new ln(0),
-          },
-          specular: {
-            value: new ln(1118481),
-          },
-          shininess: {
-            value: 30,
-          },
+          emissive: { value: new ln(0) },
+          specular: { value: new ln(1118481) },
+          shininess: { value: 30 },
         },
       ]),
       vertexShader: gr.meshphong_vert,
@@ -10861,18 +10491,10 @@ const fr = {
         fr.fog,
         fr.lights,
         {
-          emissive: {
-            value: new ln(0),
-          },
-          roughness: {
-            value: 1,
-          },
-          metalness: {
-            value: 0,
-          },
-          envMapIntensity: {
-            value: 1,
-          },
+          emissive: { value: new ln(0) },
+          roughness: { value: 1 },
+          metalness: { value: 0 },
+          envMapIntensity: { value: 1 },
         },
       ]),
       vertexShader: gr.meshphysical_vert,
@@ -10890,11 +10512,7 @@ const fr = {
         fr.gradientmap,
         fr.fog,
         fr.lights,
-        {
-          emissive: {
-            value: new ln(0),
-          },
-        },
+        { emissive: { value: new ln(0) } },
       ]),
       vertexShader: gr.meshtoon_vert,
       fragmentShader: gr.meshtoon_frag,
@@ -10906,11 +10524,7 @@ const fr = {
         fr.normalmap,
         fr.displacementmap,
         fr.fog,
-        {
-          matcap: {
-            value: null,
-          },
-        },
+        { matcap: { value: null } },
       ]),
       vertexShader: gr.meshmatcap_vert,
       fragmentShader: gr.meshmatcap_frag,
@@ -10925,15 +10539,9 @@ const fr = {
         fr.common,
         fr.fog,
         {
-          scale: {
-            value: 1,
-          },
-          dashSize: {
-            value: 1,
-          },
-          totalSize: {
-            value: 2,
-          },
+          scale: { value: 1 },
+          dashSize: { value: 1 },
+          totalSize: { value: 2 },
         },
       ]),
       vertexShader: gr.linedashed_vert,
@@ -10950,11 +10558,7 @@ const fr = {
         fr.bumpmap,
         fr.normalmap,
         fr.displacementmap,
-        {
-          opacity: {
-            value: 1,
-          },
-        },
+        { opacity: { value: 1 } },
       ]),
       vertexShader: gr.meshnormal_vert,
       fragmentShader: gr.meshnormal_frag,
@@ -10965,35 +10569,17 @@ const fr = {
       fragmentShader: gr.sprite_frag,
     },
     background: {
-      uniforms: {
-        uvTransform: {
-          value: new Ie(),
-        },
-        t2D: {
-          value: null,
-        },
-      },
+      uniforms: { uvTransform: { value: new Ie() }, t2D: { value: null } },
       vertexShader: gr.background_vert,
       fragmentShader: gr.background_frag,
     },
     cube: {
-      uniforms: Qn([
-        fr.envmap,
-        {
-          opacity: {
-            value: 1,
-          },
-        },
-      ]),
+      uniforms: Qn([fr.envmap, { opacity: { value: 1 } }]),
       vertexShader: gr.cube_vert,
       fragmentShader: gr.cube_frag,
     },
     equirect: {
-      uniforms: {
-        tEquirect: {
-          value: null,
-        },
-      },
+      uniforms: { tEquirect: { value: null } },
       vertexShader: gr.equirect_vert,
       fragmentShader: gr.equirect_frag,
     },
@@ -11002,15 +10588,9 @@ const fr = {
         fr.common,
         fr.displacementmap,
         {
-          referencePosition: {
-            value: new Ye(),
-          },
-          nearDistance: {
-            value: 1,
-          },
-          farDistance: {
-            value: 1e3,
-          },
+          referencePosition: { value: new Ye() },
+          nearDistance: { value: 1 },
+          farDistance: { value: 1e3 },
         },
       ]),
       vertexShader: gr.distanceRGBA_vert,
@@ -11020,14 +10600,7 @@ const fr = {
       uniforms: Qn([
         fr.lights,
         fr.fog,
-        {
-          color: {
-            value: new ln(0),
-          },
-          opacity: {
-            value: 1,
-          },
-        },
+        { color: { value: new ln(0) }, opacity: { value: 1 } },
       ]),
       vertexShader: gr.shadow_vert,
       fragmentShader: gr.shadow_frag,
@@ -11037,75 +10610,29 @@ mr.physical = {
   uniforms: Qn([
     mr.standard.uniforms,
     {
-      clearcoat: {
-        value: 0,
-      },
-      clearcoatMap: {
-        value: null,
-      },
-      clearcoatRoughness: {
-        value: 0,
-      },
-      clearcoatRoughnessMap: {
-        value: null,
-      },
-      clearcoatNormalScale: {
-        value: new Le(1, 1),
-      },
-      clearcoatNormalMap: {
-        value: null,
-      },
-      sheen: {
-        value: 0,
-      },
-      sheenColor: {
-        value: new ln(0),
-      },
-      sheenColorMap: {
-        value: null,
-      },
-      sheenRoughness: {
-        value: 0,
-      },
-      sheenRoughnessMap: {
-        value: null,
-      },
-      transmission: {
-        value: 0,
-      },
-      transmissionMap: {
-        value: null,
-      },
-      transmissionSamplerSize: {
-        value: new Le(),
-      },
-      transmissionSamplerMap: {
-        value: null,
-      },
-      thickness: {
-        value: 0,
-      },
-      thicknessMap: {
-        value: null,
-      },
-      attenuationDistance: {
-        value: 0,
-      },
-      attenuationColor: {
-        value: new ln(0),
-      },
-      specularIntensity: {
-        value: 0,
-      },
-      specularIntensityMap: {
-        value: null,
-      },
-      specularColor: {
-        value: new ln(1, 1, 1),
-      },
-      specularColorMap: {
-        value: null,
-      },
+      clearcoat: { value: 0 },
+      clearcoatMap: { value: null },
+      clearcoatRoughness: { value: 0 },
+      clearcoatRoughnessMap: { value: null },
+      clearcoatNormalScale: { value: new Le(1, 1) },
+      clearcoatNormalMap: { value: null },
+      sheen: { value: 0 },
+      sheenColor: { value: new ln(0) },
+      sheenColorMap: { value: null },
+      sheenRoughness: { value: 0 },
+      sheenRoughnessMap: { value: null },
+      transmission: { value: 0 },
+      transmissionMap: { value: null },
+      transmissionSamplerSize: { value: new Le() },
+      transmissionSamplerMap: { value: null },
+      thickness: { value: 0 },
+      thicknessMap: { value: null },
+      attenuationDistance: { value: 0 },
+      attenuationColor: { value: new ln(0) },
+      specularIntensity: { value: 0 },
+      specularIntensityMap: { value: null },
+      specularColor: { value: new ln(1, 1, 1) },
+      specularColorMap: { value: null },
     },
   ]),
   vertexShader: gr.meshphysical_vert,
@@ -11655,10 +11182,7 @@ class _r {
       (this.renderingShadows = !1),
       (this.plane = new lr()),
       (this.viewNormalMatrix = new Ie()),
-      (this.uniform = {
-        value: null,
-        needsUpdate: !1,
-      }),
+      (this.uniform = { value: null, needsUpdate: !1 }),
       (this.numPlanes = 0),
       (this.numIntersection = 0);
   }
@@ -11883,15 +11407,7 @@ const wr = Math.pow(2, 8),
   Ar = [0.125, 0.215, 0.35, 0.446, 0.526, 0.582],
   Er = 5 + Ar.length,
   Dr = 20,
-  Tr = {
-    [ce]: 0,
-    [he]: 1,
-    [de]: 2,
-    [ge]: 3,
-    [me]: 4,
-    [ye]: 5,
-    [pe]: 6,
-  },
+  Tr = { [ce]: 0, [he]: 1, [de]: 2, [ge]: 3, [me]: 4, [ye]: 5, [pe]: 6 },
   Pr = new Mr(),
   { _lodPlanes: Lr, _sizeLods: Ir, _sigmas: Nr } = Ur(),
   Rr = new ln();
@@ -11919,37 +11435,17 @@ class Br {
           i = new Ye(0, 1, 0);
         return new Cr({
           name: "SphericalGaussianBlur",
-          defines: {
-            n: t,
-          },
+          defines: { n: t },
           uniforms: {
-            envMap: {
-              value: null,
-            },
-            samples: {
-              value: 1,
-            },
-            weights: {
-              value: e,
-            },
-            latitudinal: {
-              value: !1,
-            },
-            dTheta: {
-              value: 0,
-            },
-            mipInt: {
-              value: 0,
-            },
-            poleAxis: {
-              value: i,
-            },
-            inputEncoding: {
-              value: Tr[ce],
-            },
-            outputEncoding: {
-              value: Tr[ce],
-            },
+            envMap: { value: null },
+            samples: { value: 1 },
+            weights: { value: e },
+            latitudinal: { value: !1 },
+            dTheta: { value: 0 },
+            mipInt: { value: 0 },
+            poleAxis: { value: i },
+            inputEncoding: { value: Tr[ce] },
+            outputEncoding: { value: Tr[ce] },
           },
           vertexShader: qr(),
           fragmentShader: `\n\n\t\t\tprecision mediump float;\n\t\t\tprecision mediump int;\n\n\t\t\tvarying vec3 vOutputDirection;\n\n\t\t\tuniform sampler2D envMap;\n\t\t\tuniform int samples;\n\t\t\tuniform float weights[ n ];\n\t\t\tuniform bool latitudinal;\n\t\t\tuniform float dTheta;\n\t\t\tuniform float mipInt;\n\t\t\tuniform vec3 poleAxis;\n\n\t\t\t${Yr()}\n\n\t\t\t#define ENVMAP_TYPE_CUBE_UV\n\t\t\t#include <cube_uv_reflection_fragment>\n\n\t\t\tvec3 getSample( float theta, vec3 axis ) {\n\n\t\t\t\tfloat cosTheta = cos( theta );\n\t\t\t\t// Rodrigues' axis-angle rotation\n\t\t\t\tvec3 sampleDirection = vOutputDirection * cosTheta\n\t\t\t\t\t+ cross( axis, vOutputDirection ) * sin( theta )\n\t\t\t\t\t+ axis * dot( axis, vOutputDirection ) * ( 1.0 - cosTheta );\n\n\t\t\t\treturn bilinearCubeUV( envMap, sampleDirection, mipInt );\n\n\t\t\t}\n\n\t\t\tvoid main() {\n\n\t\t\t\tvec3 axis = latitudinal ? poleAxis : cross( poleAxis, vOutputDirection );\n\n\t\t\t\tif ( all( equal( axis, vec3( 0.0 ) ) ) ) {\n\n\t\t\t\t\taxis = vec3( vOutputDirection.z, 0.0, - vOutputDirection.x );\n\n\t\t\t\t}\n\n\t\t\t\taxis = normalize( axis );\n\n\t\t\t\tgl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\t\tgl_FragColor.rgb += weights[ 0 ] * getSample( 0.0, axis );\n\n\t\t\t\tfor ( int i = 1; i < n; i++ ) {\n\n\t\t\t\t\tif ( i >= samples ) {\n\n\t\t\t\t\t\tbreak;\n\n\t\t\t\t\t}\n\n\t\t\t\t\tfloat theta = dTheta * float( i );\n\t\t\t\t\tgl_FragColor.rgb += weights[ i ] * getSample( -1.0 * theta, axis );\n\t\t\t\t\tgl_FragColor.rgb += weights[ i ] * getSample( theta, axis );\n\n\t\t\t\t}\n\n\t\t\t\tgl_FragColor = linearToOutputTexel( gl_FragColor );\n\n\t\t\t}\n\t\t`,
@@ -12210,11 +11706,7 @@ function Ur() {
       t.push(b),
       n > 4 && n--;
   }
-  return {
-    _lodPlanes: t,
-    _sizeLods: e,
-    _sigmas: i,
-  };
+  return { _lodPlanes: t, _sizeLods: e, _sigmas: i };
 }
 function jr(t) {
   const e = new He(3 * wr, 3 * wr, t);
@@ -12233,18 +11725,10 @@ function Vr() {
   return new Cr({
     name: "EquirectangularToCubeUV",
     uniforms: {
-      envMap: {
-        value: null,
-      },
-      texelSize: {
-        value: t,
-      },
-      inputEncoding: {
-        value: Tr[ce],
-      },
-      outputEncoding: {
-        value: Tr[ce],
-      },
+      envMap: { value: null },
+      texelSize: { value: t },
+      inputEncoding: { value: Tr[ce] },
+      outputEncoding: { value: Tr[ce] },
     },
     vertexShader: qr(),
     fragmentShader: `\n\n\t\t\tprecision mediump float;\n\t\t\tprecision mediump int;\n\n\t\t\tvarying vec3 vOutputDirection;\n\n\t\t\tuniform sampler2D envMap;\n\t\t\tuniform vec2 texelSize;\n\n\t\t\t${Yr()}\n\n\t\t\t#include <common>\n\n\t\t\tvoid main() {\n\n\t\t\t\tgl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );\n\n\t\t\t\tvec3 outputDirection = normalize( vOutputDirection );\n\t\t\t\tvec2 uv = equirectUv( outputDirection );\n\n\t\t\t\tvec2 f = fract( uv / texelSize - 0.5 );\n\t\t\t\tuv -= f * texelSize;\n\t\t\t\tvec3 tl = envMapTexelToLinear( texture2D ( envMap, uv ) ).rgb;\n\t\t\t\tuv.x += texelSize.x;\n\t\t\t\tvec3 tr = envMapTexelToLinear( texture2D ( envMap, uv ) ).rgb;\n\t\t\t\tuv.y += texelSize.y;\n\t\t\t\tvec3 br = envMapTexelToLinear( texture2D ( envMap, uv ) ).rgb;\n\t\t\t\tuv.x -= texelSize.x;\n\t\t\t\tvec3 bl = envMapTexelToLinear( texture2D ( envMap, uv ) ).rgb;\n\n\t\t\t\tvec3 tm = mix( tl, tr, f.x );\n\t\t\t\tvec3 bm = mix( bl, br, f.x );\n\t\t\t\tgl_FragColor.rgb = mix( tm, bm, f.y );\n\n\t\t\t\tgl_FragColor = linearToOutputTexel( gl_FragColor );\n\n\t\t\t}\n\t\t`,
@@ -12257,15 +11741,9 @@ function Wr() {
   return new Cr({
     name: "CubemapToCubeUV",
     uniforms: {
-      envMap: {
-        value: null,
-      },
-      inputEncoding: {
-        value: Tr[ce],
-      },
-      outputEncoding: {
-        value: Tr[ce],
-      },
+      envMap: { value: null },
+      inputEncoding: { value: Tr[ce] },
+      outputEncoding: { value: Tr[ce] },
     },
     vertexShader: qr(),
     fragmentShader: `\n\n\t\t\tprecision mediump float;\n\t\t\tprecision mediump int;\n\n\t\t\tvarying vec3 vOutputDirection;\n\n\t\t\tuniform samplerCube envMap;\n\n\t\t\t${Yr()}\n\n\t\t\tvoid main() {\n\n\t\t\t\tgl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );\n\t\t\t\tgl_FragColor.rgb = envMapTexelToLinear( textureCube( envMap, vec3( - vOutputDirection.x, vOutputDirection.yz ) ) ).rgb;\n\t\t\t\tgl_FragColor = linearToOutputTexel( gl_FragColor );\n\n\t\t\t}\n\t\t`,
@@ -12503,17 +11981,8 @@ class Kr {
     (this.gl = t),
       (this.autoReset = !0),
       (this.programs = null),
-      (this.memory = {
-        geometries: 0,
-        textures: 0,
-      }),
-      (this.render = {
-        frame: 0,
-        calls: 0,
-        triangles: 0,
-        points: 0,
-        lines: 0,
-      });
+      (this.memory = { geometries: 0, textures: 0 }),
+      (this.render = { frame: 0, calls: 0, triangles: 0, points: 0, lines: 0 });
   }
   update(t, e, i) {
     switch ((this.render.calls++, e)) {
@@ -12831,12 +12300,7 @@ class to extends Ge {
   constructor(t = null, e = 1, i = 1, n = 1) {
     super(null),
       (this.isDataTexture2DArray = !0),
-      (this.image = {
-        data: t,
-        width: e,
-        height: i,
-        depth: n,
-      }),
+      (this.image = { data: t, width: e, height: i, depth: n }),
       (this.magFilter = Ut),
       (this.minFilter = Ut),
       (this.wrapR = Bt),
@@ -12920,11 +12384,7 @@ class ro {
                 (u[a + r + 7] = 0));
           }
         }
-        (i = {
-          count: t,
-          texture: c,
-          size: new Le(s, l),
-        }),
+        (i = { count: t, texture: c, size: new Le(s, l) }),
           this.morphTextures.set(e, i);
       }
       let o = 0;
@@ -13028,12 +12488,7 @@ const ao = new Ge(),
     constructor(t = null, e = 1, i = 1, n = 1) {
       super(null),
         (this.isDataTexture3D = !0),
-        (this.image = {
-          data: t,
-          width: e,
-          height: i,
-          depth: n,
-        }),
+        (this.image = { data: t, width: e, height: i, depth: n }),
         (this.magFilter = Ut),
         (this.minFilter = Ut),
         (this.wrapR = Bt),
@@ -14023,14 +13478,8 @@ class Pa {
         (this.diagnostics = {
           runnable: n,
           programLog: t,
-          vertexShader: {
-            log: e,
-            prefix: g,
-          },
-          fragmentShader: {
-            log: i,
-            prefix: m,
-          },
+          vertexShader: { log: e, prefix: g },
+          fragmentShader: { log: i, prefix: m },
         });
     }
     this.gl.deleteShader(x),
@@ -14495,9 +13944,7 @@ class Oa {
       (this.opaque = []),
       (this.transmissive = []),
       (this.transparent = []),
-      (this.defaultProgram = {
-        id: -1,
-      });
+      (this.defaultProgram = { id: -1 });
   }
   init() {
     (this.renderItemsIndex = 0),
@@ -14601,10 +14048,7 @@ class za {
     let e;
     switch (t.type) {
       case "DirectionalLight":
-        e = {
-          direction: new Ye(),
-          color: new ln(),
-        };
+        e = { direction: new Ye(), color: new ln() };
         break;
       case "SpotLight":
         e = {
@@ -14618,19 +14062,10 @@ class za {
         };
         break;
       case "PointLight":
-        e = {
-          position: new Ye(),
-          color: new ln(),
-          distance: 0,
-          decay: 0,
-        };
+        e = { position: new Ye(), color: new ln(), distance: 0, decay: 0 };
         break;
       case "HemisphereLight":
-        e = {
-          direction: new Ye(),
-          skyColor: new ln(),
-          groundColor: new ln(),
-        };
+        e = { direction: new Ye(), skyColor: new ln(), groundColor: new ln() };
         break;
       case "RectAreaLight":
         e = {
@@ -15044,31 +14479,17 @@ class Wa {
       (this._shadowMapSize = new Le()),
       (this._viewportSize = new Le()),
       (this._viewport = new je()),
-      (this._depthMaterial = new Ha({
-        depthPacking: 3201,
-      })),
+      (this._depthMaterial = new Ha({ depthPacking: 3201 })),
       (this._distanceMaterial = new Va()),
       (this._materialCache = {}),
       (this._maxTextureSize = i.maxTextureSize),
-      (this.shadowSide = {
-        0: bt,
-        1: 0,
-        2: xt,
-      }),
+      (this.shadowSide = { 0: bt, 1: 0, 2: xt }),
       (this.shadowMaterialVertical = new Jn({
-        defines: {
-          VSM_SAMPLES: 8,
-        },
+        defines: { VSM_SAMPLES: 8 },
         uniforms: {
-          shadow_pass: {
-            value: null,
-          },
-          resolution: {
-            value: new Le(),
-          },
-          radius: {
-            value: 4,
-          },
+          shadow_pass: { value: null },
+          resolution: { value: new Le() },
+          radius: { value: 4 },
         },
         vertexShader:
           "\nvoid main() {\n\n\tgl_Position = vec4( position, 1.0 );\n\n}\n",
@@ -15122,22 +14543,14 @@ class Wa {
             (r.mapSize.y = this._viewportSize.y))),
         null === r.map && !r.isPointLightShadow && 3 === this.type)
       ) {
-        const t = {
-          minFilter: Vt,
-          magFilter: Vt,
-          format: te,
-        };
+        const t = { minFilter: Vt, magFilter: Vt, format: te };
         (r.map = new He(this._shadowMapSize.x, this._shadowMapSize.y, t)),
           (r.map.texture.name = n.name + ".shadowMap"),
           (r.mapPass = new He(this._shadowMapSize.x, this._shadowMapSize.y, t)),
           r.camera.updateProjectionMatrix();
       }
       if (null === r.map) {
-        const t = {
-          minFilter: Ut,
-          magFilter: Ut,
-          format: te,
-        };
+        const t = { minFilter: Ut, magFilter: Ut, format: te };
         (r.map = new He(this._shadowMapSize.x, this._shadowMapSize.y, t)),
           (r.map.texture.name = n.name + ".shadowMap"),
           r.camera.updateProjectionMatrix();
@@ -15796,10 +15209,7 @@ class Qa {
     null === this.currentTextureSlot && this.activeTexture();
     let i = this.currentBoundTextures[this.currentTextureSlot];
     void 0 === i &&
-      ((i = {
-        type: void 0,
-        texture: void 0,
-      }),
+      ((i = { type: void 0, texture: void 0 }),
       (this.currentBoundTextures[this.currentTextureSlot] = i)),
       (i.type === t && i.texture === e) ||
         (this.gl.bindTexture(t, e || this.emptyTextures[t]),
@@ -16944,9 +16354,7 @@ class Ja {
       (this.renderListStack = []),
       (this.renderStateStack = []),
       (this.domElement = this._canvas),
-      (this.debug = {
-        checkShaderErrors: !0,
-      }),
+      (this.debug = { checkShaderErrors: !0 }),
       (this.autoClear = !0),
       (this.autoClearColor = !0),
       (this.autoClearDepth = !0),
@@ -17037,11 +16445,7 @@ class Ja {
       }
       void 0 === this._gl.getShaderPrecisionFormat &&
         (this._gl.getShaderPrecisionFormat = function () {
-          return {
-            rangeMin: 1,
-            rangeMax: 1,
-            precision: 1,
-          };
+          return { rangeMin: 1, rangeMax: 1, precision: 1 };
         });
     } catch (i) {
       throw (console.error("@dp/gis-engine: WebGLRenderer: " + i.message), i);
@@ -18124,10 +17528,7 @@ class $a {
       (this.stride = e),
       (this.count = void 0 !== t ? t.length / e : 0),
       (this.usage = be),
-      (this.updateRange = {
-        offset: 0,
-        count: -1,
-      }),
+      (this.updateRange = { offset: 0, count: -1 }),
       (this.version = 0),
       (this.uuid = we());
   }
@@ -18341,12 +17742,7 @@ class is extends Ge {
   constructor(t = null, e = 1, i = 1, n, r, o, a, s, l = 1003, u = 1003, c, h) {
     super(null, o, a, s, l, u, n, r, c, h),
       (this.isDataTexture = !0),
-      (this.image = {
-        data: t,
-        width: e,
-        height: i,
-        colorSpace: "srgb",
-      }),
+      (this.image = { data: t, width: e, height: i, colorSpace: "srgb" }),
       (this.magFilter = l),
       (this.minFilter = u),
       (this.generateMipmaps = !1),
@@ -18448,9 +17844,7 @@ class ls extends Wn {
   }
   updateMorphTargets() {}
   dispose() {
-    this.dispatchEvent({
-      type: "dispose",
-    });
+    this.dispatchEvent({ type: "dispose" });
   }
 }
 class us extends hn {
@@ -18783,7 +18177,6 @@ class As extends Hi {
     super(), (this.isGroup = !0);
   }
 }
-window.As = As;
 class Es extends Ge {
   constructor(t, e, i, n, r, o, a, s, l) {
     super(t, e, i, n, r, o, a, s, l),
@@ -18791,7 +18184,6 @@ class Es extends Ge {
       (this.needsUpdate = !0);
   }
 }
-window.Es = Es;
 new Ye(), new Ye(), new Ye(), new tn();
 class Ds {
   constructor() {
@@ -18916,11 +18308,7 @@ class Ds {
         r[i].applyMatrix4(s.makeRotationAxis(n[i], e * i)),
           o[i].crossVectors(n[i], r[i]);
     }
-    return {
-      tangents: n,
-      normals: r,
-      binormals: o,
-    };
+    return { tangents: n, normals: r, binormals: o };
   }
   clone() {
     return new this.constructor().copy(this);
@@ -18930,11 +18318,7 @@ class Ds {
   }
   toJSON() {
     const t = {
-      metadata: {
-        version: 4.5,
-        type: "Curve",
-        generator: "Curve.toJSON",
-      },
+      metadata: { version: 4.5, type: "Curve", generator: "Curve.toJSON" },
     };
     return (
       (t.arcLengthDivisions = this.arcLengthDivisions), (t.type = this.type), t
@@ -19531,9 +18915,7 @@ var Hs = Object.freeze(
       SplineCurve: js,
     },
     Symbol.toStringTag,
-    {
-      value: "Module",
-    }
+    { value: "Module" }
   )
 );
 class Vs extends Ds {
@@ -19723,10 +19105,7 @@ class qs extends Ws {
     return e;
   }
   extractPoints(t) {
-    return {
-      shape: this.getPoints(t),
-      holes: this.getPointsHoles(t),
-    };
+    return { shape: this.getPoints(t), holes: this.getPointsHoles(t) };
   }
   copy(t) {
     super.copy(t), (this.holes = []);
@@ -19761,9 +19140,7 @@ function Ys(t, e) {
     return parseFloat(i.substring(0, e + n + 1));
   })(Math.random() * (e - t) + t, 2);
 }
-var Xs = {
-  exports: {},
-};
+var Xs = { exports: {} };
 function Qs(t, e, i) {
   i = i || 2;
   var n,
@@ -20240,11 +19617,7 @@ function xl(t, e, i, n) {
   (Qs.flatten = function (t) {
     for (
       var e = t[0][0].length,
-        i = {
-          vertices: [],
-          holes: [],
-          dimensions: e,
-        },
+        i = { vertices: [], holes: [], dimensions: e },
         n = 0,
         r = 0;
       r < t.length;
@@ -20266,8 +19639,6 @@ var _l = Xs.exports,
   El = Al.hasOwnProperty,
   Dl = Al.toString,
   Tl = wl ? wl.toStringTag : void 0;
-window._l = _l;
-
 var Pl = Object.prototype.toString;
 var Ll = "[object Null]",
   Il = "[object Undefined]",
@@ -20930,12 +20301,7 @@ function jc(t, e, i, n, r, o, a, s) {
 }
 function Hc(t, e, i) {
   "__proto__" == e && Zu
-    ? Zu(t, e, {
-        configurable: !0,
-        enumerable: !0,
-        value: i,
-        writable: !0,
-      })
+    ? Zu(t, e, { configurable: !0, enumerable: !0, value: i, writable: !0 })
     : (t[e] = i);
 }
 function Vc(t, e) {
@@ -21835,7 +21201,6 @@ function Yd(t, e, i) {
   );
   return (n.placeholder = Yd.placeholder), n;
 }
-window.Yd = Yd;
 function Xd(t, e, i) {
   ((void 0 !== i && !Vc(t[e], i)) || (void 0 === i && !(e in t))) &&
     Hc(t, e, i);
@@ -21912,7 +21277,6 @@ function $d(t, e) {
 function tf(t, e) {
   return Hd(t, e);
 }
-window.tf = tf;
 function ef(t) {
   return t && t.length
     ? (function (t, e, i) {
@@ -21927,11 +21291,9 @@ function ef(t) {
       })(t, Kl, $d)
     : void 0;
 }
-window.ef = ef;
 var nf = $c(function (t, e, i) {
   Jd(t, e, i);
 });
-window.nf = nf;
 const rf = (function () {
   try {
     return (
@@ -21951,11 +21313,9 @@ const of = pd,
       kl(e) ? e : void 0 === e ? null : void 0
     );
   };
-window.af = af;
 function sf(t, e) {
   return t && t.hasOwnProperty(e);
 }
-window.sf = sf;
 function lf(t) {
   return uf(t) || "" === t;
 }
@@ -22180,9 +21540,108 @@ function Nf(t, e) {
 }
 var Rf,
   Of = !0;
-
+function Ff(t, e) {
+  if ("string" == typeof e) return t[e];
+  {
+    const i = e.length;
+    let n,
+      r,
+      o = -1;
+    for (; ++o < i && ((n = e[o]), Object.hasOwnProperty.call(t, n)); )
+      r = t = t[n];
+    return o === i ? r : void 0;
+  }
+}
 void 0 === (Rf = !1) && (Rf = !0), (Of = Rf);
-
+class zf {
+  constructor(t) {
+    (this.parent = t), (this.watchers = []);
+  }
+  addWatch(t) {
+    t instanceof Array
+      ? Array.prototype.push.apply(this.watchers, t)
+      : this.watchers.push(t),
+      this.watchers.sort((t, e) => (t.priority || 10) - (e.priority || 10));
+  }
+  compare(t, e) {
+    if (e && t)
+      for (let i = 0, n = this.watchers.length; i < n; i++) {
+        const n = this.watchers[i],
+          { rule: r, cb: o } = n;
+        if (this.__calcRuleAndProps(r, e, t) && (o(e, t), n.serial)) break;
+      }
+  }
+  defaultRule(t, e, i, n = !1) {
+    return this.parent.defaultRule(t, e, i, n);
+  }
+  __calcRuleAndProps(t, e, i) {
+    let n = !1;
+    switch (t.type) {
+      case "all":
+        t.rules && (n = t.rules.every((t) => this.__calcRuleAndProps(t, e, i)));
+        break;
+      case "some":
+        t.rules && (n = t.rules.some((t) => this.__calcRuleAndProps(t, e, i)));
+        break;
+      default: {
+        const n =
+          "custom" === t.type ? t.ruleFunc : this.parent.ruleFuncMap[t.type];
+        return !!n && n(e, i, t.key);
+      }
+    }
+    return n;
+  }
+}
+const kf = new (class {
+  constructor() {
+    this.ruleFuncMap = {};
+  }
+  registerRule(t, e) {
+    this.ruleFuncMap[t] = e;
+  }
+  createPropsWatch() {
+    return new zf(this);
+  }
+  defaultRule(t, e, i, n = !1) {
+    return { rule: { type: e, key: t }, cb: i, serial: n };
+  }
+})();
+kf.registerRule("has", (t, e, i) => cf(Ff(t, i))),
+  kf.registerRule("diff", (t, e, i) => {
+    const n = Ff(t, i),
+      r = Ff(e, i);
+    return cf(n) && n !== r;
+  }),
+  kf.registerRule("diffDeep", (t, e, i) => {
+    const n = Ff(t, i),
+      r = Ff(e, i);
+    return (
+      cf(n) && n !== r && (Array.isArray(n) ? !tf(n, r) : !tf(nf({}, r, n), r))
+    );
+  }),
+  kf.registerRule("diffAnyone", (t, e, i) =>
+    i.some((i) => {
+      const n = Ff(t, i),
+        r = Ff(e, i);
+      return cf(n) && n !== r;
+    })
+  ),
+  kf.registerRule("diffAnyoneDeep", (t, e, i) =>
+    i.some((i) => {
+      const n = Ff(t, i),
+        r = Ff(e, i);
+      return (
+        cf(n) &&
+        n !== r &&
+        (Array.isArray(n) ? !tf(n, r) : !tf(nf({}, r, n), r))
+      );
+    })
+  ),
+  kf.registerRule("always", () => !0),
+  kf.registerRule("hasAndClose", (t, e, i) => {
+    const n = Ff(t, i);
+    return cf(n) && !n;
+  });
 const Bf = 0.01,
   Gf = Math.PI / 180,
   Uf = 180 / Math.PI,
@@ -22190,24 +21649,16 @@ const Bf = 0.01,
   Hf = 1565.4303392804097,
   Vf = jf * Math.PI * 2,
   Wf = [];
-window.Vf = Vf;
 for (let p7 = 0; p7 <= 31; p7++) {
   const t = Xf(p7, 1),
     e = [];
   for (let i = 0; i < 10; i++) e.push(Xf(p7 + 0.1 * i, 1));
-  Wf.push({
-    value: t,
-    subValue: e,
-  });
+  Wf.push({ value: t, subValue: e });
 }
 function qf(t, e) {
   0 === e && (e = 512);
   const i = (function (t) {
-      if (t >= Wf[0].value)
-        return {
-          zoom: 0,
-          distance: Wf[0].subValue[0],
-        };
+      if (t >= Wf[0].value) return { zoom: 0, distance: Wf[0].subValue[0] };
       let e = 0,
         i = 0,
         n = !1;
@@ -22224,10 +21675,7 @@ function qf(t, e) {
         }
         if (n || e == Wf.length - 1) break;
       }
-      return {
-        zoom: e + 0.1 * i,
-        distance: Wf[e].subValue[i],
-      };
+      return { zoom: e + 0.1 * i, distance: Wf[e].subValue[i] };
     })(t / e).zoom,
     n = Kf(i),
     r = Math.tan((n * Gf) / 2),
@@ -22255,7 +21703,6 @@ function Qf(t) {
     return i.push(t[2]), i;
   }
 }
-window.Qf = Qf;
 function Zf(t) {
   const e = Jf;
   if (void 0 === t[2]) {
@@ -22266,7 +21713,6 @@ function Zf(t) {
     return i.push(t[2]), i;
   }
 }
-window.Zf = Zf;
 class Jf {
   static project(t, e) {
     const i = 85.0511287798;
@@ -22593,9 +22039,7 @@ function _g(t) {
   for (e in t)
     n[e] =
       null == (i = t[e])
-        ? {
-            type: null,
-          }
+        ? { type: null }
         : ("FeatureCollection" === i.type
             ? Sg
             : "Feature" === i.type
@@ -22604,10 +22048,7 @@ function _g(t) {
   return n;
 }
 function Sg(t) {
-  var e = {
-    type: "GeometryCollection",
-    geometries: t.features.map(Mg),
-  };
+  var e = { type: "GeometryCollection", geometries: t.features.map(Mg) };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function Mg(t) {
@@ -22622,25 +22063,13 @@ function Mg(t) {
   return i;
 }
 function Cg(t) {
-  if (null == t)
-    return {
-      type: null,
-    };
+  if (null == t) return { type: null };
   var e =
     "GeometryCollection" === t.type
-      ? {
-          type: "GeometryCollection",
-          geometries: t.geometries.map(Cg),
-        }
+      ? { type: "GeometryCollection", geometries: t.geometries.map(Cg) }
       : "Point" === t.type || "MultiPoint" === t.type
-      ? {
-          type: t.type,
-          coordinates: t.coordinates,
-        }
-      : {
-          type: t.type,
-          arcs: t.coordinates,
-        };
+      ? { type: t.type, coordinates: t.coordinates }
+      : { type: t.type, arcs: t.coordinates };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function wg(t) {
@@ -22787,10 +22216,7 @@ var Eg = Object.freeze(
                   },
                 };
                 for (var m in t) f(t[m]);
-                return {
-                  scale: [1 / s, 1 / l],
-                  translate: [n, r],
-                };
+                return { scale: [1 / s, 1 / l], translate: [n, r] };
               })(t, i, e),
             r = (function (t) {
               var e,
@@ -22917,12 +22343,7 @@ var Eg = Object.freeze(
                 for (i = 0, n = a.length; i < n; ++i)
                   for (var l = a[i], u = l[0], c = l[1]; ++u < c; )
                     r.has(o[u]) &&
-                      ((e = {
-                        0: u,
-                        1: l[1],
-                      }),
-                      (l[1] = u),
-                      (l = l.next = e));
+                      ((e = { 0: u, 1: l[1] }), (l[1] = u), (l = l.next = e));
                 for (i = 0, n = s.length; i < n; ++i)
                   for (
                     var h = s[i], p = h[0], d = p, f = h[1], g = r.has(o[p]);
@@ -22931,10 +22352,7 @@ var Eg = Object.freeze(
                   )
                     r.has(o[d]) &&
                       (g
-                        ? ((e = {
-                            0: d,
-                            1: h[1],
-                          }),
+                        ? ((e = { 0: d, 1: h[1] }),
                           (h[1] = d),
                           (h = h.next = e))
                         : (bg(o, p, f, f - d),
@@ -22970,18 +22388,12 @@ var Eg = Object.freeze(
                   };
                   function s(t) {
                     for (var n = 0, o = t.length; n < o; ++n) r[++e] = t[n];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return i.push(a), a;
                   }
                   function l(t) {
                     for (var i = 0, o = t.length; i < o; ++i) r[++e] = t[i];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return n.push(a), a;
                   }
                   function u(t) {
@@ -23070,9 +22482,7 @@ var Eg = Object.freeze(
         },
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   Dg = ht(Eg);
@@ -23139,25 +22549,10 @@ function Ig(t, e) {
     r = null == e.properties ? {} : e.properties,
     o = Ng(t, e);
   return null == i && null == n
-    ? {
-        type: "Feature",
-        properties: r,
-        geometry: o,
-      }
+    ? { type: "Feature", properties: r, geometry: o }
     : null == n
-    ? {
-        type: "Feature",
-        id: i,
-        properties: r,
-        geometry: o,
-      }
-    : {
-        type: "Feature",
-        id: i,
-        bbox: n,
-        properties: r,
-        geometry: o,
-      };
+    ? { type: "Feature", id: i, properties: r, geometry: o }
+    : { type: "Feature", id: i, bbox: n, properties: r, geometry: o };
 }
 function Ng(t, e) {
   var i = Pg(t.transform),
@@ -23191,10 +22586,7 @@ function Ng(t, e) {
       n = e.type;
     switch (n) {
       case "GeometryCollection":
-        return {
-          type: n,
-          geometries: e.geometries.map(t),
-        };
+        return { type: n, geometries: e.geometries.map(t) };
       case "Point":
         i = o(e.coordinates);
         break;
@@ -23216,10 +22608,7 @@ function Ng(t, e) {
       default:
         return null;
     }
-    return {
-      type: n,
-      coordinates: i,
-    };
+    return { type: n, coordinates: i };
   })(e);
 }
 function Rg(t, e) {
@@ -23297,10 +22686,7 @@ function Og(t, e, i) {
         o = [];
       function a(t) {
         var e = t < 0 ? ~t : t;
-        (o[e] || (o[e] = [])).push({
-          i: t,
-          g: n,
-        });
+        (o[e] || (o[e] = [])).push({ i: t, g: n });
       }
       function s(t) {
         t.forEach(a);
@@ -23342,10 +22728,7 @@ function Og(t, e, i) {
       );
     })(0, e, i);
   else for (r = 0, n = new Array((o = t.arcs.length)); r < o; ++r) n[r] = r;
-  return {
-    type: "MultiLineString",
-    arcs: Rg(t, n),
-  };
+  return { type: "MultiLineString", arcs: Rg(t, n) };
 }
 function Fg(t, e) {
   var i = {},
@@ -23364,12 +22747,7 @@ function Fg(t, e) {
       for (var e, i = -1, n = t.length, r = t[n - 1], o = 0; ++i < n; )
         (e = r), (r = t[i]), (o += e[0] * r[1] - e[1] * r[0]);
       return Math.abs(o);
-    })(
-      Ng(t, {
-        type: "Polygon",
-        arcs: [e],
-      }).coordinates[0]
-    );
+    })(Ng(t, { type: "Polygon", arcs: [e] }).coordinates[0]);
   }
   return (
     e.forEach(function t(e) {
@@ -23562,16 +22940,10 @@ var Bg = Object.freeze(
                 };
                 break;
               case "Point":
-                e = {
-                  type: "Point",
-                  coordinates: p(t.coordinates),
-                };
+                e = { type: "Point", coordinates: p(t.coordinates) };
                 break;
               case "MultiPoint":
-                e = {
-                  type: "MultiPoint",
-                  coordinates: t.coordinates.map(p),
-                };
+                e = { type: "MultiPoint", coordinates: t.coordinates.map(p) };
                 break;
               default:
                 return t;
@@ -23605,9 +22977,7 @@ var Bg = Object.freeze(
         untransform: kg,
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   Gg = ht(Bg),
@@ -23649,10 +23019,7 @@ function Hg(t, e) {
     if (r !== a) return null;
     i = t.coordinates.concat(e.coordinates.reverse().slice(1));
   }
-  return {
-    type: "LineString",
-    coordinates: i,
-  };
+  return { type: "LineString", coordinates: i };
 }
 var Vg = {};
 function Wg(t, e, i) {
@@ -23835,24 +23202,15 @@ var Qg = Dg.topology,
           : e;
       case "MultiPoint":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Point",
-            coordinates: t,
-          };
+          return { type: "Point", coordinates: t };
         });
       case "MultiPolygon":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Polygon",
-            coordinates: t,
-          };
+          return { type: "Polygon", coordinates: t };
         });
       case "MultiLineString":
         return e.coordinates.map(function (t) {
-          return {
-            type: "LineString",
-            coordinates: t,
-          };
+          return { type: "LineString", coordinates: t };
         });
       case "GeometryCollection":
         return e.geometries.map(t).reduce(function (t, e) {
@@ -23906,9 +23264,7 @@ var Qg = Dg.topology,
         return t;
     }
   };
-var em = {
-    exports: {},
-  },
+var em = { exports: {} },
   im = function (t, e) {
     (this.p1 = t), (this.p2 = e);
   };
@@ -24041,24 +23397,15 @@ const am = {
           : [e];
       case "MultiPoint":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Point",
-            coordinates: t,
-          };
+          return { type: "Point", coordinates: t };
         });
       case "MultiPolygon":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Polygon",
-            coordinates: t,
-          };
+          return { type: "Polygon", coordinates: t };
         });
       case "MultiLineString":
         return e.coordinates.map(function (t) {
-          return {
-            type: "LineString",
-            coordinates: t,
-          };
+          return { type: "LineString", coordinates: t };
         });
       case "GeometryCollection":
         return e.geometries.map(t).reduce(function (t, e) {
@@ -24073,8 +23420,49 @@ const am = {
   dissolve: tm,
   simplify: em.exports,
 };
-window.am = am;
-
+function sm(t, e) {
+  const i = (t) => {
+      const i = e(t);
+      (t[0] = +i[0].toFixed(6)), (t[1] = +i[1].toFixed(6));
+    },
+    n = JSON.parse(JSON.stringify(t));
+  switch (n.type) {
+    case "FeatureCollection":
+      for (let t = 0; t < n.features.length; t++) lm(n.features[t].geometry, i);
+      break;
+    case "Feature":
+      lm(n.geometry, i);
+      break;
+    case "GeometryCollection":
+      for (let t = 0; t < n.geometries.length; t++) lm(n.geometries[t], i);
+      break;
+    default:
+      lm(n, i);
+  }
+  return n;
+}
+function lm(t, e) {
+  let i, n, r;
+  const o = t.coordinates;
+  switch (t.type) {
+    case "Point":
+      e(o);
+      break;
+    case "LineString":
+    case "MultiPoint":
+      for (i = 0; i < o.length; i++) e(o[i]);
+      break;
+    case "Polygon":
+    case "MultiLineString":
+      for (i = 0; i < o.length; i++)
+        for (n = 0; n < o[i].length; n++) e(o[i][n]);
+      break;
+    case "MultiPolygon":
+      for (i = 0; i < o.length; i++)
+        for (n = 0; n < o[i].length; n++)
+          for (r = 0; r < o[i][n].length; r++) e(o[i][n][r]);
+  }
+}
 var um = 6371008.8,
   cm = {
     centimeters: 100 * um,
@@ -24095,9 +23483,7 @@ var um = 6371008.8,
   };
 function hm(t, e, i) {
   void 0 === i && (i = {});
-  var n = {
-    type: "Feature",
-  };
+  var n = { type: "Feature" };
   return (
     (0 === i.id || i.id) && (n.id = i.id),
     i.bbox && (n.bbox = i.bbox),
@@ -24114,14 +23500,7 @@ function pm(t, e, i) {
     throw new Error("coordinates must be at least 2 numbers long");
   if (!Sm(t[0]) || !Sm(t[1]))
     throw new Error("coordinates must contain numbers");
-  return hm(
-    {
-      type: "Point",
-      coordinates: t,
-    },
-    e,
-    i
-  );
+  return hm({ type: "Point", coordinates: t }, e, i);
 }
 function dm(t, e, i) {
   void 0 === i && (i = {});
@@ -24135,32 +23514,16 @@ function dm(t, e, i) {
       if (o[o.length - 1][a] !== o[0][a])
         throw new Error("First and last Position are not equivalent.");
   }
-  return hm(
-    {
-      type: "Polygon",
-      coordinates: t,
-    },
-    e,
-    i
-  );
+  return hm({ type: "Polygon", coordinates: t }, e, i);
 }
 function fm(t, e, i) {
   if ((void 0 === i && (i = {}), t.length < 2))
     throw new Error("coordinates must be an array of two or more positions");
-  return hm(
-    {
-      type: "LineString",
-      coordinates: t,
-    },
-    e,
-    i
-  );
+  return hm({ type: "LineString", coordinates: t }, e, i);
 }
 function gm(t, e) {
   void 0 === e && (e = {});
-  var i = {
-    type: "FeatureCollection",
-  };
+  var i = { type: "FeatureCollection" };
   return (
     e.id && (i.id = e.id), e.bbox && (i.bbox = e.bbox), (i.features = t), i
   );
@@ -24168,27 +23531,12 @@ function gm(t, e) {
 function mm(t, e, i) {
   return (
     void 0 === i && (i = {}),
-    hm(
-      {
-        type: "MultiLineString",
-        coordinates: t,
-      },
-      e,
-      i
-    )
+    hm({ type: "MultiLineString", coordinates: t }, e, i)
   );
 }
 function ym(t, e, i) {
   return (
-    void 0 === i && (i = {}),
-    hm(
-      {
-        type: "MultiPolygon",
-        coordinates: t,
-      },
-      e,
-      i
-    )
+    void 0 === i && (i = {}), hm({ type: "MultiPolygon", coordinates: t }, e, i)
   );
 }
 function vm(t, e) {
@@ -24358,17 +23706,7 @@ function Am(t, e) {
       case "Point":
       case "LineString":
       case "Polygon":
-        return (
-          !1 !==
-            e(
-              hm(t, n, {
-                bbox: r,
-                id: o,
-              }),
-              i,
-              0
-            ) && void 0
-        );
+        return !1 !== e(hm(t, n, { bbox: r, id: o }), i, 0) && void 0;
     }
     switch (s) {
       case "MultiPoint":
@@ -24382,21 +23720,7 @@ function Am(t, e) {
     }
     for (var l = 0; l < t.coordinates.length; l++) {
       var u = t.coordinates[l];
-      if (
-        !1 ===
-        e(
-          hm(
-            {
-              type: a,
-              coordinates: u,
-            },
-            n
-          ),
-          i,
-          l
-        )
-      )
-        return !1;
+      if (!1 === e(hm({ type: a, coordinates: u }, n), i, l)) return !1;
     }
   });
 }
@@ -24617,9 +23941,7 @@ function km(t) {
   );
 }
 Em.default = Em;
-var Bm = {
-  exports: {},
-};
+var Bm = { exports: {} };
 function Gm(t, e, i, n, r) {
   Um(t, e, i || 0, n || t.length - 1, r || Hm);
 }
@@ -24992,9 +24314,7 @@ var ny = Object.freeze(
         },
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   ry = ht(ny),
@@ -25002,9 +24322,7 @@ var ny = Object.freeze(
 !(function (t) {
   function e(t, e, i) {
     void 0 === i && (i = {});
-    var n = {
-      type: "Feature",
-    };
+    var n = { type: "Feature" };
     return (
       (0 === i.id || i.id) && (n.id = i.id),
       i.bbox && (n.bbox = i.bbox),
@@ -25021,14 +24339,7 @@ var ny = Object.freeze(
       throw new Error("coordinates must be at least 2 numbers long");
     if (!p(t[0]) || !p(t[1]))
       throw new Error("coordinates must contain numbers");
-    return e(
-      {
-        type: "Point",
-        coordinates: t,
-      },
-      i,
-      n
-    );
+    return e({ type: "Point", coordinates: t }, i, n);
   }
   function n(t, i, n) {
     void 0 === n && (n = {});
@@ -25042,32 +24353,16 @@ var ny = Object.freeze(
         if (a[a.length - 1][s] !== a[0][s])
           throw new Error("First and last Position are not equivalent.");
     }
-    return e(
-      {
-        type: "Polygon",
-        coordinates: t,
-      },
-      i,
-      n
-    );
+    return e({ type: "Polygon", coordinates: t }, i, n);
   }
   function r(t, i, n) {
     if ((void 0 === n && (n = {}), t.length < 2))
       throw new Error("coordinates must be an array of two or more positions");
-    return e(
-      {
-        type: "LineString",
-        coordinates: t,
-      },
-      i,
-      n
-    );
+    return e({ type: "LineString", coordinates: t }, i, n);
   }
   function o(t, e) {
     void 0 === e && (e = {});
-    var i = {
-      type: "FeatureCollection",
-    };
+    var i = { type: "FeatureCollection" };
     return (
       e.id && (i.id = e.id), e.bbox && (i.bbox = e.bbox), (i.features = t), i
     );
@@ -25075,40 +24370,18 @@ var ny = Object.freeze(
   function a(t, i, n) {
     return (
       void 0 === n && (n = {}),
-      e(
-        {
-          type: "MultiLineString",
-          coordinates: t,
-        },
-        i,
-        n
-      )
+      e({ type: "MultiLineString", coordinates: t }, i, n)
     );
   }
   function s(t, i, n) {
     return (
-      void 0 === n && (n = {}),
-      e(
-        {
-          type: "MultiPoint",
-          coordinates: t,
-        },
-        i,
-        n
-      )
+      void 0 === n && (n = {}), e({ type: "MultiPoint", coordinates: t }, i, n)
     );
   }
   function l(t, i, n) {
     return (
       void 0 === n && (n = {}),
-      e(
-        {
-          type: "MultiPolygon",
-          coordinates: t,
-        },
-        i,
-        n
-      )
+      e({ type: "MultiPolygon", coordinates: t }, i, n)
     );
   }
   function u(e, i) {
@@ -25129,9 +24402,7 @@ var ny = Object.freeze(
   function p(t) {
     return !isNaN(t) && null !== t && !Array.isArray(t);
   }
-  Object.defineProperty(t, "__esModule", {
-    value: !0,
-  }),
+  Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.earthRadius = 6371008.8),
     (t.factors = {
       centimeters: 100 * t.earthRadius,
@@ -25245,14 +24516,7 @@ var ny = Object.freeze(
     (t.geometryCollection = function (t, i, n) {
       return (
         void 0 === n && (n = {}),
-        e(
-          {
-            type: "GeometryCollection",
-            geometries: t,
-          },
-          i,
-          n
-        )
+        e({ type: "GeometryCollection", geometries: t }, i, n)
       );
     }),
     (t.round = function (t, e) {
@@ -25316,9 +24580,7 @@ var ny = Object.freeze(
     });
 })(oy);
 var ay = {};
-Object.defineProperty(ay, "__esModule", {
-  value: !0,
-});
+Object.defineProperty(ay, "__esModule", { value: !0 });
 var sy = oy;
 function ly(t, e, i) {
   if (null !== t)
@@ -25480,17 +24742,7 @@ function py(t, e) {
       case "Point":
       case "LineString":
       case "Polygon":
-        return (
-          !1 !==
-            e(
-              sy.feature(t, n, {
-                bbox: r,
-                id: o,
-              }),
-              i,
-              0
-            ) && void 0
-        );
+        return !1 !== e(sy.feature(t, n, { bbox: r, id: o }), i, 0) && void 0;
     }
     switch (s) {
       case "MultiPoint":
@@ -25503,10 +24755,7 @@ function py(t, e) {
         a = "Polygon";
     }
     for (var l = 0; l < t.coordinates.length; l++) {
-      var u = {
-        type: a,
-        coordinates: t.coordinates[l],
-      };
+      var u = { type: a, coordinates: t.coordinates[l] };
       if (!1 === e(sy.feature(u, n), i, l)) return !1;
     }
   });
@@ -25758,9 +25007,7 @@ function fy(t, e) {
     );
   });
 var gy = {};
-Object.defineProperty(gy, "__esModule", {
-  value: !0,
-});
+Object.defineProperty(gy, "__esModule", { value: !0 });
 var my = ay;
 function yy(t) {
   var e = [1 / 0, 1 / 0, -1 / 0, -1 / 0];
@@ -25842,12 +25089,7 @@ function Cy(t) {
         if ("FeatureCollection" !== t.type) throw new Error("invalid geojson");
         e = _y(t);
       }
-      return {
-        minX: e[0],
-        minY: e[1],
-        maxX: e[2],
-        maxY: e[3],
-      };
+      return { minX: e[0], minY: e[1], maxX: e[2], maxY: e[3] };
     }),
     e
   );
@@ -25993,14 +25235,10 @@ function Py(t, e) {
             return n;
           })(i, n);
         case "LineString":
-          return Dy(i, n, {
-            ignoreEndVertices: !0,
-          });
+          return Dy(i, n, { ignoreEndVertices: !0 });
         case "Polygon":
         case "MultiPolygon":
-          return Im(i, n, {
-            ignoreBoundary: !0,
-          });
+          return Im(i, n, { ignoreBoundary: !0 });
         default:
           throw new Error("feature2 " + o + " geometry not supported");
       }
@@ -26019,10 +25257,7 @@ function Py(t, e) {
           return (function (t, e) {
             for (var i = !1, n = 0; n < t.coordinates.length; n++) {
               if (!Dy(t.coordinates[n], e)) return !1;
-              i ||
-                (i = Dy(t.coordinates[n], e, {
-                  ignoreEndVertices: !0,
-                }));
+              i || (i = Dy(t.coordinates[n], e, { ignoreEndVertices: !0 }));
             }
             return i;
           })(i, n);
@@ -26034,9 +25269,7 @@ function Py(t, e) {
                 i = !1;
                 break;
               }
-              n = Im(t.coordinates[1], e, {
-                ignoreBoundary: !0,
-              });
+              n = Im(t.coordinates[1], e, { ignoreBoundary: !0 });
             }
             return i && n;
           })(i, n);
@@ -26060,11 +25293,7 @@ function Py(t, e) {
             for (var r = !1, o = 0; o < t.coordinates.length - 1; o++) {
               if (!Im(t.coordinates[o], e)) return !1;
               if (
-                (r ||
-                  (r = Im(t.coordinates[o], e, {
-                    ignoreBoundary: !0,
-                  })),
-                !r)
+                (r || (r = Im(t.coordinates[o], e, { ignoreBoundary: !0 })), !r)
               )
                 r = Im(Ny(t.coordinates[o], t.coordinates[o + 1]), e, {
                   ignoreBoundary: !0,
@@ -26211,9 +25440,7 @@ function zy(t, e) {
     Cm(e, function (e) {
       var r = (function (t, e, i) {
           void 0 === i && (i = {});
-          var n = pm([1 / 0, 1 / 0], {
-              dist: 1 / 0,
-            }),
+          var n = pm([1 / 0, 1 / 0], { dist: 1 / 0 }),
             r = 0;
           return (
             Am(t, function (t) {
@@ -26425,8 +25652,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
-***************************************************************************** */
-          return !1;
+***************************************************************************** */ return !1;
         })(t.geometry, e.geometry);
       });
     }),
@@ -26475,11 +25701,7 @@ function Qy(t, e) {
       ops: [],
     };
   return (
-    (o = {
-      next: s(0),
-      throw: s(1),
-      return: s(2),
-    }),
+    (o = { next: s(0), throw: s(1), return: s(2) }),
     "function" == typeof Symbol &&
       (o[Symbol.iterator] = function () {
         return this;
@@ -26510,13 +25732,7 @@ function Qy(t, e) {
                 r = o;
                 break;
               case 4:
-                return (
-                  a.label++,
-                  {
-                    value: o[1],
-                    done: !1,
-                  }
-                );
+                return a.label++, { value: o[1], done: !1 };
               case 5:
                 a.label++, (n = o[1]), (o = [0]);
                 continue;
@@ -26554,10 +25770,7 @@ function Qy(t, e) {
             i = r = 0;
           }
         if (5 & o[0]) throw o[1];
-        return {
-          value: o[0] ? o[1] : void 0,
-          done: !0,
-        };
+        return { value: o[0] ? o[1] : void 0, done: !0 };
       })([o, s]);
     };
   }
@@ -26622,10 +25835,7 @@ function tv(t, e, i) {
       ? ((r = e.right), (e.right = null), (n = e))
       : ((n = e.left), (e.left = null), (r = e));
   }
-  return {
-    left: n,
-    right: r,
-  };
+  return { left: n, right: r };
 }
 function ev(t, e, i, n, r) {
   if (t) {
@@ -26687,10 +25897,7 @@ var iv = (function () {
         return (
           (this._root = Ky(t.key, this._root, this._comparator)),
           (this._root = this._remove(t.key, this._root, this._comparator)),
-          {
-            key: t.key,
-            data: t.data,
-          }
+          { key: t.key, data: t.data }
         );
       }
       return null;
@@ -26859,14 +26066,7 @@ var iv = (function () {
           })(t, e),
           r
         );
-        (n = this._size + n),
-          (this._root = rv(
-            {
-              head: o,
-            },
-            0,
-            n
-          ));
+        (n = this._size + n), (this._root = rv({ head: o }, 0, n));
       }
       return this;
     }),
@@ -27006,14 +26206,8 @@ var uv = function (t, e) {
     var i = t.ll.x < e.ll.x ? e.ll.x : t.ll.x,
       n = t.ur.x < e.ur.x ? t.ur.x : e.ur.x;
     return {
-      ll: {
-        x: i,
-        y: t.ll.y < e.ll.y ? e.ll.y : t.ll.y,
-      },
-      ur: {
-        x: n,
-        y: t.ur.y < e.ur.y ? t.ur.y : e.ur.y,
-      },
+      ll: { x: i, y: t.ll.y < e.ll.y ? e.ll.y : t.ll.y },
+      ur: { x: n, y: t.ur.y < e.ur.y ? t.ur.y : e.ur.y },
     };
   },
   hv = Number.EPSILON;
@@ -27039,10 +26233,7 @@ var pv = hv * hv,
         {
           key: "round",
           value: function (t, e) {
-            return {
-              x: this.xRounder.round(t),
-              y: this.yRounder.round(e),
-            };
+            return { x: this.xRounder.round(t), y: this.yRounder.round(e) };
           },
         },
       ]),
@@ -27080,14 +26271,8 @@ var pv = hv * hv,
     return t.x * e.x + t.y * e.y;
   },
   bv = function (t, e, i) {
-    var n = {
-        x: e.x - t.x,
-        y: e.y - t.y,
-      },
-      r = {
-        x: i.x - t.x,
-        y: i.y - t.y,
-      },
+    var n = { x: e.x - t.x, y: e.y - t.y },
+      r = { x: i.x - t.x, y: i.y - t.y },
       o = yv(n, r);
     return dv(o, 0);
   },
@@ -27095,31 +26280,15 @@ var pv = hv * hv,
     return Math.sqrt(vv(t, t));
   },
   _v = function (t, e, i) {
-    var n = {
-        x: e.x - t.x,
-        y: e.y - t.y,
-      },
-      r = {
-        x: i.x - t.x,
-        y: i.y - t.y,
-      };
+    var n = { x: e.x - t.x, y: e.y - t.y },
+      r = { x: i.x - t.x, y: i.y - t.y };
     return vv(r, n) / xv(r) / xv(n);
   },
   Sv = function (t, e, i) {
-    return 0 === e.y
-      ? null
-      : {
-          x: t.x + (e.x / e.y) * (i - t.y),
-          y: i,
-        };
+    return 0 === e.y ? null : { x: t.x + (e.x / e.y) * (i - t.y), y: i };
   },
   Mv = function (t, e, i) {
-    return 0 === e.x
-      ? null
-      : {
-          x: i,
-          y: t.y + (e.y / e.x) * (i - t.x),
-        };
+    return 0 === e.x ? null : { x: i, y: t.y + (e.y / e.x) * (i - t.x) };
   },
   Cv = (function () {
     function t(e, i) {
@@ -27217,14 +26386,8 @@ var pv = hv * hv,
                     ((r = e.point),
                     (o = t.point),
                     (a = u.point),
-                    (s = {
-                      x: o.x - r.x,
-                      y: o.y - r.y,
-                    }),
-                    (l = {
-                      x: a.x - r.x,
-                      y: a.y - r.y,
-                    }),
+                    (s = { x: o.x - r.x, y: o.y - r.y }),
+                    (l = { x: a.x - r.x, y: a.y - r.y }),
                     yv(l, s) / xv(l) / xv(s)),
                   cosine: _v(e.point, t.point, u.point),
                 });
@@ -27358,14 +26521,8 @@ var pv = hv * hv,
               var t = this.leftSE.point.y,
                 e = this.rightSE.point.y;
               return {
-                ll: {
-                  x: this.leftSE.point.x,
-                  y: t < e ? t : e,
-                },
-                ur: {
-                  x: this.rightSE.point.x,
-                  y: t > e ? t : e,
-                },
+                ll: { x: this.leftSE.point.x, y: t < e ? t : e },
+                ur: { x: this.rightSE.point.x, y: t > e ? t : e },
               };
             },
           },
@@ -27431,10 +26588,7 @@ var pv = hv * hv,
                 if (0 === n.y) return Sv(t, e, i.y);
                 var r = yv(e, n);
                 if (0 == r) return null;
-                var o = {
-                    x: i.x - t.x,
-                    y: i.y - t.y,
-                  },
+                var o = { x: i.x - t.x, y: i.y - t.y },
                   a = yv(o, e) / r,
                   s = yv(o, n) / r;
                 return {
@@ -27530,11 +26684,7 @@ var pv = hv * hv,
                 var t = this.prev.consumedBy || this.prev;
                 this._beforeState = t.afterState();
               } else
-                this._beforeState = {
-                  rings: [],
-                  windings: [],
-                  multiPolys: [],
-                };
+                this._beforeState = { rings: [], windings: [], multiPolys: [] };
               return this._beforeState;
             },
           },
@@ -27662,16 +26812,7 @@ var pv = hv * hv,
           "Input geometry is not a valid Polygon or MultiPolygon"
         );
       var r = mv.round(e[0][0], e[0][1]);
-      this.bbox = {
-        ll: {
-          x: r.x,
-          y: r.y,
-        },
-        ur: {
-          x: r.x,
-          y: r.y,
-        },
-      };
+      this.bbox = { ll: { x: r.x, y: r.y }, ur: { x: r.x, y: r.y } };
       for (var o = r, a = 1, s = e.length; a < s; a++) {
         if ("number" != typeof e[a][0] || "number" != typeof e[a][1])
           throw new Error(
@@ -27771,14 +26912,8 @@ var pv = hv * hv,
       } catch (a) {}
       (this.polys = []),
         (this.bbox = {
-          ll: {
-            x: Number.POSITIVE_INFINITY,
-            y: Number.POSITIVE_INFINITY,
-          },
-          ur: {
-            x: Number.NEGATIVE_INFINITY,
-            y: Number.NEGATIVE_INFINITY,
-          },
+          ll: { x: Number.POSITIVE_INFINITY, y: Number.POSITIVE_INFINITY },
+          ur: { x: Number.NEGATIVE_INFINITY, y: Number.NEGATIVE_INFINITY },
         });
       for (var n = 0, r = e.length; n < r; n++) {
         var o = new Dv(e[n], this);
@@ -27860,10 +26995,7 @@ var pv = hv * hv,
                         break;
                       }
                     if (null === g) {
-                      h.push({
-                        index: u.length,
-                        point: s.point,
-                      });
+                      h.push({ index: u.length, point: s.point });
                       var v = s.getLeftmostComparator(a);
                       l = p.sort(v)[0].otherSE;
                       break;
@@ -28336,11 +27468,7 @@ var Bv = (function (t) {
     );
   })(Error),
   Gv = function () {},
-  Uv = {
-    MAX_VALUE: {
-      configurable: !0,
-    },
-  };
+  Uv = { MAX_VALUE: { configurable: !0 } };
 (Gv.isNaN = function (t) {
   return Number.isNaN(t);
 }),
@@ -28383,24 +27511,12 @@ var qv = function t() {
           (this.z = arguments[2]));
   },
   Yv = {
-    DimensionalComparator: {
-      configurable: !0,
-    },
-    serialVersionUID: {
-      configurable: !0,
-    },
-    NULL_ORDINATE: {
-      configurable: !0,
-    },
-    X: {
-      configurable: !0,
-    },
-    Y: {
-      configurable: !0,
-    },
-    Z: {
-      configurable: !0,
-    },
+    DimensionalComparator: { configurable: !0 },
+    serialVersionUID: { configurable: !0 },
+    NULL_ORDINATE: { configurable: !0 },
+    X: { configurable: !0 },
+    Y: { configurable: !0 },
+    Z: { configurable: !0 },
   };
 (qv.prototype.setOrdinate = function (t, e) {
   switch (t) {
@@ -28570,18 +27686,10 @@ var Qv = function () {};
   });
 var Zv = function () {},
   Jv = {
-    INTERIOR: {
-      configurable: !0,
-    },
-    BOUNDARY: {
-      configurable: !0,
-    },
-    EXTERIOR: {
-      configurable: !0,
-    },
-    NONE: {
-      configurable: !0,
-    },
+    INTERIOR: { configurable: !0 },
+    BOUNDARY: { configurable: !0 },
+    EXTERIOR: { configurable: !0 },
+    NONE: { configurable: !0 },
   };
 (Zv.prototype.interfaces_ = function () {
   return [];
@@ -28619,11 +27727,7 @@ var Kv = function (t, e) {
     return t.interfaces_ && t.interfaces_().indexOf(e) > -1;
   },
   $v = function () {},
-  tb = {
-    LOG_10: {
-      configurable: !0,
-    },
-  };
+  tb = { LOG_10: { configurable: !0 } };
 ($v.prototype.interfaces_ = function () {
   return [];
 }),
@@ -28735,42 +27839,18 @@ var rb = function t() {
     }
   },
   ob = {
-    PI: {
-      configurable: !0,
-    },
-    TWO_PI: {
-      configurable: !0,
-    },
-    PI_2: {
-      configurable: !0,
-    },
-    E: {
-      configurable: !0,
-    },
-    NaN: {
-      configurable: !0,
-    },
-    EPS: {
-      configurable: !0,
-    },
-    SPLIT: {
-      configurable: !0,
-    },
-    MAX_PRINT_DIGITS: {
-      configurable: !0,
-    },
-    TEN: {
-      configurable: !0,
-    },
-    ONE: {
-      configurable: !0,
-    },
-    SCI_NOT_EXPONENT_CHAR: {
-      configurable: !0,
-    },
-    SCI_NOT_ZERO: {
-      configurable: !0,
-    },
+    PI: { configurable: !0 },
+    TWO_PI: { configurable: !0 },
+    PI_2: { configurable: !0 },
+    E: { configurable: !0 },
+    NaN: { configurable: !0 },
+    EPS: { configurable: !0 },
+    SPLIT: { configurable: !0 },
+    MAX_PRINT_DIGITS: { configurable: !0 },
+    TEN: { configurable: !0 },
+    ONE: { configurable: !0 },
+    SCI_NOT_EXPONENT_CHAR: { configurable: !0 },
+    SCI_NOT_ZERO: { configurable: !0 },
   };
 (rb.prototype.le = function (t) {
   return (this._hi < t._hi || this._hi === t._hi) && this._lo <= t._lo;
@@ -29317,11 +28397,7 @@ var rb = function t() {
   }),
   Object.defineProperties(rb, ob);
 var ab = function () {},
-  sb = {
-    DP_SAFE_EPSILON: {
-      configurable: !0,
-    },
-  };
+  sb = { DP_SAFE_EPSILON: { configurable: !0 } };
 (ab.prototype.interfaces_ = function () {
   return [];
 }),
@@ -29403,18 +28479,10 @@ var ab = function () {},
   Object.defineProperties(ab, sb);
 var lb = function () {},
   ub = {
-    X: {
-      configurable: !0,
-    },
-    Y: {
-      configurable: !0,
-    },
-    Z: {
-      configurable: !0,
-    },
-    M: {
-      configurable: !0,
-    },
+    X: { configurable: !0 },
+    Y: { configurable: !0 },
+    Z: { configurable: !0 },
+    M: { configurable: !0 },
   };
 (ub.X.get = function () {
   return 0;
@@ -29473,9 +28541,7 @@ var cb = function () {},
   for (var o = 0, a = e; a < e + r; a++) (i[n + o] = t[a]), o++;
 }),
   (pb.getProperty = function (t) {
-    return {
-      "line.separator": "\n",
-    }[t];
+    return { "line.separator": "\n" }[t];
   });
 var db = function t() {
   if (
@@ -29587,11 +28653,7 @@ var fb = function t() {
       this.init(o, a, s, l);
     }
   },
-  gb = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-  };
+  gb = { serialVersionUID: { configurable: !0 } };
 (fb.prototype.getArea = function () {
   return this.getWidth() * this.getHeight();
 }),
@@ -30194,24 +29256,12 @@ var Cb = function () {
       (this._result = 0);
   },
   wb = {
-    DONT_INTERSECT: {
-      configurable: !0,
-    },
-    DO_INTERSECT: {
-      configurable: !0,
-    },
-    COLLINEAR: {
-      configurable: !0,
-    },
-    NO_INTERSECTION: {
-      configurable: !0,
-    },
-    POINT_INTERSECTION: {
-      configurable: !0,
-    },
-    COLLINEAR_INTERSECTION: {
-      configurable: !0,
-    },
+    DONT_INTERSECT: { configurable: !0 },
+    DO_INTERSECT: { configurable: !0 },
+    COLLINEAR: { configurable: !0 },
+    NO_INTERSECTION: { configurable: !0 },
+    POINT_INTERSECTION: { configurable: !0 },
+    COLLINEAR_INTERSECTION: { configurable: !0 },
   };
 (Cb.prototype.getIndexAlongSegment = function (t, e) {
   return this.computeIntLineIndex(), this._intLineIndex[t][e];
@@ -30711,24 +29761,12 @@ var Db = function () {
   });
 var Tb = function () {},
   Pb = {
-    CLOCKWISE: {
-      configurable: !0,
-    },
-    RIGHT: {
-      configurable: !0,
-    },
-    COUNTERCLOCKWISE: {
-      configurable: !0,
-    },
-    LEFT: {
-      configurable: !0,
-    },
-    COLLINEAR: {
-      configurable: !0,
-    },
-    STRAIGHT: {
-      configurable: !0,
-    },
+    CLOCKWISE: { configurable: !0 },
+    RIGHT: { configurable: !0 },
+    COUNTERCLOCKWISE: { configurable: !0 },
+    LEFT: { configurable: !0 },
+    COLLINEAR: { configurable: !0 },
+    STRAIGHT: { configurable: !0 },
   };
 (Tb.prototype.interfaces_ = function () {
   return [];
@@ -30917,36 +29955,16 @@ var Ib = function () {
       (this._SRID = t.getSRID());
   },
   Nb = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-    SORTINDEX_POINT: {
-      configurable: !0,
-    },
-    SORTINDEX_MULTIPOINT: {
-      configurable: !0,
-    },
-    SORTINDEX_LINESTRING: {
-      configurable: !0,
-    },
-    SORTINDEX_LINEARRING: {
-      configurable: !0,
-    },
-    SORTINDEX_MULTILINESTRING: {
-      configurable: !0,
-    },
-    SORTINDEX_POLYGON: {
-      configurable: !0,
-    },
-    SORTINDEX_MULTIPOLYGON: {
-      configurable: !0,
-    },
-    SORTINDEX_GEOMETRYCOLLECTION: {
-      configurable: !0,
-    },
-    geometryChangedFilter: {
-      configurable: !0,
-    },
+    serialVersionUID: { configurable: !0 },
+    SORTINDEX_POINT: { configurable: !0 },
+    SORTINDEX_MULTIPOINT: { configurable: !0 },
+    SORTINDEX_LINESTRING: { configurable: !0 },
+    SORTINDEX_LINEARRING: { configurable: !0 },
+    SORTINDEX_MULTILINESTRING: { configurable: !0 },
+    SORTINDEX_POLYGON: { configurable: !0 },
+    SORTINDEX_MULTIPOLYGON: { configurable: !0 },
+    SORTINDEX_GEOMETRYCOLLECTION: { configurable: !0 },
+    geometryChangedFilter: { configurable: !0 },
   };
 (Ib.prototype.isGeometryCollection = function () {
   return this.getSortIndex() === Ib.SORTINDEX_GEOMETRYCOLLECTION;
@@ -31139,33 +30157,15 @@ var Ob = function () {};
   });
 var Fb = function () {},
   zb = {
-    Mod2BoundaryNodeRule: {
-      configurable: !0,
-    },
-    EndPointBoundaryNodeRule: {
-      configurable: !0,
-    },
-    MultiValentEndPointBoundaryNodeRule: {
-      configurable: !0,
-    },
-    MonoValentEndPointBoundaryNodeRule: {
-      configurable: !0,
-    },
-    MOD2_BOUNDARY_RULE: {
-      configurable: !0,
-    },
-    ENDPOINT_BOUNDARY_RULE: {
-      configurable: !0,
-    },
-    MULTIVALENT_ENDPOINT_BOUNDARY_RULE: {
-      configurable: !0,
-    },
-    MONOVALENT_ENDPOINT_BOUNDARY_RULE: {
-      configurable: !0,
-    },
-    OGC_SFS_BOUNDARY_RULE: {
-      configurable: !0,
-    },
+    Mod2BoundaryNodeRule: { configurable: !0 },
+    EndPointBoundaryNodeRule: { configurable: !0 },
+    MultiValentEndPointBoundaryNodeRule: { configurable: !0 },
+    MonoValentEndPointBoundaryNodeRule: { configurable: !0 },
+    MOD2_BOUNDARY_RULE: { configurable: !0 },
+    ENDPOINT_BOUNDARY_RULE: { configurable: !0 },
+    MULTIVALENT_ENDPOINT_BOUNDARY_RULE: { configurable: !0 },
+    MONOVALENT_ENDPOINT_BOUNDARY_RULE: { configurable: !0 },
+    OGC_SFS_BOUNDARY_RULE: { configurable: !0 },
   };
 (Fb.prototype.isInBoundary = function (t) {}),
   (Fb.prototype.interfaces_ = function () {
@@ -31378,11 +30378,7 @@ var Yb = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      coordArrayType: {
-        configurable: !0,
-      },
-    };
+    var i = { coordArrayType: { configurable: !0 } };
     return (
       (i.coordArrayType.get = function () {
         return new Array(0).fill(null);
@@ -31492,15 +30488,9 @@ var Yb = (function (t) {
   })(Yb),
   Zb = function () {},
   Jb = {
-    ForwardComparator: {
-      configurable: !0,
-    },
-    BidirectionalComparator: {
-      configurable: !0,
-    },
-    coordArrayType: {
-      configurable: !0,
-    },
+    ForwardComparator: { configurable: !0 },
+    BidirectionalComparator: { configurable: !0 },
+    coordArrayType: { configurable: !0 },
   };
 (Jb.ForwardComparator.get = function () {
   return Kb;
@@ -32066,42 +31056,18 @@ var mx = function () {};
   });
 var yx = function () {},
   vx = {
-    P: {
-      configurable: !0,
-    },
-    L: {
-      configurable: !0,
-    },
-    A: {
-      configurable: !0,
-    },
-    FALSE: {
-      configurable: !0,
-    },
-    TRUE: {
-      configurable: !0,
-    },
-    DONTCARE: {
-      configurable: !0,
-    },
-    SYM_FALSE: {
-      configurable: !0,
-    },
-    SYM_TRUE: {
-      configurable: !0,
-    },
-    SYM_DONTCARE: {
-      configurable: !0,
-    },
-    SYM_P: {
-      configurable: !0,
-    },
-    SYM_L: {
-      configurable: !0,
-    },
-    SYM_A: {
-      configurable: !0,
-    },
+    P: { configurable: !0 },
+    L: { configurable: !0 },
+    A: { configurable: !0 },
+    FALSE: { configurable: !0 },
+    TRUE: { configurable: !0 },
+    DONTCARE: { configurable: !0 },
+    SYM_FALSE: { configurable: !0 },
+    SYM_TRUE: { configurable: !0 },
+    SYM_DONTCARE: { configurable: !0 },
+    SYM_P: { configurable: !0 },
+    SYM_L: { configurable: !0 },
+    SYM_A: { configurable: !0 },
   };
 (vx.P.get = function () {
   return 0;
@@ -32210,11 +31176,7 @@ var _x = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.computeEnvelopeInternal = function () {
         for (var t = new fb(), e = 0; e < this._geometries.length; e++)
@@ -32402,11 +31364,7 @@ var _x = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.getSortIndex = function () {
         return Ib.SORTINDEX_MULTILINESTRING;
@@ -32565,12 +31523,8 @@ function Tx() {}
 function Px() {}
 var Lx = function () {},
   Ix = {
-    NEWLINE: {
-      configurable: !0,
-    },
-    SIMPLE_ORDINATE_FORMAT: {
-      configurable: !0,
-    },
+    NEWLINE: { configurable: !0 },
+    SIMPLE_ORDINATE_FORMAT: { configurable: !0 },
   };
 (Lx.prototype.interfaces_ = function () {
   return [];
@@ -32738,11 +31692,7 @@ var Rx = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.computeEnvelopeInternal = function () {
         return this.isEmpty()
@@ -32940,11 +31890,7 @@ var Fx = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.computeEnvelopeInternal = function () {
         if (this.isEmpty()) return new fb();
@@ -33096,11 +32042,7 @@ var kx = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.computeEnvelopeInternal = function () {
         return this._shell.getEnvelopeInternal();
@@ -33343,11 +32285,7 @@ var kx = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.getSortIndex = function () {
         return Ib.SORTINDEX_MULTIPOINT;
@@ -33419,12 +32357,8 @@ var kx = (function (t) {
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
     var i = {
-      MINIMUM_VALID_SIZE: {
-        configurable: !0,
-      },
-      serialVersionUID: {
-        configurable: !0,
-      },
+      MINIMUM_VALID_SIZE: { configurable: !0 },
+      serialVersionUID: { configurable: !0 },
     };
     return (
       (e.prototype.getSortIndex = function () {
@@ -33482,11 +32416,7 @@ var kx = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      serialVersionUID: {
-        configurable: !0,
-      },
-    };
+    var i = { serialVersionUID: { configurable: !0 } };
     return (
       (e.prototype.getSortIndex = function () {
         return Ib.SORTINDEX_MULTIPOLYGON;
@@ -33558,15 +32488,9 @@ var kx = (function (t) {
     (this._factory = t || null), (this._isUserDataCopied = !1);
   },
   Hx = {
-    NoOpGeometryOperation: {
-      configurable: !0,
-    },
-    CoordinateOperation: {
-      configurable: !0,
-    },
-    CoordinateSequenceOperation: {
-      configurable: !0,
-    },
+    NoOpGeometryOperation: { configurable: !0 },
+    CoordinateOperation: { configurable: !0 },
+    CoordinateSequenceOperation: { configurable: !0 },
   };
 (jx.prototype.setCopyUserData = function (t) {
   this._isUserDataCopied = t;
@@ -33723,11 +32647,7 @@ var Yx = function () {
         for (var u = 0; u < s; u++) t._coordinates[u] = new qv();
       }
   },
-  Xx = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-  };
+  Xx = { serialVersionUID: { configurable: !0 } };
 (Yx.prototype.setOrdinate = function (t, e, i) {
   switch (e) {
     case lb.X:
@@ -33830,12 +32750,8 @@ var Yx = function () {
   Object.defineProperties(Yx, Xx);
 var Qx = function () {},
   Zx = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-    instanceObject: {
-      configurable: !0,
-    },
+    serialVersionUID: { configurable: !0 },
+    instanceObject: { configurable: !0 },
   };
 (Qx.prototype.readResolve = function () {
   return Qx.instance();
@@ -33918,12 +32834,8 @@ var Jx = (function (t) {
       }
   },
   $x = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-    maximumPreciseValue: {
-      configurable: !0,
-    },
+    serialVersionUID: { configurable: !0 },
+    maximumPreciseValue: { configurable: !0 },
   };
 (Kx.prototype.equals = function (t) {
   if (!(t instanceof Kx)) return !1;
@@ -34011,12 +32923,8 @@ var t_ = function t(e) {
     (this._name = e || null), t.nameToTypeMap.put(e, this);
   },
   e_ = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-    nameToTypeMap: {
-      configurable: !0,
-    },
+    serialVersionUID: { configurable: !0 },
+    nameToTypeMap: { configurable: !0 },
   };
 (t_.prototype.readResolve = function () {
   return t_.nameToTypeMap.get(this._name);
@@ -34059,11 +32967,7 @@ var i_ = function t() {
             (this._SRID = arguments[1]),
             (this._coordinateSequenceFactory = arguments[2])));
   },
-  n_ = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-  };
+  n_ = { serialVersionUID: { configurable: !0 } };
 (i_.prototype.toGeometry = function (t) {
   return t.isNull()
     ? this.createPoint(null)
@@ -34406,20 +33310,14 @@ var a_ = {
           r = s_.Point.apply(this, [n]);
         e.push(r.coordinates);
       }
-      return {
-        type: "MultiPoint",
-        coordinates: e,
-      };
+      return { type: "MultiPoint", coordinates: e };
     },
     LineString: function (t) {
       for (var e = [], i = t.getCoordinates(), n = 0; n < i.length; ++n) {
         var r = i[n];
         e.push(s_.coordinate.apply(this, [r]));
       }
-      return {
-        type: "LineString",
-        coordinates: e,
-      };
+      return { type: "LineString", coordinates: e };
     },
     MultiLineString: function (t) {
       for (var e = [], i = 0; i < t._geometries.length; ++i) {
@@ -34427,10 +33325,7 @@ var a_ = {
           r = s_.LineString.apply(this, [n]);
         e.push(r.coordinates);
       }
-      return {
-        type: "MultiLineString",
-        coordinates: e,
-      };
+      return { type: "MultiLineString", coordinates: e };
     },
     Polygon: function (t) {
       var e = [],
@@ -34441,10 +33336,7 @@ var a_ = {
           o = s_.LineString.apply(this, [r]);
         e.push(o.coordinates);
       }
-      return {
-        type: "Polygon",
-        coordinates: e,
-      };
+      return { type: "Polygon", coordinates: e };
     },
     MultiPolygon: function (t) {
       for (var e = [], i = 0; i < t._geometries.length; ++i) {
@@ -34452,10 +33344,7 @@ var a_ = {
           r = s_.Polygon.apply(this, [n]);
         e.push(r.coordinates);
       }
-      return {
-        type: "MultiPolygon",
-        coordinates: e,
-      };
+      return { type: "MultiPolygon", coordinates: e };
     },
     GeometryCollection: function (t) {
       for (var e = [], i = 0; i < t._geometries.length; ++i) {
@@ -34463,10 +33352,7 @@ var a_ = {
           r = n.getGeometryType();
         e.push(s_[r].apply(this, [n]));
       }
-      return {
-        type: "GeometryCollection",
-        geometries: e,
-      };
+      return { type: "GeometryCollection", geometries: e };
     },
   },
   l_ = function (t) {
@@ -34498,15 +33384,9 @@ u_.prototype.write = function (t) {
 };
 var c_ = function () {},
   h_ = {
-    ON: {
-      configurable: !0,
-    },
-    LEFT: {
-      configurable: !0,
-    },
-    RIGHT: {
-      configurable: !0,
-    },
+    ON: { configurable: !0 },
+    LEFT: { configurable: !0 },
+    RIGHT: { configurable: !0 },
   };
 function p_(t) {
   this.message = t || "";
@@ -35463,18 +34343,10 @@ var C_ = (function (t) {
   });
 var A_ = function () {},
   E_ = {
-    NE: {
-      configurable: !0,
-    },
-    NW: {
-      configurable: !0,
-    },
-    SW: {
-      configurable: !0,
-    },
-    SE: {
-      configurable: !0,
-    },
+    NE: { configurable: !0 },
+    NW: { configurable: !0 },
+    SW: { configurable: !0 },
+    SE: { configurable: !0 },
   };
 (A_.prototype.interfaces_ = function () {
   return [];
@@ -36172,11 +35044,7 @@ var k_ = function () {
       this._level = t;
     }
   },
-  B_ = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-  };
+  B_ = { serialVersionUID: { configurable: !0 } };
 (k_.prototype.getLevel = function () {
   return this._level;
 }),
@@ -36313,15 +35181,9 @@ var j_ = function t() {
     }
   },
   H_ = {
-    IntersectsOp: {
-      configurable: !0,
-    },
-    serialVersionUID: {
-      configurable: !0,
-    },
-    DEFAULT_NODE_CAPACITY: {
-      configurable: !0,
-    },
+    IntersectsOp: { configurable: !0 },
+    serialVersionUID: { configurable: !0 },
+    DEFAULT_NODE_CAPACITY: { configurable: !0 },
   };
 (j_.prototype.getNodeCapacity = function () {
   return this._nodeCapacity;
@@ -36587,24 +35449,12 @@ var q_ = (function (t) {
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
     var i = {
-      STRtreeNode: {
-        configurable: !0,
-      },
-      serialVersionUID: {
-        configurable: !0,
-      },
-      xComparator: {
-        configurable: !0,
-      },
-      yComparator: {
-        configurable: !0,
-      },
-      intersectsOp: {
-        configurable: !0,
-      },
-      DEFAULT_NODE_CAPACITY: {
-        configurable: !0,
-      },
+      STRtreeNode: { configurable: !0 },
+      serialVersionUID: { configurable: !0 },
+      xComparator: { configurable: !0 },
+      yComparator: { configurable: !0 },
+      intersectsOp: { configurable: !0 },
+      DEFAULT_NODE_CAPACITY: { configurable: !0 },
     };
     return (
       (e.prototype.createParentBoundablesFromVerticalSlices = function (t, e) {
@@ -37198,11 +36048,7 @@ var eS = function () {
       (this.p0 = new qv(e, i)), (this.p1 = new qv(n, r));
     }
   },
-  iS = {
-    serialVersionUID: {
-      configurable: !0,
-    },
-  };
+  iS = { serialVersionUID: { configurable: !0 } };
 (eS.prototype.minX = function () {
   return Math.min(this.p0.x, this.p1.x);
 }),
@@ -37645,11 +36491,7 @@ var lS = (function (t) {
     t && (e.__proto__ = t),
       (e.prototype = Object.create(t && t.prototype)),
       (e.prototype.constructor = e);
-    var i = {
-      SegmentOverlapAction: {
-        configurable: !0,
-      },
-    };
+    var i = { SegmentOverlapAction: { configurable: !0 } };
     return (
       (e.prototype.getMonotoneChains = function () {
         return this._monoChains;
@@ -37770,33 +36612,15 @@ var lS = (function (t) {
     }
   },
   hS = {
-    CAP_ROUND: {
-      configurable: !0,
-    },
-    CAP_FLAT: {
-      configurable: !0,
-    },
-    CAP_SQUARE: {
-      configurable: !0,
-    },
-    JOIN_ROUND: {
-      configurable: !0,
-    },
-    JOIN_MITRE: {
-      configurable: !0,
-    },
-    JOIN_BEVEL: {
-      configurable: !0,
-    },
-    DEFAULT_QUADRANT_SEGMENTS: {
-      configurable: !0,
-    },
-    DEFAULT_MITRE_LIMIT: {
-      configurable: !0,
-    },
-    DEFAULT_SIMPLIFY_FACTOR: {
-      configurable: !0,
-    },
+    CAP_ROUND: { configurable: !0 },
+    CAP_FLAT: { configurable: !0 },
+    CAP_SQUARE: { configurable: !0 },
+    JOIN_ROUND: { configurable: !0 },
+    JOIN_MITRE: { configurable: !0 },
+    JOIN_BEVEL: { configurable: !0 },
+    DEFAULT_QUADRANT_SEGMENTS: { configurable: !0 },
+    DEFAULT_MITRE_LIMIT: { configurable: !0 },
+    DEFAULT_SIMPLIFY_FACTOR: { configurable: !0 },
   };
 (cS.prototype.getEndCapStyle = function () {
   return this._endCapStyle;
@@ -37886,18 +36710,10 @@ var pS = function (t) {
       (this._inputLine = t || null);
   },
   dS = {
-    INIT: {
-      configurable: !0,
-    },
-    DELETE: {
-      configurable: !0,
-    },
-    KEEP: {
-      configurable: !0,
-    },
-    NUM_PTS_TO_CHECK: {
-      configurable: !0,
-    },
+    INIT: { configurable: !0 },
+    DELETE: { configurable: !0 },
+    KEEP: { configurable: !0 },
+    NUM_PTS_TO_CHECK: { configurable: !0 },
   };
 (pS.prototype.isDeletable = function (t, e, i, n) {
   var r = this._inputLine[t],
@@ -37999,11 +36815,7 @@ var fS = function () {
       (this._minimimVertexDistance = 0),
       (this._ptList = new Yb());
   },
-  gS = {
-    COORDINATE_ARRAY_TYPE: {
-      configurable: !0,
-    },
-  };
+  gS = { COORDINATE_ARRAY_TYPE: { configurable: !0 } };
 (fS.prototype.getCoordinates = function () {
   return this._ptList.toArray(fS.COORDINATE_ARRAY_TYPE);
 }),
@@ -38050,24 +36862,12 @@ var fS = function () {
   Object.defineProperties(fS, gS);
 var mS = function () {},
   yS = {
-    PI_TIMES_2: {
-      configurable: !0,
-    },
-    PI_OVER_2: {
-      configurable: !0,
-    },
-    PI_OVER_4: {
-      configurable: !0,
-    },
-    COUNTERCLOCKWISE: {
-      configurable: !0,
-    },
-    CLOCKWISE: {
-      configurable: !0,
-    },
-    NONE: {
-      configurable: !0,
-    },
+    PI_TIMES_2: { configurable: !0 },
+    PI_OVER_2: { configurable: !0 },
+    PI_OVER_4: { configurable: !0 },
+    COUNTERCLOCKWISE: { configurable: !0 },
+    CLOCKWISE: { configurable: !0 },
+    NONE: { configurable: !0 },
   };
 (mS.prototype.interfaces_ = function () {
   return [];
@@ -38196,18 +36996,10 @@ var vS = function t() {
       this.init(n);
   },
   bS = {
-    OFFSET_SEGMENT_SEPARATION_FACTOR: {
-      configurable: !0,
-    },
-    INSIDE_TURN_VERTEX_SNAP_DISTANCE_FACTOR: {
-      configurable: !0,
-    },
-    CURVE_VERTEX_SNAP_DISTANCE_FACTOR: {
-      configurable: !0,
-    },
-    MAX_CLOSING_SEG_LEN_FACTOR: {
-      configurable: !0,
-    },
+    OFFSET_SEGMENT_SEPARATION_FACTOR: { configurable: !0 },
+    INSIDE_TURN_VERTEX_SNAP_DISTANCE_FACTOR: { configurable: !0 },
+    CURVE_VERTEX_SNAP_DISTANCE_FACTOR: { configurable: !0 },
+    MAX_CLOSING_SEG_LEN_FACTOR: { configurable: !0 },
   };
 (vS.prototype.addNextSegment = function (t, e) {
   if (
@@ -38623,11 +37415,7 @@ var _S = function () {
     var t = arguments[0];
     this._subgraphs = t;
   },
-  SS = {
-    DepthSegment: {
-      configurable: !0,
-    },
-  };
+  SS = { DepthSegment: { configurable: !0 } };
 (_S.prototype.findStabbedSegments = function () {
   var t = this;
   if (1 === arguments.length) {
@@ -39865,11 +38653,7 @@ var GS = function t() {
     for (var e = 0; e < 2; e++)
       for (var i = 0; i < 3; i++) this._depth[e][i] = t.NULL_VALUE;
   },
-  US = {
-    NULL_VALUE: {
-      configurable: !0,
-    },
-  };
+  US = { NULL_VALUE: { configurable: !0 } };
 (GS.prototype.getDepth = function (t, e) {
   return this._depth[t][e];
 }),
@@ -40338,11 +39122,7 @@ var WS = function () {
     var t = arguments[0];
     this._segStrings = t;
   },
-  qS = {
-    fact: {
-      configurable: !0,
-    },
-  };
+  qS = { fact: { configurable: !0 } };
 (WS.prototype.checkEndPtVertexIntersections = function () {
   var t = this;
   if (0 === arguments.length)
@@ -40476,11 +39256,7 @@ var YS = function () {
       (this._p1Scaled = new qv())),
       this.initCorners(this._pt);
   },
-  XS = {
-    SAFE_ENV_EXPANSION_FACTOR: {
-      configurable: !0,
-    },
-  };
+  XS = { SAFE_ENV_EXPANSION_FACTOR: { configurable: !0 } };
 (YS.prototype.intersectsScaled = function (t, e) {
   var i = Math.min(t.x, e.x),
     n = Math.max(t.x, e.x),
@@ -40611,11 +39387,7 @@ var ZS = function () {
     var t = arguments[0];
     this._index = t;
   },
-  JS = {
-    HotPixelSnapAction: {
-      configurable: !0,
-    },
-  };
+  JS = { HotPixelSnapAction: { configurable: !0 } };
 (ZS.prototype.snap = function () {
   if (1 === arguments.length) {
     var t = arguments[0];
@@ -40817,21 +39589,11 @@ var eM = function () {
     }
   },
   iM = {
-    CAP_ROUND: {
-      configurable: !0,
-    },
-    CAP_BUTT: {
-      configurable: !0,
-    },
-    CAP_FLAT: {
-      configurable: !0,
-    },
-    CAP_SQUARE: {
-      configurable: !0,
-    },
-    MAX_PRECISION_DIGITS: {
-      configurable: !0,
-    },
+    CAP_ROUND: { configurable: !0 },
+    CAP_BUTT: { configurable: !0 },
+    CAP_FLAT: { configurable: !0 },
+    CAP_SQUARE: { configurable: !0 },
+    MAX_PRECISION_DIGITS: { configurable: !0 },
   };
 (eM.prototype.bufferFixedPrecision = function (t) {
   var e = new VS(new tM(new Kx(1)), t.getScale()),
@@ -41087,12 +39849,8 @@ var oM = function (t) {
     (this._maxPtDist = new nM()), (this._inputGeom = t || null);
   },
   aM = {
-    MaxPointDistanceFilter: {
-      configurable: !0,
-    },
-    MaxMidpointDistanceFilter: {
-      configurable: !0,
-    },
+    MaxPointDistanceFilter: { configurable: !0 },
+    MaxMidpointDistanceFilter: { configurable: !0 },
   };
 (oM.prototype.computeMaxMidpointDistance = function (t) {
   var e = new lM(this._inputGeom);
@@ -41402,11 +40160,7 @@ var pM = function t() {
       (this._component = e), (this._segIndex = i), (this._pt = n);
     }
   },
-  dM = {
-    INSIDE_AREA: {
-      configurable: !0,
-    },
-  };
+  dM = { INSIDE_AREA: { configurable: !0 } };
 (pM.prototype.isInsideArea = function () {
   return this._segIndex === pM.INSIDE_AREA;
 }),
@@ -41870,12 +40624,8 @@ var bM = function () {
     (this._g0 = t), (this._g1 = e);
   },
   xM = {
-    MaxPointDistanceFilter: {
-      configurable: !0,
-    },
-    MaxDensifiedByFractionDistanceFilter: {
-      configurable: !0,
-    },
+    MaxPointDistanceFilter: { configurable: !0 },
+    MaxDensifiedByFractionDistanceFilter: { configurable: !0 },
   };
 (bM.prototype.getCoordinates = function () {
   return this._ptDist.getCoordinates();
@@ -42008,12 +40758,8 @@ var MM = function (t, e, i) {
       (this._result = i || null);
   },
   CM = {
-    VERBOSE: {
-      configurable: !0,
-    },
-    MAX_DISTANCE_DIFF_FRAC: {
-      configurable: !0,
-    },
+    VERBOSE: { configurable: !0 },
+    MAX_DISTANCE_DIFF_FRAC: { configurable: !0 },
   };
 (MM.prototype.checkMaximumDistance = function (t, e, i) {
   var n = new bM(e, t);
@@ -42141,12 +40887,8 @@ var wM = function (t, e, i) {
       (this._result = i || null);
   },
   AM = {
-    VERBOSE: {
-      configurable: !0,
-    },
-    MAX_ENV_DIFF_FRAC: {
-      configurable: !0,
-    },
+    VERBOSE: { configurable: !0 },
+    MAX_ENV_DIFF_FRAC: { configurable: !0 },
   };
 (wM.prototype.isValid = function () {
   return (
@@ -42796,11 +41538,7 @@ var OM = function t() {
 var FM = function (t) {
     this._srcGeom = t || null;
   },
-  zM = {
-    SNAP_PRECISION_FACTOR: {
-      configurable: !0,
-    },
-  };
+  zM = { SNAP_PRECISION_FACTOR: { configurable: !0 } };
 (FM.prototype.snapTo = function (t, e) {
   var i = this.extractTargetCoordinates(t);
   return new kM(e, i).transform(this._srcGeom);
@@ -42974,12 +41712,8 @@ var GM = function () {
     (this._commonCoord = null), (this._ccFilter = new jM());
   },
   UM = {
-    CommonCoordinateFilter: {
-      configurable: !0,
-    },
-    Translater: {
-      configurable: !0,
-    },
+    CommonCoordinateFilter: { configurable: !0 },
+    Translater: { configurable: !0 },
   };
 (GM.prototype.addCommonBits = function (t) {
   var e = new HM(this._commonCoord);
@@ -43194,14 +41928,7 @@ var YM = function t() {
         (this._obj = o);
     }
   },
-  XM = {
-    INSERT: {
-      configurable: !0,
-    },
-    DELETE: {
-      configurable: !0,
-    },
-  };
+  XM = { INSERT: { configurable: !0 }, DELETE: { configurable: !0 } };
 (YM.prototype.isDelete = function () {
   return this._eventType === YM.DELETE;
 }),
@@ -43455,11 +42182,7 @@ var JM = (function (t) {
   KM = function () {
     (this._min = Gv.POSITIVE_INFINITY), (this._max = Gv.NEGATIVE_INFINITY);
   },
-  $M = {
-    NodeComparator: {
-      configurable: !0,
-    },
-  };
+  $M = { NodeComparator: { configurable: !0 } };
 (KM.prototype.getMin = function () {
   return this._min;
 }),
@@ -43622,12 +42345,8 @@ var oC = function () {
     this._index = new lC(t);
   },
   aC = {
-    SegmentVisitor: {
-      configurable: !0,
-    },
-    IntervalIndexedGeometry: {
-      configurable: !0,
-    },
+    SegmentVisitor: { configurable: !0 },
+    IntervalIndexedGeometry: { configurable: !0 },
   };
 (oC.prototype.locate = function (t) {
   var e = new Db(t),
@@ -44489,11 +43208,7 @@ var mC = function t() {
         new dC(this._geom[2], this._boundaryDistanceTolerance),
       ]);
   },
-  yC = {
-    TOLERANCE: {
-      configurable: !0,
-    },
-  };
+  yC = { TOLERANCE: { configurable: !0 } };
 (mC.prototype.reportResult = function (t, e, i) {
   pb.out.println(
     "Overlay result invalid - A:" +
@@ -44635,11 +43350,7 @@ var bC = function () {
     (this._inputPolys = t),
       null === this._inputPolys && (this._inputPolys = new Yb());
   },
-  xC = {
-    STRTREE_NODE_CAPACITY: {
-      configurable: !0,
-    },
-  };
+  xC = { STRTREE_NODE_CAPACITY: { configurable: !0 } };
 (bC.prototype.reduceToGeometries = function (t) {
   for (var e = new Yb(), i = t.iterator(); i.hasNext(); ) {
     var n = i.next(),
@@ -45954,21 +44665,12 @@ function Uw(t, e, i, n) {
         i = [-e[0], -e[1]];
       return zw(Gw).scale(79.4188).clipAngle(179.999).rotate(i).scale(um);
     })(o),
-    l = {
-      type: o.type,
-      coordinates: Hw(o.coordinates, s),
-    },
+    l = { type: o.type, coordinates: Hw(o.coordinates, s) },
     u = new l_().read(l),
     c = vm(bm(e, i), "meters"),
     h = eM.bufferOp(u, c, n);
   if (!jw((h = new u_().write(h)).coordinates))
-    return hm(
-      {
-        type: h.type,
-        coordinates: Vw(h.coordinates, s),
-      },
-      r
-    );
+    return hm({ type: h.type, coordinates: Vw(h.coordinates, s) }, r);
 }
 function jw(t) {
   return Array.isArray(t[0]) ? jw(t[0]) : isNaN(t[0]);
@@ -46130,14 +44832,7 @@ const Ww = {
               o &&
                 i.push(
                   (void 0 === r && (r = {}),
-                  hm(
-                    {
-                      type: "MultiPoint",
-                      coordinates: a,
-                    },
-                    n,
-                    r
-                  ))
+                  hm({ type: "MultiPoint", coordinates: a }, n, r))
                 );
           }
         }),
@@ -46158,20 +44853,10 @@ const Ww = {
     center: zm,
   },
   qw = {
-    FlyLine: (t, e) => ({
-      from: t[e.fromField],
-      to: t[e.toField],
-    }),
-    Point: (t, e) => ({
-      lng: t[e.lngField],
-      lat: t[e.latField],
-    }),
-    Polygon: (t, e) => ({
-      coordinates: t[e.coordinatesField],
-    }),
-    Line: (t, e) => ({
-      coordinates: t[e.coordinatesField],
-    }),
+    FlyLine: (t, e) => ({ from: t[e.fromField], to: t[e.toField] }),
+    Point: (t, e) => ({ lng: t[e.lngField], lat: t[e.latField] }),
+    Polygon: (t, e) => ({ coordinates: t[e.coordinatesField] }),
+    Line: (t, e) => ({ coordinates: t[e.coordinatesField] }),
   },
   Yw = (t) => "FeatureCollection" === t.type || "Feature" === t.type,
   Xw = (t, e, i) => {
@@ -46193,19 +44878,12 @@ const Ww = {
             (a = i.coordinates);
         }
         const s = at(t, ["coordinates"]),
-          l = ot(rt(rt({}, s), i), {
-            geometry: {
-              type: e,
-              coordinates: a,
-            },
-          });
+          l = ot(rt(rt({}, s), i), { geometry: { type: e, coordinates: a } });
         n.push(l);
       }),
       n
     );
   };
-window.Xw = Xw;
-window.Ww = Ww;
 var Qw, Zw;
 ((Zw = Qw || (Qw = {})).contain = "contain"),
   (Zw.intersect = "intersect"),
@@ -46235,9 +44913,7 @@ const Jw = (t, e) => {
             throw new Error("splitter cannot be a FeatureCollection");
           if ("GeometryCollection" === n)
             throw new Error("splitter cannot be a GeometryCollection");
-          var r = Ry(e, {
-            precision: 7,
-          });
+          var r = Ry(e, { precision: 7 });
           switch (n) {
             case "Point":
               return Fy(t, r);
@@ -46257,18 +44933,9 @@ const Jw = (t, e) => {
     });
     const r = ((o = gm(n)),
     (a = {
-      MultiPoint: {
-        coordinates: [],
-        properties: [],
-      },
-      MultiLineString: {
-        coordinates: [],
-        properties: [],
-      },
-      MultiPolygon: {
-        coordinates: [],
-        properties: [],
-      },
+      MultiPoint: { coordinates: [], properties: [] },
+      MultiLineString: { coordinates: [], properties: [] },
+      MultiPolygon: { coordinates: [], properties: [] },
     }),
     Cm(o, function (t) {
       var e, i, n, r;
@@ -46312,36 +44979,19 @@ const Jw = (t, e) => {
         .sort()
         .map(function (t) {
           return hm(
-            {
-              type: t,
-              coordinates: a[t].coordinates,
-            },
-            {
-              collectedProperties: a[t].properties,
-            }
+            { type: t, coordinates: a[t].coordinates },
+            { collectedProperties: a[t].properties }
           );
         })
     )).features[0];
     var o, a;
-    return (
-      r || {
-        geometry: {
-          coordinates: [],
-        },
-      }
-    );
+    return r || { geometry: { coordinates: [] } };
   },
   Kw = (t, e, i, n) => {
     if (!i || i === Qw.none) return !0;
     let r = t.geometry ? t : pm([t.lng, t.lat]);
     if (
-      ((r = rt(
-        {
-          type: "Feature",
-          properties: {},
-        },
-        r
-      )),
+      ((r = rt({ type: "Feature", properties: {} }, r)),
       "Point" === r.geometry.type)
     )
       return i !== Qw.intersect || Im(r, e);
@@ -46449,7 +45099,6 @@ function oA(t, e) {
     [Math.sin(t) * Math.sin(e), -1 * Math.sin(t) * Math.cos(e), Math.cos(t)]
   );
 }
-window.oA = oA;
 function aA(t, e) {
   return (
     (t = eA(t)),
@@ -46457,7 +45106,6 @@ function aA(t, e) {
     [-1 * Math.cos(t) * Math.sin(e), Math.cos(t) * Math.cos(e), Math.sin(t)]
   );
 }
-window.aA = aA;
 class sA {
   constructor(t) {
     (this._getEffectState = t), (this.transform = this.transform.bind(this));
@@ -46752,10 +45400,7 @@ class gA {
   subscribe(t, e) {
     const i = this._uuid();
     return (
-      (this._listeners[i] = {
-        name: t,
-        func: e,
-      }),
+      (this._listeners[i] = { name: t, func: e }),
       () => {
         delete this._listeners[i];
       }
@@ -46984,16 +45629,8 @@ const bA = {
     yellow: 16776960,
     yellowgreen: 10145074,
   },
-  xA = {
-    h: 0,
-    s: 0,
-    l: 0,
-  },
-  _A = {
-    h: 0,
-    s: 0,
-    l: 0,
-  };
+  xA = { h: 0, s: 0, l: 0 },
+  _A = { h: 0, s: 0, l: 0 };
 function SA(t, e, i) {
   return (
     i < 0 && (i += 1),
@@ -47332,7 +45969,6 @@ function EA(t) {
     return AA.set(t, n), n;
   }
 }
-window.EA = EA;
 function DA(t, e) {
   return t.transparent ? t.opacity : e;
 }
@@ -47380,10 +46016,7 @@ class NA extends En {
   ) {
     super(),
       (this.type = "ShapeGeometry"),
-      (this.parameters = {
-        shapes: t,
-        curveSegments: e,
-      });
+      (this.parameters = { shapes: t, curveSegments: e });
     const i = [],
       n = [],
       r = [],
@@ -47452,9 +46085,7 @@ class RA extends En {
     if (
       (super(),
       (this.type = "WireframeGeometry"),
-      (this.parameters = {
-        geometry: t,
-      }),
+      (this.parameters = { geometry: t }),
       null !== t)
     ) {
       const e = [],
@@ -47466,13 +46097,7 @@ class RA extends En {
           a = t.index;
         let s = t.groups;
         0 === s.length &&
-          (s = [
-            {
-              start: 0,
-              count: a.count,
-              materialIndex: 0,
-            },
-          ]);
+          (s = [{ start: 0, count: a.count, materialIndex: 0 }]);
         for (let t = 0, l = s.length; t < l; ++t) {
           const l = s[t],
             u = l.start;
@@ -47524,9 +46149,7 @@ class zA extends hn {
   constructor(t) {
     super(),
       (this.isMeshStandardMaterial = !0),
-      (this.defines = {
-        STANDARD: "",
-      }),
+      (this.defines = { STANDARD: "" }),
       (this.type = "MeshStandardMaterial"),
       (this.color = new ln(16777215)),
       (this.roughness = 1),
@@ -47563,9 +46186,7 @@ class zA extends hn {
   copy(t) {
     return (
       super.copy(t),
-      (this.defines = {
-        STANDARD: "",
-      }),
+      (this.defines = { STANDARD: "" }),
       this.color.copy(t.color),
       (this.roughness = t.roughness),
       (this.metalness = t.metalness),
@@ -47600,7 +46221,6 @@ class zA extends hn {
     );
   }
 }
-window.zA = zA;
 const kA = {
   arraySlice: (t, e, i) =>
     kA.isTypedArray(t)
@@ -47826,10 +46446,7 @@ class GA extends BA {
       (this._offsetPrev = -0),
       (this._weightNext = -0),
       (this._offsetNext = -0),
-      (this.DefaultSettings_ = {
-        endingStart: ae,
-        endingEnd: ae,
-      });
+      (this.DefaultSettings_ = { endingStart: ae, endingEnd: ae });
   }
   intervalChanged_(t, e, i) {
     const n = this.parameterPositions;
@@ -48762,10 +47379,7 @@ class mE {
     const r = e.tracks,
       o = r.length,
       a = new Array(o),
-      s = {
-        endingStart: ae,
-        endingEnd: ae,
-      };
+      s = { endingStart: ae, endingEnd: ae };
     for (let l = 0; l !== o; ++l) {
       const t = r[l].createInterpolant(null);
       (a[l] = t), (t.settings = s);
@@ -49779,10 +48393,7 @@ class PE extends vt {
       r = this._actionsByClip;
     let o = r[e];
     if (void 0 === o)
-      (o = {
-        knownActions: [t],
-        actionByRoot: {},
-      }),
+      (o = { knownActions: [t], actionByRoot: {} }),
         (t._byClipCacheIndex = 0),
         (r[e] = o);
     else {
@@ -50018,13 +48629,9 @@ class IE {
       (this.layers = new Di()),
       (this.params = {
         Mesh: {},
-        Line: {
-          threshold: 1,
-        },
+        Line: { threshold: 1 },
         LOD: {},
-        Points: {
-          threshold: 1,
-        },
+        Points: { threshold: 1 },
         Sprite: {},
       });
   }
@@ -50167,10 +48774,7 @@ class GE extends Hi {
       n.push(Math.cos(t), Math.sin(t), 1, Math.cos(e), Math.sin(e), 1);
     }
     i.setAttribute("position", new bn(n, 3));
-    const r = new us({
-      fog: !1,
-      toneMapped: !1,
-    });
+    const r = new us({ fog: !1, toneMapped: !1 });
     (this.cone = new vs(i, r)), this.add(this.cone), this.update();
   }
   dispose() {
@@ -50212,13 +48816,7 @@ class UE extends vs {
     const h = new En();
     h.setAttribute("position", new bn(u, 3)),
       h.setAttribute("color", new bn(c, 3));
-    super(
-      h,
-      new us({
-        vertexColors: !0,
-        toneMapped: !1,
-      })
-    ),
+    super(h, new us({ vertexColors: !0, toneMapped: !1 })),
       (this.type = "GridHelper");
   }
 }
@@ -50255,13 +48853,7 @@ class jE extends vs {
     const c = new En();
     c.setAttribute("position", new bn(l, 3)),
       c.setAttribute("color", new bn(u, 3));
-    super(
-      c,
-      new us({
-        vertexColors: !0,
-        toneMapped: !1,
-      })
-    ),
+    super(c, new us({ vertexColors: !0, toneMapped: !1 })),
       (this.type = "PolarGridHelper");
   }
 }
@@ -50282,10 +48874,7 @@ class qE extends Hi {
       "position",
       new bn([-e, e, 0, e, e, 0, e, -e, 0, -e, -e, 0, -e, e, 0], 3)
     );
-    const r = new us({
-      fog: !1,
-      toneMapped: !1,
-    });
+    const r = new us({ fog: !1, toneMapped: !1 });
     (this.lightPlane = new gs(n, r)),
       this.add(this.lightPlane),
       (n = new En()),
@@ -50319,11 +48908,7 @@ const YE = new Ye(),
 class QE extends vs {
   constructor(t) {
     const e = new En(),
-      i = new us({
-        color: 16777215,
-        vertexColors: !0,
-        toneMapped: !1,
-      }),
+      i = new us({ color: 16777215, vertexColors: !0, toneMapped: !1 }),
       n = [],
       r = [],
       o = {},
@@ -50434,13 +49019,7 @@ class JE extends vs {
           3
         )
       ),
-      super(
-        n,
-        new us({
-          color: e,
-          toneMapped: !1,
-        })
-      ),
+      super(n, new us({ color: e, toneMapped: !1 })),
       (this.box = t),
       (this.type = "Box3Helper"),
       this.geometry.computeBoundingSphere();
@@ -50463,13 +49042,7 @@ class KE extends vs {
         "color",
         new bn([1, 0, 0, 1, 0.6, 0, 0, 1, 0, 0.6, 1, 0, 0, 0, 1, 0, 0.6, 1], 3)
       );
-    super(
-      i,
-      new us({
-        vertexColors: !0,
-        toneMapped: !1,
-      })
-    ),
+    super(i, new us({ vertexColors: !0, toneMapped: !1 })),
       (this.type = "AxesHelper");
   }
   setColors(t, e, i) {
@@ -50606,51 +49179,21 @@ class tD {
       : void 0;
   }
 }
-const eD = {
-    type: "start",
-  },
-  iD = {
-    type: "end",
-  },
-  nD = {
-    type: "change",
-  },
-  rD = {
-    type: "pan",
-  },
-  oD = {
-    type: "panStart",
-  },
-  aD = {
-    type: "panEnd",
-  },
-  sD = {
-    type: "rotate",
-  },
-  lD = {
-    type: "rotateStart",
-  },
-  uD = {
-    type: "rotateEnd",
-  },
-  cD = {
-    type: "pitch",
-  },
-  hD = {
-    type: "pitchStart",
-  },
-  pD = {
-    type: "pitchEnd",
-  },
-  dD = {
-    type: "zoom",
-  },
-  fD = {
-    type: "zoomStart",
-  },
-  gD = {
-    type: "zoomEnd",
-  };
+const eD = { type: "start" },
+  iD = { type: "end" },
+  nD = { type: "change" },
+  rD = { type: "pan" },
+  oD = { type: "panStart" },
+  aD = { type: "panEnd" },
+  sD = { type: "rotate" },
+  lD = { type: "rotateStart" },
+  uD = { type: "rotateEnd" },
+  cD = { type: "pitch" },
+  hD = { type: "pitchStart" },
+  pD = { type: "pitchEnd" },
+  dD = { type: "zoom" },
+  fD = { type: "zoomStart" },
+  gD = { type: "zoomEnd" };
 class mD extends vt {
   constructor(t, e) {
     super(),
@@ -50783,10 +49326,7 @@ class mD extends vt {
         MIDDLE: ft.DOLLY,
         RIGHT: ft.PAN,
       }),
-      (this.touches = {
-        ONE: mt.ROTATE,
-        TWO: mt.DOLLY_PAN,
-      }),
+      (this.touches = { ONE: mt.ROTATE, TWO: mt.DOLLY_PAN }),
       (this.target0 = this.target.clone()),
       (this.STATE = {
         NONE: -1,
@@ -50819,9 +49359,7 @@ class mD extends vt {
       t.addEventListener("contextmenu", this.onContextMenu),
       t.addEventListener("pointerdown", this.onPointerDown),
       t.addEventListener("pointercancel", this.onPointerCancel),
-      t.addEventListener("wheel", this.onMouseWheel, {
-        passive: !1,
-      });
+      t.addEventListener("wheel", this.onMouseWheel, { passive: !1 });
   }
   getAutoRotationAngle() {
     return ((2 * Math.PI) / 60 / 60) * this.autoRotateSpeed;
@@ -51276,24 +49814,12 @@ const DD = class extends Wn {
 };
 (DD.SkyShader = {
   uniforms: {
-    turbidity: {
-      value: 2,
-    },
-    rayleigh: {
-      value: 1,
-    },
-    mieCoefficient: {
-      value: 0.005,
-    },
-    mieDirectionalG: {
-      value: 0.8,
-    },
-    sunPosition: {
-      value: new Ye(),
-    },
-    up: {
-      value: new Ye(0, 1, 0),
-    },
+    turbidity: { value: 2 },
+    rayleigh: { value: 1 },
+    mieCoefficient: { value: 0.005 },
+    mieDirectionalG: { value: 0.8 },
+    sunPosition: { value: new Ye() },
+    up: { value: new Ye(0, 1, 0) },
   },
   vertexShader:
     "\n\t\tuniform vec3 sunPosition;\n\t\tuniform float rayleigh;\n\t\tuniform float turbidity;\n\t\tuniform float mieCoefficient;\n\t\tuniform vec3 up;\n\n\t\tvarying vec3 vWorldPosition;\n\t\tvarying vec3 vSunDirection;\n\t\tvarying float vSunfade;\n\t\tvarying vec3 vBetaR;\n\t\tvarying vec3 vBetaM;\n\t\tvarying float vSunE;\n\n\t\t// constants for atmospheric scattering\n\t\tconst float e = 2.71828182845904523536028747135266249775724709369995957;\n\t\tconst float pi = 3.141592653589793238462643383279502884197169;\n\n\t\t// wavelength of used primaries, according to preetham\n\t\tconst vec3 lambda = vec3( 680E-9, 550E-9, 450E-9 );\n\t\t// this pre-calcuation replaces older TotalRayleigh(vec3 lambda) function:\n\t\t// (8.0 * pow(pi, 3.0) * pow(pow(n, 2.0) - 1.0, 2.0) * (6.0 + 3.0 * pn)) / (3.0 * N * pow(lambda, vec3(4.0)) * (6.0 - 7.0 * pn))\n\t\tconst vec3 totalRayleigh = vec3( 5.804542996261093E-6, 1.3562911419845635E-5, 3.0265902468824876E-5 );\n\n\t\t// mie stuff\n\t\t// K coefficient for the primaries\n\t\tconst float v = 4.0;\n\t\tconst vec3 K = vec3( 0.686, 0.678, 0.666 );\n\t\t// MieConst = pi * pow( ( 2.0 * pi ) / lambda, vec3( v - 2.0 ) ) * K\n\t\tconst vec3 MieConst = vec3( 1.8399918514433978E14, 2.7798023919660528E14, 4.0790479543861094E14 );\n\n\t\t// earth shadow hack\n\t\t// cutoffAngle = pi / 1.95;\n\t\tconst float cutoffAngle = 1.6110731556870734;\n\t\tconst float steepness = 1.5;\n\t\tconst float EE = 1000.0;\n\n\t\tfloat sunIntensity( float zenithAngleCos ) {\n\t\t\tzenithAngleCos = clamp( zenithAngleCos, -1.0, 1.0 );\n\t\t\treturn EE * max( 0.0, 1.0 - pow( e, -( ( cutoffAngle - acos( zenithAngleCos ) ) / steepness ) ) );\n\t\t}\n\n\t\tvec3 totalMie( float T ) {\n\t\t\tfloat c = ( 0.2 * T ) * 10E-18;\n\t\t\treturn 0.434 * c * MieConst;\n\t\t}\n\n\t\tvoid main() {\n\n\t\t\tvec4 worldPosition = modelMatrix * vec4( position, 1.0 );\n\t\t\tvWorldPosition = worldPosition.xyz;\n\n\t\t\tgl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n\t\t\tgl_Position.z = gl_Position.w; // set z to camera.far\n\n\t\t\tvSunDirection = normalize( sunPosition );\n\n\t\t\tvSunE = sunIntensity( dot( vSunDirection, up ) );\n\n\t\t\tvSunfade = 1.0 - clamp( 1.0 - exp( ( sunPosition.y / 450000.0 ) ), 0.0, 1.0 );\n\n\t\t\tfloat rayleighCoefficient = rayleigh - ( 1.0 * ( 1.0 - vSunfade ) );\n\n\t\t\t// extinction (absorbtion + out scattering)\n\t\t\t// rayleigh coefficients\n\t\t\tvBetaR = totalRayleigh * rayleighCoefficient;\n\n\t\t\t// mie coefficients\n\t\t\tvBetaM = totalMie( turbidity ) * mieCoefficient;\n\n\t\t}",
@@ -51301,27 +49827,13 @@ const DD = class extends Wn {
     "\n\t\tvarying vec3 vWorldPosition;\n\t\tvarying vec3 vSunDirection;\n\t\tvarying float vSunfade;\n\t\tvarying vec3 vBetaR;\n\t\tvarying vec3 vBetaM;\n\t\tvarying float vSunE;\n\n\t\tuniform float mieDirectionalG;\n\t\tuniform vec3 up;\n\n\t\tconst vec3 cameraPos = vec3( 0.0, 0.0, 0.0 );\n\n\t\t// constants for atmospheric scattering\n\t\tconst float pi = 3.141592653589793238462643383279502884197169;\n\n\t\tconst float n = 1.0003; // refractive index of air\n\t\tconst float N = 2.545E25; // number of molecules per unit volume for air at 288.15K and 1013mb (sea level -45 celsius)\n\n\t\t// optical length at zenith for molecules\n\t\tconst float rayleighZenithLength = 8.4E3;\n\t\tconst float mieZenithLength = 1.25E3;\n\t\t// 66 arc seconds -> degrees, and the cosine of that\n\t\tconst float sunAngularDiameterCos = 0.999956676946448443553574619906976478926848692873900859324;\n\n\t\t// 3.0 / ( 16.0 * pi )\n\t\tconst float THREE_OVER_SIXTEENPI = 0.05968310365946075;\n\t\t// 1.0 / ( 4.0 * pi )\n\t\tconst float ONE_OVER_FOURPI = 0.07957747154594767;\n\n\t\tfloat rayleighPhase( float cosTheta ) {\n\t\t\treturn THREE_OVER_SIXTEENPI * ( 1.0 + pow( cosTheta, 2.0 ) );\n\t\t}\n\n\t\tfloat hgPhase( float cosTheta, float g ) {\n\t\t\tfloat g2 = pow( g, 2.0 );\n\t\t\tfloat inverse = 1.0 / pow( 1.0 - 2.0 * g * cosTheta + g2, 1.5 );\n\t\t\treturn ONE_OVER_FOURPI * ( ( 1.0 - g2 ) * inverse );\n\t\t}\n\n\t\tvoid main() {\n\n\t\t\tvec3 direction = normalize( vWorldPosition - cameraPos );\n\n\t\t\t// optical length\n\t\t\t// cutoff angle at 90 to avoid singularity in next formula.\n\t\t\tfloat zenithAngle = acos( max( 0.0, dot( up, direction ) ) );\n\t\t\tfloat inverse = 1.0 / ( cos( zenithAngle ) + 0.15 * pow( 93.885 - ( ( zenithAngle * 180.0 ) / pi ), -1.253 ) );\n\t\t\tfloat sR = rayleighZenithLength * inverse;\n\t\t\tfloat sM = mieZenithLength * inverse;\n\n\t\t\t// combined extinction factor\n\t\t\tvec3 Fex = exp( -( vBetaR * sR + vBetaM * sM ) );\n\n\t\t\t// in scattering\n\t\t\tfloat cosTheta = dot( direction, vSunDirection );\n\n\t\t\tfloat rPhase = rayleighPhase( cosTheta * 0.5 + 0.5 );\n\t\t\tvec3 betaRTheta = vBetaR * rPhase;\n\n\t\t\tfloat mPhase = hgPhase( cosTheta, mieDirectionalG );\n\t\t\tvec3 betaMTheta = vBetaM * mPhase;\n\n\t\t\tvec3 Lin = pow( vSunE * ( ( betaRTheta + betaMTheta ) / ( vBetaR + vBetaM ) ) * ( 1.0 - Fex ), vec3( 1.5 ) );\n\t\t\tLin *= mix( vec3( 1.0 ), pow( vSunE * ( ( betaRTheta + betaMTheta ) / ( vBetaR + vBetaM ) ) * Fex, vec3( 1.0 / 2.0 ) ), clamp( pow( 1.0 - dot( up, vSunDirection ), 5.0 ), 0.0, 1.0 ) );\n\n\t\t\t// nightsky\n\t\t\tfloat theta = acos( direction.y ); // elevation --\x3e y-axis, [-pi/2, pi/2]\n\t\t\tfloat phi = atan( direction.z, direction.x ); // azimuth --\x3e x-axis [-pi/2, pi/2]\n\t\t\tvec2 uv = vec2( phi, theta ) / vec2( 2.0 * pi, pi ) + vec2( 0.5, 0.0 );\n\t\t\tvec3 L0 = vec3( 0.1 ) * Fex;\n\n\t\t\t// composition + solar disc\n\t\t\tfloat sundisk = smoothstep( sunAngularDiameterCos, sunAngularDiameterCos + 0.00002, cosTheta );\n\t\t\tL0 += ( vSunE * 19000.0 * Fex ) * sundisk;\n\n\t\t\tvec3 texColor = ( Lin + L0 ) * 0.04 + vec3( 0.0, 0.0003, 0.00075 );\n\n\t\t\tvec3 retColor = pow( texColor, vec3( 1.0 / ( 1.2 + ( 1.2 * vSunfade ) ) ) );\n\n\t\t\tgl_FragColor = vec4( retColor, 1.0 );\n\n\t\t\t#include <tonemapping_fragment>\n\t\t\t#include <encodings_fragment>\n\n\t\t}",
 }),
   (fr.line = {
-    worldUnits: {
-      value: 1,
-    },
-    linewidth: {
-      value: 1,
-    },
-    resolution: {
-      value: new Le(1, 1),
-    },
-    dashOffset: {
-      value: 0,
-    },
-    dashScale: {
-      value: 1,
-    },
-    dashSize: {
-      value: 1,
-    },
-    gapSize: {
-      value: 1,
-    },
+    worldUnits: { value: 1 },
+    linewidth: { value: 1 },
+    resolution: { value: new Le(1, 1) },
+    dashOffset: { value: 0 },
+    dashScale: { value: 1 },
+    dashSize: { value: 1 },
+    gapSize: { value: 1 },
   }),
   (mr.line = {
     uniforms: Zn.merge([fr.common, fr.fog, fr.line]),
@@ -51597,12 +50109,7 @@ function WD(t, e, i, n) {
   );
 }
 class qD extends Wn {
-  constructor(
-    t = new ID(),
-    e = new TD({
-      color: 16777215 * Math.random(),
-    })
-  ) {
+  constructor(t = new ID(), e = new TD({ color: 16777215 * Math.random() })) {
     super(t, e), (this.type = "LineSegments2");
   }
   computeLineDistances() {
@@ -51763,12 +50270,7 @@ class YD extends ID {
   }
 }
 class XD extends qD {
-  constructor(
-    t = new YD(),
-    e = new TD({
-      color: 16777215 * Math.random(),
-    })
-  ) {
+  constructor(t = new YD(), e = new TD({ color: 16777215 * Math.random() })) {
     super(t, e), (this.isLine2 = !0), (this.type = "Line2");
   }
 }
@@ -51839,19 +50341,12 @@ class QD {
       (i = e[t]
         ? i.replace("$0", "graphics card")
         : i.replace("$0", "browser")),
-      (i = i.replace(
-        "$1",
-        {
-          1: "WebGL",
-          2: "WebGL 2",
-        }[t]
-      )),
+      (i = i.replace("$1", { 1: "WebGL", 2: "WebGL 2" }[t])),
       (n.innerHTML = i),
       n
     );
   }
 }
-window.QD = QD;
 function ZD(t, e, i) {
   t.normalized
     ? t.setXYZW(e, 255 * i[0], 255 * i[1], 255 * i[2], 255 * i[3])
@@ -51864,8 +50359,7 @@ function ZD(t, e, i) {
  * @author      Stephens Nunnally <@stevinz>
  * @license     MIT - Copyright (c) 2022 Stephens Nunnally
  * @source      https://github.com/stevinz/three-subdivide
- */
-new Ye(),
+ */ new Ye(),
   new Ye(),
   new Ye(),
   new Ye(),
@@ -51891,12 +50385,7 @@ var JD = Object.defineProperty,
   iT = Object.prototype.propertyIsEnumerable,
   nT = (t, e, i) =>
     e in t
-      ? JD(t, e, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: i,
-        })
+      ? JD(t, e, { enumerable: !0, configurable: !0, writable: !0, value: i })
       : (t[e] = i),
   rT = (t, e) => {
     for (var i in e || (e = {})) eT.call(e, i) && nT(t, i, e[i]);
@@ -51909,7 +50398,6 @@ const aT = (t, e) => {
   const { callback: i } = e;
   return i && (t = t.filter(i)), t;
 };
-window.aT = aT;
 class sT {
   constructor() {
     (this._partials = new Float64Array(32)), (this._n = 0);
@@ -53488,35 +51976,24 @@ const SL = {
     const { projection: i, as: n } = e,
       r = SL[i];
     if (t[0].lng) {
-      return t.map((t) =>
-        oT(rT({}, t), {
-          [n]: r([t.lng, t.lat]),
-        })
-      );
+      return t.map((t) => oT(rT({}, t), { [n]: r([t.lng, t.lat]) }));
     }
     return t.map((t) => {
       const { coordinates: e } = t.geometry || {};
       if (!Array.isArray(e[0])) {
         const i = r(e);
-        return oT(rT({}, t), {
-          [n]: i,
-        });
+        return oT(rT({}, t), { [n]: i });
       }
       const i = e.map((t) => (Array.isArray(t[0]) ? t.map((t) => r(t)) : r(t)));
       return oT(rT({}, t), {
         [n]: i,
-        geometry: oT(rT({}, t.geometry), {
-          [n]: i,
-        }),
+        geometry: oT(rT({}, t.geometry), { [n]: i }),
       });
     });
   };
-window.ML = ML;
 function CL(t) {
   if (t.__esModule) return t;
-  var e = Object.defineProperty({}, "__esModule", {
-    value: !0,
-  });
+  var e = Object.defineProperty({}, "__esModule", { value: !0 });
   return (
     Object.keys(t).forEach(function (i) {
       var n = Object.getOwnPropertyDescriptor(t, i);
@@ -53708,9 +52185,7 @@ function OL(t) {
   for (e in t)
     n[e] =
       null == (i = t[e])
-        ? {
-            type: null,
-          }
+        ? { type: null }
         : ("FeatureCollection" === i.type
             ? FL
             : "Feature" === i.type
@@ -53719,10 +52194,7 @@ function OL(t) {
   return n;
 }
 function FL(t) {
-  var e = {
-    type: "GeometryCollection",
-    geometries: t.features.map(zL),
-  };
+  var e = { type: "GeometryCollection", geometries: t.features.map(zL) };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function zL(t) {
@@ -53737,25 +52209,13 @@ function zL(t) {
   return i;
 }
 function kL(t) {
-  if (null == t)
-    return {
-      type: null,
-    };
+  if (null == t) return { type: null };
   var e =
     "GeometryCollection" === t.type
-      ? {
-          type: "GeometryCollection",
-          geometries: t.geometries.map(kL),
-        }
+      ? { type: "GeometryCollection", geometries: t.geometries.map(kL) }
       : "Point" === t.type || "MultiPoint" === t.type
-      ? {
-          type: t.type,
-          coordinates: t.coordinates,
-        }
-      : {
-          type: t.type,
-          arcs: t.coordinates,
-        };
+      ? { type: t.type, coordinates: t.coordinates }
+      : { type: t.type, arcs: t.coordinates };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function BL(t) {
@@ -53902,10 +52362,7 @@ var UL = Object.freeze(
                   },
                 };
                 for (var m in t) f(t[m]);
-                return {
-                  scale: [1 / s, 1 / l],
-                  translate: [n, r],
-                };
+                return { scale: [1 / s, 1 / l], translate: [n, r] };
               })(t, i, e),
             r = (function (t) {
               var e,
@@ -54032,12 +52489,7 @@ var UL = Object.freeze(
                 for (i = 0, n = a.length; i < n; ++i)
                   for (var l = a[i], u = l[0], c = l[1]; ++u < c; )
                     r.has(o[u]) &&
-                      ((e = {
-                        0: u,
-                        1: l[1],
-                      }),
-                      (l[1] = u),
-                      (l = l.next = e));
+                      ((e = { 0: u, 1: l[1] }), (l[1] = u), (l = l.next = e));
                 for (i = 0, n = s.length; i < n; ++i)
                   for (
                     var h = s[i], p = h[0], d = p, f = h[1], g = r.has(o[p]);
@@ -54046,10 +52498,7 @@ var UL = Object.freeze(
                   )
                     r.has(o[d]) &&
                       (g
-                        ? ((e = {
-                            0: d,
-                            1: h[1],
-                          }),
+                        ? ((e = { 0: d, 1: h[1] }),
                           (h[1] = d),
                           (h = h.next = e))
                         : (NL(o, p, f, f - d),
@@ -54085,18 +52534,12 @@ var UL = Object.freeze(
                   };
                   function s(t) {
                     for (var n = 0, o = t.length; n < o; ++n) r[++e] = t[n];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return i.push(a), a;
                   }
                   function l(t) {
                     for (var i = 0, o = t.length; i < o; ++i) r[++e] = t[i];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return n.push(a), a;
                   }
                   function u(t) {
@@ -54185,9 +52628,7 @@ var UL = Object.freeze(
         },
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   jL = CL(UL);
@@ -54254,25 +52695,10 @@ function qL(t, e) {
     r = null == e.properties ? {} : e.properties,
     o = YL(t, e);
   return null == i && null == n
-    ? {
-        type: "Feature",
-        properties: r,
-        geometry: o,
-      }
+    ? { type: "Feature", properties: r, geometry: o }
     : null == n
-    ? {
-        type: "Feature",
-        id: i,
-        properties: r,
-        geometry: o,
-      }
-    : {
-        type: "Feature",
-        id: i,
-        bbox: n,
-        properties: r,
-        geometry: o,
-      };
+    ? { type: "Feature", id: i, properties: r, geometry: o }
+    : { type: "Feature", id: i, bbox: n, properties: r, geometry: o };
 }
 function YL(t, e) {
   var i = VL(t.transform),
@@ -54306,10 +52732,7 @@ function YL(t, e) {
       n = e.type;
     switch (n) {
       case "GeometryCollection":
-        return {
-          type: n,
-          geometries: e.geometries.map(t),
-        };
+        return { type: n, geometries: e.geometries.map(t) };
       case "Point":
         i = o(e.coordinates);
         break;
@@ -54331,10 +52754,7 @@ function YL(t, e) {
       default:
         return null;
     }
-    return {
-      type: n,
-      coordinates: i,
-    };
+    return { type: n, coordinates: i };
   })(e);
 }
 function XL(t, e) {
@@ -54412,10 +52832,7 @@ function QL(t, e, i) {
         o = [];
       function a(t) {
         var e = t < 0 ? ~t : t;
-        (o[e] || (o[e] = [])).push({
-          i: t,
-          g: n,
-        });
+        (o[e] || (o[e] = [])).push({ i: t, g: n });
       }
       function s(t) {
         t.forEach(a);
@@ -54457,10 +52874,7 @@ function QL(t, e, i) {
       );
     })(0, e, i);
   else for (r = 0, n = new Array((o = t.arcs.length)); r < o; ++r) n[r] = r;
-  return {
-    type: "MultiLineString",
-    arcs: XL(t, n),
-  };
+  return { type: "MultiLineString", arcs: XL(t, n) };
 }
 function ZL(t, e) {
   var i = {},
@@ -54479,12 +52893,7 @@ function ZL(t, e) {
       for (var e, i = -1, n = t.length, r = t[n - 1], o = 0; ++i < n; )
         (e = r), (r = t[i]), (o += e[0] * r[1] - e[1] * r[0]);
       return Math.abs(o);
-    })(
-      YL(t, {
-        type: "Polygon",
-        arcs: [e],
-      }).coordinates[0]
-    );
+    })(YL(t, { type: "Polygon", arcs: [e] }).coordinates[0]);
   }
   return (
     e.forEach(function t(e) {
@@ -54677,16 +53086,10 @@ var $L = Object.freeze(
                 };
                 break;
               case "Point":
-                e = {
-                  type: "Point",
-                  coordinates: p(t.coordinates),
-                };
+                e = { type: "Point", coordinates: p(t.coordinates) };
                 break;
               case "MultiPoint":
-                e = {
-                  type: "MultiPoint",
-                  coordinates: t.coordinates.map(p),
-                };
+                e = { type: "MultiPoint", coordinates: t.coordinates.map(p) };
                 break;
               default:
                 return t;
@@ -54720,9 +53123,7 @@ var $L = Object.freeze(
         untransform: KL,
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   tI = CL($L),
@@ -54764,10 +53165,7 @@ function nI(t, e) {
     if (r !== a) return null;
     i = t.coordinates.concat(e.coordinates.reverse().slice(1));
   }
-  return {
-    type: "LineString",
-    coordinates: i,
-  };
+  return { type: "LineString", coordinates: i };
 }
 var rI = {};
 function oI(t, e, i) {
@@ -54950,24 +53348,15 @@ var uI = jL.topology,
           : e;
       case "MultiPoint":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Point",
-            coordinates: t,
-          };
+          return { type: "Point", coordinates: t };
         });
       case "MultiPolygon":
         return e.coordinates.map(function (t) {
-          return {
-            type: "Polygon",
-            coordinates: t,
-          };
+          return { type: "Polygon", coordinates: t };
         });
       case "MultiLineString":
         return e.coordinates.map(function (t) {
-          return {
-            type: "LineString",
-            coordinates: t,
-          };
+          return { type: "LineString", coordinates: t };
         });
       case "GeometryCollection":
         return e.geometries.map(t).reduce(function (t, e) {
@@ -55022,10 +53411,7 @@ var uI = jL.topology,
     }
   };
 const gI = (t, e) => fI(t);
-window.gI = gI;
-var mI = {
-    exports: {},
-  },
+var mI = { exports: {} },
   yI = function (t, e) {
     (this.p1 = t), (this.p2 = e);
   };
@@ -55363,12 +53749,7 @@ var cN = (function () {
   hN = cN;
 function pN(t, e, i) {
   "__proto__" == e && hN
-    ? hN(t, e, {
-        configurable: !0,
-        enumerable: !0,
-        value: i,
-        writable: !0,
-      })
+    ? hN(t, e, { configurable: !0, enumerable: !0, value: i, writable: !0 })
     : (t[e] = i);
 }
 var dN = Object.prototype.hasOwnProperty;
@@ -56186,7 +54567,6 @@ const mF = (t, e) => {
   const { callback: i } = e;
   return i && (t = t.map(i)), t;
 };
-window.mF = mF;
 var yF = {},
   vF = {};
 function bF(t) {
@@ -56820,9 +55200,7 @@ function Nz(t) {
       return Rz(t);
     case "FeatureCollection":
       return (function (t) {
-        var e = {
-          type: "FeatureCollection",
-        };
+        var e = { type: "FeatureCollection" };
         return (
           Object.keys(t).forEach(function (i) {
             switch (i) {
@@ -56852,9 +55230,7 @@ function Nz(t) {
   }
 }
 function Rz(t) {
-  var e = {
-    type: "Feature",
-  };
+  var e = { type: "Feature" };
   return (
     Object.keys(t).forEach(function (i) {
       switch (i) {
@@ -56890,9 +55266,7 @@ function Oz(t) {
     : e;
 }
 function Fz(t) {
-  var e = {
-    type: t.type,
-  };
+  var e = { type: t.type };
   return (
     t.bbox && (e.bbox = t.bbox),
     "GeometryCollection" === t.type
@@ -56913,9 +55287,7 @@ function zz(t) {
 }
 function kz(t, e, i) {
   void 0 === i && (i = {});
-  var n = {
-    type: "Feature",
-  };
+  var n = { type: "Feature" };
   return (
     (0 === i.id || i.id) && (n.id = i.id),
     i.bbox && (n.bbox = i.bbox),
@@ -56926,9 +55298,7 @@ function kz(t, e, i) {
 }
 function Bz(t, e) {
   void 0 === e && (e = {});
-  var i = {
-    type: "FeatureCollection",
-  };
+  var i = { type: "FeatureCollection" };
   return (
     e.id && (i.id = e.id), e.bbox && (i.bbox = e.bbox), (i.features = t), i
   );
@@ -57084,17 +55454,7 @@ function Xz(t) {
           case "Point":
           case "LineString":
           case "Polygon":
-            return (
-              !1 !==
-                e(
-                  kz(t, n, {
-                    bbox: r,
-                    id: o,
-                  }),
-                  i,
-                  0
-                ) && void 0
-            );
+            return !1 !== e(kz(t, n, { bbox: r, id: o }), i, 0) && void 0;
         }
         switch (s) {
           case "MultiPoint":
@@ -57108,21 +55468,7 @@ function Xz(t) {
         }
         for (var l = 0; l < t.coordinates.length; l++) {
           var u = t.coordinates[l];
-          if (
-            !1 ===
-            e(
-              kz(
-                {
-                  type: a,
-                  coordinates: u,
-                },
-                n
-              ),
-              i,
-              l
-            )
-          )
-            return !1;
+          if (!1 === e(kz({ type: a, coordinates: u }, n), i, l)) return !1;
         }
       });
     })(t, function (t) {
@@ -57610,12 +55956,7 @@ const Qz = (function (t, e) {
       o.projection(t).context(e)
     );
   })(),
-  Zz = {
-    centroid: !1,
-    name: !1,
-    bbox: !1,
-    rewind: !1,
-  },
+  Zz = { centroid: !1, name: !1, bbox: !1, rewind: !1 },
   Jz = (t) => {
     if (t.geometry.type.startsWith("Multi")) {
       const e = Xz(t).features[0];
@@ -57659,10 +56000,7 @@ const Qz = (function (t, e) {
     );
   },
   $z = {};
-window.Kz = Kz;
-var tk = {
-  exports: {},
-};
+var tk = { exports: {} };
 !(function (t) {
   var e = Object.prototype.hasOwnProperty,
     i = "~";
@@ -57864,7 +56202,6 @@ class ok {
       this.target.removeAllListeners();
   }
 }
-window.ok = ok;
 class ak {
   constructor(t, e) {
     let i;
@@ -57878,20 +56215,10 @@ class ak {
       (this.historyData = []),
       (this.parserData = {}),
       (this.latestData = {}),
-      (this.reRunAllTransform = (
-        t = {
-          pushHistory: !0,
-          emitMessage: !0,
-        }
-      ) => (
+      (this.reRunAllTransform = (t = { pushHistory: !0, emitMessage: !0 }) => (
         this.resetTransformData(),
         this.transformsArr.forEach((e) => {
-          this.executeTransform(
-            e,
-            oT(rT({}, t), {
-              emitMessage: !1,
-            })
-          );
+          this.executeTransform(e, oT(rT({}, t), { emitMessage: !1 }));
         }),
         !1 !== (null == t ? void 0 : t.emitMessage) &&
           this.target.emit("change", []),
@@ -57939,13 +56266,7 @@ class ak {
       return null != (n = null != (i = t.level) ? i : 0 - e.level) ? n : 0;
     });
   }
-  executeTransform(
-    t,
-    e = {
-      pushHistory: !0,
-      emitMessage: !0,
-    }
-  ) {
+  executeTransform(t, e = { pushHistory: !0, emitMessage: !0 }) {
     const { pushHistory: i, emitMessage: n } = e,
       r = this.dataSet.getTransform(t.type)(this.latestData, t.options);
     this.history && !1 !== i && this.historyData.push(r),
@@ -57962,7 +56283,6 @@ class ak {
     this.dataSet.removeDataView(this.name);
   }
 }
-window.ak = ak;
 const sk = !0,
   lk = !0,
   uk = {
@@ -57988,11 +56308,7 @@ const sk = !0,
     drillSave: !0,
   },
   ck = {
-    ambient: {
-      enabled: !0,
-      color: "#FFFFFF",
-      intensity: 35,
-    },
+    ambient: { enabled: !0, color: "#FFFFFF", intensity: 35 },
     directional: {
       enabled: !0,
       color: "#FFFFFF",
@@ -58013,11 +56329,7 @@ const sk = !0,
     offsetX: 0,
     offsetY: 0,
     dpr: window.devicePixelRatio ? window.devicePixelRatio : 1,
-    background: {
-      color: "rgba(12,9,41,1)",
-      map: null,
-      transparent: !1,
-    },
+    background: { color: "rgba(12,9,41,1)", map: null, transparent: !1 },
   },
   pk = 12,
   dk = 400,
@@ -58037,18 +56349,8 @@ const sk = !0,
   yk = {
     color: null,
     opacity: 1,
-    padding: {
-      top: 5,
-      left: 5,
-      right: 5,
-      bottom: 5,
-    },
-    shadow: {
-      color: "rgb(255, 255, 255)",
-      blur: 0,
-      offsetX: 0,
-      offsetY: 0,
-    },
+    padding: { top: 5, left: 5, right: 5, bottom: 5 },
+    shadow: { color: "rgb(255, 255, 255)", blur: 0, offsetX: 0, offsetY: 0 },
     borderRadius: null,
   },
   vk = "1.2",
@@ -58058,7 +56360,6 @@ var xk, _k;
   (_k.GEOBUF = "geobuf"),
   (_k.GEOJSON_URL = "geojson_url"),
   (_k.GEOBUF_URL = "geobuf_url");
-window.xk = xk;
 const Sk = {
     visible: !0,
     offset: [0, 0, 0],
@@ -58067,9 +56368,6 @@ const Sk = {
     zoomRange: [0, 24],
   },
   Mk = "100000";
-
-window.Mk = Mk;
-
 var Ck, wk, Ak, Ek, Dk, Tk;
 ((wk = Ck || (Ck = {}))[(wk.wgs84 = 0)] = "wgs84"),
   (wk[(wk.gcj = 1)] = "gcj"),
@@ -58085,43 +56383,26 @@ const Pk = {
         data: `https://lf3-dpfe.${atob(
           "Ynl0ZXRvcy5jb20="
         )}/obj/gis/data/districtaggregate_province_kld_gc.pbf`,
-        simplify: {
-          enabled: !0,
-          tolerance: 0.025,
-        },
+        simplify: { enabled: !0, tolerance: 0.025 },
       },
       1: {
         type: xk.GEOBUF_URL,
         data: `https://lf3-dpfe.${atob(
           "Ynl0ZXRvcy5jb20="
         )}/obj/gis/data/districtaggregate_city_kld_gc.pbf`,
-        simplify: {
-          enabled: !0,
-          tolerance: 0.005,
-        },
+        simplify: { enabled: !0, tolerance: 0.005 },
       },
       2: {
         type: xk.GEOBUF_URL,
         data: `https://lf3-dpfe.${atob(
           "Ynl0ZXRvcy5jb20="
         )}/obj/gis/data/districtaggregate_county_kld_gc.pbf`,
-        simplify: {
-          enabled: !1,
-        },
+        simplify: { enabled: !1 },
       },
       region: {},
     },
-    level: {
-      range: [0, 2],
-      adcode: Mk,
-    },
-    granularity: {
-      0: 1,
-      1: 2,
-      2: 3,
-      3: 3,
-      region: 1,
-    },
+    level: { range: [0, 2], adcode: Mk },
+    granularity: { 0: 1, 1: 2, 2: 3, 3: 3, region: 1 },
     duration: 500,
     preventMouse: !1,
     drillDownEvent: "dblclick",
@@ -58151,10 +56432,7 @@ const Pk = {
         )}/obj/gis/data/district_100000_1_gc.pbf`,
       },
     },
-    fields: {
-      majorPOIField: "name",
-      minorPOIField: "value",
-    },
+    fields: { majorPOIField: "name", minorPOIField: "value" },
     poi: {
       enabled: !0,
       hideOnMove: !1,
@@ -58207,16 +56485,8 @@ const Pk = {
           range: ["rgba(60,177,209,1)", "rgba(6,33,38,0.5)"],
         },
       },
-      stroke: {
-        color: "rgba(46,176,200,1)",
-        opacity: 1,
-        width: 2,
-      },
-      bottomStroke: {
-        color: "#69dcbe",
-        opacity: 1,
-        width: 1,
-      },
+      stroke: { color: "rgba(46,176,200,1)", opacity: 1, width: 2 },
+      bottomStroke: { color: "#69dcbe", opacity: 1, width: 1 },
     },
     extrudeBackgroundStyle: {
       enabled: !1,
@@ -58238,42 +56508,53 @@ const Pk = {
       },
     },
     subDistrictStyle: {
-      stroke: {
-        color: "rgba(30,89,99,1)",
-        opacity: 1,
-        width: 1,
-      },
+      stroke: { color: "rgba(30,89,99,1)", opacity: 1, width: 1 },
     },
     drill: Pk,
     interaction: {
       hover: {
         enabled: !1,
         trigger: "mousemove",
-        effect: {
-          color: vk,
-          poi: !1,
-        },
+        effect: { color: vk, poi: !1 },
       },
       select: {
         enabled: !1,
         trigger: "click",
         multi: !1,
-        effect: {
-          color: bk,
-          poi: !1,
-        },
+        effect: { color: bk, poi: !1 },
       },
     },
     viewClip: null,
   },
-  Ok = {
-    cameraChange: !0,
-    cameraTween: !0,
-  };
-window.Rk = Rk;
-window.Ok = Ok;
-window.Lk = Lk;
-
+  Ok = { cameraChange: !0, cameraTween: !0 };
+function Fk(t) {
+  return !![
+    "loaded",
+    "destroy",
+    "resize",
+    "viewportChange",
+    "pan",
+    "panStart",
+    "panEnd",
+    "zoom",
+    "zoomStart",
+    "zoomEnd",
+    "rotate",
+    "rotateStart",
+    "rotateEnd",
+    "pitch",
+    "pitchStart",
+    "pitchEnd",
+    "hover",
+    "select",
+    "drill",
+    "drillUp",
+    "drillUpEnd",
+    "drillDown",
+    "drillDownEnd",
+    "drillEnd",
+  ].includes(t);
+}
 var zk = "named",
   kk = "name",
   Bk = "unmanaged",
@@ -58298,9 +56579,49 @@ var zk = "named",
     ClassProperty: "ClassProperty",
     ConstructorArgument: "ConstructorArgument",
     Variable: "Variable",
-  };
-
-var Kk = "NULL argument",
+  },
+  Qk = 0;
+function Zk() {
+  return Qk++;
+}
+var Jk = (function () {
+    function t(t, e) {
+      (this.id = Zk()),
+        (this.activated = !1),
+        (this.serviceIdentifier = t),
+        (this.scope = e),
+        (this.type = Yk.Invalid),
+        (this.constraint = function (t) {
+          return !0;
+        }),
+        (this.implementationType = null),
+        (this.cache = null),
+        (this.factory = null),
+        (this.provider = null),
+        (this.onActivation = null),
+        (this.dynamicValue = null);
+    }
+    return (
+      (t.prototype.clone = function () {
+        var e = new t(this.serviceIdentifier, this.scope);
+        return (
+          (e.activated = !1),
+          (e.implementationType = this.implementationType),
+          (e.dynamicValue = this.dynamicValue),
+          (e.scope = this.scope),
+          (e.type = this.type),
+          (e.factory = this.factory),
+          (e.provider = this.provider),
+          (e.constraint = this.constraint),
+          (e.onActivation = this.onActivation),
+          (e.cache = this.cache),
+          e
+        );
+      }),
+      t
+    );
+  })(),
+  Kk = "NULL argument",
   $k = "Key Not Found",
   tB = "Ambiguous match found for serviceIdentifier:",
   eB = "No matching bindings found for serviceIdentifier:",
@@ -58398,7 +56719,7 @@ function gB(t) {
 }
 var mB = (function () {
     function t(t) {
-      (this.id = window.Zk()), (this.container = t);
+      (this.id = Zk()), (this.container = t);
     }
     return (
       (t.prototype.addPlan = function (t) {
@@ -58454,12 +56775,7 @@ var mB = (function () {
           i = t.split("").reverse().join("");
         return (
           (e = this.str.split("").reverse().join("")),
-          this.startsWith.call(
-            {
-              str: e,
-            },
-            i
-          )
+          this.startsWith.call({ str: e }, i)
         );
       }),
       (t.prototype.contains = function (t) {
@@ -58476,7 +56792,7 @@ var mB = (function () {
   })(),
   _B = (function () {
     function t(t, e, i, n) {
-      (this.id = window.Zk()),
+      (this.id = Zk()),
         (this.type = t),
         (this.serviceIdentifier = i),
         (this.name = new xB(e || "")),
@@ -58623,17 +56939,12 @@ function AB(t) {
     t.forEach(function (t) {
       e[t.key.toString()] = t.value;
     }),
-    {
-      inject: e[Gk],
-      multiInject: e[Uk],
-      targetName: e[kk],
-      unmanaged: e[Bk],
-    }
+    { inject: e[Gk], multiInject: e[Uk], targetName: e[kk], unmanaged: e[Bk] }
   );
 }
 var EB = (function () {
   function t(t, e, i, n, r) {
-    (this.id = window.Zk()),
+    (this.id = Zk()),
       (this.serviceIdentifier = t),
       (this.parentContext = e),
       (this.parentRequest = i),
@@ -59107,6 +57418,160 @@ var FB = function (t, e) {
       t
     );
   })(),
+  VB = (function () {
+    function t(t) {
+      (this._binding = t),
+        (this._bindingWhenSyntax = new GB(this._binding)),
+        (this._bindingOnSyntax = new UB(this._binding)),
+        (this._bindingInSyntax = new HB(t));
+    }
+    return (
+      (t.prototype.inRequestScope = function () {
+        return this._bindingInSyntax.inRequestScope();
+      }),
+      (t.prototype.inSingletonScope = function () {
+        return this._bindingInSyntax.inSingletonScope();
+      }),
+      (t.prototype.inTransientScope = function () {
+        return this._bindingInSyntax.inTransientScope();
+      }),
+      (t.prototype.when = function (t) {
+        return this._bindingWhenSyntax.when(t);
+      }),
+      (t.prototype.whenTargetNamed = function (t) {
+        return this._bindingWhenSyntax.whenTargetNamed(t);
+      }),
+      (t.prototype.whenTargetIsDefault = function () {
+        return this._bindingWhenSyntax.whenTargetIsDefault();
+      }),
+      (t.prototype.whenTargetTagged = function (t, e) {
+        return this._bindingWhenSyntax.whenTargetTagged(t, e);
+      }),
+      (t.prototype.whenInjectedInto = function (t) {
+        return this._bindingWhenSyntax.whenInjectedInto(t);
+      }),
+      (t.prototype.whenParentNamed = function (t) {
+        return this._bindingWhenSyntax.whenParentNamed(t);
+      }),
+      (t.prototype.whenParentTagged = function (t, e) {
+        return this._bindingWhenSyntax.whenParentTagged(t, e);
+      }),
+      (t.prototype.whenAnyAncestorIs = function (t) {
+        return this._bindingWhenSyntax.whenAnyAncestorIs(t);
+      }),
+      (t.prototype.whenNoAncestorIs = function (t) {
+        return this._bindingWhenSyntax.whenNoAncestorIs(t);
+      }),
+      (t.prototype.whenAnyAncestorNamed = function (t) {
+        return this._bindingWhenSyntax.whenAnyAncestorNamed(t);
+      }),
+      (t.prototype.whenAnyAncestorTagged = function (t, e) {
+        return this._bindingWhenSyntax.whenAnyAncestorTagged(t, e);
+      }),
+      (t.prototype.whenNoAncestorNamed = function (t) {
+        return this._bindingWhenSyntax.whenNoAncestorNamed(t);
+      }),
+      (t.prototype.whenNoAncestorTagged = function (t, e) {
+        return this._bindingWhenSyntax.whenNoAncestorTagged(t, e);
+      }),
+      (t.prototype.whenAnyAncestorMatches = function (t) {
+        return this._bindingWhenSyntax.whenAnyAncestorMatches(t);
+      }),
+      (t.prototype.whenNoAncestorMatches = function (t) {
+        return this._bindingWhenSyntax.whenNoAncestorMatches(t);
+      }),
+      (t.prototype.onActivation = function (t) {
+        return this._bindingOnSyntax.onActivation(t);
+      }),
+      t
+    );
+  })(),
+  WB = (function () {
+    function t(t) {
+      this._binding = t;
+    }
+    return (
+      (t.prototype.to = function (t) {
+        return (
+          (this._binding.type = Yk.Instance),
+          (this._binding.implementationType = t),
+          new VB(this._binding)
+        );
+      }),
+      (t.prototype.toSelf = function () {
+        if ("function" != typeof this._binding.serviceIdentifier)
+          throw new Error(
+            "The toSelf function can only be applied when a constructor is used as service identifier"
+          );
+        var t = this._binding.serviceIdentifier;
+        return this.to(t);
+      }),
+      (t.prototype.toConstantValue = function (t) {
+        return (
+          (this._binding.type = Yk.ConstantValue),
+          (this._binding.cache = t),
+          (this._binding.dynamicValue = null),
+          (this._binding.implementationType = null),
+          new jB(this._binding)
+        );
+      }),
+      (t.prototype.toDynamicValue = function (t) {
+        return (
+          (this._binding.type = Yk.DynamicValue),
+          (this._binding.cache = null),
+          (this._binding.dynamicValue = t),
+          (this._binding.implementationType = null),
+          new VB(this._binding)
+        );
+      }),
+      (t.prototype.toConstructor = function (t) {
+        return (
+          (this._binding.type = Yk.Constructor),
+          (this._binding.implementationType = t),
+          new jB(this._binding)
+        );
+      }),
+      (t.prototype.toFactory = function (t) {
+        return (
+          (this._binding.type = Yk.Factory),
+          (this._binding.factory = t),
+          new jB(this._binding)
+        );
+      }),
+      (t.prototype.toFunction = function (t) {
+        if ("function" != typeof t)
+          throw new Error(
+            "Value provided to function binding must be a function!"
+          );
+        var e = this.toConstantValue(t);
+        return (this._binding.type = Yk.Function), e;
+      }),
+      (t.prototype.toAutoFactory = function (t) {
+        return (
+          (this._binding.type = Yk.Factory),
+          (this._binding.factory = function (e) {
+            return function () {
+              return e.container.get(t);
+            };
+          }),
+          new jB(this._binding)
+        );
+      }),
+      (t.prototype.toProvider = function (t) {
+        return (
+          (this._binding.type = Yk.Provider),
+          (this._binding.provider = t),
+          new jB(this._binding)
+        );
+      }),
+      (t.prototype.toService = function (t) {
+        this.toDynamicValue(function (e) {
+          return e.container.get(t);
+        });
+      }),
+      t
+    );
+  })(),
   qB = (function () {
     function t() {}
     return (
@@ -59218,11 +57683,7 @@ var FB = function (t, e) {
           ops: [],
         };
       return (
-        (o = {
-          next: s(0),
-          throw: s(1),
-          return: s(2),
-        }),
+        (o = { next: s(0), throw: s(1), return: s(2) }),
         "function" == typeof Symbol &&
           (o[Symbol.iterator] = function () {
             return this;
@@ -59248,13 +57709,7 @@ var FB = function (t, e) {
                     r = o;
                     break;
                   case 4:
-                    return (
-                      a.label++,
-                      {
-                        value: o[1],
-                        done: !1,
-                      }
-                    );
+                    return a.label++, { value: o[1], done: !1 };
                   case 5:
                     a.label++, (n = o[1]), (o = [0]);
                     continue;
@@ -59292,14 +57747,288 @@ var FB = function (t, e) {
                 i = r = 0;
               }
             if (5 & o[0]) throw o[1];
-            return {
-              value: o[0] ? o[1] : void 0,
-              done: !0,
-            };
+            return { value: o[0] ? o[1] : void 0, done: !0 };
           })([o, s]);
         };
       }
-    };
+    },
+  ZB = (function () {
+    function t(t) {
+      var e = t || {};
+      if ("object" != typeof e)
+        throw new Error(
+          "Invalid Container constructor argument. Container options must be an object."
+        );
+      if (void 0 === e.defaultScope) e.defaultScope = qk;
+      else if (
+        e.defaultScope !== Wk &&
+        e.defaultScope !== qk &&
+        e.defaultScope !== Vk
+      )
+        throw new Error(
+          "Invalid Container option. Default scope must be a string ('singleton' or 'transient')."
+        );
+      if (void 0 === e.autoBindInjectable) e.autoBindInjectable = !1;
+      else if ("boolean" != typeof e.autoBindInjectable)
+        throw new Error(
+          "Invalid Container option. Auto bind injectable must be a boolean"
+        );
+      if (void 0 === e.skipBaseClassChecks) e.skipBaseClassChecks = !1;
+      else if ("boolean" != typeof e.skipBaseClassChecks)
+        throw new Error(
+          "Invalid Container option. Skip base check must be a boolean"
+        );
+      (this.options = {
+        autoBindInjectable: e.autoBindInjectable,
+        defaultScope: e.defaultScope,
+        skipBaseClassChecks: e.skipBaseClassChecks,
+      }),
+        (this.id = Zk()),
+        (this._bindingDictionary = new YB()),
+        (this._snapshots = []),
+        (this._middleware = null),
+        (this.parent = null),
+        (this._metadataReader = new lB());
+    }
+    return (
+      (t.merge = function (e, i) {
+        var n = new t(),
+          r = DB(n),
+          o = DB(e),
+          a = DB(i);
+        function s(t, e) {
+          t.traverse(function (t, i) {
+            i.forEach(function (t) {
+              e.add(t.serviceIdentifier, t.clone());
+            });
+          });
+        }
+        return s(o, r), s(a, r), n;
+      }),
+      (t.prototype.load = function () {
+        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+        for (
+          var i = this._getContainerModuleHelpersFactory(), n = 0, r = t;
+          n < r.length;
+          n++
+        ) {
+          var o = r[n],
+            a = i(o.id);
+          o.registry(
+            a.bindFunction,
+            a.unbindFunction,
+            a.isboundFunction,
+            a.rebindFunction
+          );
+        }
+      }),
+      (t.prototype.loadAsync = function () {
+        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+        return XB(this, void 0, void 0, function () {
+          var e, i, n, r, o;
+          return QB(this, function (a) {
+            switch (a.label) {
+              case 0:
+                (e = this._getContainerModuleHelpersFactory()),
+                  (i = 0),
+                  (n = t),
+                  (a.label = 1);
+              case 1:
+                return i < n.length
+                  ? ((r = n[i]),
+                    (o = e(r.id)),
+                    [
+                      4,
+                      r.registry(
+                        o.bindFunction,
+                        o.unbindFunction,
+                        o.isboundFunction,
+                        o.rebindFunction
+                      ),
+                    ])
+                  : [3, 4];
+              case 2:
+                a.sent(), (a.label = 3);
+              case 3:
+                return i++, [3, 1];
+              case 4:
+                return [2];
+            }
+          });
+        });
+      }),
+      (t.prototype.unload = function () {
+        for (var t = this, e = [], i = 0; i < arguments.length; i++)
+          e[i] = arguments[i];
+        e.forEach(function (e) {
+          var i,
+            n =
+              ((i = e.id),
+              function (t) {
+                return t.moduleId === i;
+              });
+          t._bindingDictionary.removeByCondition(n);
+        });
+      }),
+      (t.prototype.bind = function (t) {
+        var e = this.options.defaultScope || qk,
+          i = new Jk(t, e);
+        return this._bindingDictionary.add(t, i), new WB(i);
+      }),
+      (t.prototype.rebind = function (t) {
+        return this.unbind(t), this.bind(t);
+      }),
+      (t.prototype.unbind = function (t) {
+        try {
+          this._bindingDictionary.remove(t);
+        } catch (e) {
+          throw new Error("Could not unbind serviceIdentifier: " + hB(t));
+        }
+      }),
+      (t.prototype.unbindAll = function () {
+        this._bindingDictionary = new YB();
+      }),
+      (t.prototype.isBound = function (t) {
+        var e = this._bindingDictionary.hasKey(t);
+        return !e && this.parent && (e = this.parent.isBound(t)), e;
+      }),
+      (t.prototype.isBoundNamed = function (t, e) {
+        return this.isBoundTagged(t, zk, e);
+      }),
+      (t.prototype.isBoundTagged = function (t, e, i) {
+        var n = !1;
+        if (this._bindingDictionary.hasKey(t)) {
+          var r = this._bindingDictionary.get(t),
+            o = (function (t, e, i, n) {
+              var r = new _B(Xk.Variable, "", e, new yB(i, n)),
+                o = new mB(t);
+              return new EB(e, o, null, [], r);
+            })(this, t, e, i);
+          n = r.some(function (t) {
+            return t.constraint(o);
+          });
+        }
+        return !n && this.parent && (n = this.parent.isBoundTagged(t, e, i)), n;
+      }),
+      (t.prototype.snapshot = function () {
+        this._snapshots.push(
+          qB.of(this._bindingDictionary.clone(), this._middleware)
+        );
+      }),
+      (t.prototype.restore = function () {
+        var t = this._snapshots.pop();
+        if (void 0 === t) throw new Error("No snapshot available to restore.");
+        (this._bindingDictionary = t.bindings),
+          (this._middleware = t.middleware);
+      }),
+      (t.prototype.createChild = function (e) {
+        var i = new t(e || this.options);
+        return (i.parent = this), i;
+      }),
+      (t.prototype.applyMiddleware = function () {
+        for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+        var i = this._middleware ? this._middleware : this._planAndResolve();
+        this._middleware = t.reduce(function (t, e) {
+          return e(t);
+        }, i);
+      }),
+      (t.prototype.applyCustomMetadataReader = function (t) {
+        this._metadataReader = t;
+      }),
+      (t.prototype.get = function (t) {
+        return this._get(!1, !1, Xk.Variable, t);
+      }),
+      (t.prototype.getTagged = function (t, e, i) {
+        return this._get(!1, !1, Xk.Variable, t, e, i);
+      }),
+      (t.prototype.getNamed = function (t, e) {
+        return this.getTagged(t, zk, e);
+      }),
+      (t.prototype.getAll = function (t) {
+        return this._get(!0, !0, Xk.Variable, t);
+      }),
+      (t.prototype.getAllTagged = function (t, e, i) {
+        return this._get(!1, !0, Xk.Variable, t, e, i);
+      }),
+      (t.prototype.getAllNamed = function (t, e) {
+        return this.getAllTagged(t, zk, e);
+      }),
+      (t.prototype.resolve = function (t) {
+        var e = this.createChild();
+        return e.bind(t).toSelf(), e.get(t);
+      }),
+      (t.prototype._getContainerModuleHelpersFactory = function () {
+        var t = this,
+          e = function (t, e) {
+            t._binding.moduleId = e;
+          },
+          i = function (i) {
+            return function (n) {
+              var r = t.rebind.bind(t)(n);
+              return e(r, i), r;
+            };
+          };
+        return function (n) {
+          return {
+            bindFunction:
+              ((r = n),
+              function (i) {
+                var n = t.bind.bind(t)(i);
+                return e(n, r), n;
+              }),
+            isboundFunction: function (e) {
+              return t.isBound.bind(t)(e);
+            },
+            rebindFunction: i(n),
+            unbindFunction: function (e) {
+              t.unbind.bind(t)(e);
+            },
+          };
+          var r;
+        };
+      }),
+      (t.prototype._get = function (t, e, i, n, r, o) {
+        var a = null,
+          s = {
+            avoidConstraints: t,
+            contextInterceptor: function (t) {
+              return t;
+            },
+            isMultiInject: e,
+            key: r,
+            serviceIdentifier: n,
+            targetType: i,
+            value: o,
+          };
+        if (this._middleware) {
+          if (null == (a = this._middleware(s)))
+            throw new Error(
+              "Invalid return type in middleware. Middleware must return!"
+            );
+        } else a = this._planAndResolve()(s);
+        return a;
+      }),
+      (t.prototype._planAndResolve = function () {
+        var t = this;
+        return function (e) {
+          var i = IB(
+            t._metadataReader,
+            t,
+            e.isMultiInject,
+            e.targetType,
+            e.serviceIdentifier,
+            e.key,
+            e.value,
+            e.avoidConstraints
+          );
+          return (function (t) {
+            return OB(t.plan.rootRequest.requestScope)(t.plan.rootRequest);
+          })((i = e.contextInterceptor(i)));
+        };
+      }),
+      t
+    );
+  })();
 function JB() {
   return function (t) {
     if (Reflect.hasOwnMetadata(jk, t))
@@ -59308,7 +58037,15 @@ function JB() {
     return Reflect.defineMetadata(jk, e, t), t;
   };
 }
-
+const KB = {
+  ITextService: Symbol.for("ITextService"),
+  ILogService: Symbol.for("ILogService"),
+  IEventEmitter: Symbol.for("IEventEmitter"),
+  SceneID: Symbol.for("SceneID"),
+  IEventService: Symbol.for("IEventService"),
+  ITextureService: Symbol.for("ITextureService"),
+  IShaderService: Symbol.for("IShaderService"),
+};
 const $B = 32 * window.devicePixelRatio,
   tG = 32 * $B,
   eG = 32 * $B;
@@ -59342,10 +58079,7 @@ const iG = new (class {
       this.ctx.font = `${n} ${p}px ${o} `;
       const d = this.ctx.measureText(String(e)).width + c * l;
       p += h * l;
-      const f = {
-        x: 0,
-        y: 0,
-      };
+      const f = { x: 0, y: 0 };
       switch (r) {
         case "vertical":
           (f.x = c * l), (f.y = s + h * l), (a = a > d ? a : d), (s += p);
@@ -59481,14 +58215,10 @@ class nG extends Cr {
         "precision highp float;\nvarying vec2 vUv;\nuniform sampler2D uMap;\nvoid main() {\n  vec4 tex = texture2D(uMap, vUv);\n  gl_FragColor = tex;\n}",
       vertexShader:
         "precision highp float;\nattribute vec3 position;\nattribute vec2 uv;\nvarying vec2 vUv;\n\nuniform mat4 modelViewMatrix;\nuniform mat4 projectionMatrix;\n\nvoid main() {\n  vUv = uv;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n}",
-      uniforms: {
-        uMap: {
-          value: null,
-        },
-      },
+      uniforms: { uMap: { value: null } },
     }),
       (this.props = t),
-      (this.textureService = window.bG.get(window.KB.ITextureService));
+      (this.textureService = bG.get(KB.ITextureService));
   }
   async init() {
     const t = await iG.createTextImage(this.textureService, this.props),
@@ -59527,11 +58257,7 @@ let aG = class {
         zIndex: o,
         offsetX: s,
         offsetY: l,
-        textSeries: i.map((t) =>
-          af(t, {
-            props: af(mk, t.props),
-          })
-        ),
+        textSeries: i.map((t) => af(t, { props: af(mk, t.props) })),
         background: af(yk, n),
       },
       c = new dr(1, 1, 1, 1),
@@ -59646,7 +58372,7 @@ let gG = class {
             })
             .catch(() => {});
       }),
-      (this.logService = window.bG.get(window.KB.ILogService));
+      (this.logService = bG.get(KB.ILogService));
   }
   addImage(t, e, i) {
     if (this.getImage(t)) return;
@@ -59680,7 +58406,6 @@ gG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && dG(e, i, o), o;
 })([JB()], gG);
-window.gG = gG;
 var mG = Object.defineProperty,
   yG = Object.getOwnPropertyDescriptor;
 let vG = class {
@@ -59714,9 +58439,7 @@ let vG = class {
           }),
           u
         ),
-        {
-          defines: r,
-        }
+        { defines: r }
       ));
   }
   getShaderModule(t) {
@@ -59734,11 +58457,7 @@ let vG = class {
     );
   }
   parseShader(t) {
-    const e = {
-        defines: "",
-        header: "",
-        main: "",
-      },
+    const e = { defines: "", header: "", main: "" },
       i = t.match(/void\s*main\s*\w*\s*\([\w\s,]*\)\s*{([\w\W]*?)}/g);
     if (null == i ? void 0 : i.length) {
       const n = i[0].match(/\{((.|\n)*?)\}/g);
@@ -59774,13 +58493,83 @@ vG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && mG(e, i, o), o;
 })([JB()], vG);
-
-window.bG.bind(window.KB.ILogService).to(pG).inSingletonScope(),
-  window.bG.bind(window.KB.ITextureService).to(gG).inSingletonScope(),
-  window.bG.bind(window.KB.IShaderService).to(vG).inSingletonScope(),
-  window.bG.bind(window.KB.ITextService).toConstantValue(new aG()),
-  window.bG.bind(window.KB.IEventEmitter).to(dt);
-
+const bG = new ZB();
+bG.bind(KB.ILogService).to(pG).inSingletonScope(),
+  bG.bind(KB.ITextureService).to(gG).inSingletonScope(),
+  bG.bind(KB.IShaderService).to(vG).inSingletonScope(),
+  bG.bind(KB.ITextService).toConstantValue(new aG()),
+  bG.bind(KB.IEventEmitter).to(dt);
+const xG = (function (t, e) {
+    void 0 === e && (e = !0);
+    var i = (function (t, e) {
+        return function (i) {
+          return function (n, r) {
+            lG(
+              n,
+              r,
+              function () {
+                return t.get(i);
+              },
+              e
+            );
+          };
+        };
+      })(t, e),
+      n = (function (t, e) {
+        return function (i, n) {
+          return function (r, o) {
+            lG(
+              r,
+              o,
+              function () {
+                return t.getNamed(i, n);
+              },
+              e
+            );
+          };
+        };
+      })(t, e),
+      r = (function (t, e) {
+        return function (i, n, r) {
+          return function (o, a) {
+            lG(
+              o,
+              a,
+              function () {
+                return t.getTagged(i, n, r);
+              },
+              e
+            );
+          };
+        };
+      })(t, e),
+      o = (function (t, e) {
+        return function (i) {
+          return function (n, r) {
+            lG(
+              n,
+              r,
+              function () {
+                return t.getAll(i);
+              },
+              e
+            );
+          };
+        };
+      })(t, e);
+    return {
+      lazyInject: i,
+      lazyInjectNamed: n,
+      lazyInjectTagged: r,
+      lazyMultiInject: o,
+    };
+  })(bG, !1),
+  _G = (t) => {
+    const e = xG.lazyInject(t);
+    return function (t, i, n) {
+      e.call(this, t, i), n && (n.initializer = () => t[i]);
+    };
+  };
 var SG = Object.defineProperty,
   MG = Object.getOwnPropertyDescriptor;
 let CG = class {
@@ -59860,7 +58649,7 @@ let CG = class {
       (this._destroy = () => {
         this.ee.removeAllListeners(), this.__resetState();
       }),
-      (this.logService = window.bG.get(window.KB.ILogService));
+      (this.logService = bG.get(KB.ILogService));
   }
 };
 CG = ((t, e, i, n) => {
@@ -59872,7 +58661,6 @@ CG = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && SG(e, i, o), o;
 })([JB()], CG);
-window.CG = CG;
 class wG {
   constructor(t) {
     (this.props = t),
@@ -59908,12 +58696,10 @@ class wG {
     (this.coreCamera = null), (this.hudCamera = null);
   }
 }
-window.wG = wG;
 var AG, EG;
 ((EG = AG || (AG = {})).WebGis = "webGis"),
   (EG.XGis = "xGis"),
   (EG.Engine = "engine");
-window.AG = AG;
 class DG {
   constructor(t) {
     (this.props = t),
@@ -60050,7 +58836,6 @@ class DG {
       this.gisStateApi.unsubjectAll();
   }
 }
-window.DG = DG;
 var TG = Object.defineProperty,
   PG = Object.getOwnPropertyDescriptor;
 class LG {
@@ -60081,7 +58866,7 @@ class LG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && TG(e, i, o);
-})([_G(window.KB.ILogService)], LG.prototype, "logService", 2);
+})([_G(KB.ILogService)], LG.prototype, "logService", 2);
 var IG = Object.defineProperty,
   NG = Object.getOwnPropertyDescriptor;
 class RG {
@@ -60123,10 +58908,7 @@ class RG {
           n = 0;
         for (; null !== e; )
           (i += e.offsetTop), (n += e.offsetLeft), (e = e.offsetParent);
-        return {
-          top: i,
-          left: n,
-        };
+        return { top: i, left: n };
       })(e);
       (i = t.targetTouches[0].pageX - o), (n = t.targetTouches[0].pageY - r);
     } else this.logService.error(`传入event ${this.eventType} 无法解析位置`);
@@ -60141,10 +58923,7 @@ class RG {
           x: this.offsetX,
           y: this.offsetY,
           code: 200,
-          properties: ot(rt({}, t), {
-            _id_: n.id,
-            _instanceId_: r,
-          }),
+          properties: ot(rt({}, t), { _id_: n.id, _instanceId_: r }),
           orginalEvent: this.orginalEvent,
         };
       if (
@@ -60162,10 +58941,7 @@ class RG {
               color: e.interaction.hover.effect.color,
             }),
           e.interaction.hover.effect.poi &&
-            e.poiGroup.active({
-              id: n.id,
-              instanceId: r,
-            }),
+            e.poiGroup.active({ id: n.id, instanceId: r }),
           e.ee.emit("hover", o),
           (this.isHover = !0)),
         e.interaction.select.enabled &&
@@ -60184,10 +58960,7 @@ class RG {
                     multi: e.interaction.select.multi,
                   }),
                 e.interaction.select.effect.poi &&
-                  e.poiGroup.active({
-                    id: n.id,
-                    instanceId: r,
-                  }),
+                  e.poiGroup.active({ id: n.id, instanceId: r }),
                 e.ee.emit("select", o);
             }, e.comboTimeout))),
         (this.eventType === i.baseMapLayer.state.drill.drillDownEvent ||
@@ -60218,18 +58991,12 @@ class RG {
         e.ee.emit("un" + this.eventType, {}),
         e.interaction.hover.enabled &&
           e.interaction.hover.trigger === this.eventType &&
-          (e.interaction.hover.effect.color &&
-            e.unActive({
-              type: "hover",
-            }),
+          (e.interaction.hover.effect.color && e.unActive({ type: "hover" }),
           e.interaction.hover.effect.poi && e.poiGroup.active(null),
           e.ee.emit("hover", null)),
         e.interaction.select.enabled &&
           e.interaction.select.trigger === this.eventType &&
-          (e.interaction.select.effect.color &&
-            e.unActive({
-              type: "select",
-            }),
+          (e.interaction.select.effect.color && e.unActive({ type: "select" }),
           e.interaction.select.effect.poi && e.poiGroup.active(null),
           e.ee.emit("select", null)),
         (this.eventType !== i.baseMapLayer.state.drill.drillDownEvent &&
@@ -60253,7 +59020,7 @@ class RG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && IG(e, i, o);
-})([_G(window.KB.ILogService)], RG.prototype, "logService", 2);
+})([_G(KB.ILogService)], RG.prototype, "logService", 2);
 var OG = Object.defineProperty,
   FG = Object.getOwnPropertyDescriptor;
 class zG extends RG {
@@ -60278,9 +59045,7 @@ class zG extends RG {
           ),
           this.raycaster.setFromCamera(this.mouse, e.coreCamera),
           a.forEach((t) => {
-            const e = n.get({
-              layerID: t,
-            });
+            const e = n.get({ layerID: t });
             if (e && e.state.common.visible) {
               const t = e.listenerObj.children,
                 i =
@@ -60310,7 +59075,7 @@ class zG extends RG {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && OG(e, i, o);
-})([_G(window.KB.ILogService)], zG.prototype, "logService", 2);
+})([_G(KB.ILogService)], zG.prototype, "logService", 2);
 class kG extends RG {
   constructor(t) {
     super(t),
@@ -60359,9 +59124,7 @@ class kG extends RG {
         else {
           const t = (a[0] << 16) | (a[1] << 8) | a[2],
             e = this.pickingObjMap.get(t),
-            i = n.get({
-              layerID: e.ext.realLayerID,
-            });
+            i = n.get({ layerID: e.ext.realLayerID });
           super.layerDispatch(e, i);
         }
         super.handleHoverCursor(), i.coreRenderer.setRenderTarget(null);
@@ -60676,12 +59439,7 @@ function $G(t) {
     : XG;
 }
 function tU(t, e, i, n) {
-  return {
-    x: t,
-    y: e,
-    width: i,
-    height: n,
-  };
+  return { x: t, y: e, width: i, height: n };
 }
 var eU = (function () {
     function t(t) {
@@ -60733,10 +59491,7 @@ var eU = (function () {
           left: n,
         }),
         l);
-    qG(this, {
-      target: t,
-      contentRect: u,
-    });
+    qG(this, { target: t, contentRect: u });
   },
   nU = (function () {
     function t(t, e, i) {
@@ -60837,10 +59592,7 @@ class sU {
           a = t.clientHeight;
         i.setSize(o, a),
           e.setSize(o, a),
-          r.emit("resize", {
-            width: o,
-            height: a,
-          }),
+          r.emit("resize", { width: o, height: a }),
           n.updatePOI(!0);
       }),
       (this.bindEventListeners = (t) => {
@@ -60851,9 +59603,7 @@ class sU {
         const { ee: e } = this.props;
         t.preventDefault();
         const i = t.type,
-          n = {
-            orginalEvent: t,
-          };
+          n = { orginalEvent: t };
         e.emit(i, n);
       }),
       this.__initContainerDomResizeHandle();
@@ -60914,7 +59664,7 @@ class fU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && pU(e, i, o);
-})([_G(window.KB.ILogService)], fU.prototype, "logService", 2);
+})([_G(KB.ILogService)], fU.prototype, "logService", 2);
 class gU {
   constructor(t) {
     (this.props = t),
@@ -60961,7 +59711,6 @@ class gU {
       this.props.eventManager._destroy();
   }
 }
-window.gU = gU;
 ((uU = lU || (lU = {}))[(uU.PLANE_LAYER = 0)] = "PLANE_LAYER"),
   (uU[(uU.SHADOW_PLANE = 1)] = "SHADOW_PLANE"),
   (uU[(uU.BASE_MAP_LAYER_BOTTOM_STROKE = 2)] = "BASE_MAP_LAYER_BOTTOM_STROKE"),
@@ -60997,9 +59746,6 @@ window.gU = gU;
   (hU[(hU.ATTACH_LAYER_STROKE_MESH = 3)] = "ATTACH_LAYER_STROKE_MESH"),
   (hU[(hU.ATTACH_LAYER_BORDER_MESH = 4)] = "ATTACH_LAYER_BORDER_MESH"),
   (hU[(hU.ATTACH_LAYER_POI = 5)] = "ATTACH_LAYER_POI");
-
-window.lU = lU;
-
 class mU {
   constructor(t) {
     (this.props = t), (this.type = "ambient"), this.__init();
@@ -61118,7 +59864,7 @@ class xU {
       this.initAmbient(),
       this.initDirectionsal(),
       this.initShadow(),
-      (this._propsWatch = window.kf.createPropsWatch()),
+      (this._propsWatch = kf.createPropsWatch()),
       this._initPropsWatchRule(),
       (this.ee = new dt()),
       this.ee.on("updateArea", () => {
@@ -61153,9 +59899,7 @@ class xU {
     this.__initShadowPlane(), this.updateShadow();
   }
   get() {
-    return af(this.state, {
-      light: this.lights,
-    });
+    return af(this.state, { light: this.lights });
   }
   set(t) {
     return this._propsWatch.compare(this.state, t), this;
@@ -61175,11 +59919,7 @@ class xU {
         },
       } = this.state,
       n = new dr(1, 1),
-      r = new FA({
-        color: e,
-        opacity: i,
-        transparent: !0,
-      });
+      r = new FA({ color: e, opacity: i, transparent: !0 });
     (this.shadowPlane = new Wn(n, r)),
       this.shadowPlane.setRenderIndex(lU.SHADOW_PLANE),
       (this.shadowPlane.receiveShadow = !0),
@@ -61256,8 +59996,7 @@ class xU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && vU(e, i, o);
-})([_G(window.KB.ILogService)], xU.prototype, "logService", 2);
-window.xU = xU;
+})([_G(KB.ILogService)], xU.prototype, "logService", 2);
 var _U = Object.defineProperty,
   SU = Object.getOwnPropertyDescriptor;
 class MU {
@@ -61356,15 +60095,11 @@ class MU {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && _U(e, i, o);
-})([_G(window.KB.ILogService)], MU.prototype, "logService", 2);
-window.MU = MU;
+})([_G(KB.ILogService)], MU.prototype, "logService", 2);
 const CU = new ln(16777215),
   wU = !1;
 new ln("grey");
-const AU = {
-  axis: "z",
-  speed: 0.01,
-};
+const AU = { axis: "z", speed: 0.01 };
 var EU, DU;
 ((DU = EU || (EU = {})).RUNNING = "running"), (DU.PAUSED = "paused");
 class TU {
@@ -61381,7 +60116,6 @@ class TU {
     this.status = EU.PAUSED;
   }
 }
-window.TU = TU;
 var PU = Object.defineProperty,
   LU = Object.getOwnPropertyDescriptor;
 class IU {
@@ -61448,7 +60182,6 @@ class IU {
       (this.hudScene = null);
   }
 }
-window.IU = IU;
 ((t, e, i, n) => {
   for (
     var r, o = n > 1 ? void 0 : n ? LU(e, i) : e, a = t.length - 1;
@@ -61457,7 +60190,7 @@ window.IU = IU;
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && PU(e, i, o);
-})([_G(window.KB.ITextureService)], IU.prototype, "textureService", 2);
+})([_G(KB.ITextureService)], IU.prototype, "textureService", 2);
 var NU = Object.defineProperty,
   RU = Object.getOwnPropertyDescriptor;
 let OU = class {
@@ -61471,7 +60204,7 @@ let OU = class {
     }),
       (this.__layers = new Map()),
       (this.BASE_MAP_Z = 0),
-      (this.logService = window.bG.get(window.KB.ILogService)),
+      (this.logService = bG.get(KB.ILogService)),
       (this.ee = new dt()),
       this.ee.on("updateArea", (t) => {
         for (const e of this.layers.values())
@@ -61578,7 +60311,6 @@ OU = ((t, e, i, n) => {
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   return n && o && NU(e, i, o), o;
 })([JB()], OU);
-window.OU = OU;
 var FU,
   zU = {
     Linear: {
@@ -62234,7 +60966,6 @@ class JU {
       );
   }
 }
-window.JU = JU;
 class KU {
   constructor(t) {
     (this.props = t), this.__initAexs();
@@ -62348,7 +61079,7 @@ function sj() {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && ej(e, i, o);
-})([_G(window.KB.ILogService)], nj.prototype, "logService", 2),
+})([_G(KB.ILogService)], nj.prototype, "logService", 2),
   ((tj = $U || ($U = {})).CONSTANT = "constant"),
   (tj.LINEAR = "linear"),
   (tj.THRESHOLD = "threshold"),
@@ -62365,12 +61096,8 @@ class cj extends Map {
     if (
       (super(),
       Object.defineProperties(this, {
-        _intern: {
-          value: new Map(),
-        },
-        _key: {
-          value: e,
-        },
+        _intern: { value: new Map() },
+        _key: { value: e },
       }),
       null != t)
     )
@@ -62982,11 +61709,7 @@ function cH(t, e) {
         ? s[a]
           ? (s[a] += n)
           : (s[++a] = n)
-        : ((s[++a] = null),
-          l.push({
-            i: a,
-            x: aH(i, n),
-          })),
+        : ((s[++a] = null), l.push({ i: a, x: aH(i, n) })),
       (o = uH.lastIndex);
   return (
     o < e.length && ((r = e.slice(o)), s[a] ? (s[a] += r) : (s[++a] = r)),
@@ -63563,11 +62286,7 @@ function GH(t) {
     t
   );
 }
-(TH = kH({
-  thousands: ",",
-  grouping: [3],
-  currency: ["$", ""],
-})),
+(TH = kH({ thousands: ",", grouping: [3], currency: ["$", ""] })),
   (PH = TH.format),
   (LH = TH.formatPrefix),
   ((NH = IH || (IH = {})).Greater = ">"),
@@ -63738,11 +62457,7 @@ const jH = class {
       i.sort((t, i) => t[e] - i[e]),
       0 === i.length
         ? (console.error("@dp/gis-scale", `视觉通道数据源中没有${e}字段`),
-          [
-            {
-              [e]: 0,
-            },
-          ])
+          [{ [e]: 0 }])
         : i
     );
   }
@@ -63834,7 +62549,6 @@ HH.scaleMap = {
     );
   },
 };
-window.HH = HH;
 const VH = (t, e) => t.map((t) => t[e]),
   WH = (t, e) =>
     VH(t, e).reduce((t, e) => Lf(null != t ? t : 0, null != e ? e : 0)),
@@ -63891,10 +62605,7 @@ const VH = (t, e) => t.map((t) => t[e]),
                 },
                 l
               ),
-              {
-                majorPOIField: i[0].majorPOIField,
-                minorPOIField: s,
-              }
+              { majorPOIField: i[0].majorPOIField, minorPOIField: s }
             )
           );
       }),
@@ -63924,13 +62635,7 @@ function XH(t) {
   i.getCenter(e), t.localToWorld(e), t.localToWorld(n), t.localToWorld(r);
   const o = new Ye(e.getComponent(0), n.getComponent(1), e.getComponent(2)),
     a = new Ye(e.getComponent(0), r.getComponent(1), e.getComponent(2));
-  return {
-    max: n,
-    min: r,
-    center: e,
-    top: o,
-    bottom: a,
-  };
+  return { max: n, min: r, center: e, top: o, bottom: a };
 }
 function QH(t, e, i) {
   var n, r;
@@ -63941,10 +62646,7 @@ function QH(t, e, i) {
         ? r
         : window.innerHeight;
   t.project(e);
-  return {
-    screenX: (0.5 + t.x / 2) * o,
-    screenY: (0.5 - t.y / 2) * a,
-  };
+  return { screenX: (0.5 + t.x / 2) * o, screenY: (0.5 - t.y / 2) * a };
 }
 function ZH(t, e) {
   const i = new li();
@@ -63975,17 +62677,8 @@ new (class extends eE {
         r
       );
     if (void 0 !== iE[t])
-      return void iE[t].push({
-        onLoad: e,
-        onProgress: i,
-        onError: n,
-      });
-    (iE[t] = []),
-      iE[t].push({
-        onLoad: e,
-        onProgress: i,
-        onError: n,
-      });
+      return void iE[t].push({ onLoad: e, onProgress: i, onError: n });
+    (iE[t] = []), iE[t].push({ onLoad: e, onProgress: i, onError: n });
     const o = new Request(t, {
       headers: new Headers(this.requestHeader),
       credentials: this.withCredentials ? "include" : "same-origin",
@@ -64101,16 +62794,8 @@ class eV extends As {
   }
   async addText(t, e, i, n, r, o, a, s, l) {
     const u = [];
-    r &&
-      u.push({
-        text: r.content,
-        props: r.props,
-      }),
-      o &&
-        u.push({
-          text: o.content,
-          props: o.props,
-        });
+    r && u.push({ text: r.content, props: r.props }),
+      o && u.push({ text: o.content, props: o.props });
     const c = (function (t) {
       let e;
       return {
@@ -64171,10 +62856,7 @@ class eV extends As {
     });
   }
   active(t) {
-    if (!t)
-      return void this.hide({
-        each: !0,
-      });
+    if (!t) return void this.hide({ each: !0 });
     const { id: e, instanceId: i } = t;
     cf(i)
       ? this.children.forEach((t) => {
@@ -64207,31 +62889,601 @@ class eV extends As {
       });
   }
 }
-tV([_G(window.KB.ITextService)], eV.prototype, "textService", 2),
-  tV([_G(window.KB.ILogService)], eV.prototype, "logService", 2);
-
-window.eV = eV;
-
+tV([_G(KB.ITextService)], eV.prototype, "textService", 2),
+  tV([_G(KB.ILogService)], eV.prototype, "logService", 2);
+var iV = Object.defineProperty,
+  nV = Object.getOwnPropertyDescriptor,
+  rV = (t, e, i, n) => {
+    for (
+      var r, o = n > 1 ? void 0 : n ? nV(e, i) : e, a = t.length - 1;
+      a >= 0;
+      a--
+    )
+      (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
+    return n && o && iV(e, i, o), o;
+  };
+let oV = class {
+  constructor(t, e) {
+    (this.gis = t),
+      (this.props = e),
+      (this.animation = new TU()),
+      (this.ee = new dt()),
+      (this.scaleService = HH),
+      (this.listenerObj = new As()),
+      (this.comboTimeout = 200),
+      (this.activeArr = []),
+      (this.handleDblclick = (t) => {
+        clearTimeout(this.comboTimer),
+          (this.comboTimer = setTimeout(() => {
+            this.comboTimer = null;
+          }, this.comboTimeout));
+      }),
+      this._baseLayerinit();
+    const { containerDom: i } = this.gis.props;
+    i.addEventListener("dblclick", this.handleDblclick, !1);
+  }
+  _baseLayerinit() {
+    (this.group = new As()),
+      (this.group.userData.isRootLayer = !0),
+      (this.group.userData.invertedRelection = !1),
+      (this.id = this.group.uuid),
+      (this.dataView = new ak(this.gis.dataSet, {})),
+      (this.textureManager = Yd(this.textureService.getTextureManager)(
+        this.id
+      )),
+      (this._propsWatch = kf.createPropsWatch()),
+      this._initPropsWatchRule();
+  }
+  _initialState(t) {
+    this.state = af(t, this.props);
+  }
+  _initLayerGroup(t) {
+    const {
+        layerName: e,
+        layerType: i,
+        coreGroup: n,
+        label: r = {},
+        isHudScene: o = !1,
+      } = t,
+      { enabled: a = !1, markerType: s = "css2d" } = r,
+      { sceneSystem: l, layerManager: u } = this.gis;
+    (this.layerType = i),
+      o ? l.hudScene.add(this.group) : l.coreScene.add(this.group),
+      (this.group.name = e),
+      (this.coreGroup = null != n ? n : new As()),
+      (this.coreGroup.name = `core-${e}`),
+      this.group.add(this.coreGroup),
+      (this.poiGroup = new eV()),
+      (this.poiGroup.name = `${e}-poi-layer`),
+      l.hudScene.add(this.poiGroup),
+      u.add({ layerType: i, layer: this }),
+      a && this.gis.eventManager.ee.emit("markerEnabled", { markerType: s }),
+      this.updateBaseHeight();
+  }
+  _getParseData(t) {
+    const { rawData: e, layerType: i, coordsField: n } = t,
+      { clipMode: r } = this.state,
+      { globalOpts: o } = this.gis,
+      { boundary: a } = o,
+      s = Yw(e[0]) ? "geojson" : "bytejson",
+      l = !(!r || r === Qw.none),
+      u = this.dataView
+        .parse(e, { type: s, options: { layerType: i, coordsField: n } })
+        .transform({
+          type: "filter",
+          options: { callback: l && ((t) => Kw(t, a.features[0], r, i)) },
+        })
+        .transform({
+          type: "webgis",
+          options: { as: "coordinates" },
+        }).latestData;
+    return this.state.parseData.push(...u), this;
+  }
+  _getScaleData(t) {
+    const { parseData: e } = this.state;
+    return (this.state.scaleData = this.scaleService.apply(t, e)), this;
+  }
+  _getRenderData(t) {}
+  add(t) {
+    return this;
+  }
+  remove() {
+    this._destroy();
+  }
+  set(t) {
+    return this._propsWatch.compare(this.state, t), this;
+  }
+  get() {
+    return this.state;
+  }
+  updateArea(t) {
+    this.updateBaseHeight(), this._updateOffset(this.state.common.offset);
+  }
+  updateBaseHeight() {
+    const { globalOpts: t } = this.gis;
+    if (t) {
+      const e = t.bboxOption.baseHeight;
+      this.coreGroup.position.setZ(e),
+        this.poiGroup.updateBaseHeight(e),
+        this._updatePOI(!0);
+    }
+  }
+  setContainer(t) {
+    this.container = t;
+  }
+  getContainer() {
+    return this.container;
+  }
+  clear() {
+    this.clearCoreGroup(),
+      this.clearPoiGroup(),
+      this.clearInteractionGroup(),
+      this._clearData();
+  }
+  clearCoreGroup() {
+    this.coreGroup.destroy(!1);
+  }
+  clearPoiGroup() {
+    this.poiGroup.abort(), this.poiGroup.destroy(!1);
+  }
+  clearInteractionGroup() {
+    this.unActive();
+  }
+  _clearData() {
+    (this.dataView.latestData = null),
+      (this.state.data = []),
+      (this.state.parseData = []),
+      (this.state.scaleData = []),
+      (this.state.renderData = []);
+  }
+  _destroy() {
+    var t;
+    const { sceneSystem: e, layerManager: i } = this.gis,
+      { containerDom: n } = this.gis.props;
+    n.removeEventListener("dblclick", this.handleDblclick),
+      this.clear(),
+      i.__removePure({ layerID: this.id }),
+      this.dataView.destroy(),
+      this.textureService.removeTextureManager(this.id),
+      null == (t = e.coreScene) || t.remove(this.group),
+      this.ee.removeAllListeners(),
+      (this._propsWatch = null);
+  }
+  on(t, e, i) {
+    Fk(t) || this.gis.eventManager.bindEvent(this.id, t), this.ee.on(t, e, i);
+  }
+  off(t, e) {
+    Fk(t) || this.gis.eventManager.removeMapEvent(this.id, t),
+      this.ee.removeListener(t),
+      e && e();
+  }
+  rotate(t, e) {
+    switch (t) {
+      case "x":
+        this.group.rotateX(De(e));
+        break;
+      case "y":
+        this.group.rotateY(De(e));
+        break;
+      case "z":
+        this.group.rotateZ(De(e));
+    }
+  }
+  handleAnimation(t) {}
+  emitPropsWatch(t = {}) {
+    this._propsWatch.compare(t, this.state);
+  }
+  _initPropsWatchRule() {
+    this._propsWatch.addWatch([
+      this._propsWatch.defaultRule("", "always", (t) => {
+        this.state = af(this.state, t);
+      }),
+      this._propsWatch.defaultRule(["common", "offset"], "diff", (t) => {
+        cf(t.common.offset) && this._updateOffset(t.common.offset);
+      }),
+      this._propsWatch.defaultRule(["common", "visible"], "diff", (t) => {
+        sf(t.common, "visible") && this._updateVisible(t.common.visible);
+      }),
+      this._propsWatch.defaultRule(["common", "zIndex"], "diff", (t) => {
+        sf(t.common, "zIndex") && this._updateZIndex(t.common.zIndex);
+      }),
+      this._propsWatch.defaultRule(["common", "zoomRange"], "diff", (t) => {
+        sf(t.common, "zoomRange") && this._updateZoomRange(t.common.zoomRange);
+      }),
+      this._propsWatch.defaultRule("interaction", "diffDeep", () => {
+        this._updateInteraction(this.state.interaction);
+      }),
+    ]);
+  }
+  _updateOffset(t) {
+    const [e, i, n] = t,
+      { globalOpts: r } = this.gis,
+      { size: o } = r.bboxOption,
+      a = TA(o.bboxSize, e),
+      s = TA(o.bboxSize, i),
+      l = TA(o.bboxSize, n);
+    this.extensions &&
+      Object.values(this.extensions).forEach((t) => {
+        t.group.position.setX(a),
+          t.group.position.setY(s),
+          t.group.position.setZ(l),
+          t._updatePOI(!0);
+      }),
+      this.group.position.setX(a),
+      this.group.position.setY(s),
+      this.group.position.setZ(l),
+      this._updatePOI(!0);
+  }
+  _updateVisible(t) {
+    this.extensions &&
+      Object.values(this.extensions).forEach((e) => {
+        e.group.visible = !!t && e.state.common.visible;
+      }),
+      "marker-layer" === this.group.name &&
+        requestAnimationFrame(() => {
+          const e = `data-layerid="${this.id}"`;
+          document.querySelectorAll(`[${e}]`).forEach((e) => {
+            e.firstChild.style.display = t ? "block" : "none";
+          });
+        }),
+      (this.group.visible = t),
+      (this.poiGroup.visible = t);
+  }
+  _updateZoomRange(t) {
+    this.extensions &&
+      Object.values(this.extensions).forEach((e) => {
+        (e.group.ext.zoomRange = t), (e.poiGroup.ext.zoomRange = t);
+      }),
+      (this.group.ext.zoomRange = t),
+      (this.poiGroup.ext.zoomRange = t);
+  }
+  _updateZIndex(t) {
+    this.extensions &&
+      Object.values(this.extensions).forEach((e) => {
+        e.group.zIndex = null != t ? t : e.group.zIndex;
+      }),
+      "marker-layer" === this.group.name &&
+        requestAnimationFrame(() => {
+          const e = `data-layerid="${this.id}"`;
+          document.querySelectorAll(`[${e}]`).forEach((e) => {
+            e.style.zIndex = t + "";
+          });
+        }),
+      (this.group.zIndex = null != t ? t : this.group.zIndex);
+  }
+  _updateInteraction(t) {
+    if (((this.interaction = t), !this.interaction)) return;
+    const { hover: e, select: i } = this.interaction;
+    [e, i].forEach((t) => {
+      t.enabled
+        ? this.gis.eventManager.bindEvent(this.id, t.trigger)
+        : this.gis.eventManager.removeMapEvent(this.id, t.trigger);
+    });
+  }
+  registerInteraction(t = this.state.interaction, e = this.coreGroup, i = !1) {
+    (this.interaction = t), (this.listenerObj = e), (this.recursive = i);
+  }
+  active(t) {
+    const {
+      type: e,
+      object: i,
+      id: n,
+      instanceId: r,
+      name: o,
+      color: a,
+      multi: s,
+    } = t;
+    return cf(n) || cf(o)
+      ? (o
+          ? o instanceof Array
+            ? o.forEach((t) => {
+                this._activeAtomic({
+                  name: t,
+                  object: i,
+                  color: a,
+                  type: e,
+                  multi: s,
+                });
+              })
+            : this._activeAtomic({
+                name: o,
+                object: i,
+                color: a,
+                type: e,
+                multi: s,
+              })
+          : n instanceof Array
+          ? n.forEach((t) => {
+              this._activeAtomic({
+                id: t,
+                object: i,
+                color: a,
+                type: e,
+                instanceId: r,
+                multi: s,
+              });
+            })
+          : this._activeAtomic({
+              id: n,
+              object: i,
+              color: a,
+              type: e,
+              instanceId: r,
+              multi: s,
+            }),
+        this)
+      : (this.logService.error("active 需要 传入 id 或 name"), this);
+  }
+  _activeAtomic(t) {
+    const { object: e } = t;
+    e && e.isInstancedMesh
+      ? this._activeInstanceAtomic(t)
+      : this._activeMeshAtomic(t);
+  }
+  _activeInstanceAtomic(t) {
+    const {
+      color: e,
+      type: i,
+      object: n,
+      instanceId: r,
+      id: o,
+      name: a,
+      multi: s,
+    } = t;
+    n.ext.activeArr || (n.ext.activeArr = []);
+    const l = n.ext.activeArr.findIndex(
+      (t) => t.isActive && t.instanceId === r
+    );
+    if (-1 != l) {
+      const t = n.ext.activeArr[l];
+      if ("select" === t.type && "hover" === i) return;
+      if ("select" === t.type && "select" === i) {
+        const { instanceId: e, rawColor: i } = t;
+        return (
+          ZD(n.geometry.attributes.color, e, i),
+          (n.ext.activeArr[l].type = ""),
+          (n.ext.activeArr[l].activeColor = ""),
+          void (n.ext.activeArr[l].isActive = !1)
+        );
+      }
+    }
+    "hover" === i && this.unActive({ type: "hover" }),
+      "select" === i && !0 !== s && this.unActive({ type: "select" });
+    const u = n.ext.activeArr.findIndex((t) => t.instanceId === r);
+    let c;
+    if (-1 === u) {
+      const { color: t } = n.geometry.attributes,
+        { array: o, itemSize: a } = t;
+      (c = Array.from(o).slice(r * a, r * a + a)),
+        t.normalized && (c = c.map((t) => t / 255)),
+        n.ext.activeArr.push({
+          rawColor: c,
+          activeColor: e,
+          instanceId: r,
+          isActive: !0,
+          type: i,
+        });
+    } else (n.ext.activeArr[u].type = i), (n.ext.activeArr[u].isActive = !0);
+    if (isNaN(Number(e))) {
+      const t = EA(e);
+      ZD(n.geometry.attributes.color, r, [
+        t.color.r,
+        t.color.g,
+        t.color.b,
+        t.opacity,
+      ]);
+    } else {
+      const t = Number(e),
+        i = n.ext.activeArr[u];
+      ZD(n.geometry.attributes.color, r, [
+        (null != c ? c : i.rawColor)[0] * t,
+        (null != c ? c : i.rawColor)[1] * t,
+        (null != c ? c : i.rawColor)[2] * t,
+        (null != c ? c : i.rawColor)[3],
+      ]);
+    }
+    const h = { name: a, id: o, instanceId: r, object: n, type: i, meshs: [] };
+    this.activeArr.push(h);
+  }
+  _activeMeshAtomic(t) {
+    const { name: e, color: i, type: n, id: r, multi: o } = t,
+      a = this.activeArr.findIndex((t) =>
+        t.meshs.find((t) => JH(t, e, r) && t.ext.isActive)
+      );
+    if (-1 != a) {
+      const t = this.activeArr[a];
+      let i = !1;
+      if (
+        (t.meshs.forEach((o) => {
+          "select" === o.ext.type && "hover" === n
+            ? (i = !0)
+            : "select" === o.ext.type &&
+              "select" === n &&
+              (this._unactiveAtomic({ id: r, name: e, meshs: t.meshs }),
+              this.activeArr.splice(a, 1),
+              (i = !0));
+        }),
+        i)
+      )
+        return;
+    }
+    "hover" === n && this.unActive({ type: "hover" }),
+      "select" === n && !0 !== o && this.unActive({ type: "select" });
+    const s = this.listenerObj.getObjectsByFn((t) => JH(t, e, r));
+    if (0 === s.length) return void this.logService.error("active mesh 不存在");
+    const l = { name: e, id: r, meshs: [], type: n };
+    s.forEach((t) => {
+      const e = t,
+        r = e.material;
+      (e.ext.type = n),
+        (e.ext.isActive = !0),
+        (e.ext.activeColor = i),
+        e.ext.rawColor ||
+          ((e.ext.rawColor = r.color.clone()),
+          (e.ext.rawTransparent = r.transparent),
+          (e.ext.rawOpacity = r.opacity));
+      if (isNaN(Number(i))) {
+        const t = EA(i);
+        (r.color = t.color),
+          (r.transparent = t.transparent),
+          (r.opacity = t.opacity);
+      } else {
+        const t = Number(i),
+          n = e.ext.rawColor.clone();
+        r.color = n.multiplyScalar(t);
+      }
+      (r.needsUpdate = !0), l.meshs.push(t);
+    }),
+      this.activeArr.push(l);
+  }
+  unActive(t) {
+    for (let e = this.activeArr.length - 1; e >= 0; e--) {
+      const i = this.activeArr[e],
+        n = i.object,
+        r = i.type,
+        o = i.meshs;
+      if (cf(null == t ? void 0 : t.id)) {
+        const { id: i } = t;
+        i instanceof Array
+          ? i.forEach((t) => {
+              t === n.id &&
+                (this._unactiveAtomic({ id: t, object: n, meshs: o }),
+                this.activeArr.splice(e, 1));
+            })
+          : i === n.id &&
+            (this._unactiveAtomic({ id: i, object: n, meshs: o }),
+            this.activeArr.splice(e, 1));
+      } else if (null == t ? void 0 : t.name) {
+        const { name: i } = t;
+        i instanceof Array
+          ? i.forEach((t) => {
+              t === n.name &&
+                (this._unactiveAtomic({ name: t, object: n, meshs: o }),
+                this.activeArr.splice(e, 1));
+            })
+          : i === n.name &&
+            (this._unactiveAtomic({ name: i, object: n, meshs: o }),
+            this.activeArr.splice(e, 1));
+      } else
+        cf(null == t ? void 0 : t.type)
+          ? t.type === r &&
+            (this._unactiveAtomic({ type: t.type, object: n, meshs: o }),
+            this.activeArr.splice(e, 1))
+          : (this._unactiveAtomic({ type: r, object: n, meshs: o }),
+            this.activeArr.splice(e, 1));
+    }
+    return this;
+  }
+  _unactiveAtomic(t) {
+    const { object: e } = t;
+    e && e.isInstancedMesh
+      ? this._unactiveInstanceAtomic(t)
+      : this._unactiveMeshAtomic(t);
+  }
+  _unactiveInstanceAtomic(t) {
+    const { type: e, object: i } = t;
+    for (let n = i.ext.activeArr.length - 1; n >= 0; n--) {
+      const t = i.ext.activeArr[n],
+        { instanceId: r, isActive: o, rawColor: a } = t;
+      o &&
+        e === t.type &&
+        (ZD(i.geometry.attributes.color, r, a),
+        (t.type = ""),
+        (t.activeColor = ""),
+        (t.isActive = !1));
+    }
+  }
+  _unactiveMeshAtomic(t) {
+    const { id: e, type: i, name: n, meshs: r } = t;
+    r.forEach((t) => {
+      if ((JH(t, n, e) || (!!i && t.ext.type === i)) && t.ext.isActive) {
+        const e = t.material;
+        (e.color = t.ext.rawColor),
+          (e.transparent = t.ext.rawTransparent),
+          (e.opacity = t.ext.rawOpacity),
+          (e.needsUpdate = !0),
+          (t.ext.isActive = !1),
+          (t.ext.activeColor = ""),
+          (t.ext.type = "");
+      }
+    });
+  }
+  _updatePOI(t = !1) {
+    const { poi: e, interaction: i } = this.state;
+    if (!e || !e.enabled) return;
+    const { cameraSystem: n } = this.gis,
+      { coverEnable: r, hideOnMove: o } = e;
+    if (o && !t) return void (this.poiGroup.moving = !0);
+    t && (this.poiGroup.moving = !1),
+      this.group.updateWorldMatrix(!0, !1),
+      n.coreCamera.updateWorldMatrix(!0, !1),
+      this.poiGroup.updateTextPosition(this.group.matrixWorld, n);
+    (i.hover.enabled && i.hover.effect.poi) ||
+    (i.select.enabled && i.select.effect.poi)
+      ? this.poiGroup.hide({ each: !0 })
+      : r || this.poiGroup.collision();
+  }
+  _mapSize(t, e) {
+    const { globalOpts: i } = this.gis;
+    let n = 100;
+    switch (e) {
+      case "straightline":
+        n = (t / 100) * i.layerFitValue.straightLineWidth;
+        break;
+      case "flyline":
+        n = (t / 100) * i.layerFitValue.flylineWidth;
+        break;
+      case "z":
+        n = (t / 100) * i.layerFitValue.z;
+        break;
+      default:
+        n = (t / 100) * i.layerFitValue.xy;
+    }
+    return n;
+  }
+};
 function aV(t) {
   return function (e, i) {
     e.__layerEvent__ || (e.__layerEvent__ = []), e.__layerEvent__.push([t, i]);
   };
 }
-
+rV([_G(KB.ILogService)], oV.prototype, "logService", 2),
+  rV([_G(KB.ITextService)], oV.prototype, "textService", 2),
+  rV([_G(KB.ITextureService)], oV.prototype, "textureService", 2),
+  (oV = rV(
+    [
+      function (t) {
+        return class extends t {
+          constructor(t, e) {
+            super(t, e),
+              this.__layerEvent__ &&
+                this.__layerEvent__.forEach(([t, e]) => {
+                  this.gis.ee.on(t, this[e]);
+                });
+          }
+          remove() {
+            super.remove(),
+              this.__layerEvent__ &&
+                this.__layerEvent__.forEach(([t, e]) => {
+                  this.gis.ee.off(t, this[e]);
+                });
+          }
+        };
+      },
+    ],
+    oV
+  ));
 const sV = 4800;
 function lV(t) {
   let e = af(t);
   return (
     am.flatten(e),
     (e = (function (t) {
-      const e = {
-        type: "FeatureCollection",
-        features: [],
-      };
+      const e = { type: "FeatureCollection", features: [] };
       let i, n;
       for (i = 0; i < t.features.length; i++) {
-        const r = t.features[i];
-        const o = r.geometry;
+        const r = t.features[i],
+          o = r.geometry;
         if (!o || !o.coordinates || 0 === o.coordinates.length) continue;
         if ("Polygon" != o.type) continue;
         const a = o.coordinates,
@@ -64250,7 +63502,6 @@ function lV(t) {
     e
   );
 }
-window.lV = lV;
 async function uV(t, e = "all") {
   if (!t.districtData) return;
   const i =
@@ -64321,7 +63572,6 @@ async function uV(t, e = "all") {
     });
   });
 }
-window.uV = uV;
 function cV(t, e) {
   if (sf(t, "stroke")) {
     const i = EA(t.stroke.color);
@@ -64336,7 +63586,6 @@ function cV(t, e) {
         });
   }
 }
-window.cV = cV;
 function hV(t, e) {
   if (sf(t, "bottomStroke")) {
     const i = EA(t.bottomStroke.color);
@@ -64350,8 +63599,277 @@ function hV(t, e) {
         });
   }
 }
-window.hV = hV;
-
+function pV(t) {
+  const e = t[0],
+    i = t[1],
+    n = t[2];
+  return Math.sqrt(e * e + i * i + n * n);
+}
+function dV(t, e, i) {
+  return (t[0] = e[0] - i[0]), (t[1] = e[1] - i[1]), (t[2] = e[2] - i[2]), t;
+}
+function fV(t, e) {
+  const i = e[0],
+    n = e[1],
+    r = e[2];
+  let o = i * i + n * n + r * r;
+  return (
+    o > 0 &&
+      ((o = 1 / Math.sqrt(o)),
+      (t[0] = e[0] * o),
+      (t[1] = e[1] * o),
+      (t[2] = e[2] * o)),
+    t
+  );
+}
+function gV(t, e, i, n = [], r = !0) {
+  const o = [],
+    a = [];
+  return (
+    dV(o, i, e),
+    dV(a, t, e),
+    (function (t, e, i) {
+      const n = e[0],
+        r = e[1],
+        o = e[2],
+        a = i[0],
+        s = i[1],
+        l = i[2];
+      (t[0] = r * l - o * s), (t[1] = o * a - n * l), (t[2] = n * s - r * a);
+    })(n, o, a),
+    r && fV(n, n),
+    n
+  );
+}
+function mV(t, e, i, n) {
+  let r = 0;
+  for (let o = e, a = i - n; o < i; o += n)
+    (r += (t[a] - t[o]) * (t[o + 1] + t[a + 1])), (a = o);
+  return r > 0;
+}
+function yV(t, e) {
+  const { coordinates: i, bbox: n, height: r } = e,
+    { vertices: o, holes: a, dimensions: s } = _l.flatten(i),
+    l = _l.default(o, a, s),
+    { index: u, position: c, normal: h, uv: p } = t,
+    d = n[2] - n[0],
+    f = n[3] - n[1],
+    g = c.length / 3;
+  let m;
+  const y = [];
+  for (m = 0; m < o.length; m += s)
+    (y[0] = +Math.round(o[m])),
+      (y[1] = +Math.round(o[m + 1])),
+      (y[2] = +Math.round(r)),
+      c.push(...y),
+      p.push((+y[0] - n[0]) / d, (+y[1] - n[1]) / f),
+      h.push(0, 0, 0);
+  let v, b, x;
+  const _ = [],
+    S = [],
+    M = [],
+    C = [];
+  for (m = 2; m < l.length; m += 3)
+    (v = l[m - 2] + g),
+      (b = l[m - 1] + g),
+      (x = l[m] + g),
+      u.push(v, b, x),
+      (v *= 3),
+      (_[0] = c[v]),
+      (_[1] = c[v + 1]),
+      (_[2] = c[v + 2]),
+      (b *= 3),
+      (S[0] = c[b]),
+      (S[1] = c[b + 1]),
+      (S[2] = c[b + 2]),
+      (x *= 3),
+      (M[0] = c[x]),
+      (M[1] = c[x + 1]),
+      (M[2] = c[x + 2]),
+      gV(_, S, M, C, !1),
+      (h[v] += C[0]),
+      (h[v + 1] += C[1]),
+      (h[v + 2] += C[2]),
+      (h[b] += C[0]),
+      (h[b + 1] += C[1]),
+      (h[b + 2] += C[2]),
+      (h[x] += C[0]),
+      (h[x + 1] += C[1]),
+      (h[x + 2] += C[2]);
+  for (m = 3 * g; m < h.length; m += 3)
+    (C[0] = h[m]),
+      (C[1] = h[m + 1]),
+      (C[2] = h[m + 2]),
+      fV(C, C),
+      ([h[m], h[m + 1], h[m + 2]] = C);
+}
+function vV(t, e) {
+  const { coordinates: i, height: n } = e,
+    { vertices: r, holes: o, dimensions: a } = _l.flatten(i),
+    { index: s, position: l, normal: u, uv: c } = t,
+    h = [],
+    p = [],
+    d = [],
+    f = [],
+    g = [],
+    m = [],
+    y = [],
+    v = [],
+    b = [],
+    x = l.length / 3;
+  let _, S;
+  for (_ = 0; _ < r.length; _ += a)
+    (y[0] = +Math.round(r[_])),
+      (y[1] = +Math.round(r[_ + 1])),
+      (y[2] = +Math.round(n)),
+      l.push(...y),
+      u.push(0, 0, 0),
+      (y[2] = 0),
+      l.push(...y),
+      u.push(0, 0, 0);
+  const M = o && o.length > 0 ? o[0] : r.length / a;
+  let C, w;
+  b.push([0, M]);
+  const A = o.length;
+  for (_ = 0; _ < A; _++)
+    (C = o[_]), (w = _ < A - 1 ? o[_ + 1] : r.length / a), b.push([C, w]);
+  let E, D, T;
+  for (_ = 0; _ < b.length; _++) {
+    ([C, w] = b[_]), (D = 0 === _), (E = 0);
+    if (D === mV(r, C * a, w * a, a))
+      for (S = C + 1; S < w; S++)
+        (T = 2 * (S - 1) + x),
+          (T *= 3),
+          (h[0] = l[T]),
+          (h[1] = l[T + 1]),
+          (h[2] = l[T + 2]),
+          (p[0] = l[T + 3]),
+          (p[1] = l[T + 4]),
+          (p[2] = l[T + 5]),
+          (T = 2 * S + x),
+          (T *= 3),
+          (d[0] = l[T]),
+          (d[1] = l[T + 1]),
+          (d[2] = l[T + 2]),
+          (f[0] = l[T + 3]),
+          (f[1] = l[T + 4]),
+          (f[2] = l[T + 5]),
+          (T = 2 * (S - 1) + x),
+          (T *= 2),
+          (c[T] = E),
+          (c[T + 1] = 1),
+          (c[T + 2] = E),
+          (c[T + 3] = 0),
+          (E += pV(dV(v, f, p))),
+          (T = 2 * S + x),
+          (T *= 2),
+          (c[T] = E),
+          (c[T + 1] = 1),
+          (c[T + 2] = E),
+          (c[T + 3] = 0),
+          gV(p, f, h, g, !1),
+          gV(f, d, h, m, !1),
+          (T = 2 * (S - 1) + x),
+          (T *= 3),
+          (u[T] += g[0] + m[0]),
+          (u[T + 1] += g[1] + m[1]),
+          (u[T + 2] += g[2] + m[2]),
+          (u[T + 3] += g[0]),
+          (u[T + 4] += g[1]),
+          (u[T + 5] += g[2]),
+          (T = 2 * S + x),
+          (T *= 3),
+          (u[T] += m[0]),
+          (u[T + 1] += m[1]),
+          (u[T + 2] += m[2]),
+          (u[T + 3] += g[0] + m[0]),
+          (u[T + 4] += g[1] + m[1]),
+          (u[T + 5] += g[2] + m[2]),
+          (T = 2 * (S - 1) + x),
+          s.push(T + 1, T + 3, T),
+          s.push(T + 3, T + 2, T);
+    else
+      for (S = w - 2; S >= C; S--)
+        (T = 2 * (S + 1) + x),
+          (T *= 3),
+          (h[0] = l[T]),
+          (h[1] = l[T + 1]),
+          (h[2] = l[T + 2]),
+          (p[0] = l[T + 3]),
+          (p[1] = l[T + 4]),
+          (p[2] = l[T + 5]),
+          (T = 2 * S + x),
+          (T *= 3),
+          (d[0] = l[T]),
+          (d[1] = l[T + 1]),
+          (d[2] = l[T + 2]),
+          (f[0] = l[T + 3]),
+          (f[1] = l[T + 4]),
+          (f[2] = l[T + 5]),
+          (T = 2 * (S + 1) + x),
+          (T *= 2),
+          (c[T] = E),
+          (c[T + 1] = 1),
+          (c[T + 2] = E),
+          (c[T + 3] = 0),
+          (E += pV(dV(v, f, p))),
+          (T = 2 * S + x),
+          (T *= 2),
+          (c[T] = E),
+          (c[T + 1] = 1),
+          (c[T + 2] = E),
+          (c[T + 3] = 0),
+          gV(p, f, h, g, !1),
+          gV(f, d, h, m, !1),
+          (T = 2 * (S + 1) + x),
+          (T *= 3),
+          (u[T] += g[0] + m[0]),
+          (u[T + 1] += g[1] + m[1]),
+          (u[T + 2] += g[2] + m[2]),
+          (u[T + 3] += g[0]),
+          (u[T + 4] += g[1]),
+          (u[T + 5] += g[2]),
+          (T = 2 * S + x),
+          (T *= 3),
+          (u[T] += m[0]),
+          (u[T + 1] += m[1]),
+          (u[T + 2] += m[2]),
+          (u[T + 3] += g[0] + m[0]),
+          (u[T + 4] += g[1] + m[1]),
+          (u[T + 5] += g[2] + m[2]),
+          (T = 2 * (S + 1) + x),
+          s.push(T + 1, T - 1, T),
+          s.push(T - 1, T - 2, T);
+  }
+  for (_ = 3 * x; _ < u.length; _ += 3)
+    (g[0] = u[_]),
+      (g[1] = u[_ + 1]),
+      (g[2] = u[_ + 2]),
+      fV(g, g),
+      ([u[_], u[_ + 1], u[_ + 2]] = g);
+}
+function bV(t, e) {
+  const i = { index: [], position: [], normal: [], uv: [] },
+    n = { index: [], position: [], normal: [], uv: [] };
+  let r, o, a;
+  for (r = 0; r < t.features.length; r++) {
+    (o = t.features[r]), (a = o.geometry.coordinates);
+    yV(i, { coordinates: a, bbox: e, height: 1 });
+    vV(n, { coordinates: a, bbox: e, height: 1 });
+  }
+  const s = { index: [], position: [], normal: [], uv: [], group: [] };
+  return xV(0, s, i), xV(1, s, n), s;
+}
+function xV(t, e, i) {
+  _V(e, i, "index"),
+    _V(e, i, "position"),
+    _V(e, i, "normal"),
+    _V(e, i, "uv"),
+    e.group.push(t, i.index.length, i.position.length / 3);
+}
+function _V(t, e, i) {
+  for (let n = 0; n < e[i].length; n++) t[i].push(e[i][n]);
+}
 class SV {
   constructor(t, e) {
     (this.levelMax = t), (this.levelMin = e);
@@ -64373,10 +63891,7 @@ class SV {
     return Math.floor(n * this._getMapSize(e));
   }
   lnglatToTile(t, e, i) {
-    return {
-      tileX: this._lngToTileX(t, i),
-      tileY: this._latToTileY(e, i),
-    };
+    return { tileX: this._lngToTileX(t, i), tileY: this._latToTileY(e, i) };
   }
   _lngToPixelX(t, e) {
     const i = (t + 180) / 360;
@@ -64388,10 +63903,7 @@ class SV {
     return Math.floor((n * this._getMapSize(e) * 256) % 256);
   }
   lnglatToPixel(t, e, i) {
-    return {
-      pixelX: this._lngToPixelX(t, i),
-      pixelY: this._latToPixelY(e, i),
-    };
+    return { pixelX: this._lngToPixelX(t, i), pixelY: this._latToPixelY(e, i) };
   }
   _pixelXTolng(t, e, i) {
     return ((e + t / 256) / this._getMapSize(i)) * 360 - 180;
@@ -64409,10 +63921,7 @@ class SV {
     );
   }
   pixelToLnglat(t, e, i, n, r) {
-    return {
-      lng: this._pixelXTolng(t, i, r),
-      lat: this._pixelYToLat(e, n, r),
-    };
+    return { lng: this._pixelXTolng(t, i, r), lat: this._pixelYToLat(e, n, r) };
   }
 }
 function MV(t) {
@@ -64486,7 +63995,6 @@ function MV(t) {
     zoom: l,
   };
 }
-window.MV = MV;
 function CV(t) {
   return Math.pow(2, t);
 }
@@ -64502,8 +64010,41 @@ function wV(t, e, i) {
     })(e, i);
   return [n, r];
 }
-window.wV = wV;
-
+function AV(t) {
+  const { feature: e, zoom: i, style: n, width: r, height: o, offset: a } = t,
+    s = document.createElement("canvas"),
+    l = s.getContext("2d");
+  (s.width = r),
+    (s.height = o),
+    (s.style.width = r + "px"),
+    (s.style.height = o + "px");
+  const u = e.geometry.coordinates,
+    c = [];
+  let h, p, d;
+  c.push([]);
+  for (let f = 0; f < u[0].length; f++) {
+    const t = u[0][f];
+    (d = wV(t[0], t[1], i)), c[0].push([d[0] - a[0], d[1] - a[1]]);
+  }
+  for (
+    l.globalCompositeOperation = "source-out", l.beginPath(), h = 0;
+    h < c.length;
+    h++
+  ) {
+    for (p = 0; p < c[h].length; p++) {
+      const t = c[h][p];
+      l[p ? "lineTo" : "moveTo"](t[0], t[1]);
+    }
+    l.closePath();
+  }
+  return (
+    (l.shadowBlur = n.shadowBlur),
+    (l.shadowColor = n.shadowColor),
+    (l.fillStyle = n.fillColor),
+    l.fill(),
+    s
+  );
+}
 function EV(t, e, i, n, r) {
   let o;
   if (
@@ -64791,72 +64332,28 @@ class LV extends Jn {
   constructor(t) {
     super({
       uniforms: Object.assign({}, fr.fog, {
-        bboxScale: {
-          value: 1,
-        },
-        opacity: {
-          value: 1,
-        },
-        lineLengthMax: {
-          value: 105,
-        },
-        lineLength: {
-          value: 30,
-        },
-        lineWidth: {
-          value: 10,
-        },
-        lineColor: {
-          value: new je(1, 1, 0, 0.85),
-        },
-        lineHeadColor: {
-          value: new je(1, 0, 0, 1),
-        },
-        lineHeadRatio: {
-          value: 0,
-        },
-        symbolColor: {
-          value: new je(1, 1, 0, 1),
-        },
-        map: {
-          value: null,
-        },
-        map1: {
-          value: null,
-        },
-        alphaMap: {
-          value: null,
-        },
-        resolution: {
-          value: new Le(1, 1),
-        },
-        sizeAttenuation: {
-          value: 1,
-        },
-        near: {
-          value: 1,
-        },
-        far: {
-          value: 1e9,
-        },
-        visibility: {
-          value: 1,
-        },
-        dashOffset: {
-          value: 0,
-        },
-        useDash: {
-          value: 0,
-        },
-        alphaTest: {
-          value: 0,
-        },
-        repeat: {
-          value: new Le(1, 1),
-        },
-        uvScale: {
-          value: new Le(1, 1),
-        },
+        bboxScale: { value: 1 },
+        opacity: { value: 1 },
+        lineLengthMax: { value: 105 },
+        lineLength: { value: 30 },
+        lineWidth: { value: 10 },
+        lineColor: { value: new je(1, 1, 0, 0.85) },
+        lineHeadColor: { value: new je(1, 0, 0, 1) },
+        lineHeadRatio: { value: 0 },
+        symbolColor: { value: new je(1, 1, 0, 1) },
+        map: { value: null },
+        map1: { value: null },
+        alphaMap: { value: null },
+        resolution: { value: new Le(1, 1) },
+        sizeAttenuation: { value: 1 },
+        near: { value: 1 },
+        far: { value: 1e9 },
+        visibility: { value: 1 },
+        dashOffset: { value: 0 },
+        useDash: { value: 0 },
+        alphaTest: { value: 0 },
+        repeat: { value: new Le(1, 1) },
+        uvScale: { value: new Le(1, 1) },
       }),
       vertexShader:
         "#define GLSLIFY 1\nattribute vec3 previous;\nattribute vec3 next;\nattribute float side;\nattribute float len;\nattribute vec4 lineConfig;\nattribute vec3 symbolConfig;\n\nuniform float lineLengthMax;\nuniform float lineLength;\nuniform float lineWidth;\nuniform vec4 lineColor;\nuniform vec4 lineHeadColor;\nuniform float lineHeadRatio;\nuniform vec4 symbolColor;\nuniform vec2 resolution;\nuniform float near;\nuniform float far;\nuniform uint sizeAttenuation;\nuniform float dashOffset;\nuniform float bboxScale;\n\nvarying vec4 vLineColor;\nvarying vec2 vNormal;\nvarying float vLineType;\nvarying float vBlurRatio;\nvarying vec4 vLineHeadColor;\nvarying float vLineHeadRatio;\nvarying float vLineSeg;\nvarying vec4 vSymbolColor;\nvarying vec3 vSymbolConfig;\nout vec2 vUv;\nflat out float lineAspect;\n\n#include <common>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\n#include <fog_pars_vertex>\n\nvoid main() {\n  vLineColor = lineColor;\n  vLineHeadColor = lineHeadColor;\n  vSymbolColor = symbolColor;\n\n  vLineType = lineConfig.x * 100.0;\n  vBlurRatio = lineConfig.y;\n  vLineHeadRatio = lineHeadRatio;\n\n  vSymbolConfig = symbolConfig;\n  float len_step = (lineLengthMax - lineLength) / 100.0;\n  vLineSeg = len * len_step / bboxScale * 0.0000001;\n\n  vUv = uv;\n  float aspect = resolution.x / resolution.y;\n  float pixelWidthRatio = 1. / (resolution.x * projectionMatrix[0][0]);\n  vec2 aspectVec = vec2(aspect, 1.0);\n\n  lineAspect = len / lineWidth / aspect;\n\n  mat4 mvp = projectionMatrix * modelViewMatrix;\n  vec4 projected = mvp * vec4(position, 1.0);\n  vec4 preProjected = mvp * vec4(previous, 1.);\n  vec4 nextProjected = mvp * vec4(next, 1.);\n\n  vec2 screen = projected.xy / projected.w * aspectVec;\n  vec2 preScreen = preProjected.xy / preProjected.w * aspectVec;\n  vec2 nextScreen = nextProjected.xy / nextProjected.w * aspectVec;\n  float pixelWidth = sizeAttenuation == 1u ? 1.0 : projected.w * pixelWidthRatio;\n\n  float width = lineWidth;\n\n#ifdef USE_MAP\n\n#else\n  float dist = 1.0;\n  float segLen = mod(uv.x - dashOffset, 1.0 / vLineSeg);\n  float segRatio = segLen * vLineSeg;\n\n  float blurRange = 0.1;\n  float ratio = vLineHeadRatio + blurRange;\n  if(segRatio > ratio) {\n    dist = (segRatio - ratio) / (1.0 - ratio);\n  } else if(segRatio > ratio - blurRange) {\n    dist = pow((ratio - segRatio) / blurRange, 3.0);\n  }\n  width = mix(lineWidth, lineWidth, saturate(dist));\n#endif\n\n  width *= 1.8 * pixelWidth;\n\n  vec2 dir = vec2(0.0);\n  if(nextScreen == screen) \n    dir = normalize(screen - preScreen);\n  else if(preScreen == screen) \n    dir = normalize(nextScreen - screen);\n  else {\n    vec2 dir1 = normalize(screen - preScreen);\n    vec2 dir2 = normalize(nextScreen - screen);\n    dir = normalize(dir1 + dir2);\n  }\n\n  vNormal = normalize(vec2(-dir.y / aspect, dir.x) * side); \n\n  vec4 normalVec4 = vec4(-dir.y, dir.x, 0., 1.);\n  normalVec4.xy *= .5 * width;\n  normalVec4 *= projectionMatrix;\n  vec2 normal = normalVec4.xy;\n\n  vec4 offset = vec4(normal * side, 0., 0.);\n  gl_Position = projected + offset;\n\n  #include <logdepthbuf_vertex>\n  #include <clipping_planes_vertex>\n  #include <fog_vertex>\n}",
@@ -65032,250 +64529,73 @@ class LV extends Jn {
 }
 const IV = {
   lineType1: [
-    {
-      percent: 0,
-      opacity: 1,
-    },
-    {
-      percent: 1,
-      opacity: 1,
-    },
+    { percent: 0, opacity: 1 },
+    { percent: 1, opacity: 1 },
   ],
   lineType2: [
-    {
-      percent: 0,
-      opacity: 0,
-    },
-    {
-      percent: 1,
-      opacity: 1,
-    },
+    { percent: 0, opacity: 0 },
+    { percent: 1, opacity: 1 },
   ],
   lineType3: [
-    {
-      percent: 0,
-      opacity: 0.1,
-    },
-    {
-      percent: 0.25,
-      opacity: 1,
-    },
-    {
-      percent: 0.5,
-      opacity: 1,
-    },
-    {
-      percent: 1,
-      opacity: 0,
-    },
+    { percent: 0, opacity: 0.1 },
+    { percent: 0.25, opacity: 1 },
+    { percent: 0.5, opacity: 1 },
+    { percent: 1, opacity: 0 },
   ],
   lineType4: [
-    {
-      percent: 0,
-      opacity: 0.25,
-    },
-    {
-      percent: 0.1,
-      opacity: 1,
-    },
-    {
-      percent: 0.2,
-      opacity: 0.25,
-    },
-    {
-      percent: 0.3,
-      opacity: 1,
-    },
-    {
-      percent: 0.4,
-      opacity: 0.25,
-    },
-    {
-      percent: 0.5,
-      opacity: 1,
-    },
-    {
-      percent: 0.6,
-      opacity: 0.25,
-    },
-    {
-      percent: 0.7,
-      opacity: 1,
-    },
-    {
-      percent: 0.8,
-      opacity: 0.25,
-    },
-    {
-      percent: 0.9,
-      opacity: 1,
-    },
-    {
-      percent: 1,
-      opacity: 0.25,
-    },
+    { percent: 0, opacity: 0.25 },
+    { percent: 0.1, opacity: 1 },
+    { percent: 0.2, opacity: 0.25 },
+    { percent: 0.3, opacity: 1 },
+    { percent: 0.4, opacity: 0.25 },
+    { percent: 0.5, opacity: 1 },
+    { percent: 0.6, opacity: 0.25 },
+    { percent: 0.7, opacity: 1 },
+    { percent: 0.8, opacity: 0.25 },
+    { percent: 0.9, opacity: 1 },
+    { percent: 1, opacity: 0.25 },
   ],
   lineType5: [
-    {
-      percent: 0,
-      opacity: 1,
-    },
-    {
-      percent: 0.05,
-      opacity: 1,
-    },
-    {
-      percent: 0.05,
-      opacity: 0,
-    },
-    {
-      percent: 0.1,
-      opacity: 0,
-    },
-    {
-      percent: 0.1,
-      opacity: 1,
-    },
-    {
-      percent: 0.15,
-      opacity: 1,
-    },
-    {
-      percent: 0.15,
-      opacity: 0,
-    },
-    {
-      percent: 0.2,
-      opacity: 0,
-    },
-    {
-      percent: 0.2,
-      opacity: 1,
-    },
-    {
-      percent: 0.25,
-      opacity: 1,
-    },
-    {
-      percent: 0.25,
-      opacity: 0,
-    },
-    {
-      percent: 0.3,
-      opacity: 0,
-    },
-    {
-      percent: 0.3,
-      opacity: 1,
-    },
-    {
-      percent: 0.35,
-      opacity: 1,
-    },
-    {
-      percent: 0.35,
-      opacity: 0,
-    },
-    {
-      percent: 0.4,
-      opacity: 0,
-    },
-    {
-      percent: 0.4,
-      opacity: 1,
-    },
-    {
-      percent: 0.45,
-      opacity: 1,
-    },
-    {
-      percent: 0.45,
-      opacity: 0,
-    },
-    {
-      percent: 0.5,
-      opacity: 0,
-    },
-    {
-      percent: 0.5,
-      opacity: 1,
-    },
-    {
-      percent: 0.55,
-      opacity: 1,
-    },
-    {
-      percent: 0.55,
-      opacity: 0,
-    },
-    {
-      percent: 0.6,
-      opacity: 0,
-    },
-    {
-      percent: 0.6,
-      opacity: 1,
-    },
-    {
-      percent: 0.65,
-      opacity: 1,
-    },
-    {
-      percent: 0.65,
-      opacity: 0,
-    },
-    {
-      percent: 0.7,
-      opacity: 0,
-    },
-    {
-      percent: 0.7,
-      opacity: 1,
-    },
-    {
-      percent: 0.75,
-      opacity: 1,
-    },
-    {
-      percent: 0.75,
-      opacity: 0,
-    },
-    {
-      percent: 0.8,
-      opacity: 0,
-    },
-    {
-      percent: 0.8,
-      opacity: 1,
-    },
-    {
-      percent: 0.85,
-      opacity: 1,
-    },
-    {
-      percent: 0.85,
-      opacity: 0,
-    },
-    {
-      percent: 0.9,
-      opacity: 0,
-    },
-    {
-      percent: 0.9,
-      opacity: 1,
-    },
-    {
-      percent: 0.95,
-      opacity: 1,
-    },
-    {
-      percent: 0.95,
-      opacity: 0,
-    },
-    {
-      percent: 1,
-      opacity: 0,
-    },
+    { percent: 0, opacity: 1 },
+    { percent: 0.05, opacity: 1 },
+    { percent: 0.05, opacity: 0 },
+    { percent: 0.1, opacity: 0 },
+    { percent: 0.1, opacity: 1 },
+    { percent: 0.15, opacity: 1 },
+    { percent: 0.15, opacity: 0 },
+    { percent: 0.2, opacity: 0 },
+    { percent: 0.2, opacity: 1 },
+    { percent: 0.25, opacity: 1 },
+    { percent: 0.25, opacity: 0 },
+    { percent: 0.3, opacity: 0 },
+    { percent: 0.3, opacity: 1 },
+    { percent: 0.35, opacity: 1 },
+    { percent: 0.35, opacity: 0 },
+    { percent: 0.4, opacity: 0 },
+    { percent: 0.4, opacity: 1 },
+    { percent: 0.45, opacity: 1 },
+    { percent: 0.45, opacity: 0 },
+    { percent: 0.5, opacity: 0 },
+    { percent: 0.5, opacity: 1 },
+    { percent: 0.55, opacity: 1 },
+    { percent: 0.55, opacity: 0 },
+    { percent: 0.6, opacity: 0 },
+    { percent: 0.6, opacity: 1 },
+    { percent: 0.65, opacity: 1 },
+    { percent: 0.65, opacity: 0 },
+    { percent: 0.7, opacity: 0 },
+    { percent: 0.7, opacity: 1 },
+    { percent: 0.75, opacity: 1 },
+    { percent: 0.75, opacity: 0 },
+    { percent: 0.8, opacity: 0 },
+    { percent: 0.8, opacity: 1 },
+    { percent: 0.85, opacity: 1 },
+    { percent: 0.85, opacity: 0 },
+    { percent: 0.9, opacity: 0 },
+    { percent: 0.9, opacity: 1 },
+    { percent: 0.95, opacity: 1 },
+    { percent: 0.95, opacity: 0 },
+    { percent: 1, opacity: 0 },
   ],
 };
 class NV {
@@ -65294,7 +64614,7 @@ class NV {
         lineHeadColor: s,
         lineHeadRatio: l,
       } = n,
-      u = window.sm(
+      u = sm(
         lV({
           type: "FeatureCollection",
           features: am.flatten(Object.assign({}, i)).features,
@@ -65309,19 +64629,12 @@ class NV {
           (t.height = 100),
           (t.style.width = "100px"),
           (t.style.height = "100px");
-        const e = t.getContext("2d", {
-            preserveDrawingBuffer: !0,
-          }),
+        const e = t.getContext("2d", { preserveDrawingBuffer: !0 }),
           i = e.createLinearGradient(0, 0, 100, 0);
         let n = 20;
         for (const o in IV) {
           const t = IV[o],
-            r = {
-              r: 255,
-              g: 255,
-              b: 255,
-              a: 1,
-            };
+            r = { r: 255, g: 255, b: 255, a: 1 };
           for (let e = 0; e < t.length; e++) {
             const n = t[e],
               o = n.percent,
@@ -65382,16 +64695,8 @@ class NV {
       d.setGeometry(t, {
         curveLen: r,
         isGeoUv: !1,
-        lineConfig: {
-          lineType: 0.02,
-          blurRatio: 0,
-          lineTextureNum: 0.05,
-        },
-        symbolConfig: {
-          symbolType: 0.01,
-          symbolNum: 0.01,
-          symbolAspect: 0.01,
-        },
+        lineConfig: { lineType: 0.02, blurRatio: 0, lineTextureNum: 0.05 },
+        symbolConfig: { symbolType: 0.01, symbolNum: 0.01, symbolAspect: 0.01 },
       });
     }
     d.createGeometry();
@@ -65422,7 +64727,6 @@ function RV(t) {
     e
   );
 }
-window.RV = RV;
 const OV = (t, e, i, n) => {
   let r, o, a;
   switch (n) {
@@ -65574,13 +64878,7 @@ function FV(t, e) {
   if (i) OV(t, i, "map", e);
   else {
     a.map = null;
-    const i = n
-      ? EA(n)
-      : {
-          color: CU,
-          transparent: wU,
-          opacity: 1,
-        };
+    const i = n ? EA(n) : { color: CU, transparent: wU, opacity: 1 };
     n && t.textureManager(`${e}-map`).abort(),
       (a.color = i.color),
       (a.opacity = i.opacity),
@@ -65591,8 +64889,85 @@ function FV(t, e) {
     ? (OV(t, r, "normalMap", e), (a.normalScale = new Le(o, o)))
     : ((a.normalMap = null), (a.needsUpdate = !0));
 }
-window.FV = FV;
-
+function zV(t) {
+  const {
+    districtStyle: { innerShadow: e },
+  } = t.state;
+  if (e && e.enabled && e.shadowColor && e.shadowBlurScale) {
+    const { bboxOption: i, boundary: n } = t.gis.globalOpts,
+      r = (function (t) {
+        const {
+            geojson: e,
+            bboxOption: i,
+            maxZoom: n,
+            shadowColor: r,
+            shadowBlurScale: o,
+          } = t,
+          { bbox: a } = i,
+          s = MV({
+            tileUrl: "",
+            bbox: a,
+            maxZoom: n,
+            worldBboxSize: Vf,
+            bboxOption: i,
+            isExtrudeBackground: !1,
+          }),
+          { zoom: l } = s,
+          u = wV(a[0], a[1], l),
+          c = wV(a[2], a[3], l),
+          h = Math.abs(u[0] - c[0]),
+          p = Math.abs(u[1] - c[1]),
+          d = document.createElement("canvas");
+        (d.width = h),
+          (d.height = p),
+          (d.style.width = h + "px"),
+          (d.style.height = p + "px");
+        const f = d.getContext("2d"),
+          g = { fill: !0, fillColor: r, shadowColor: r, shadowBlur: 100 },
+          m = am.flatten(Object.assign({}, e));
+        let y, v;
+        for (y = 0; y < m.features.length; y++) {
+          v = m.features[y];
+          const t = am.bbox(v),
+            e = wV(t[0], t[1], l),
+            i = wV(t[2], t[3], l),
+            n = Math.abs(e[0] - i[0]),
+            r = Math.abs(e[1] - i[1]);
+          if (n > 0 && r > 0) {
+            g.shadowBlur = Math.min(n, r) * o;
+            const t = AV({
+              feature: v,
+              zoom: l,
+              style: g,
+              width: n,
+              height: r,
+              offset: [e[0], i[1]],
+            });
+            f.drawImage(
+              t,
+              Math.abs(e[0] - u[0]),
+              Math.abs(i[1] - c[1]),
+              t.width,
+              t.height
+            );
+          }
+        }
+        return d;
+      })({
+        geojson: n,
+        bboxOption: i,
+        maxZoom: 12,
+        shadowColor: e.shadowColor,
+        shadowBlurScale: e.shadowBlurScale,
+      });
+    (t.extrudeInnerShadowMaterial.map = new Es(r)),
+      (t.extrudeInnerShadowMaterial.opacity = 1),
+      (t.extrudeInnerShadowMaterial.needsUpdate = !0);
+  } else
+    (t.extrudeInnerShadowMaterial.map = null),
+      (t.extrudeInnerShadowMaterial.opacity = 0),
+      (t.extrudeInnerShadowMaterial.needsUpdate = !0);
+}
 function kV(t) {
   var e;
   const {
@@ -65614,20 +64989,12 @@ function kV(t) {
     (t.boundaryStreamerLayer = a), a.set(o), t.districtStrokeGroup.add(a.group);
   }
 }
-window.kV = kV;
 function BV(t, e) {
   const { colorConfig: i } = e.sideConfig,
     { bottomColor: n, topColor: r, bottomOpacity: o, topOpacity: a } = GV(i);
-  (t.uniforms.topColor.value = {
-    color: r,
-    opacity: a,
-  }),
-    (t.uniforms.bottomColor.value = {
-      color: n,
-      opacity: o,
-    });
+  (t.uniforms.topColor.value = { color: r, opacity: a }),
+    (t.uniforms.bottomColor.value = { color: n, opacity: o });
 }
-window.BV = BV;
 function GV(t) {
   let e, i, n, r;
   switch (t.range.length) {
@@ -65643,14 +65010,8 @@ function GV(t) {
       const s = EA(t.range[1]);
       (i = s.color), (r = s.opacity);
   }
-  return {
-    bottomColor: e,
-    topColor: i,
-    bottomOpacity: n,
-    topOpacity: r,
-  };
+  return { bottomColor: e, topColor: i, bottomOpacity: n, topOpacity: r };
 }
-window.GV = GV;
 function UV(t, e) {
   const i = t.bboxProj,
     n = 1.4 * t.size.bboxSize,
@@ -65683,19 +65044,12 @@ function UV(t, e) {
       bbox2: s,
       center: u,
       centerProj: d,
-      size: {
-        width: f,
-        height: g,
-        minSize: m,
-        maxSize: y,
-        bboxSize: v,
-      },
+      size: { width: f, height: g, minSize: m, maxSize: y, bboxSize: v },
       bboxScale: v / Vf,
       baseHeight: 0.05 * t.size.bboxSize * 0.2,
     };
   return (e.gis.globalOpts.backgroundBboxOption = b), b;
 }
-window.UV = UV;
 function jV(t, e) {
   const i = e.extrudeBackgroundFillGroup.children.find(
     (t) => "Mesh" === t.type && "side" === t.userData.faceType
@@ -65706,7 +65060,6 @@ function jV(t, e) {
   );
   n && ((n.scale.z = t || 1), (n.position.z = 0));
 }
-window.jV = jV;
 async function HV(t, e = "all") {
   var i;
   if (!t.subDistrictData) return;
@@ -65735,11 +65088,7 @@ async function HV(t, e = "all") {
       }
       return null;
     })(t),
-    s = new pn({
-      transparent: !0,
-      color: CU,
-      opacity: 0,
-    });
+    s = new pn({ transparent: !0, color: CU, opacity: 0 });
   t.subDistrictData.forEach((i) => {
     var r;
     const l = i.properties.name,
@@ -65792,7 +65141,6 @@ async function HV(t, e = "all") {
         t.subDistrictInfoArr.push(h);
   });
 }
-window.HV = HV;
 function VV(t, e) {
   if (sf(t, "stroke")) {
     const i = EA(t.stroke.color);
@@ -65807,7 +65155,6 @@ function VV(t, e) {
         });
   }
 }
-window.VV = VV;
 function WV(t) {
   var e, i;
   t.clearPoiGroup(), t.clearInteractionGroup(), (t.coreGroup.visible = !1);
@@ -65860,17 +65207,13 @@ function qV(t, e) {
   if (!t) return -1;
   return t.default.findIndex((t) => !!t.get(e));
 }
-window.qV = qV;
 const YV = class {
   static async getGeoBuf2GeoJsonByUrl(t, e) {
     try {
-      const i = await fetch(t);
-      const n = await i.arrayBuffer();
-      const r = new ak(YV.dataSet);
-      const o = r.parse(n, {
-        type: "geobuf",
-        options: e,
-      }).latestData;
+      const i = await fetch(t),
+        n = await i.arrayBuffer(),
+        r = new ak(YV.dataSet),
+        o = r.parse(n, { type: "geobuf", options: e }).latestData;
       return r.destroy(), o;
     } catch (i) {
       return console.error("[xGis]", `${i}`), null;
@@ -65881,10 +65224,7 @@ const YV = class {
       const i = await fetch(t),
         n = await i.json(),
         r = new ak(YV.dataSet),
-        o = r.parse(n, {
-          type: "geojson",
-          options: e,
-        }).latestData;
+        o = r.parse(n, { type: "geojson", options: e }).latestData;
       return r.destroy(), o;
     } catch (i) {
       return console.error("[xGis]", `${i}`), null;
@@ -65936,10 +65276,7 @@ const YV = class {
         );
       }
     else n = -1;
-    return {
-      level: n,
-      adcode: i,
-    };
+    return { level: n, adcode: i };
   }
   static getGeoCoordByAlias(t, e) {
     var i, n;
@@ -65960,20 +65297,12 @@ const YV = class {
       o = e.layerManager.baseMapLayer.subDistrictInfoArr.find(
         (t) => t.name === r
       );
-    return o
-      ? {
-          lng: o.lng,
-          lat: o.lat,
-        }
-      : void 0;
+    return o ? { lng: o.lng, lat: o.lat } : void 0;
   }
   static getGeoCoord(t) {
     if (t.layerManager.baseMapLayer)
       return t.layerManager.baseMapLayer.subDistrictInfoArr.map((t) =>
-        ot(rt({}, t), {
-          lng: t.lng,
-          lat: t.lat,
-        })
+        ot(rt({}, t), { lng: t.lng, lat: t.lat })
       );
     console.error(
       "[xGis]",
@@ -65989,14 +65318,8 @@ const YV = class {
       o = QH(n.top, e.cameraSystem.coreCamera, e.state.containerDom);
     return {
       screen: {
-        top: {
-          x: o.screenX,
-          y: o.screenY,
-        },
-        center: {
-          x: r.screenX,
-          y: r.screenY,
-        },
+        top: { x: o.screenX, y: o.screenY },
+        center: { x: r.screenX, y: r.screenY },
       },
     };
   }
@@ -66021,11 +65344,7 @@ const YV = class {
         console.error("[xGis]", `传入name ${t} 无法解析到对应Object`), null
       );
     const a = QH(XH(o).center, e.cameraSystem.coreCamera, e.props.containerDom);
-    return {
-      x: a.screenX,
-      y: a.screenY,
-      properties: o.ext,
-    };
+    return { x: a.screenX, y: a.screenY, properties: o.ext };
   }
   static exportImage(t, e = "gis") {
     const { renderSystem: i } = t;
@@ -66057,15 +65376,1319 @@ let XV = YV;
     return Kz(r, n, i);
   }),
   XV.dataSet.registerParser("geojson", Kz);
-
-window.XV = XV;
-
+const QV = { useProcess: !0, useProject: !0 };
+async function ZV(t, e) {
+  if (!(null == t ? void 0 : t.data)) return null;
+  const { type: i, data: n, simplify: r } = t,
+    { useProject: o, useProcess: a } = af(QV, e);
+  let s, l;
+  switch (i) {
+    case xk.GEOJSON:
+      s = n;
+      break;
+    case xk.GEOJSON_URL:
+      (l = t.data), (s = await XV.getGeoJsonByUrl(l));
+      break;
+    case xk.GEOBUF_URL:
+      (l = t.data), (s = await XV.getGeoBuf2GeoJsonByUrl(l));
+      break;
+    case xk.GEOBUF:
+    default:
+      console.error("[xGis]", `地图数据 url ${l} 格式无法解析`);
+  }
+  return (
+    (t.__raw_geojson__ = s),
+    (t.__geojson__ = s),
+    (null == r ? void 0 : r.enabled) &&
+      (t.__geojson__ = am.simplify(t.__geojson__, r.tolerance)),
+    a && (t.__geojson_process__ = lV(t.__geojson__)),
+    o &&
+      (t.__geojson_process_proj__ = sm(
+        a ? t.__geojson_process__ : t.__geojson__,
+        Qf
+      )),
+    t
+  );
+}
+const JV = {
+  bboxSize: 68016,
+  height: 50503.97002946732,
+  maxSize: 68565.51601500002,
+  minSize: 50503.97002946732,
+  width: 68565.51601500002,
+};
+function KV(t) {
+  const {
+      geojson: e,
+      geojsonProj: i,
+      geojsonUtil: n,
+      worldBboxSize: r,
+      heightScale: o,
+      pitch: a,
+      rotation: s,
+      offset: l,
+      viewClip: u,
+    } = t,
+    c = n.bbox(i);
+  let h = c;
+  u &&
+    (h = (function (t, e, i) {
+      const n = [0, 0, 0, 0];
+      switch (i) {
+        case "bottom-right":
+          (n[0] = t[0]),
+            (n[1] = Math.max(t[1], e[3])),
+            (n[2] = Math.min(t[2], e[0])),
+            (n[3] = t[3]);
+          break;
+        case "bottom":
+          (n[0] = t[0]),
+            (n[1] = Math.max(t[1], e[3])),
+            (n[2] = t[2]),
+            (n[3] = t[3]);
+          break;
+        case "top":
+          (n[0] = t[0]),
+            (n[1] = t[1]),
+            (n[2] = t[2]),
+            (n[3] = Math.min(t[3], e[1]));
+          break;
+        case "left":
+          (n[0] = Math.max(t[0], e[2])),
+            (n[1] = t[1]),
+            (n[2] = t[2]),
+            (n[3] = t[3]);
+          break;
+        case "right":
+          (n[0] = t[0]),
+            (n[1] = t[1]),
+            (n[2] = Math.min(t[2], e[0])),
+            (n[3] = t[3]);
+      }
+      return n;
+    })(
+      c,
+      [...Qf([u.bbox[0], u.bbox[1]]), ...Qf([u.bbox[2], u.bbox[3]])],
+      u.direction
+    ));
+  const p = (function (t, e, i) {
+      const n = [(t[0] + t[2]) / 2, (t[1] + t[3]) / 2, 0],
+        r = [t[0], t[1]],
+        o = [t[2], t[3]],
+        a = [...Zf(r), ...Zf(o)],
+        s = [(a[0] + a[2]) / 2, (a[1] + a[3]) / 2, 0],
+        l = Math.abs(t[0] - t[2]),
+        u = Math.abs(t[1] - t[3]),
+        c = Math.min(l, u),
+        h = Math.max(l, u),
+        p = JV.width,
+        d = JV.height,
+        f = JV.bboxSize,
+        g = ef([l / p, u / d]) * f,
+        m = g / e,
+        y = g * i * 0.05;
+      return {
+        bbox: a,
+        bboxProj: t,
+        center: s,
+        centerProj: n,
+        size: { width: l, height: u, minSize: c, maxSize: h, bboxSize: g },
+        bboxScale: m,
+        baseHeight: y,
+      };
+    })(h, r, o),
+    d = [(h[0] + h[2]) / 2, (h[1] + h[3]) / 2, 0],
+    f = p.size.bboxSize * l[2],
+    g = oA(a, s).map((t) => t * f);
+  (g[0] += d[0]), (g[1] += d[1]), (g[2] += d[2]);
+  const m = aA(a, s);
+  return {
+    boundary: e,
+    boundaryProj: i,
+    bboxOption: p,
+    viewBBoxOption: p,
+    cameraStatus: {
+      near: Math.max(p.size.bboxSize, 0.001),
+      far: 10 * p.size.bboxSize,
+      target: [d[0] + l[0] * p.size.bboxSize, d[1] + l[1] * p.size.bboxSize, 0],
+      position: [
+        g[0] + l[0] * p.size.bboxSize,
+        g[1] + l[1] * p.size.bboxSize,
+        g[2],
+      ],
+      up: m,
+    },
+    layerFitValue: {
+      xy: p.size.bboxSize >> 4,
+      z: p.size.bboxSize >> 3,
+      flylineWidth: p.size.bboxSize >> 12,
+      straightLineWidth: p.size.bboxSize >> 6,
+    },
+  };
+}
+async function $V(t) {
+  try {
+    const { drill: e, data: i } = t.state;
+    e.enabled && e.data
+      ? await (async function (t) {
+          const { drill: e } = t.state;
+          (t.drillData = await (async function (t, e, i) {
+            const n = [];
+            for (let r = e[0]; r <= e[1]; r++) {
+              const e = t[String(r)];
+              if (e) {
+                const { data: t, type: i } = e;
+                let r = t;
+                switch (i) {
+                  case xk.GEOJSON:
+                    n.push(
+                      new Promise((e) => {
+                        e(t);
+                      })
+                    );
+                    break;
+                  case xk.GEOBUF_URL:
+                    (r = t), n.push(XV.getGeoBuf2GeoJsonByUrl(r));
+                    break;
+                  case xk.GEOJSON_URL:
+                    (r = t), n.push(XV.getGeoJsonByUrl(r));
+                    break;
+                  case xk.GEOBUF:
+                  default:
+                    console.error("[xGis]", `地图数据 url ${r} 格式无法解析`);
+                }
+              } else
+                3 === r ||
+                  console.error(
+                    "[xGis]",
+                    `钻取地图 level ${r} 无法匹配对应数据`
+                  );
+            }
+            return Promise.all(n)
+              .then((t) => {
+                const n = (function (t, e, i) {
+                  const n = { default: [], process: [] };
+                  if (
+                    (t.forEach((e, r) => {
+                      const o = new Map();
+                      let a = new Map();
+                      const s = i[String(r)];
+                      if (s <= r)
+                        console.error(
+                          "[xGis]",
+                          `配置 granularity ${s} 必须大于 level ${r} `
+                        );
+                      else {
+                        let i;
+                        switch (r) {
+                          case 0:
+                            switch ((o.set(Mk, t[0].features), s)) {
+                              case 1:
+                                (i = t[0]), a.set(Mk, i.features);
+                                break;
+                              case 2:
+                                const e = [];
+                                (i = t[1]),
+                                  i.features.forEach((i) => {
+                                    const n = i.properties.parent;
+                                    if (Lk.includes(n)) {
+                                      const i = t[0].features.find(
+                                        (t) => t.properties.id === n
+                                      );
+                                      e.find(
+                                        (t) =>
+                                          t.properties.id === i.properties.id
+                                      ) || e.push(i);
+                                    } else e.push(i);
+                                  }),
+                                  a.set(Mk, e);
+                                break;
+                              default:
+                                (i = t[2]), a.set(Mk, i.features);
+                            }
+                            break;
+                          case 1:
+                            if (
+                              ((i = t[s - 1]),
+                              e.features.forEach((t) => {
+                                const e = t.properties.parent,
+                                  i = o.get(e);
+                                Array.isArray(i) ? i.push(t) : o.set(e, [t]);
+                              }),
+                              2 === s)
+                            )
+                              a = o;
+                            else
+                              i &&
+                                e.features.forEach((t) => {
+                                  const e = t.properties.parent;
+                                  let n = a.get(e);
+                                  Array.isArray(n) || a.set(e, []),
+                                    (n = a.get(e)),
+                                    Lk.includes(e)
+                                      ? n.push(t)
+                                      : i.features.forEach((t) => {
+                                          const i = t.properties.acroutes;
+                                          if (i) {
+                                            i.split(",")[1] === e && n.push(t);
+                                          }
+                                        });
+                                });
+                            break;
+                          case 2:
+                            e.features.forEach((t) => {
+                              const e = t.properties.parent,
+                                i = o.get(e);
+                              Array.isArray(i) ? i.push(t) : o.set(e, [t]);
+                            }),
+                              (a = o);
+                            break;
+                          default:
+                            console.error(
+                              "[xGis]",
+                              "钻取地图 数据 data 超出三级结构"
+                            );
+                        }
+                      }
+                      n.default.push(o), n.process.push(a);
+                    }),
+                    t[1] && t[2] && 3 === e[e.length - 1])
+                  ) {
+                    const e = new Map();
+                    let i = new Map();
+                    t[1].features.forEach((t) => {
+                      if (Lk.includes(t.properties.parent)) {
+                        const i = t.properties.id,
+                          n = e.get(i);
+                        Array.isArray(n)
+                          ? n.push(t)
+                          : e.set(t.properties.id, [t]);
+                      }
+                    }),
+                      t[2].features.forEach((t) => {
+                        const i = t.properties.id,
+                          n = e.get(i);
+                        Array.isArray(n) ? n.push(t) : e.set(i, [t]);
+                      }),
+                      (i = e),
+                      n.default.push(e),
+                      n.process.push(i);
+                  }
+                  return n;
+                })(t, e, i);
+                return n;
+              })
+              .catch(
+                (t) => (
+                  console.error("[xGis]", t), { default: [], process: [] }
+                )
+              );
+          })(e.data, e.level.range, e.granularity)),
+            (t.currentCode = e.level.adcode),
+            (t.currentLevel = qV(t.drillData, t.currentCode));
+          const i = XV.getParentInfoByAdCode(t.currentCode, t.gis);
+          (t.currentParentLevel = i.level), (t.currentParentCode = i.adcode);
+        })(t)
+      : await ZV(null == i ? void 0 : i.subDistrict),
+      i.district ||
+        (i.district = {
+          type: xk.GEOJSON,
+          data: {
+            type: "FeatureCollection",
+            features: [
+              {
+                type: "Feature",
+                properties: {},
+                geometry: am.dissolve(i.subDistrict.__raw_geojson__),
+              },
+            ],
+          },
+        }),
+      await ZV(null == i ? void 0 : i.district),
+      (async function (t) {
+        const {
+            data: { region: e, subDistrict: i },
+            drill: { data: n, granularity: r, enabled: o },
+          } = t.state,
+          a = o && n;
+        e &&
+          Object.values(e).forEach((e) => {
+            let n, o, s, l, u;
+            if (a) {
+              if (
+                ((u = t.drillData.default[0]
+                  .get(Mk)
+                  .filter((t) => e.child.includes(t.properties.id))),
+                u.length > 0)
+              ) {
+                let i;
+                switch (r.region) {
+                  case 1:
+                    i = u;
+                    break;
+                  case 2:
+                    const n = [];
+                    for (const [i, o] of t.drillData.default[1].entries())
+                      e.child.includes(i) &&
+                        (Lk.includes(i)
+                          ? n.push(
+                              t.drillData.default[0]
+                                .get(Mk)
+                                .find((t) => t.properties.id === i)
+                            )
+                          : n.push(...o));
+                    i = n;
+                    break;
+                  case 3:
+                    const r = [];
+                    for (const [i, o] of t.drillData.default[2].entries()) {
+                      const t = o[0].properties.acroutes;
+                      if (t) {
+                        const i = t.split(",")[1];
+                        e.child.includes(i) && r.push(...o);
+                      }
+                    }
+                    i = r;
+                }
+                t.drillData.default[0].set(e.adcode, u),
+                  t.drillData.process[0].set(e.adcode, i);
+                const a = t.drillData.process[0].get(e.adcode);
+                (n = [
+                  { type: "Feature", properties: {}, geometry: am.dissolve(a) },
+                ]),
+                  (o = sm(
+                    lV({ type: "FeatureCollection", features: n }),
+                    Qf
+                  ).features),
+                  (s = t.drillData.process[0].get(e.adcode)),
+                  (l = sm(
+                    lV({ type: "FeatureCollection", features: s }),
+                    Qf
+                  ).features);
+              }
+            } else if (
+              ((u = i.__geojson__.features.filter((t) =>
+                e.child.includes(t.properties.id)
+              )),
+              u.length > 0)
+            ) {
+              const i = u;
+              t.drillData.default[0].set(e.adcode, u),
+                t.drillData.process[0].set(e.adcode, i),
+                (n = [
+                  { type: "Feature", properties: {}, geometry: am.dissolve(i) },
+                ]),
+                (o = sm(
+                  lV({ type: "FeatureCollection", features: n }),
+                  Qf
+                ).features),
+                (s = i),
+                (l = sm(
+                  lV({ type: "FeatureCollection", features: s }),
+                  Qf
+                ).features);
+            }
+            u.length > 0 &&
+              (t.state = af(t.state, {
+                data: {
+                  [e.adcode]: {
+                    districtData: o,
+                    rawDistrictData: n,
+                    subDistrictData: l,
+                    rawSubDistrictData: s,
+                  },
+                },
+              }));
+          });
+      })(t);
+  } catch (e) {
+    throw new Error("地图数据加载失败");
+  }
+}
+function tW(t) {
+  var e, i, n;
+  try {
+    const { drill: r, data: o } = t.state,
+      a = r.enabled && r.data;
+    if (a)
+      if (0 === t.currentLevel) {
+        const e =
+          !!o.region &&
+          Object.values(o.region).find((e) => e.adcode === t.currentCode);
+        e
+          ? ((t.rawDistrictData = o[e.adcode].rawDistrictData),
+            (t.districtData = o[e.adcode].districtData),
+            (t.currentRegion = e.adcode))
+          : ((t.rawDistrictData = o.district.__geojson__.features),
+            (t.districtData = o.district.__geojson_process_proj__.features));
+      } else
+        (t.rawDistrictData = [
+          t.drillData.default[t.currentParentLevel]
+            .get(t.currentParentCode)
+            .find((e) => e.properties.id === t.currentCode),
+        ]),
+          (t.districtData = sm(
+            lV({ type: "FeatureCollection", features: t.rawDistrictData }),
+            Qf
+          ).features);
+    else
+      (null == (e = o.district) ? void 0 : e.data) &&
+        ((t.districtData = o.district.__geojson_process_proj__.features),
+        (t.rawDistrictData = o.district.__geojson__.features));
+    if (a) {
+      t.rawSubDistrictData = t.drillData.default[t.currentLevel].get(
+        t.currentCode
+      );
+      let e = { type: "FeatureCollection", features: t.rawSubDistrictData };
+      const n =
+        null == (i = t.state.drill.data[t.currentLevel]) ? void 0 : i.simplify;
+      (null == n ? void 0 : n.enabled) && (e = am.simplify(e, n.tolerance)),
+        (t.subDistrictData = sm(lV(e), Qf).features);
+    } else
+      (null == (n = o.subDistrict) ? void 0 : n.data) &&
+        ((t.subDistrictData = o.subDistrict.__geojson_process_proj__.features),
+        (t.rawSubDistrictData = o.subDistrict.__geojson__.features));
+  } catch (r) {
+    throw ((t.isDrilling = !1), new Error("地图数据生成失败"));
+  }
+}
+class eW extends oV {
+  constructor(t, e, i) {
+    super(t, e),
+      (this.gis = t),
+      (this.props = e),
+      (this.cb = i),
+      (this.isDrilling = !1),
+      (this.drillData = { default: [new Map()], process: [new Map()] }),
+      (this.currentCode = Mk),
+      (this.currentLevel = 0),
+      (this.currentParentCode = null),
+      (this.currentParentLevel = -1),
+      (this.drillCache = {}),
+      (this.subDistrictInfoArr = []),
+      (this.currentRegion = null);
+  }
+  async init() {
+    this._initialState(),
+      this._initLayerGroup(),
+      await this.__initMap(),
+      this.gis.__destroyed ||
+        (this.__initEvent(),
+        this.animation.start(),
+        super.registerInteraction(
+          this.state.interaction,
+          this.subDistrictFillGroup,
+          !1
+        ),
+        super.emitPropsWatch(),
+        this.registerHeightScale(),
+        this.ee.emit("loaded", this),
+        this.cb());
+  }
+  _initialState() {
+    super._initialState({});
+  }
+  _initLayerGroup() {
+    super._initLayerGroup({ layerName: "base-map-layer", layerType: "base" }),
+      this.__releaseLayerGroup();
+  }
+  __initEvent() {
+    const { drill: t } = this.state;
+    t.enabled &&
+      (t.preventMouse ||
+        (this.gis.eventManager.bindEvent(this.id, t.drillUpEvent),
+        this.gis.eventManager.bindEvent(this.id, t.drillDownEvent)));
+  }
+  __releaseLayerGroup() {
+    (this.districtStrokeGroup = new As()),
+      (this.districtStrokeGroup.name = "district-stroke"),
+      (this.districtBottomStrokeGroup = new As()),
+      (this.districtBottomStrokeGroup.name = "district-bottom-stroke"),
+      (this.districtFillGroup = new As()),
+      (this.districtFillGroup.name = "district-fill"),
+      (this.extrudeBackgroundFillGroup = new As()),
+      (this.extrudeBackgroundFillGroup.name = "extrude-background-fill"),
+      (this.subDistrictStrokeGroup = new As()),
+      (this.subDistrictStrokeGroup.name = "sub-district-stroke"),
+      (this.subDistrictFillGroup = new As()),
+      (this.subDistrictFillGroup.name = "sub-district-fill"),
+      (this.listenerObj = this.subDistrictFillGroup),
+      this.coreGroup.add(
+        this.districtStrokeGroup,
+        this.districtBottomStrokeGroup,
+        this.districtFillGroup,
+        this.extrudeBackgroundFillGroup,
+        this.subDistrictFillGroup,
+        this.subDistrictStrokeGroup
+      ),
+      (this.coreGroup.userData.invertedRelection = !0),
+      (this.districtStrokeGroup.userData.invertedRelection = !1),
+      (this.districtBottomStrokeGroup.userData.invertedRelection = !1),
+      (this.districtFillGroup.userData.invertedRelection = !0),
+      (this.extrudeBackgroundFillGroup.userData.invertedRelection = !0),
+      (this.subDistrictFillGroup.userData.invertedRelection = !1),
+      (this.subDistrictStrokeGroup.userData.invertedRelection = !1);
+  }
+  set(t) {
+    return super.set(t), this;
+  }
+  get() {
+    return super.get();
+  }
+  add() {
+    return this;
+  }
+  remove() {
+    super.remove();
+  }
+  updateArea(t) {
+    const { cameraStatus: e } = this.gis.globalOpts,
+      {
+        drill: { duration: i },
+      } = this.state,
+      { cameraChange: n, cameraTween: r } = af(Ok, t);
+    n &&
+      this.gis.viewportSystem.setCameraState(
+        e,
+        r ? { duration: i, type: "straight" } : void 0
+      ),
+      this.updateBaseHeight(),
+      this._updatePOI(!0);
+  }
+  async initExtrude() {
+    const { bboxOption: t, boundary: e, boundaryProj: i } = this.gis.globalOpts,
+      { districtStyle: n, extrudeBackgroundStyle: r } = this.state;
+    if (
+      (n &&
+        n.enabled &&
+        (function (t, e) {
+          const { geojson: i, bboxOption: n } = t,
+            r = bV(i, n.bboxProj);
+          let o = 0,
+            a = 0,
+            s = 0,
+            l = 0;
+          const u = n.baseHeight ? n.baseHeight : 1;
+          for (let c = 0; c < r.group.length; c += 3)
+            switch (
+              ((o += s),
+              (a += l),
+              (s = r.group[c + 1]),
+              (l = r.group[c + 2]),
+              r.group[c])
+            ) {
+              case 0:
+                const t = RV({
+                    index: r.index.slice(o, 1 * (o + s)),
+                    position: r.position.slice(3 * a, 3 * (a + l)),
+                    normal: r.normal.slice(3 * a, 3 * (a + l)),
+                    uv: r.uv.slice(2 * a, 2 * (a + l)),
+                  }),
+                  i = new Wn(t, e.extrudeTopMaterial);
+                i.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
+                  (i.scale.z = u),
+                  (i.position.z = 0),
+                  (i.userData.faceType = "top"),
+                  (i.name = "map-top"),
+                  (i.frustumCulled = !1),
+                  e.districtFillGroup.add(i);
+                const n = new Wn(t, e.extrudeInnerShadowMaterial);
+                n.setRenderIndex(lU.BASE_MAP_LAYER_INNERSHADOW_MESH),
+                  (n.scale.z = 1.01 * u),
+                  (n.position.z = 0),
+                  (n.userData.faceType = "map-innerShadow"),
+                  (n.name = "map-innerShadow"),
+                  (n.frustumCulled = !1),
+                  e.districtFillGroup.add(n);
+                break;
+              case 1:
+                const c = RV({
+                    index: r.index.slice(o, 1 * (o + s)),
+                    position: r.position.slice(3 * a, 3 * (a + l)),
+                    normal: r.normal.slice(3 * a, 3 * (a + l)),
+                    uv: r.uv.slice(2 * a, 2 * (a + l)),
+                  }),
+                  h = new Wn(c, e.extrudeSideMaterial);
+                h.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
+                  (h.scale.z = u),
+                  (h.position.z = 0),
+                  (h.name = "map-side"),
+                  (h.userData.faceType = "side"),
+                  (h.userData.invertedRelection = !0),
+                  (h.castShadow = !0),
+                  (h.frustumCulled = !1),
+                  e.districtFillGroup.add(h);
+            }
+        })({ geojson: i, bboxOption: t }, this),
+      r && r.enabled)
+    ) {
+      if (!this.bgGeoData) {
+        const t = {
+          type: xk.GEOBUF_URL,
+          data: `https://lf3-dpfe.${atob(
+            "Ynl0ZXRvcy5jb20="
+          )}/obj/gis/data/worldborderworldborder_gc.pbf`,
+        };
+        this.bgGeoData = await ZV(t, { useProcess: !1, useProject: !1 });
+      }
+      const i = UV(t, this),
+        n = (function (t, e, i) {
+          const { bbox2: n } = t,
+            r = Ww.intersect(
+              {
+                type: "Feature",
+                properties: {},
+                geometry: {
+                  type: "Polygon",
+                  coordinates: [
+                    [
+                      [n[0], n[1]],
+                      [n[2], n[1]],
+                      [n[2], n[3]],
+                      [n[0], n[3]],
+                      [n[0], n[1]],
+                    ],
+                  ],
+                },
+              },
+              e.__geojson__.features[0]
+            );
+          let o = { type: "FeatureCollection", features: [r] };
+          o = am.rewind(o);
+          const a = Ww.distance(
+              {
+                type: "Feature",
+                properties: {},
+                geometry: {
+                  type: "Point",
+                  coordinates: [t.bbox[0], t.bbox[1]],
+                },
+              },
+              {
+                type: "Feature",
+                properties: {},
+                geometry: {
+                  type: "Point",
+                  coordinates: [t.bbox[2], t.bbox[3]],
+                },
+              },
+              { units: "meters" }
+            ),
+            s = Ww.buffer(i.features[0], ~~(0.001 * a), {
+              units: "meters",
+              steps: 1,
+            });
+          return (
+            (o = {
+              type: "FeatureCollection",
+              features: [Ww.difference(r, s)],
+            }),
+            sm(lV(o), Qf)
+          );
+        })(i, this.bgGeoData, e);
+      !(function (t, e) {
+        const { geojson: i, bboxOption: n } = t,
+          r = bV(i, n.bboxProj);
+        let o = 0,
+          a = 0,
+          s = 0,
+          l = 0;
+        for (let u = 0; u < r.group.length; u += 3)
+          switch (
+            ((o += s),
+            (a += l),
+            (s = r.group[u + 1]),
+            (l = r.group[u + 2]),
+            r.group[u])
+          ) {
+            case 0:
+              const t = RV({
+                  index: r.index.slice(o, 1 * (o + s)),
+                  position: r.position.slice(3 * a, 3 * (a + l)),
+                  normal: r.normal.slice(3 * a, 3 * (a + l)),
+                  uv: r.uv.slice(2 * a, 2 * (a + l)),
+                }),
+                i = new Wn(t, e.extrudeBackgroundTopMaterial);
+              i.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
+                (i.scale.z = n.baseHeight ? n.baseHeight : 1),
+                (i.position.z = 0),
+                (i.userData.faceType = "top"),
+                (i.name = "map-top"),
+                (i.receiveShadow = !0),
+                (i.frustumCulled = !1),
+                e.extrudeBackgroundFillGroup.add(i);
+              break;
+            case 1:
+              const u = RV({
+                  index: r.index.slice(o, 1 * (o + s)),
+                  position: r.position.slice(3 * a, 3 * (a + l)),
+                  normal: r.normal.slice(3 * a, 3 * (a + l)),
+                  uv: r.uv.slice(2 * a, 2 * (a + l)),
+                }),
+                c = new Wn(u, e.extrudeBackgroundSideMaterial);
+              c.setRenderIndex(lU.BASE_MAP_LAYER_EXTRUDE_MESH),
+                (c.scale.z = n.baseHeight ? n.baseHeight : 1),
+                (c.position.z = 0),
+                (c.name = "map-side"),
+                (c.userData.faceType = "side"),
+                (c.userData.invertedRelection = !0),
+                (c.castShadow = !0),
+                (c.frustumCulled = !1),
+                e.extrudeBackgroundFillGroup.add(c);
+          }
+      })({ geojson: n, bboxOption: i }, this);
+    }
+  }
+  async updateExtrudeStyle() {
+    const { districtStyle: t, extrudeBackgroundStyle: e } = this.state;
+    t && t.enabled && (FV(this, "extrude"), zV(this), kV(this)),
+      e && e.enabled && FV(this, "extrude-background");
+  }
+  updateBaseHeight() {
+    const { globalOpts: t } = this.gis;
+    if (t) {
+      const {
+        bboxOption: { baseHeight: e },
+      } = t;
+      this.districtStrokeGroup.position.setZ(e),
+        this.subDistrictStrokeGroup.position.setZ(e),
+        this.subDistrictFillGroup.position.setZ(e),
+        this.poiGroup.updateBaseHeight(e),
+        (function (t, e) {
+          e.districtFillGroup.children.forEach((e) => {
+            "map-innerShadow" === e.userData.faceType
+              ? (e.scale.z = 1.01 * (t || 1))
+              : (e.scale.z = t || 1),
+              (e.position.z = 0);
+          });
+        })(e, this),
+        jV(e, this);
+    }
+  }
+  async __initMap(t) {
+    const { districtStyle: e, extrudeBackgroundStyle: i } = this.state,
+      { sceneSystem: n } = this.gis;
+    await $V(this),
+      this.gis.__destroyed ||
+        (tW(this),
+        uV(this),
+        HV(this),
+        this.scaleAdaptation(!1),
+        t
+          ? this.gis.viewportSystem.init("xgis")
+          : this.gis.viewportSystem.init(),
+        this.scaleAdaptation(!1),
+        (function (t, e, i) {
+          const n = EA(e.state.background.color);
+          (i.extrudeTopMaterial = new zA({
+            color: n.color,
+            transparent: !0,
+            depthTest: !0,
+            depthWrite: !0,
+          })),
+            (i.extrudeInnerShadowMaterial = new zA({
+              transparent: !0,
+              depthTest: !0,
+              depthWrite: !0,
+            }));
+          const { colorConfig: r } = t.sideConfig,
+            {
+              bottomColor: o,
+              topColor: a,
+              bottomOpacity: s,
+              topOpacity: l,
+            } = GV(r);
+          i.extrudeSideMaterial = new Jn({
+            uniforms: {
+              type: {
+                type: "int",
+                value: ((t) => {
+                  switch (t) {
+                    case "linear":
+                      return 1;
+                    case "ordinal":
+                      return 2;
+                  }
+                })(r.type),
+              },
+              bottomColor: { type: "vec3", value: { color: o, opacity: s } },
+              topColor: { type: "vec3", value: { color: a, opacity: l } },
+            },
+            transparent: !0,
+            vertexShader:
+              "varying vec2 vUv;\n\n#include <common>  \n#include <uv_pars_vertex>  \n#include <uv2_pars_vertex>  \n#include <logdepthbuf_pars_vertex>  \n#include <clipping_planes_pars_vertex>   \n\nvoid main() {\n\n  #include <uv_vertex>    \n  #include <uv2_vertex>\n\n  vUv = uv;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n\n  #include <begin_vertex>    \n  \n  #include <skinning_vertex>    \n  #include <displacementmap_vertex>    \n  #include <project_vertex>    \n  #include <logdepthbuf_vertex>    \n  #include <clipping_planes_vertex>      \n  \n  #include <worldpos_vertex>    \n  \n  \n}",
+            fragmentShader:
+              "#ifdef GL_ES\nprecision highp float;\n#endif\n\nstruct colorObj {\n  vec3 color;\n  float opacity;\n};\n\nuniform colorObj topColor;\nuniform colorObj bottomColor;\nuniform int type;\n\nvarying vec2 vUv;\n\n#include <common>  \n#include <packing>\n#include <uv_pars_fragment>\n\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nvoid main() {\n    #include <clipping_planes_fragment>\n\n    gl_FragColor = vec4(mix(topColor.color, bottomColor.color, vUv.y), mix(topColor.opacity, bottomColor.opacity, vUv.y));\n\n    #include <premultiplied_alpha_fragment>  \n    #include <dithering_fragment>\n}",
+          });
+        })(e, n, this),
+        (function (t, e, i) {
+          const n = EA(e.state.background.color);
+          i.extrudeBackgroundTopMaterial = new zA({
+            color: n.color,
+            transparent: !0,
+            depthTest: !0,
+            depthWrite: !0,
+          });
+          const { colorConfig: r } = t.sideConfig,
+            {
+              bottomColor: o,
+              topColor: a,
+              bottomOpacity: s,
+              topOpacity: l,
+            } = GV(r);
+          i.extrudeBackgroundSideMaterial = new Jn({
+            uniforms: {
+              type: {
+                type: "int",
+                value: ((t) => {
+                  switch (t) {
+                    case "linear":
+                      return 1;
+                    case "ordinal":
+                      return 2;
+                  }
+                })(r.type),
+              },
+              bottomColor: { type: "vec3", value: { color: o, opacity: s } },
+              topColor: { type: "vec3", value: { color: a, opacity: l } },
+            },
+            transparent: !1,
+            vertexShader:
+              "varying vec2 vUv;\n\n#include <common>  \n#include <uv_pars_vertex>  \n#include <uv2_pars_vertex>  \n#include <logdepthbuf_pars_vertex>  \n#include <clipping_planes_pars_vertex>   \n\nvoid main() {\n\n  #include <uv_vertex>    \n  #include <uv2_vertex>\n\n  vUv = uv;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n\n  #include <begin_vertex>    \n  \n  #include <skinning_vertex>    \n  #include <displacementmap_vertex>    \n  #include <project_vertex>    \n  #include <logdepthbuf_vertex>    \n  #include <clipping_planes_vertex>      \n  \n  #include <worldpos_vertex>    \n  \n  \n}",
+            fragmentShader:
+              "#ifdef GL_ES\nprecision highp float;\n#endif\n\nstruct colorObj {\n    vec3 color;\n    float opacity;\n};\n\nuniform colorObj topColor;\nuniform colorObj bottomColor;\nuniform int type;\n\nvarying vec2 vUv;\n\n#include <common>  \n#include <packing>\n#include <uv_pars_fragment>\n\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nvoid main() {\n    #include <clipping_planes_fragment>\n\n    gl_FragColor = vec4(mix(topColor.color, bottomColor.color, vUv.y), mix(topColor.opacity, bottomColor.opacity, vUv.y));\n\n    #include <premultiplied_alpha_fragment>  \n    #include <dithering_fragment>\n}",
+            depthTest: !0,
+            depthWrite: !0,
+          });
+        })(i, n, this),
+        await this.initExtrude());
+  }
+  async drillDown(t, e) {
+    const { viewportSystem: i } = this.gis,
+      {
+        drill: {
+          enabled: n,
+          duration: r,
+          level: { range: o },
+        },
+      } = this.state;
+    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
+    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
+    const a = qV(this.drillData, t);
+    if (-1 === a)
+      return this.logService.warn(`钻取层级 ${a}不合法，下钻无效`), this;
+    if (a > o[1] || a < o[0])
+      return this.logService.warn(`钻取层级 ${a}超过最大限制，下钻无效`), this;
+    this.isDrilling = !0;
+    const s = {
+      adcode: this.currentCode,
+      viewPortInfo: i.get(),
+      group: this.coreGroup,
+      subDistrictInfoArr: this.subDistrictInfoArr,
+    };
+    (this.drillCache[s.adcode] = s),
+      (this.currentLevel = a),
+      (this.currentCode = t);
+    const l = XV.getParentInfoByAdCode(this.currentCode, this.gis);
+    (this.currentParentLevel = l.level),
+      (this.currentParentCode = l.adcode),
+      (this.currentRegion = null),
+      tW(this);
+    const u = {
+      type: "drillDown",
+      code: 200,
+      properties: {
+        currentCode: this.currentCode,
+        currentLevel: this.currentLevel,
+      },
+    };
+    return (
+      this.ee.emit("drill", u),
+      this.ee.emit("drillDown", u),
+      WV(this),
+      await new Promise((t) =>
+        setTimeout(() => {
+          e && e(),
+            (() => {
+              this.ee.emit("drillDownEnd", u),
+                this.ee.emit("drillEnd", u),
+                (this.isDrilling = !1);
+            })(),
+            t(this);
+        }, r)
+      )
+    );
+  }
+  async drillUp(t, e) {
+    const { viewportSystem: i } = this.gis,
+      {
+        drill: {
+          enabled: n,
+          duration: r,
+          level: { range: o },
+        },
+      } = this.state;
+    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
+    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
+    let a = this.currentParentLevel;
+    if ((t && (a = qV(this.drillData, t)), -1 === a))
+      return this.logService.warn(`钻取层级 ${a}不合法，上钻无效`), this;
+    if (a > o[1] || a < o[0])
+      return this.logService.warn(`钻取层级 ${a}超过最大限制，上钻无效`), this;
+    this.isDrilling = !0;
+    const s = {
+      adcode: this.currentCode,
+      viewPortInfo: i.get(),
+      group: this.coreGroup,
+      subDistrictInfoArr: this.subDistrictInfoArr,
+    };
+    (this.drillCache[s.adcode] = s), (this.currentLevel = a);
+    const l = XV.getParentInfoByAdCode(this.currentCode, this.gis);
+    this.currentCode = null != t ? t : l.adcode;
+    const u = XV.getParentInfoByAdCode(this.currentCode, this.gis);
+    (this.currentParentCode = u.adcode),
+      (this.currentParentLevel = u.level),
+      (this.currentRegion = null),
+      tW(this);
+    const c = {
+      type: "drillUp",
+      code: 200,
+      properties: {
+        currentCode: this.currentCode,
+        currentLevel: this.currentLevel,
+      },
+    };
+    return (
+      this.ee.emit("drill", c),
+      this.ee.emit("drillUp", c),
+      WV(this),
+      await new Promise((t) =>
+        setTimeout(() => {
+          e && e(),
+            (() => {
+              this.ee.emit("drillUpEnd", c),
+                this.ee.emit("drillEnd", c),
+                (this.isDrilling = !1);
+            })(),
+            t(this);
+        }, r)
+      )
+    );
+  }
+  async drillRegion(t, e) {
+    const { viewportSystem: i } = this.gis,
+      {
+        drill: { enabled: n, duration: r },
+      } = this.state;
+    if (!n) return this.logService.warn("当前未开启钻取功能"), this;
+    if (this.isDrilling) return this.logService.warn("当前钻取未结束"), this;
+    (this.isDrilling = !0), (this.currentRegion = t);
+    const o = {
+      adcode: this.currentCode,
+      viewPortInfo: i.get(),
+      group: this.coreGroup,
+      subDistrictInfoArr: this.subDistrictInfoArr,
+    };
+    (this.drillCache[o.adcode] = o),
+      (this.currentLevel = 0),
+      (this.currentCode = t);
+    const a = XV.getParentInfoByAdCode(this.currentCode, this.gis);
+    (this.currentParentCode = a.adcode),
+      (this.currentParentLevel = a.level),
+      (async function (t) {
+        const e = t.state.data[t.currentRegion];
+        (t.rawSubDistrictData = e.rawSubDistrictData),
+          (t.subDistrictData = e.subDistrictData),
+          (t.rawDistrictData = e.rawDistrictData),
+          (t.districtData = e.districtData);
+      })(this);
+    const s = {
+      type: "drillRegion",
+      code: 200,
+      properties: {
+        currentCode: this.currentCode,
+        currentLevel: this.currentLevel,
+      },
+    };
+    return (
+      this.ee.emit("drill", s),
+      this.ee.emit("drillRegion", s),
+      WV(this),
+      await new Promise((t) =>
+        setTimeout(() => {
+          e && e(),
+            (() => {
+              this.ee.emit("drillEnd", s),
+                this.ee.emit("drillRegionEnd", s),
+                (this.isDrilling = !1);
+            })(),
+            t(this);
+        }, r)
+      )
+    );
+  }
+  async initPOI() {
+    const { poi: t } = this.state,
+      {
+        enabled: e,
+        background: i,
+        orient: n,
+        alignment: r,
+        offsetX: o,
+        offsetY: a,
+        major: s,
+      } = t;
+    if (!e || !s.enabled) return void this.clearPoiGroup();
+    this.clearPoiGroup();
+    const { baseHeight: l } = this.gis.globalOpts.bboxOption;
+    for (let u = 0; u < this.subDistrictInfoArr.length; u++) {
+      const t = this.subDistrictInfoArr[u],
+        { centroid: e, alias: c } = t;
+      if (!e) continue;
+      const h = new Ye(0, 0, 0);
+      await this.poiGroup.addText(
+        h,
+        n,
+        r,
+        i,
+        { content: `${s.format ? s.format(c) : c}`, props: s },
+        null,
+        o,
+        a,
+        { position: [e[0], e[1], l], offsetX: o, offsetY: a }
+      );
+    }
+    this._updatePOI(!0);
+  }
+  scaleAdaptation(t = !0) {
+    const { project: e } = this.gis.layerManager.geo,
+      {
+        districtStyle: { heightScale: i },
+        viewClip: n,
+      } = this.state,
+      { drillSave: r } = this.gis.viewportSystem.get(),
+      o = this.drillCache[this.currentCode];
+    let a;
+    a = o && r ? o.viewPortInfo : this.gis.viewportSystem.get();
+    const { pitch: s, rotation: l, offset: u } = a,
+      c = Vf,
+      h = null == n ? void 0 : n[this.currentCode],
+      p = KV({
+        geojson: { type: "FeatureCollection", features: this.rawDistrictData },
+        geojsonProj: { type: "FeatureCollection", features: this.districtData },
+        project: e,
+        geojsonUtil: am,
+        worldBboxSize: c,
+        heightScale: i,
+        pitch: s,
+        rotation: l,
+        offset: u,
+        viewClip: h,
+      });
+    (this.gis.globalOpts = p),
+      this.gis.layerManager.ee.emit("updateArea", { cameraTween: t }),
+      this.gis.lightSystem.ee.emit("updateArea");
+  }
+  registerHeightScale() {
+    this._propsWatch.addWatch([
+      this._propsWatch.defaultRule(
+        ["districtStyle", "heightScale"],
+        "diffDeep",
+        () => {
+          const { bboxOption: t } = this.gis.globalOpts;
+          (t.baseHeight =
+            t.size.bboxSize * this.state.districtStyle.heightScale * 0.05),
+            this.gis.layerManager.ee.emit("updateArea", {
+              cameraChange: !1,
+              cameraTween: !1,
+            }),
+            this.gis.lightSystem.ee.emit("updateArea");
+        }
+      ),
+    ]);
+  }
+  debugBbox() {
+    const {
+        bboxOption: {
+          size: { width: t, height: e },
+          centerProj: i,
+          baseHeight: n,
+        },
+      } = this.gis.globalOpts,
+      r = new dr(t, e),
+      o = new pn({ color: 16711680, opacity: 0.1, transparent: !0, side: xt }),
+      a = new Wn(r, o);
+    a.position.set(i[0], i[1], n + 1),
+      a.setRenderIndex(lU.PARTICLE_LAYER),
+      this.coreGroup.add(a);
+  }
+  handleAnimation() {
+    this.boundaryStreamerLayer && this.boundaryStreamerLayer.handleAnimation();
+  }
+  clear() {
+    this.clearCoreGroup(),
+      this.clearPoiGroup(),
+      this.clearInteractionGroup(),
+      (this.isDrilling = !1),
+      (this.drillData = { default: [new Map()], process: [new Map()] }),
+      (this.currentCode = Mk),
+      (this.currentLevel = 0),
+      (this.currentParentCode = null),
+      (this.currentParentLevel = -1),
+      (this.drillCache = {}),
+      (this.subDistrictStrokeGroup = null),
+      (this.subDistrictFillGroup = null),
+      (this.districtStrokeGroup = null),
+      (this.districtBottomStrokeGroup = null),
+      (this.districtFillGroup = null),
+      (this.extrudeBackgroundFillGroup = null),
+      (this.subDistrictInfoArr = []),
+      (this.districtData = null),
+      (this.subDistrictData = null),
+      (this.rawDistrictData = null),
+      (this.rawSubDistrictData = null),
+      (this.extrudeTopMaterial = null),
+      (this.extrudeSideMaterial = null),
+      (this.extrudeInnerShadowMaterial = null),
+      (this.extrudeBackgroundTopMaterial = null),
+      (this.extrudeBackgroundSideMaterial = null),
+      (this.currentRegion = null),
+      (this.bgGeoData = null),
+      (this.boundaryStreamerLayer = null),
+      (this.gis.globalOpts = null);
+  }
+  async release() {
+    if (
+      (this.clear(),
+      this._initLayerGroup(),
+      await this.__initMap(!0),
+      this.gis.__destroyed)
+    )
+      return;
+    this.__initEvent(),
+      this.animation.start(),
+      super.registerInteraction(
+        this.state.interaction,
+        this.subDistrictFillGroup,
+        !1
+      ),
+      super.emitPropsWatch(),
+      this.registerHeightScale(),
+      FV(this, "extrude"),
+      BV(this.extrudeSideMaterial, this.state.districtStyle),
+      zV(this),
+      kV(this),
+      cV(this.state.districtStyle, this),
+      hV(this.state.districtStyle, this),
+      VV(this.state.subDistrictStyle, this),
+      FV(this, "extrude-background"),
+      BV(this.extrudeBackgroundSideMaterial, this.state.extrudeBackgroundStyle);
+    const { backgroundBboxOption: t } = this.gis.globalOpts;
+    t &&
+      ((t.baseHeight =
+        t.size.bboxSize *
+        this.state.extrudeBackgroundStyle.heightScale *
+        0.05 *
+        0.2),
+      jV(t.baseHeight, this)),
+      await this.initPOI();
+  }
+  _initPropsWatchRule() {
+    super._initPropsWatchRule(),
+      this._propsWatch.addWatch([
+        this._propsWatch.defaultRule(["viewClip"], "diffDeep", () => {
+          (this.drillCache = {}), this.scaleAdaptation(!1);
+        }),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "fill"],
+          "diffDeep",
+          () => {
+            FV(this, "extrude");
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "sideConfig"],
+          "diffDeep",
+          () => {
+            BV(this.extrudeSideMaterial, this.state.districtStyle);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "innerShadow"],
+          "diffDeep",
+          () => {
+            zV(this);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "boundaryStreamer"],
+          "diffDeep",
+          () => {
+            kV(this);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "stroke"],
+          "diffDeep",
+          () => {
+            cV(this.state.districtStyle, this);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["districtStyle", "bottomStroke"],
+          "diffDeep",
+          () => {
+            hV(this.state.districtStyle, this);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["subDistrictStyle", "stroke"],
+          "diffDeep",
+          () => {
+            VV(this.state.subDistrictStyle, this);
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["extrudeBackgroundStyle", "fill"],
+          "diffDeep",
+          () => {
+            FV(this, "extrude-background");
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["extrudeBackgroundStyle", "sideConfig"],
+          "diffDeep",
+          () => {
+            BV(
+              this.extrudeBackgroundSideMaterial,
+              this.state.extrudeBackgroundStyle
+            );
+          }
+        ),
+        this._propsWatch.defaultRule(
+          ["extrudeBackgroundStyle", "heightScale"],
+          "diffDeep",
+          () => {
+            const { backgroundBboxOption: t } = this.gis.globalOpts;
+            t &&
+              ((t.baseHeight =
+                t.size.bboxSize *
+                this.state.extrudeBackgroundStyle.heightScale *
+                0.05 *
+                0.2),
+              jV(t.baseHeight, this));
+          }
+        ),
+        this._propsWatch.defaultRule("poi", "diffDeep", () => {
+          this.initPOI();
+        }),
+      ]);
+  }
+}
 const iW = {
     css2d: class {
       constructor(t = {}) {
-        (this.cache = {
-          objects: new WeakMap(),
-        }),
+        (this.cache = { objects: new WeakMap() }),
           (this.domElement =
             void 0 !== t.element ? t.element : document.createElement("div")),
           (this.domElement.style.overflow = "hidden");
@@ -66098,10 +66721,7 @@ const iW = {
           this.renderObject(t.children[n], e, i);
       }
       getSize() {
-        return {
-          width: this._width,
-          height: this._height,
-        };
+        return { width: this._width, height: this._height };
       }
       render(t, e) {
         !0 === t.autoUpdate && t.updateMatrixWorld(),
@@ -66121,13 +66741,7 @@ const iW = {
     },
     css3d: class {
       constructor(t = {}) {
-        this.cache = {
-          camera: {
-            fov: 0,
-            style: "",
-          },
-          objects: new WeakMap(),
-        };
+        this.cache = { camera: { fov: 0, style: "" }, objects: new WeakMap() };
         const e =
           void 0 !== t.element ? t.element : document.createElement("div");
         (e.style.overflow = "hidden"),
@@ -66138,10 +66752,7 @@ const iW = {
           e.appendChild(this.cameraElement);
       }
       getSize() {
-        return {
-          width: this._width,
-          height: this._height,
-        };
+        return { width: this._width, height: this._height };
       }
       render(t, e) {
         const i = e.projectionMatrix.elements[5] * this._heightHalf;
@@ -66292,9 +66903,7 @@ const iW = {
             o = this.cache.objects.get(t);
           if (void 0 === o || o.style !== n) {
             r.style.transform = n;
-            const e = {
-              style: n,
-            };
+            const e = { style: n };
             this.cache.objects.set(t, e);
           }
           (r.style.display = t.visible ? "" : "none"),
@@ -66394,47 +67003,24 @@ const sW = oW.CPU,
     if (!t || 0 == t.length) return t;
     const { as: i } = e;
     if (t[0].lng) {
-      return t.map((t) =>
-        ot(rt({}, t), {
-          [i]: Qf([t.lng, t.lat]),
-        })
-      );
+      return t.map((t) => ot(rt({}, t), { [i]: Qf([t.lng, t.lat]) }));
     }
     return t.map((t) => {
       const { coordinates: e } = t.geometry || {};
       if (!Array.isArray(e[0])) {
         const n = Qf(e);
-        return ot(rt({}, t), {
-          [i]: n,
-        });
+        return ot(rt({}, t), { [i]: n });
       }
       const n = e.map((t) =>
         Array.isArray(t[0]) ? t.map((t) => Qf(t)) : Qf(t)
       );
       return ot(rt({}, t), {
         [i]: n,
-        geometry: ot(rt({}, t.geometry), {
-          [i]: n,
-        }),
+        geometry: ot(rt({}, t.geometry), { [i]: n }),
       });
     });
   },
-  uW = ot(
-    rt(
-      {},
-      {
-        duration: 1e3,
-        loop: 0,
-        yoyo: !1,
-      }
-    ),
-    {
-      type: "straight",
-    }
-  );
-window.sW = sW;
-window.lW = lW;
-// Tweenjs
+  uW = ot(rt({}, { duration: 1e3, loop: 0, yoyo: !1 }), { type: "straight" });
 class cW {
   constructor() {
     this.tweenGroup = new BU();
@@ -66617,12 +67203,8 @@ class dW {
               },
               animation: [
                 {
-                  from: {
-                    rotation: i.getSourceState().minRotation,
-                  },
-                  to: {
-                    rotation: i.getSourceState().maxRotation,
-                  },
+                  from: { rotation: i.getSourceState().minRotation },
+                  to: { rotation: i.getSourceState().maxRotation },
                   duration: s,
                   delay: l,
                 },
@@ -66666,9 +67248,7 @@ class dW {
       u.run(c);
     } else
       i.set(AG.XGis, n),
-        this.props.controlsSystem.controls.dispatchEvent({
-          type: "end",
-        });
+        this.props.controlsSystem.controls.dispatchEvent({ type: "end" });
     return this;
   }
   getCameraState() {
@@ -66712,12 +67292,8 @@ class dW {
               },
               animation: [
                 {
-                  from: {
-                    rotation: i.getSourceState().rotation,
-                  },
-                  to: {
-                    rotation: 360 + i.getSourceState().rotation,
-                  },
+                  from: { rotation: i.getSourceState().rotation },
+                  to: { rotation: 360 + i.getSourceState().rotation },
                   duration: s,
                   delay: l,
                 },
@@ -66762,9 +67338,7 @@ class dW {
       u.run(c);
     } else
       i.set(AG.Engine, t),
-        this.props.controlsSystem.controls.dispatchEvent({
-          type: "end",
-        });
+        this.props.controlsSystem.controls.dispatchEvent({ type: "end" });
     return this;
   }
   getWebGisCameraState() {
@@ -66815,12 +67389,8 @@ class dW {
               },
               animation: [
                 {
-                  from: {
-                    rotation: i.getSourceState().minRotation,
-                  },
-                  to: {
-                    rotation: i.getSourceState().maxRotation,
-                  },
+                  from: { rotation: i.getSourceState().minRotation },
+                  to: { rotation: i.getSourceState().maxRotation },
                   duration: s,
                   delay: l,
                 },
@@ -66865,9 +67435,7 @@ class dW {
       u.run(c);
     } else
       i.set(AG.WebGis, n),
-        this.props.controlsSystem.controls.dispatchEvent({
-          type: "end",
-        });
+        this.props.controlsSystem.controls.dispatchEvent({ type: "end" });
     return this;
   }
   getBaseCameraState(t) {
@@ -66909,6 +67477,17 @@ class dW {
     this.ee.removeAllListeners();
   }
 }
+function fW(t) {
+  let e;
+  return (
+    (e = (null == t ? void 0 : t.mode)
+      ? t.mode
+      : (null == t ? void 0 : t.offset)
+      ? "xgis"
+      : ((null == t ? void 0 : t.zoom) && (null == t || t.center), "webgis")),
+    e
+  );
+}
 ((t, e, i, n) => {
   for (
     var r, o = n > 1 ? void 0 : n ? pW(e, i) : e, a = t.length - 1;
@@ -66917,8 +67496,7 @@ class dW {
   )
     (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
   n && o && hW(e, i, o);
-})([_G(window.KB.ILogService)], dW.prototype, "logService", 2);
-window.dW = dW;
+})([_G(KB.ILogService)], dW.prototype, "logService", 2);
 var gW = Math.PI / 3,
   mW = [0, gW, 2 * gW, 3 * gW, 4 * gW, 5 * gW];
 function yW(t) {
@@ -66930,7 +67508,7 @@ function vW(t) {
 const bW = (t, e) => {
     const { size: i = 10, boundary: n, tessellate: r } = e;
     if (0 === t.length) return t;
-    const o = window.sm(n, Qf);
+    const o = sm(n, Qf);
     let a = am.bbox(o);
     a = [
       [a[0], a[1]],
@@ -67061,25 +67639,10 @@ const bW = (t, e) => {
       r &&
         n &&
         s.centers().forEach((t) => {
-          Kw(
-            {
-              lng: t[0],
-              lat: t[1],
-            },
-            o,
-            Qw.intersect
-          ) &&
-            l.push(
-              ot(rt({}, u), {
-                coordinates: t,
-              })
-            );
+          Kw({ lng: t[0], lat: t[1] }, o, Qw.intersect) &&
+            l.push(ot(rt({}, u), { coordinates: t }));
         });
-    return s(l.concat(t)).map((t) => ({
-      points: t,
-      x: t.x,
-      y: t.y,
-    }));
+    return s(l.concat(t)).map((t) => ({ points: t, x: t.x, y: t.y }));
   },
   xW = () => {
     let t = {},
@@ -67130,20 +67693,10 @@ const bW = (t, e) => {
           a = n[t][e];
         let s = r.x - a.x + o.x - a.x,
           l = r.y - a.y + o.y - a.y;
-        return (
-          (s *= i),
-          (l *= i),
-          {
-            x: s,
-            y: l,
-          }
-        );
+        return (s *= i), (l *= i), { x: s, y: l };
       },
       y = (t, e, r) => {
-        const o = {
-            x: 0,
-            y: 0,
-          },
+        const o = { x: 0, y: 0 },
           a = i[t];
         for (let i = 0; i < a.length; i++) {
           const r = {
@@ -67154,10 +67707,7 @@ const bW = (t, e) => {
             const l =
               1 /
               Math.pow(
-                ((s = {
-                  source: n[a[i]][e],
-                  target: n[t][e],
-                }),
+                ((s = { source: n[a[i]][e], target: n[t][e] }),
                 Math.sqrt(
                   Math.pow(s.source.x - s.target.x, 2) +
                     Math.pow(s.source.y - s.target.y, 2)
@@ -67172,28 +67722,14 @@ const bW = (t, e) => {
       },
       v = (t, i, n) => {
         const o = r / (p(e[t]) * (i + 1)),
-          a = [
-            {
-              x: 0,
-              y: 0,
-            },
-          ];
+          a = [{ x: 0, y: 0 }];
         for (let e = 1; e < i + 1; e++) {
-          const i = {
-              x: 0,
-              y: 0,
-            },
+          const i = { x: 0, y: 0 },
             r = m(t, e, o),
             s = y(t, e);
           (i.x = n * (r.x + s.x)), (i.y = n * (r.y + s.y)), a.push(i);
         }
-        return (
-          a.push({
-            x: 0,
-            y: 0,
-          }),
-          a
-        );
+        return a.push({ x: 0, y: 0 }), a;
       },
       b = (i) => {
         for (let o = 0; o < e.length; o++)
@@ -67220,10 +67756,7 @@ const bW = (t, e) => {
                   u = n[o][t - 1].y;
                 (l += i * (n[o][t].x - n[o][t - 1].x)),
                   (u += i * (n[o][t].y - n[o][t - 1].y)),
-                  s.push({
-                    x: l,
-                    y: u,
-                  }),
+                  s.push({ x: l, y: u }),
                   (e -= a),
                   (a = r);
               }
@@ -67234,18 +67767,9 @@ const bW = (t, e) => {
         var r;
       },
       x = (e, i) => {
-        const n = g(t[i.source], {
-            source: t[e.source],
-            target: t[e.target],
-          }),
-          r = g(t[i.target], {
-            source: t[e.source],
-            target: t[e.target],
-          }),
-          o = {
-            x: (n.x + r.x) / 2,
-            y: (n.y + r.y) / 2,
-          },
+        const n = g(t[i.source], { source: t[e.source], target: t[e.target] }),
+          r = g(t[i.target], { source: t[e.source], target: t[e.target] }),
+          o = { x: (n.x + r.x) / 2, y: (n.y + r.y) / 2 },
           a = {
             x: (t[e.source].x + t[e.target].x) / 2,
             y: (t[e.source].y + t[e.target].y) / 2,
@@ -67363,7 +67887,7 @@ const bW = (t, e) => {
     if (0 === t.length) return t;
     let o = [];
     if (r) {
-      const e = window.sm(n, Qf);
+      const e = sm(n, Qf);
       o = ((t, e, i, n) => {
         const r = [],
           [o, a, s, l] = t,
@@ -67379,14 +67903,9 @@ const bW = (t, e) => {
         for (let g = 0; g < h; g++) {
           let t = a;
           for (let n = 0; n < p; n++) {
-            const n = ot(rt({}, d), {
-              coordinates: [f + e / 2, t + e / 2],
-            });
+            const n = ot(rt({}, d), { coordinates: [f + e / 2, t + e / 2] });
             Kw(
-              {
-                lng: n.coordinates[0],
-                lat: n.coordinates[1],
-              },
+              { lng: n.coordinates[0], lat: n.coordinates[1] },
               i,
               Qw.intersect
             ) && r.push(n),
@@ -67409,12 +67928,7 @@ const bW = (t, e) => {
           yOffset: t,
           xOffset: t,
         }))(e);
-        if (n <= 0 || r <= 0)
-          return {
-            gridHash: {},
-            xOffset: n,
-            yOffset: r,
-          };
+        if (n <= 0 || r <= 0) return { gridHash: {}, xOffset: n, yOffset: r };
         const o = {};
         for (const a of t) {
           const [t, e] = a.coordinates;
@@ -67422,22 +67936,12 @@ const bW = (t, e) => {
             const s = Math.floor((t + i[0]) / n),
               l = Math.floor((e + i[1]) / r),
               u = `${l}-${s}`;
-            (o[u] = o[u] || {
-              count: 0,
-              points: [],
-              lngIdx: s,
-              latIdx: l,
-            }),
+            (o[u] = o[u] || { count: 0, points: [], lngIdx: s, latIdx: l }),
               (o[u].count += 1),
               o[u].points.push(a);
           }
         }
-        return {
-          gridHash: o,
-          xOffset: n,
-          yOffset: r,
-          offsets: i,
-        };
+        return { gridHash: o, xOffset: n, yOffset: r, offsets: i };
       })(t.concat(o), i),
       c = ((t, e, i, n, r) => {
         const o = new Array(Object.keys(t).length);
@@ -67448,11 +67952,7 @@ const bW = (t, e) => {
             c = parseInt(l[1], 10) + 0.5,
             h = a++;
           o[h] = rt(
-            {
-              index: h,
-              x: -n[0] + e * c + r / 2,
-              y: -n[1] + i * u + r / 2,
-            },
+            { index: h, x: -n[0] + e * c + r / 2, y: -n[1] + i * u + r / 2 },
             t[s]
           );
         }
@@ -67460,15 +67960,9 @@ const bW = (t, e) => {
       })(a, s, l, u, i);
     return c;
   };
-window.bW = bW;
-window._W = _W;
-var SW = {
-  exports: {},
-};
+var SW = { exports: {} };
 !(function (t) {
-  var e = {
-    exports: {},
-  };
+  var e = { exports: {} };
   function i(t, e, i) {
     i = i || 2;
     var r,
@@ -67912,11 +68406,7 @@ var SW = {
     (i.flatten = function (t) {
       for (
         var e = t[0][0].length,
-          i = {
-            vertices: [],
-            holes: [],
-            dimensions: e,
-          },
+          i = { vertices: [], holes: [], dimensions: e },
           n = 0,
           r = 0;
         r < t.length;
@@ -68395,11 +68885,7 @@ var SW = {
   }
   function pt(t, e, i, n) {
     var r = null == i || "auto" === i;
-    if (!0 === i)
-      return {
-        vertices: t,
-        holes: e,
-      };
+    if (!0 === i) return { vertices: t, holes: e };
     for (
       var o = [],
         a = e && [],
@@ -68440,11 +68926,7 @@ var SW = {
       }
       f < d - 1 && a && a.push(o.length / 2);
     }
-    return {
-      vertices: new Float32Array(o),
-      splittedMap: c,
-      holes: a,
-    };
+    return { vertices: new Float32Array(o), splittedMap: c, holes: a };
   }
   function dt(t, e) {
     for (var i = 0, n = 0, r = 0; r < t.length; r++) {
@@ -68474,10 +68956,7 @@ var SW = {
           indices: new (n > 65535 ? Uint32Array : Uint16Array)(i),
           uv: new Float32Array(2 * n),
         },
-        b = {
-          vertex: 0,
-          index: 0,
-        },
+        b = { vertex: 0, index: 0 },
         x = 0;
       x < t.length;
       x++
@@ -68764,9 +69243,7 @@ var SW = {
     (t.flatten = $),
     (t.offsetPolygon = rt),
     (t.triangulate = K),
-    Object.defineProperty(t, "__esModule", {
-      value: !0,
-    });
+    Object.defineProperty(t, "__esModule", { value: !0 });
 })(SW.exports);
 const MW = (t) => {
     const e = 1 / Math.sqrt(t.x * t.x + t.y * t.y + t.z * t.z);
@@ -68825,24 +69302,9 @@ const MW = (t) => {
         s = Number(!!o),
         l = Number(!!a),
         u = [];
-      (u[0] = {
-        x: 0,
-        y: 0,
-        z: 0,
-        w: 0,
-      }),
-        (u[1] = {
-          x: 0,
-          y: 0,
-          z: l,
-          w: l,
-        }),
-        (u[2] = {
-          x: 0,
-          y: 0,
-          z: s,
-          w: s,
-        });
+      (u[0] = { x: 0, y: 0, z: 0, w: 0 }),
+        (u[1] = { x: 0, y: 0, z: l, w: l }),
+        (u[2] = { x: 0, y: 0, z: s, w: s });
       const c = ((t) => {
           const {
               height: e = 1,
@@ -68857,26 +69319,11 @@ const MW = (t) => {
             u = [],
             c = [];
           for (let m = 0; m < 3; m++)
-            r &&
-              !r[m] &&
-              (r[m] = {
-                x: 0,
-                y: 0,
-                z: 1,
-                w: 1,
-              });
+            r && !r[m] && (r[m] = { x: 0, y: 0, z: 1, w: 1 });
           const h = (2 * Math.PI) / i,
             p = (a - o) / e,
-            d = {
-              x: 0,
-              y: 0,
-              z: 0,
-            },
-            f = {
-              x: 0,
-              y: 0,
-              z: 0,
-            };
+            d = { x: 0, y: 0, z: 0 },
+            f = { x: 0, y: 0, z: 0 };
           for (let m = 0; m <= n; m++) {
             const t = m / n,
               s = t * (o - a) + a;
@@ -68932,28 +69379,12 @@ const MW = (t) => {
                 ? (s.push(d), s.push(d + (h + 2)), s.push(d + (h + 1)))
                 : (s.push(d), s.push(d + (h + 1)), s.push(d + (h + 2)));
           };
-          return (
-            g(!0),
-            g(!1),
-            {
-              indices: s,
-              position: l,
-              normal: u,
-              uv: c,
-            }
-          );
-        })({
-          radiusTop: e,
-          radiusBottom: i,
-          faceUV: u,
-          segments: n,
-        }),
+          return g(!0), g(!1), { indices: s, position: l, normal: u, uv: c };
+        })({ radiusTop: e, radiusBottom: i, faceUV: u, segments: n }),
         { position: h } = c,
         p = [];
       for (let d = 0; d < h.length; d += 3) p.push(h[d], h[d + 2], h[d + 1]);
-      return ot(rt({}, c), {
-        position: p,
-      });
+      return ot(rt({}, c), { position: p });
     },
   },
   AW = (t, e) => {
@@ -68972,10 +69403,7 @@ const MW = (t) => {
             n.push(e);
           }
         }
-        return {
-          colors: r,
-          height: n,
-        };
+        return { colors: r, height: n };
       })(t, e);
     return {
       indices: n,
@@ -69000,9 +69428,341 @@ var EW,
       (r = t[a]) && (o = (n ? r(e, i, o) : r(o)) || o);
     return n && o && TW(e, i, o), o;
   };
-
-LW([_G(window.KB.IShaderService)], IW.prototype, "shaderService", 2),
-  LW([_G(window.KB.ILogService)], IW.prototype, "logService", 2),
+class IW {
+  constructor(t) {
+    (this.props = t),
+      (this.id = we()),
+      (this.__cb = []),
+      (this.__errorCb = []),
+      (this.__isReady = !1),
+      (this.__destroyed = !1),
+      (this.version = ut),
+      (this.__maps = []),
+      (this.eventManager = new CG()),
+      (this.layerManager = new OU()),
+      (this.__initCameraSystem = () => {
+        const { viewportConfig: t, width: e, height: i } = this.state;
+        this.cameraSystem = new wG({ config: t, width: e, height: i });
+      }),
+      (this.__initSceneSystem = () => {
+        const {
+          sceneConfig: t,
+          viewportConfig: e,
+          containerDom: i,
+        } = this.state;
+        (this.sceneSystem = new IU({
+          containerDom: i,
+          config: t,
+          viewportConfig: e,
+          cameraSystem: this.cameraSystem,
+          layerManager: this.layerManager,
+        })),
+          this.ee.on("viewportChange", (t) => {
+            (this.sceneSystem.coreScene.ext.zoom = t.zoom),
+              (this.sceneSystem.hudScene.ext.zoom = t.zoom);
+          });
+      }),
+      (this.__initRenderSystem = () => {
+        const { width: t, height: e, containerDom: i } = this.state;
+        (this.renderSystem = new MU({
+          containerDom: i,
+          width: t,
+          height: e,
+          cameraSystem: this.cameraSystem,
+          sceneSystem: this.sceneSystem,
+        })),
+          this.shaderService.registerBasicModule(),
+          this.eventManager.ee.on("markerEnabled", ({ markerType: t }) => {
+            const { width: e, height: i, containerDom: n } = this.props;
+            this.renderSystem.markerRenderer ||
+              (this.renderSystem.markerRenderer = new rW({
+                sceneSystem: this.sceneSystem,
+                cameraSystem: this.cameraSystem,
+                controlsSystem: this.controlsSystem,
+                containerDom: n,
+                markerType: t,
+                width: e,
+                height: i,
+              }));
+          });
+      }),
+      (this.__initEventSystem = () => {
+        const { containerDom: t, autoSize: e } = this.state;
+        this.eventSystem = new gU({
+          engine: sW,
+          viewportSystem: this.viewportSystem,
+          cameraSystem: this.cameraSystem,
+          renderSystem: this.renderSystem,
+          sceneSystem: this.sceneSystem,
+          containerDom: t,
+          autoSize: e,
+          ee: this.ee,
+          layerManager: this.layerManager,
+          eventManager: this.eventManager,
+        });
+      }),
+      (this.__initLightSystem = () => {
+        const { lightConfig: t } = this.state;
+        this.lightSystem = new xU({
+          sceneSystem: this.sceneSystem,
+          gis: this,
+          config: t,
+        });
+      }),
+      (this.__initHelperSystem = () => {
+        const { dev: t } = this.state;
+        if (t) {
+          (this.renderSystem.coreRenderer.debug.checkShaderErrors = !1),
+            new KU({ length: 2e4, sceneSystem: this.sceneSystem }),
+            new nj({
+              type: "cartesian",
+              sceneSystem: this.sceneSystem,
+              config: { size: 100, divisions: 10 },
+            });
+          const t = new QE(this.cameraSystem.coreCamera);
+          this.sceneSystem.coreScene.add(t),
+            this.lightSystem.lights.forEach((t) => {
+              switch (t.type) {
+                case "directional": {
+                  const e = 5,
+                    i = new qE(t.light, e);
+                  return void this.sceneSystem.coreScene.add(i);
+                }
+                case "spot": {
+                  const e = new GE(t.light);
+                  return void this.sceneSystem.coreScene.add(e);
+                }
+              }
+            });
+        }
+      }),
+      (this.__syncMap = (t) => {
+        this.__maps.forEach((e) => {
+          e.setCenter(t.center, !0),
+            e.setZoom(t.zoom, !0),
+            e.setPitch(t.pitch, !0),
+            e.setRotation(t.rotation, !0);
+        });
+      }),
+      this.__init();
+  }
+  __init() {
+    if (!this.__checkEnv()) return;
+    this.__injectToGlobal(),
+      (this.ee = new dt()),
+      this.__initDataSet(),
+      this.__mergeDefaultConfig(),
+      this.__initCameraSystem(),
+      this.__initSceneSystem(),
+      this.__initRenderSystem(),
+      this.__initLightSystem(),
+      this.__initControlsSystem(),
+      this.__initViewportSystem(),
+      this.__initEventSystem();
+    new Promise((t, e) => {
+      this.__initBaseMapLayer(t, e);
+    })
+      .then(() => {
+        this.__iniTickSystem(),
+          this.tickSystem.start(),
+          this.__initHelperSystem(),
+          (this.__isReady = !0),
+          setTimeout(() => {
+            if (!this.__destroyed) {
+              for (let t = 0; t < this.__cb.length; t++) this.__cb[t](this);
+              (this.__cb = []), this.ee.emit("loaded", "");
+            }
+          }, 0);
+      })
+      .catch((t) => {
+        for (let e = 0; e < this.__errorCb.length; e++) this.__errorCb[e](t);
+        (this.__errorCb = []), this.ee.emit("loaded", "");
+      });
+  }
+  __checkEnv() {
+    return this.props.containerDom && this.props.containerDom.isConnected
+      ? QD.isWebGL2Available()
+        ? (QD.isGPUAcceleratorEnabled() ||
+            this.logService.error(
+              "检测到您已关闭浏览器硬件加速模式，请开启以获得更好的体验"
+            ),
+          !0)
+        : (this.logService.error(
+            "当前环境不支持 webgl2，请更新浏览器或显卡配置以获得更好的体验"
+          ),
+          !1)
+      : (this.logService.error("Plane3D containerDom is required"), !1);
+  }
+  __injectToGlobal() {
+    const { globalVariable: t = sk } = this.props;
+    t &&
+      ((window.__gis__ = this),
+      Array.isArray(window.__gises__)
+        ? window.__gises__.push(this)
+        : (window.__gises__ = [this]));
+  }
+  __initDataSet() {
+    const t = new ok();
+    t.registerParser("geojson", Kz),
+      t.registerParser("bytejson", Xw),
+      t.registerTransform("projection", ML),
+      t.registerTransform("hexagon", bW),
+      t.registerTransform("grid", _W),
+      t.registerTransform("filter", aT),
+      t.registerTransform("map", mF),
+      t.registerTransform("dissolve", gI),
+      t.registerTransform("webgis", lW),
+      (this.dataSet = t);
+  }
+  __mergeDefaultConfig() {
+    const {
+        autoSize: t,
+        containerDom: e,
+        baseMapLayer: i,
+        width: n,
+        height: r,
+      } = this.props,
+      o = null != t ? t : lk,
+      a = null != n ? n : 1920,
+      s = null != r ? r : 1080,
+      l = null == i ? void 0 : i.baseZoom;
+    this.state = af(
+      {
+        dev: false,
+        globalVariable: sk,
+        autoSize: lk,
+        sceneConfig: hk,
+        viewportConfig: af(uk, { mode: fW(this.props.viewportConfig) }),
+        baseMapLayer: af(Rk, { baseZoom: l || -1 }),
+        lightConfig: ck,
+        controlType: "orbit",
+      },
+      ot(rt({}, this.props), {
+        width: o ? e.clientWidth : a,
+        height: o ? e.clientHeight : s,
+      })
+    );
+  }
+  __initControlsSystem() {
+    const { viewportConfig: t } = this.state;
+    (this.controlsSystem = new DG({
+      sceneSystem: this.sceneSystem,
+      renderSystem: this.renderSystem,
+      cameraSystem: this.cameraSystem,
+      config: t,
+      layerManager: this.layerManager,
+      gis: this,
+    })),
+      this.controlsSystem.gisStateApi.subscribe(AG.WebGis, this.__syncMap);
+  }
+  __initViewportSystem() {
+    const { viewportConfig: t } = this.state;
+    this.viewportSystem = new dW({
+      sceneSystem: this.sceneSystem,
+      renderSystem: this.renderSystem,
+      cameraSystem: this.cameraSystem,
+      controlsSystem: this.controlsSystem,
+      config: t,
+      layerManager: this.layerManager,
+      gis: this,
+    });
+  }
+  __iniTickSystem() {
+    this.tickSystem = new JU({
+      sceneSystem: this.sceneSystem,
+      renderSystem: this.renderSystem,
+      cameraSystem: this.cameraSystem,
+      controlsSystem: this.controlsSystem,
+      layerManager: this.layerManager,
+    });
+  }
+  async __initBaseMapLayer(t, e) {
+    const { baseMapLayer: i } = this.state;
+    if (i.enabled)
+      try {
+        const e = new eW(this, i, t);
+        await e.init();
+      } catch (n) {
+        e(n);
+      }
+    else t();
+  }
+  then(t) {
+    return (
+      this.__isReady
+        ? setTimeout(() => {
+            t(this);
+          }, 0)
+        : this.__cb.push(t),
+      this
+    );
+  }
+  catch(t) {
+    return this.__errorCb.push(t), this;
+  }
+  on(t, e, i) {
+    Fk(t) || this.eventSystem.mapContainerEvent.bindEventListeners(t),
+      this.ee.on(t, e, i);
+  }
+  off(t, e) {
+    Fk(t) || this.eventManager.removeMapEvent(this.id, t),
+      this.ee.removeListener(t),
+      e && e();
+  }
+  get performance() {
+    return this.renderSystem.coreRenderer.info;
+  }
+  registerMap(t) {
+    if (!t.__destroyed)
+      if (this.__maps.find((e) => e.id === t.id))
+        this.logService.warn("请不要重复绑定第三方地图");
+      else {
+        this.__maps.push(t);
+        const e = this.controlsSystem.gisStateApi.getSourceState(),
+          i = t.getMaxPitch(),
+          n = t.getZooms();
+        this.viewportSystem.set({
+          maxPitch: Math.min(e.maxPitch, i),
+          minZoom: n[0],
+          maxZoom: n[1],
+        }),
+          this.__syncMap(this.controlsSystem.gisStateApi.get(AG.WebGis));
+      }
+  }
+  unregisterMap(t) {
+    this.__maps.splice(this.__maps.indexOf(t), 1);
+  }
+  destroy() {
+    var t, e, i, n, r, o, a, s, l, u, c, h, p, d;
+    if (this.__destroyed)
+      return void this.logService.warn("请勿重复调用 destroy");
+    (this.__destroyed = !0),
+      this.ee.emit("destroy", ""),
+      null == (t = this.eventSystem) || t.destroy(),
+      null == (e = this.controlsSystem) || e.destroy(),
+      null == (i = this.tickSystem) || i.destroy(),
+      null == (n = this.layerManager) || n.destroy(),
+      null == (r = this.lightSystem) || r.destroy(),
+      null == (o = this.sceneSystem) || o.destroy(),
+      null == (a = this.renderSystem) || a.destroy(),
+      null == (s = this.dataSet) || s.destroy(),
+      null == (l = this.controlsSystem) ||
+        l.gisStateApi.unsubscribe(AG.WebGis, this.__syncMap),
+      null == (u = this.viewportSystem) || u.destroy(),
+      null == (c = this.__maps) || c.forEach((t) => t.destroy()),
+      (null == (h = this.state) ? void 0 : h.containerDom) &&
+        (this.state.containerDom.innerHTML = ""),
+      (null == (p = window.__gis__) ? void 0 : p.id) === this.id &&
+        (window.__gis__ = null);
+    const f =
+      null == (d = window.__gises__)
+        ? void 0
+        : d.findIndex((t) => t.id === this.id);
+    f > -1 && window.__gises__.splice(f, 1);
+  }
+}
+LW([_G(KB.IShaderService)], IW.prototype, "shaderService", 2),
+  LW([_G(KB.ILogService)], IW.prototype, "logService", 2),
   ff("images", "waternormals.jpg"),
   ((DW = EW || (EW = {})).MIDDLE = "middle"),
   (DW.LEFT = "left"),
@@ -69035,25 +69795,11 @@ class NW extends oV {
         n,
         s,
         r,
-        f
-          ? {
-              content: h,
-              props: o,
-            }
-          : null,
-        g
-          ? {
-              content: p,
-              props: a,
-            }
-          : null,
+        f ? { content: h, props: o } : null,
+        g ? { content: p, props: a } : null,
         l,
         u,
-        ot(rt({}, d), {
-          position: [c.x, c.y, c.z],
-          offsetX: l,
-          offsetY: u,
-        })
+        ot(rt({}, d), { position: [c.x, c.y, c.z], offsetX: l, offsetY: u })
       ));
   }
   async initPOI() {
@@ -69071,11 +69817,7 @@ class NW extends oV {
         { layerManager: a } = this.gis,
         { lng: s, lat: l } = t,
         [u, c] = a.geo.project([s, l]),
-        h = {
-          x: u,
-          y: c,
-          z: this.coreGroup.position.z,
-        };
+        h = { x: u, y: c, z: this.coreGroup.position.z };
       await this._addPoiMesh({
         pointPosition: h,
         majorContent: i.format
@@ -69084,9 +69826,7 @@ class NW extends oV {
         minorContent: n.format
           ? n.format(t[r.minorPOIField])
           : t[r.minorPOIField],
-        ext: {
-          relatedInstanceId: o,
-        },
+        ext: { relatedInstanceId: o },
       });
     }
     this._updatePOI(!0);
@@ -69118,16 +69858,10 @@ class RW extends NW {
         case EW.TOP:
       }
       await this._addPoiMesh({
-        pointPosition: {
-          x: e,
-          y: o,
-          z: u + this.coreGroup.position.z,
-        },
+        pointPosition: { x: e, y: o, z: u + this.coreGroup.position.z },
         majorContent: i.format ? i.format(s[c]._majorPOI_) : s[c]._majorPOI_,
         minorContent: n.format ? n.format(s[c]._minorPOI_) : s[c]._minorPOI_,
-        ext: {
-          relatedInstanceId: c,
-        },
+        ext: { relatedInstanceId: c },
       });
     }
     this._updatePOI(!0);
@@ -69505,19 +70239,9 @@ const OW = {
       size: 20,
       height: {
         type: $U.LINEAR,
-        linear: {
-          domain: [],
-          range: [0, 70],
-          clamp: !1,
-        },
-        threshold: {
-          domain: [],
-          range: [0, 100],
-        },
-        ordinal: {
-          domain: [],
-          range: [0, 100],
-        },
+        linear: { domain: [], range: [0, 70], clamp: !1 },
+        threshold: { domain: [], range: [0, 100] },
+        ordinal: { domain: [], range: [0, 100] },
         constant: 50,
         default: 0,
       },
@@ -69571,30 +70295,20 @@ const OW = {
         offsetX: 0,
         offsetY: 0,
       },
-      custom: {
-        enabled: !1,
-        markerType: "css2d",
-        element: null,
-      },
+      custom: { enabled: !1, markerType: "css2d", element: null },
     },
     clipMode: Qw.intersect,
     interaction: {
       hover: {
         enabled: !1,
         trigger: "mousemove",
-        effect: {
-          color: vk,
-          poi: !1,
-        },
+        effect: { color: vk, poi: !1 },
       },
       select: {
         enabled: !1,
         trigger: "click",
         multi: !1,
-        effect: {
-          color: bk,
-          poi: !1,
-        },
+        effect: { color: bk, poi: !1 },
       },
     },
   };
@@ -69612,9 +70326,7 @@ class kW extends RW {
           "varying vec4 vColor;\nattribute vec4 color;\n#pragma common\nvoid main() {\n  vColor = color;\n  gl_Position = projectionMatrix * modelViewMatrix * instanceMatrix * caclPosition(position);\n}",
         fragmentShader:
           "precision highp float;\nvarying vec4 vColor;\nvoid main() {\n  gl_FragColor *= vec4(vColor);\n}",
-        basicMaterial: ot(rt({}, mr.phong), {
-          lights: !0,
-        }),
+        basicMaterial: ot(rt({}, mr.phong), { lights: !0 }),
         defines: {},
       }),
       super.registerInteraction(),
@@ -69637,10 +70349,7 @@ class kW extends RW {
     return super._getParseData(
       ot(rt({}, t), {
         layerType: "Point",
-        coordsField: {
-          lngField: i,
-          latField: n,
-        },
+        coordsField: { lngField: i, latField: n },
       })
     );
   }
@@ -69665,10 +70374,7 @@ class kW extends RW {
         height: r,
       } = t,
       o = {
-        color: {
-          field: e.colorField,
-          calcMethod: n.calcMethod || "sum",
-        },
+        color: { field: e.colorField, calcMethod: n.calcMethod || "sum" },
         height: r && {
           field: e.heightField,
           calcMethod: r.calcMethod || "sum",
@@ -69678,27 +70384,13 @@ class kW extends RW {
       },
       a = YH(i, o, n.conditional),
       s = [
-        {
-          visual: n,
-          scaleField: "colorField",
-          dataField: "_color_",
-        },
-        {
-          scaleField: "majorPOIField",
-          dataField: "_majorPOI_",
-        },
-        {
-          scaleField: "minorPOIField",
-          dataField: "_minorPOI_",
-        },
+        { visual: n, scaleField: "colorField", dataField: "_color_" },
+        { scaleField: "majorPOIField", dataField: "_majorPOI_" },
+        { scaleField: "minorPOIField", dataField: "_minorPOI_" },
       ];
     return (
       r &&
-        s.push({
-          visual: r,
-          scaleField: "heightField",
-          dataField: "_height_",
-        }),
+        s.push({ visual: r, scaleField: "heightField", dataField: "_height_" }),
       (this.state.scaleData = this.scaleService.apply(s, a)),
       this
     );
@@ -69730,9 +70422,7 @@ class kW extends RW {
           this._getScaleData.bind(this),
           this._getRenderData.bind(this),
           this.__draw.bind(this)
-        )({
-          rawData: t,
-        }),
+        )({ rawData: t }),
         this)
       : this;
   }
@@ -69770,11 +70460,7 @@ class kW extends RW {
       m.setAttribute("uv", new bn(c, 2)),
       m.computeVertexNormals();
     const y = this.gis.shaderService.getShaderModule("hexagonShader"),
-      v = new Jn(
-        ot(rt({}, y), {
-          transparent: !0,
-        })
-      );
+      v = new Jn(ot(rt({}, y), { transparent: !0 }));
     if (((v.uniforms.diffuse.value = new ln("#E2E2E2")), this.instancedMesh)) {
       for (let x = 0; x < this.coreGroup.children.length; x++)
         if (this.coreGroup.children[x].uuid === this.instancedMesh.uuid) {
@@ -69810,16 +70496,10 @@ class kW extends RW {
           case EW.TOP:
         }
         await this._addPoiMesh({
-          pointPosition: {
-            x: o,
-            y: a,
-            z: b + this.coreGroup.position.z,
-          },
+          pointPosition: { x: o, y: a, z: b + this.coreGroup.position.z },
           majorContent: i.format ? i.format(f[x]._majorPOI_) : f[x]._majorPOI_,
           minorContent: n.format ? n.format(f[x]._minorPOI_) : f[x]._minorPOI_,
-          ext: {
-            relatedInstanceId: x,
-          },
+          ext: { relatedInstanceId: x },
         });
       }
     }
@@ -69896,19 +70576,9 @@ const BW = {
     size: 30,
     height: {
       type: $U.LINEAR,
-      linear: {
-        domain: [],
-        range: [0, 70],
-        clamp: !1,
-      },
-      threshold: {
-        domain: [],
-        range: [0, 100],
-      },
-      ordinal: {
-        domain: [],
-        range: [0, 100],
-      },
+      linear: { domain: [], range: [0, 70], clamp: !1 },
+      threshold: { domain: [], range: [0, 100] },
+      ordinal: { domain: [], range: [0, 100] },
       constant: 50,
       default: 0,
     },
@@ -69924,11 +70594,7 @@ const BW = {
           domain: [],
           range: [FW.light.arcoblue[1], FW.light.arcoblue[9]],
         },
-        ordinal: {
-          domain: [],
-          range: FW.light.arcoblue,
-          unknown: "undefined",
-        },
+        ordinal: { domain: [], range: FW.light.arcoblue, unknown: "undefined" },
         constant: FW.light.arcoblue[1],
         default: "rgba(103,255,255,0.1)",
         calcMethod: "sum",
@@ -69962,30 +70628,20 @@ const BW = {
       offsetX: 0,
       offsetY: 0,
     },
-    custom: {
-      enabled: !1,
-      markerType: "css2d",
-      element: null,
-    },
+    custom: { enabled: !1, markerType: "css2d", element: null },
   },
   clipMode: Qw.intersect,
   interaction: {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -70003,9 +70659,7 @@ class GW extends RW {
           "varying vec4 vColor;\nattribute vec4 color;\nvoid main() {\n  vColor = color;\n  gl_Position = projectionMatrix * modelViewMatrix * instanceMatrix * vec4(position, 1.0);\n}",
         fragmentShader:
           "precision highp float;\nvarying vec4 vColor;\nvoid main() {\n  gl_FragColor *= vec4(vColor);\n}",
-        basicMaterial: ot(rt({}, mr.phong), {
-          lights: !0,
-        }),
+        basicMaterial: ot(rt({}, mr.phong), { lights: !0 }),
         defines: {},
       }),
       super.registerInteraction(),
@@ -70028,10 +70682,7 @@ class GW extends RW {
     return super._getParseData(
       ot(rt({}, t), {
         layerType: "Point",
-        coordsField: {
-          lngField: i,
-          latField: n,
-        },
+        coordsField: { lngField: i, latField: n },
       })
     );
   }
@@ -70056,10 +70707,7 @@ class GW extends RW {
         height: r,
       } = t,
       o = {
-        color: {
-          field: e.colorField,
-          calcMethod: n.calcMethod || "sum",
-        },
+        color: { field: e.colorField, calcMethod: n.calcMethod || "sum" },
         height: r && {
           field: e.heightField,
           calcMethod: r.calcMethod || "sum",
@@ -70069,27 +70717,13 @@ class GW extends RW {
       },
       a = YH(i, o, n.conditional),
       s = [
-        {
-          visual: n,
-          scaleField: "colorField",
-          dataField: "_color_",
-        },
-        {
-          scaleField: "majorPOIField",
-          dataField: "_majorPOI_",
-        },
-        {
-          scaleField: "minorPOIField",
-          dataField: "_minorPOI_",
-        },
+        { visual: n, scaleField: "colorField", dataField: "_color_" },
+        { scaleField: "majorPOIField", dataField: "_majorPOI_" },
+        { scaleField: "minorPOIField", dataField: "_minorPOI_" },
       ];
     return (
       r &&
-        s.push({
-          visual: r,
-          scaleField: "heightField",
-          dataField: "_height_",
-        }),
+        s.push({ visual: r, scaleField: "heightField", dataField: "_height_" }),
       (this.state.scaleData = this.scaleService.apply(s, a)),
       this
     );
@@ -70122,9 +70756,7 @@ class GW extends RW {
           this._getScaleData.bind(this),
           this._getRenderData.bind(this),
           this.__draw.bind(this)
-        )({
-          rawData: t,
-        }),
+        )({ rawData: t }),
         this)
       : this;
   }
@@ -70162,11 +70794,7 @@ class GW extends RW {
       m.setAttribute("uv", new bn(l, 2)),
       m.computeVertexNormals();
     const y = this.gis.shaderService.getShaderModule("gridShader"),
-      v = new Jn(
-        ot(rt({}, y), {
-          transparent: !0,
-        })
-      );
+      v = new Jn(ot(rt({}, y), { transparent: !0 }));
     if (((v.uniforms.diffuse.value = new ln("#E2E2E2")), this.instancedMesh)) {
       for (let x = 0; x < this.coreGroup.children.length; x++)
         if (this.coreGroup.children[x].uuid === this.instancedMesh.uuid) {
@@ -70202,16 +70830,10 @@ class GW extends RW {
           case EW.TOP:
         }
         await this._addPoiMesh({
-          pointPosition: {
-            x: o,
-            y: a,
-            z: b + this.coreGroup.position.z,
-          },
+          pointPosition: { x: o, y: a, z: b + this.coreGroup.position.z },
           majorContent: i.format ? i.format(p[x]._majorPOI_) : p[x]._majorPOI_,
           minorContent: n.format ? n.format(p[x]._minorPOI_) : p[x]._minorPOI_,
-          ext: {
-            relatedInstanceId: x,
-          },
+          ext: { relatedInstanceId: x },
         });
       }
     }
@@ -70280,15 +70902,8 @@ class GW extends RW {
 }
 const UW = "rgb(198,201,73)",
   jW = {
-    inner: {
-      hole: 1 / 4,
-      radius: 0.5,
-    },
-    outer: {
-      radius: 0.5,
-      hole: 1 / 4,
-      maxRadius: 2,
-    },
+    inner: { hole: 1 / 4, radius: 0.5 },
+    outer: { radius: 0.5, hole: 1 / 4, maxRadius: 2 },
   },
   HW = {
     common: Sk,
@@ -70298,16 +70913,8 @@ const UW = "rgb(198,201,73)",
     style: {
       fill: {
         colorConfig: {
-          inner: {
-            color: UW,
-            maxOpacity: 1,
-            minOpacity: 0,
-          },
-          outer: {
-            color: UW,
-            maxOpacity: 0.5,
-            minOpacity: 0,
-          },
+          inner: { color: UW, maxOpacity: 1, minOpacity: 0 },
+          outer: { color: UW, maxOpacity: 0.5, minOpacity: 0 },
         },
       },
     },
@@ -70337,11 +70944,7 @@ const UW = "rgb(198,201,73)",
         offsetX: 0,
         offsetY: 0,
       },
-      custom: {
-        enabled: !1,
-        markerType: "css2d",
-        element: null,
-      },
+      custom: { enabled: !1, markerType: "css2d", element: null },
     },
   },
   VW = af(HW, {
@@ -70351,19 +70954,13 @@ const UW = "rgb(198,201,73)",
       hover: {
         enabled: !1,
         trigger: "mousemove",
-        effect: {
-          color: vk,
-          poi: !1,
-        },
+        effect: { color: vk, poi: !1 },
       },
       select: {
         enabled: !1,
         trigger: "click",
         multi: !1,
-        effect: {
-          color: bk,
-          poi: !1,
-        },
+        effect: { color: bk, poi: !1 },
       },
     },
   }),
@@ -70416,31 +71013,20 @@ const UW = "rgb(198,201,73)",
         },
       },
     },
-    animation: {
-      enabled: !0,
-      speed: 1,
-    },
-    breathPointLayer: af(HW, {
-      clipMode: Qw.none,
-    }),
+    animation: { enabled: !0, speed: 1 },
+    breathPointLayer: af(HW, { clipMode: Qw.none }),
     clipMode: Qw.intersect,
     interaction: {
       hover: {
         enabled: !1,
         trigger: "mousemove",
-        effect: {
-          color: vk,
-          poi: !1,
-        },
+        effect: { color: vk, poi: !1 },
       },
       select: {
         enabled: !1,
         trigger: "click",
         multi: !1,
-        effect: {
-          color: bk,
-          poi: !1,
-        },
+        effect: { color: bk, poi: !1 },
       },
     },
   },
@@ -70577,11 +71163,7 @@ function rq(t, e, i, n, r, o, a, s, l, u, c) {
     const u = i.ray.origin.distanceTo(iq);
     return u < i.near || u > i.far
       ? null
-      : {
-          distance: u,
-          point: iq.clone(),
-          object: t,
-        };
+      : { distance: u, point: iq.clone(), object: t };
   })(t, e, i, n, QW, ZW, JW, eq);
   if (p) {
     o &&
@@ -70594,13 +71176,7 @@ function rq(t, e, i, n, r, o, a, s, l, u, c) {
         $W.fromBufferAttribute(a, l),
         tq.fromBufferAttribute(a, u),
         (p.uv2 = tn.getUV(eq, QW, ZW, JW, KW, $W, tq, new Le())));
-    const t = {
-      a: s,
-      b: l,
-      c: u,
-      normal: new Ye(),
-      materialIndex: 0,
-    };
+    const t = { a: s, b: l, c: u, normal: new Ye(), materialIndex: 0 };
     tn.getNormal(QW, ZW, JW, t.normal), (p.face = t);
   }
   return p;
@@ -71001,44 +71577,19 @@ class Sq extends Jn {
       transparent: !0,
       depthTest: !1,
       uniforms: {
-        scale: {
-          value: 1,
-        },
-        opacity: {
-          value: 1,
-        },
-        inRadius: {
-          value: 0,
-        },
-        resolution: {
-          value: 1,
-        },
-        color: {
-          value: [0, 1, 0, 1],
-        },
-        image: {
-          value: null,
-        },
-        valueRange: {
-          value: [0, 1],
-        },
-        sizeRange: {
-          value: [0, 1],
-        },
-        usePixel: {
-          value: !1,
-        },
-        colorscale: {
-          value: null,
-        },
-        uTransparentImages: {
-          value: new Int8Array(64).fill(0),
-        },
+        scale: { value: 1 },
+        opacity: { value: 1 },
+        inRadius: { value: 0 },
+        resolution: { value: 1 },
+        color: { value: [0, 1, 0, 1] },
+        image: { value: null },
+        valueRange: { value: [0, 1] },
+        sizeRange: { value: [0, 1] },
+        usePixel: { value: !1 },
+        colorscale: { value: null },
+        uTransparentImages: { value: new Int8Array(64).fill(0) },
       },
-      defines: {
-        USE_ATTRIBUTE_COLOR: !0,
-        MAX_ICON_ROW: 8,
-      },
+      defines: { USE_ATTRIBUTE_COLOR: !0, MAX_ICON_ROW: 8 },
     });
   }
   set colorscale(t) {
@@ -71270,10 +71821,7 @@ class Dq extends NW {
             type: r,
             layerType: t,
             options: {
-              coordsField: {
-                lngField: i,
-                latField: n,
-              },
+              coordsField: { lngField: i, latField: n },
               layerType: t,
             },
           })
@@ -71286,9 +71834,7 @@ class Dq extends NW {
           })
           .transform({
             type: "webgis",
-            options: {
-              as: "coordinates",
-            },
+            options: { as: "coordinates" },
           }).latestData;
       for (let e = 0; e < l.length; e++) {
         const t = l[e];
@@ -71339,17 +71885,9 @@ class Dq extends NW {
         poi: { major: i, minor: n },
         fields: r,
       } = this.state,
-      o = {
-        x: e[0],
-        y: e[1],
-        z: 0,
-      };
-    this.__addInnerMesh({
-      pointPosition: o,
-    }),
-      this.__addOuterMesh({
-        pointPosition: o,
-      }),
+      o = { x: e[0], y: e[1], z: 0 };
+    this.__addInnerMesh({ pointPosition: o }),
+      this.__addOuterMesh({ pointPosition: o }),
       (o.z += this.coreGroup.position.z),
       await this._addPoiMesh({
         pointPosition: o,
@@ -71527,11 +72065,7 @@ const Pq = (t, e, i) => {
           })(p[0], p[p.length - 1], i);
         n.push(...d);
       }),
-      {
-        position: n,
-        fromColor: r,
-        toColor: o,
-      }
+      { position: n, fromColor: r, toColor: o }
     );
   };
 class Iq extends oV {
@@ -71728,63 +72262,25 @@ class Rq extends Jn {
       fragmentShader:
         "precision highp float;\nuniform sampler2D map;\nuniform sampler2D alphaMap;\nuniform float useMap;\nuniform float useAlphaMap;\nuniform float useDash;\nuniform float dashArray;  \nuniform float dashOffset; \nuniform float dashRatio;  \n\nuniform float alphaTest;\nuniform vec2 repeat;\nvarying vec2 vUV;\nvarying float vCounters; \n\nvarying vec3 pos;\n\nuniform vec4 startColor;\nuniform vec4 endColor;\nvarying vec4 vfromColor;\nvarying vec4 vtoColor;\n\nfloat getOpacity(float x, float len) {\n    return 1.0 - 4.0 * (x - len / 2.0) * (x - len / 2.0) / (len * len);\n}\n\nvoid main() {\n    vec4 c = mix(vfromColor, vtoColor, vCounters);\n    #ifdef USE_ANIMATION\n    float blur = mod((vCounters + dashOffset), (dashArray + dashArray * dashRatio));\n    blur /= dashArray;\n    c = mix(vfromColor, vtoColor, blur);\n    #endif\n    if(pos.z < 0.0) { \n        discard;\n    }\n\n    if(useMap == 1.)\n        c *= texture2D(map, vUV * repeat);\n    if(useAlphaMap == 1.)\n        c.a *= texture2D(alphaMap, vUV * repeat).a;\n    if(c.a < alphaTest)\n        discard;\n    #ifdef USE_ANIMATION\n    if(useDash == 1.) {\n        \n        \n        float op = ceil(mod(vCounters + dashOffset, dashArray) - (dashArray * dashRatio));\n\n        if(blur >= 1.0 || blur < 0.2) {\n            discard;\n        } else {\n            \n        }\n    }\n    #endif\n\n    \n    gl_FragColor = c;\n\n    \n\n}",
       uniforms: {
-        lineWidth: {
-          value: 1,
-        },
-        map: {
-          value: null,
-        },
-        useMap: {
-          value: 0,
-        },
-        alphaMap: {
-          value: null,
-        },
-        useAlphaMap: {
-          value: 0,
-        },
-        color: {
-          value: new ln(16777215),
-        },
-        opacity: {
-          value: 1,
-        },
-        resolution: {
-          value: new Le(1, 1),
-        },
-        sizeAttenuation: {
-          value: 1,
-        },
-        dashArray: {
-          value: 0,
-        },
-        dashOffset: {
-          value: 0,
-        },
-        dashRatio: {
-          value: 0.5,
-        },
-        useDash: {
-          value: 0,
-        },
-        visibility: {
-          value: 1,
-        },
-        alphaTest: {
-          value: 0,
-        },
-        repeat: {
-          value: new Le(1, 1),
-        },
-        lineCap: {
-          value: 2,
-        },
-        startColor: {
-          value: new je(0.72, 0.8, 1, 1),
-        },
-        endColor: {
-          value: new je(0.03, 0.37, 0.75, 1),
-        },
+        lineWidth: { value: 1 },
+        map: { value: null },
+        useMap: { value: 0 },
+        alphaMap: { value: null },
+        useAlphaMap: { value: 0 },
+        color: { value: new ln(16777215) },
+        opacity: { value: 1 },
+        resolution: { value: new Le(1, 1) },
+        sizeAttenuation: { value: 1 },
+        dashArray: { value: 0 },
+        dashOffset: { value: 0 },
+        dashRatio: { value: 0.5 },
+        useDash: { value: 0 },
+        visibility: { value: 1 },
+        alphaTest: { value: 0 },
+        repeat: { value: new Le(1, 1) },
+        lineCap: { value: 2 },
+        startColor: { value: new je(0.72, 0.8, 1, 1) },
+        endColor: { value: new je(0.03, 0.37, 0.75, 1) },
       },
     }),
       this.setValues(t),
@@ -71909,10 +72405,7 @@ class Rq extends Jn {
     this.uniforms.repeat.value.copy(t);
   }
 }
-const Oq = {
-  NoBlending: 1,
-  AdditiveBlending: 2,
-};
+const Oq = { NoBlending: 1, AdditiveBlending: 2 };
 class Fq extends Iq {
   constructor(t, e) {
     super(t, e),
@@ -71926,9 +72419,7 @@ class Fq extends Iq {
     (this.extensions.breathPointLayer = new Dq(
       this.gis,
       ot(rt({}, i), {
-        common: {
-          visible: !!n.visible && i.common.visible,
-        },
+        common: { visible: !!n.visible && i.common.visible },
         __pureData__: !0,
       }),
       !0
@@ -71941,10 +72432,7 @@ class Fq extends Iq {
     super._initialState(WW);
   }
   _initLayerGroup() {
-    super._initLayerGroup({
-      layerName: "fly-line-layer",
-      layerType: "line",
-    });
+    super._initLayerGroup({ layerName: "fly-line-layer", layerType: "line" });
   }
   updateArea() {
     super.updateArea();
@@ -71959,10 +72447,7 @@ class Fq extends Iq {
     return super._getParseData(
       ot(rt({}, t), {
         layerType: "FlyLine",
-        coordsField: {
-          fromField: i,
-          toField: n,
-        },
+        coordsField: { fromField: i, toField: n },
       })
     );
   }
@@ -71971,16 +72456,8 @@ class Fq extends Iq {
       { fill: i } = t,
       { fromColor: n, toColor: r } = i,
       o = [
-        {
-          visual: n,
-          scaleField: e.fromColorField,
-          dataField: "_fromColor_",
-        },
-        {
-          visual: r,
-          scaleField: e.toColorField,
-          dataField: "_toColor_",
-        },
+        { visual: n, scaleField: e.fromColorField, dataField: "_fromColor_" },
+        { visual: r, scaleField: e.toColorField, dataField: "_toColor_" },
       ];
     return super._getScaleData(o);
   }
@@ -71991,9 +72468,7 @@ class Fq extends Iq {
     return (
       (n =
         "BezierCurve3" === i
-          ? Lq(e, {
-              height: this._mapSize(80, "z"),
-            })
+          ? Lq(e, { height: this._mapSize(80, "z") })
           : ((t, e) => {
               if (0 === t.length) return t;
               const i = {},
@@ -72001,18 +72476,9 @@ class Fq extends Iq {
               t.forEach((t, e) => {
                 const { coordinates: r } = t;
                 0 === e
-                  ? (i[e] = {
-                      x: r[0][0],
-                      y: r[0][1],
-                    })
-                  : ((i[e] = {
-                      x: r[1][0],
-                      y: r[1][1],
-                    }),
-                    n.push({
-                      source: e,
-                      target: "0",
-                    }));
+                  ? (i[e] = { x: r[0][0], y: r[0][1] })
+                  : ((i[e] = { x: r[1][0], y: r[1][1] }),
+                    n.push({ source: e, target: "0" }));
               });
               const r = xW().step_size(50).nodes(i).edges(n)(),
                 o = [];
@@ -72036,9 +72502,7 @@ class Fq extends Iq {
         this._getScaleData.bind(this),
         this._getRenderData.bind(this),
         this.__draw.bind(this)
-      )({
-        rawData: e,
-      });
+      )({ rawData: e });
     const { parseData: i } = this.state,
       n = [],
       r = {};
@@ -72046,9 +72510,7 @@ class Fq extends Iq {
       i.forEach((t) => {
         this.__addBreathData(r, t, n);
       }),
-      this.extensions.breathPointLayer.set({
-        data: n,
-      }),
+      this.extensions.breathPointLayer.set({ data: n }),
       this
     );
   }
@@ -72056,19 +72518,9 @@ class Fq extends Iq {
     const n = e.coordinates[0].join("-"),
       r = e.coordinates[1].join("-");
     t[n] ||
-      i.push(
-        ot(rt({}, e), {
-          type: "from",
-          coordinates: e.coordinates[0],
-        })
-      ),
+      i.push(ot(rt({}, e), { type: "from", coordinates: e.coordinates[0] })),
       t[r] ||
-        i.push(
-          ot(rt({}, e), {
-            type: "to",
-            coordinates: e.coordinates[1],
-          })
-        ),
+        i.push(ot(rt({}, e), { type: "to", coordinates: e.coordinates[1] })),
       (t[n] = !0),
       (t[r] = !0);
   }
@@ -72088,11 +72540,7 @@ class Fq extends Iq {
           { color: c, opacity: h } = EA(s);
         n.push(l.r, l.g, l.b, u), r.push(c.r, c.g, c.b, h);
       }),
-      {
-        position: i,
-        fromColor: n,
-        toColor: r,
-      }
+      { position: i, fromColor: n, toColor: r }
     );
   }
   __draw() {
@@ -72214,64 +72662,35 @@ const zq = {
           domain: [],
           range: [FW.light.arcoblue[1], FW.light.arcoblue[9]],
         },
-        ordinal: {
-          domain: [],
-          range: FW.light.arcoblue,
-          unknown: "undefined",
-        },
+        ordinal: { domain: [], range: FW.light.arcoblue, unknown: "undefined" },
         constant: FW.light.arcoblue[1],
         default: FW.light.arcoblue[1],
       },
       map: {
         type: $U.CONSTANT,
-        threshold: {
-          domain: [],
-          range: [],
-        },
-        ordinal: {
-          domain: [],
-          range: [],
-        },
+        threshold: { domain: [], range: [] },
+        ordinal: { domain: [], range: [] },
         constant: "",
         default: "",
       },
       mapAspect: {
         type: $U.CONSTANT,
-        threshold: {
-          domain: [],
-          range: [],
-        },
-        ordinal: {
-          domain: [],
-          range: [],
-        },
+        threshold: { domain: [], range: [] },
+        ordinal: { domain: [], range: [] },
         constant: 1,
         default: 1,
       },
     },
     width: {
       type: $U.LINEAR,
-      linear: {
-        domain: null,
-        range: [20, 120],
-        clamp: !1,
-      },
-      threshold: {
-        domain: null,
-        range: [20, 120],
-      },
-      ordinal: {
-        domain: null,
-        range: [20, 120],
-      },
+      linear: { domain: null, range: [20, 120], clamp: !1 },
+      threshold: { domain: null, range: [20, 120] },
+      ordinal: { domain: null, range: [20, 120] },
       constant: 20,
       default: 20,
     },
   },
-  animation: {
-    enabled: !0,
-    speed: 1,
-  },
+  animation: { enabled: !0, speed: 1 },
   lineJoin: "miter",
   usePixel: !1,
   clipMode: Qw.intersect,
@@ -72279,19 +72698,13 @@ const zq = {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -72693,37 +73106,14 @@ class Bq extends Jn {
   constructor() {
     super({
       uniforms: {
-        uOffset: {
-          type: "float",
-          value: 0,
-        },
-        uIcon: {
-          type: "sampler2D",
-          value: null,
-        },
-        uIconIndex: {
-          type: "float",
-          value: 0,
-        },
-        iconAspect: {
-          type: "float",
-          value: 1,
-        },
-        uColor: {
-          type: "vec4",
-          value: [0, 0, 0, 0],
-        },
-        uWidth: {
-          type: "float",
-          value: 5,
-        },
-        uResolution: {
-          type: "float",
-          value: 1,
-        },
-        uTransparentImages: {
-          value: new Int8Array(64).fill(0),
-        },
+        uOffset: { type: "float", value: 0 },
+        uIcon: { type: "sampler2D", value: null },
+        uIconIndex: { type: "float", value: 0 },
+        iconAspect: { type: "float", value: 1 },
+        uColor: { type: "vec4", value: [0, 0, 0, 0] },
+        uWidth: { type: "float", value: 5 },
+        uResolution: { type: "float", value: 1 },
+        uTransparentImages: { value: new Int8Array(64).fill(0) },
       },
       vertexShader:
         "attribute float aDistance;\nattribute vec3 aDir;\nattribute float aUVy;\n\nuniform float uWidth;\nuniform float uResolution;\n\nvarying float vDistance;\n\n#ifdef USE_ICON\nvarying float vUV;\n#endif\nvoid main() {\n  float halfWith = uWidth / 2.;\n  #ifdef USE_ICON\n  vUV = aUVy;\n  #endif\n  vec3 uOffset = normal * halfWith * uResolution;\n  float cosHalfAngle = dot(aDir, normal);\n  vDistance = aDistance / uResolution + (cosHalfAngle * halfWith);\n\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position + uOffset, 1.);\n}",
@@ -72731,10 +73121,7 @@ class Bq extends Jn {
         "precision highp float;\nuniform float uOffset;\nuniform float uWidth;\nuniform float uIconIndex;\nuniform float iconAspect;\nuniform bool[MAX_ICON_ROW * MAX_ICON_ROW] uTransparentImages;\n\n#ifdef USE_ICON\nuniform sampler2D uIcon;\nvarying float vUV;\n#endif\nuniform vec4 uColor;\nvarying float vDistance;\n\nfloat between(float edge0, float edge1, float x) {\n  return clamp((x - edge0) / (edge1 - edge0), 0., 1.);\n}\nvec2 mixIconCoord(vec2 v) {\n  float step = 1. / float(MAX_SPRITE_SIZE);\n  \n  float maxIconCount = float(MAX_ICON_ROW);\n  float y = floor(uIconIndex / maxIconCount);\n  float x = mod(uIconIndex, maxIconCount);\n  return vec2(mix(between(0., maxIconCount, x) + step, between(0., maxIconCount, x + 1.) - step, v.x), mix(between(0., maxIconCount, y) + step, between(0., maxIconCount, y + 1.) - step, v.y));\n}\n\nvoid main(void) {\n  vec4 finalColor = vec4(1.0, 0.0, 0.0, 0.0);\n\n  #ifdef USE_ICON\n\n  \n  \n  \n  \n  \n\n  bool transparent = uTransparentImages[int(uIconIndex)];\n\n  \n  vec2 coord = mixIconCoord(vec2(mod((vDistance - uOffset) / uWidth / iconAspect, 1.), vUV));\n  vec4 iconColor = texture2D(uIcon, coord);\n\n  if(!transparent) {\n    finalColor = iconColor;\n  } else if(iconColor.a == 1.) {\n    finalColor = iconColor;\n  } else if(uColor.a == 0.) {\n    finalColor = iconColor;\n  } else {\n    finalColor = vec4(uColor.rgb, iconColor.a);\n  }\n\n  gl_FragColor = finalColor;\n  #endif\n\n  #ifndef USE_ICON\n  gl_FragColor = uColor;\n  #endif\n}",
       side: xt,
       transparent: !0,
-      defines: {
-        MAX_ICON_ROW: 8,
-        MAX_SPRITE_SIZE: bq,
-      },
+      defines: { MAX_ICON_ROW: 8, MAX_SPRITE_SIZE: bq },
       depthTest: !1,
     });
   }
@@ -72923,26 +73310,10 @@ class Xq extends Iq {
       } = i;
     return this.scaleService.apply(
       [
-        {
-          visual: n,
-          scaleField: e.colorField,
-          dataField: "_color_",
-        },
-        {
-          visual: a,
-          scaleField: e.widthField,
-          dataField: "_width_",
-        },
-        {
-          visual: r,
-          scaleField: e.mapField,
-          dataField: "_map_",
-        },
-        {
-          visual: o,
-          scaleField: e.mapField,
-          dataField: "_mapAspect_",
-        },
+        { visual: n, scaleField: e.colorField, dataField: "_color_" },
+        { visual: a, scaleField: e.widthField, dataField: "_width_" },
+        { visual: r, scaleField: e.mapField, dataField: "_map_" },
+        { visual: o, scaleField: e.mapField, dataField: "_mapAspect_" },
       ],
       t
     );
@@ -72960,23 +73331,14 @@ class Xq extends Iq {
         type: r,
         options: {
           layerType: a,
-          coordsField: {
-            coordinatesField: "coordinates",
-          },
+          coordsField: { coordinatesField: "coordinates" },
         },
       })
       .transform({
         type: "filter",
-        options: {
-          callback: o && ((t) => Kw(t, n.features[0], e, a)),
-        },
+        options: { callback: o && ((t) => Kw(t, n.features[0], e, a)) },
       })
-      .transform({
-        type: "webgis",
-        options: {
-          as: "coordinates",
-        },
-      }).latestData;
+      .transform({ type: "webgis", options: { as: "coordinates" } }).latestData;
   }
   __add(t) {
     this.__addLine(t);
@@ -73124,14 +73486,8 @@ const Qq = {
         },
         map: {
           type: $U.CONSTANT,
-          threshold: {
-            domain: [],
-            range: [],
-          },
-          ordinal: {
-            domain: [],
-            range: [],
-          },
+          threshold: { domain: [], range: [] },
+          ordinal: { domain: [], range: [] },
           constant: `https://lf3-dpfe.${atob(
             "Ynl0ZXRvcy5jb20="
           )}/obj/gis/images/bubble.png`,
@@ -73140,19 +73496,9 @@ const Qq = {
       },
       size: {
         type: $U.LINEAR,
-        linear: {
-          domain: null,
-          range: [40, 120],
-          clamp: !1,
-        },
-        threshold: {
-          domain: null,
-          range: [40, 120],
-        },
-        ordinal: {
-          domain: null,
-          range: [40, 120],
-        },
+        linear: { domain: null, range: [40, 120], clamp: !1 },
+        threshold: { domain: null, range: [40, 120] },
+        ordinal: { domain: null, range: [40, 120] },
         constant: 40,
         default: 40,
       },
@@ -73191,27 +73537,11 @@ const Qq = {
         offsetX: 0,
         offsetY: 0,
       },
-      custom: {
-        enabled: !1,
-        markerType: "css2d",
-        element: null,
-      },
+      custom: { enabled: !1, markerType: "css2d", element: null },
     },
     animation: {
-      opacity: {
-        enabled: !1,
-        min: 0.2,
-        max: 1,
-        speed: 0.3,
-        yoyo: !0,
-      },
-      scale: {
-        enabled: !0,
-        min: 0.5,
-        max: 1,
-        speed: 0.2,
-        yoyo: !0,
-      },
+      opacity: { enabled: !1, min: 0.2, max: 1, speed: 0.3, yoyo: !0 },
+      scale: { enabled: !0, min: 0.5, max: 1, speed: 0.2, yoyo: !0 },
     },
   },
   Zq = af(Qq, {
@@ -73221,31 +73551,18 @@ const Qq = {
       hover: {
         enabled: !1,
         trigger: "mousemove",
-        effect: {
-          color: vk,
-          poi: !1,
-        },
+        effect: { color: vk, poi: !1 },
       },
       select: {
         enabled: !1,
         trigger: "click",
         multi: !1,
-        effect: {
-          color: bk,
-          poi: !1,
-        },
+        effect: { color: bk, poi: !1 },
       },
     },
   });
 class Jq {
-  constructor(
-    t = {
-      min: 1,
-      max: 1,
-      speed: 0.5,
-      yoyo: !0,
-    }
-  ) {
+  constructor(t = { min: 1, max: 1, speed: 0.5, yoyo: !0 }) {
     (this._reverseTime = !1),
       (this.min = t.min),
       (this.max = t.max),
@@ -73382,20 +73699,11 @@ class eY extends NW {
         depthTest: !1,
         transparent: !0,
         uniforms: {
-          uOpacity: {
-            value: 1,
-          },
-          uImage: {
-            value: null,
-          },
-          uTransparentImages: {
-            value: new Int8Array(64).fill(0),
-          },
+          uOpacity: { value: 1 },
+          uImage: { value: null },
+          uTransparentImages: { value: new Int8Array(64).fill(0) },
         },
-        defines: {
-          USE_IMAGE: !1,
-          MAX_ICON_ROW: 8,
-        },
+        defines: { USE_IMAGE: !1, MAX_ICON_ROW: 8 },
       })),
       this.instancedMesh)
     ) {
@@ -73421,19 +73729,10 @@ class eY extends NW {
         this.dummy.scale.set(r, r, 1),
         this.dummy.updateMatrix(),
         this.instancedMesh.setMatrixAt(p, this.dummy.matrix),
-        this.instancedMesh.setUserDataAt(
-          p,
-          ot(rt({}, n), {
-            initialScale: r,
-          })
-        ),
+        this.instancedMesh.setUserDataAt(p, ot(rt({}, n), { initialScale: r })),
         t)
       ) {
-        const t = {
-          x: o,
-          y: a,
-          z: 0,
-        };
+        const t = { x: o, y: a, z: 0 };
         (t.z += this.coreGroup.position.z),
           await this._addPoiMesh({
             pointPosition: t,
@@ -73443,9 +73742,7 @@ class eY extends NW {
             minorContent: i.format
               ? i.format(u[p]._minorPOI_)
               : u[p]._minorPOI_,
-            ext: {
-              relatedInstanceId: p,
-            },
+            ext: { relatedInstanceId: p },
           });
       }
     }
@@ -73475,26 +73772,13 @@ class eY extends NW {
     return this.dataView
       .parse(t, {
         type: s,
-        options: {
-          layerType: u,
-          coordsField: {
-            lngField: i,
-            latField: n,
-          },
-        },
+        options: { layerType: u, coordsField: { lngField: i, latField: n } },
       })
       .transform({
         type: "filter",
-        options: {
-          callback: l && ((t) => Kw(t, a.features[0], r, u)),
-        },
+        options: { callback: l && ((t) => Kw(t, a.features[0], r, u)) },
       })
-      .transform({
-        type: "webgis",
-        options: {
-          as: "coordinates",
-        },
-      }).latestData;
+      .transform({ type: "webgis", options: { as: "coordinates" } }).latestData;
   }
   __getScaleData(t) {
     const { fields: e, style: i } = this.state,
@@ -73504,29 +73788,11 @@ class eY extends NW {
       } = i;
     return this.scaleService.apply(
       [
-        {
-          scaleField: e.majorPOIField,
-          dataField: "_majorPOI_",
-        },
-        {
-          scaleField: e.minorPOIField,
-          dataField: "_minorPOI_",
-        },
-        {
-          visual: n,
-          scaleField: e.colorField,
-          dataField: "_color_",
-        },
-        {
-          visual: o,
-          scaleField: e.sizeField,
-          dataField: "_size_",
-        },
-        {
-          visual: r,
-          scaleField: e.mapField,
-          dataField: "_map_",
-        },
+        { scaleField: e.majorPOIField, dataField: "_majorPOI_" },
+        { scaleField: e.minorPOIField, dataField: "_minorPOI_" },
+        { visual: n, scaleField: e.colorField, dataField: "_color_" },
+        { visual: o, scaleField: e.sizeField, dataField: "_size_" },
+        { visual: r, scaleField: e.mapField, dataField: "_map_" },
       ],
       t
     );
@@ -73652,29 +73918,20 @@ const iY = {
     enabled: !0,
     markerType: "css2d",
     element: null,
-    anchor: {
-      position: "center",
-      offset: [0, 0],
-    },
+    anchor: { position: "center", offset: [0, 0] },
   },
   clipMode: Qw.intersect,
   interaction: {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -73717,21 +73974,14 @@ class nY extends NW {
     return super._getParseData(
       ot(rt({}, t), {
         layerType: "Point",
-        coordsField: {
-          lngField: i,
-          latField: n,
-        },
+        coordsField: { lngField: i, latField: n },
       })
     );
   }
   _getRenderData(t) {
     const { parseData: e } = this.state;
     if (0 === e.length) return t;
-    const i = AW(e, {
-      segments: 3,
-      radiusTop: 0.001,
-      shape: "marker",
-    });
+    const i = AW(e, { segments: 3, radiusTop: 0.001, shape: "marker" });
     return (this.state.renderData = i), this;
   }
   add(t) {
@@ -73742,9 +73992,7 @@ class nY extends NW {
           this._getParseData.bind(this),
           this._getRenderData.bind(this),
           this.__draw.bind(this)
-        )({
-          rawData: e,
-        }),
+        )({ rawData: e }),
         this)
       : this;
   }
@@ -73812,9 +74060,7 @@ class nY extends NW {
     super.clear(),
       null == (t = this.instancedMesh) ||
         t.children.forEach((t) => {
-          t.dispatchEvent({
-            type: "removed",
-          });
+          t.dispatchEvent({ type: "removed" });
         }),
       null == (e = this.instancedMesh) || e.dispose(),
       (this.instancedMesh = null);
@@ -73867,20 +74113,12 @@ const rY = {
     fill: {
       color: {
         type: $U.LINEAR,
-        linear: {
-          domain: [],
-          range: ["#041c22", "#40cad8"],
-          clamp: !1,
-        },
+        linear: { domain: [], range: ["#041c22", "#40cad8"], clamp: !1 },
         threshold: {
           domain: [],
           range: [FW.light.arcoblue[1], FW.light.arcoblue[9]],
         },
-        ordinal: {
-          domain: [],
-          range: FW.light.arcoblue,
-          unknown: "undefined",
-        },
+        ordinal: { domain: [], range: FW.light.arcoblue, unknown: "undefined" },
         constant: FW.light.arcoblue[1],
         default: "rgba(255,255,255,0)",
       },
@@ -73919,19 +74157,13 @@ const rY = {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -74018,19 +74250,9 @@ class oY extends NW {
       })),
       (this.state.scaleData = this.scaleService.apply(
         [
-          {
-            visual: t,
-            scaleField: i.colorField,
-            dataField: "_color_",
-          },
-          {
-            scaleField: i.majorPOIField,
-            dataField: "_majorPOI_",
-          },
-          {
-            scaleField: i.minorPOIField,
-            dataField: "_minorPOI_",
-          },
+          { visual: t, scaleField: i.colorField, dataField: "_color_" },
+          { scaleField: i.majorPOIField, dataField: "_majorPOI_" },
+          { scaleField: i.minorPOIField, dataField: "_minorPOI_" },
         ],
         o ? [...n, ...this.currentRegionData] : e
       ));
@@ -74128,16 +74350,10 @@ class oY extends NW {
             n = t[a.colorField],
             r = [t._position_[0], t._position_[1], this.coreGroup.position.z];
           await this._addPoiMesh({
-            pointPosition: {
-              x: r[0],
-              y: r[1],
-              z: r[2],
-            },
+            pointPosition: { x: r[0], y: r[1], z: r[2] },
             majorContent: l.format ? l.format(i) : i,
             minorContent: u.format ? u.format(n) : n,
-            ext: {
-              relatedMeshIds: e.map((t) => t.id),
-            },
+            ext: { relatedMeshIds: e.map((t) => t.id) },
           });
         } else {
           const t =
@@ -74154,16 +74370,10 @@ class oY extends NW {
             f = null != (o = h[d]) ? o : d,
             g = [t[0], t[1], this.coreGroup.position.z];
           await this._addPoiMesh({
-            pointPosition: {
-              x: g[0],
-              y: g[1],
-              z: g[2],
-            },
+            pointPosition: { x: g[0], y: g[1], z: g[2] },
             majorContent: l.format ? l.format(p) : p,
             minorContent: u.format ? u.format(f) : f,
-            ext: {
-              relatedMeshIds: e.map((t) => t.id),
-            },
+            ext: { relatedMeshIds: e.map((t) => t.id) },
           });
         }
     }
@@ -74207,19 +74417,13 @@ const aY = {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -74238,10 +74442,7 @@ class sY extends oV {
       super.registerInteraction();
   }
   _initLayerGroup() {
-    super._initLayerGroup({
-      layerName: "plane-layer",
-      layerType: "env",
-    });
+    super._initLayerGroup({ layerName: "plane-layer", layerType: "env" });
   }
   _initPlane() {
     const { sceneSystem: t } = this.gis;
@@ -74254,20 +74455,12 @@ class sY extends oV {
         fragmentShader:
           "precision highp float;\nuniform sampler2D uPlaneTexture;\nvarying vec2 vUv;\nuniform vec3 uColor;\nuniform float uOpacity;\n\nvoid main() {\n  vec4 finalColor;\n  \n  #if defined(USE_IMAGE)\n  finalColor = texture2D(uPlaneTexture, vUv);\n  finalColor.a *= uOpacity;\n  #else\n  finalColor = vec4(uColor, uOpacity);\n  #endif\n  gl_FragColor = finalColor;\n\n}",
         uniforms: {
-          uColor: {
-            value: new Ye(e.color.r, e.color.g, e.color.b),
-          },
-          uOpacity: {
-            value: e.opacity,
-          },
-          uPlaneTexture: {
-            value: !1,
-          },
+          uColor: { value: new Ye(e.color.r, e.color.g, e.color.b) },
+          uOpacity: { value: e.opacity },
+          uPlaneTexture: { value: !1 },
         },
         transparent: e.transparent,
-        defines: {
-          USE_IMAGE: !1,
-        },
+        defines: { USE_IMAGE: !1 },
         depthTest: !0,
         depthWrite: !1,
       })),
@@ -74445,11 +74638,7 @@ const lY = {
   },
   count: 20,
   size: 20,
-  scope: {
-    width: 65,
-    height: 65,
-    altitude: 65,
-  },
+  scope: { width: 65, height: 65, altitude: 65 },
   center: null,
   minSpeed: 0.1,
   maxSpeed: 0.2,
@@ -74457,19 +74646,13 @@ const lY = {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -74483,9 +74666,7 @@ class uY extends oV {
   __init() {
     this._initialState(),
       this._initLayerGroup(),
-      super.emitPropsWatch({
-        count: 0,
-      }),
+      super.emitPropsWatch({ count: 0 }),
       super.registerInteraction();
   }
   __initTexture() {
@@ -74566,25 +74747,18 @@ class uY extends oV {
       (this.particle = new Cs(e, this.particleMaterial)),
       this.particle.setRenderIndex(lU.PARTICLE_LAYER),
       (this.particle.name = "particle"),
-      (this.particle.ext = {
-        speed: {},
-      }),
+      (this.particle.ext = { speed: {} }),
       this.coreGroup.add(this.particle);
   }
   _initLayerGroup() {
-    super._initLayerGroup({
-      layerName: "particle-layer",
-      layerType: "env",
-    }),
+    super._initLayerGroup({ layerName: "particle-layer", layerType: "env" }),
       this.animation.start();
   }
   add(t) {
     const { count: e } = t;
     return (
       this.__addParticle(e),
-      (this.state = af(this.state, {
-        count: this.state.count + e,
-      })),
+      (this.state = af(this.state, { count: this.state.count + e })),
       this.updateArea(),
       this
     );
@@ -74628,11 +74802,7 @@ class uY extends oV {
                     "attribute float size;\n\nvoid main() {\n  \n  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);\n  \n  gl_PointSize = size / -mvPosition.z;\n  gl_Position = projectionMatrix * mvPosition;\n\n  \n  \n  \n\n  \n  \n  \n\n}",
                   fragmentShader:
                     "precision highp float;\nuniform sampler2D uPointTexture;\n\nvoid main() {\n\n  \n  vec2 uv = vec2(gl_PointCoord.x, 1.0 - gl_PointCoord.y);\n  gl_FragColor = texture2D(uPointTexture, uv);\n\n}",
-                  uniforms: {
-                    uPointTexture: {
-                      value: this.texture,
-                    },
-                  },
+                  uniforms: { uPointTexture: { value: this.texture } },
                   transparent: !0,
                   side: 0,
                   depthTest: !1,
@@ -74643,9 +74813,7 @@ class uY extends oV {
           t.count > e.count
             ? (this.clear(),
               (this.state.count = 0),
-              this.add({
-                count: t.count,
-              }))
+              this.add({ count: t.count }))
             : this.particle.geometry.setDrawRange(0, t.count);
         }),
         this._propsWatch.defaultRule("", "always", (t) => {
@@ -74691,17 +74859,8 @@ const cY = {
   },
   flash: 40,
   count: 20,
-  size: {
-    minWidth: 6,
-    maxWidth: 6,
-    minHeight: 8,
-    maxHeight: 8,
-  },
-  scope: {
-    width: 65,
-    height: 65,
-    altitude: 65,
-  },
+  size: { minWidth: 6, maxWidth: 6, minHeight: 8, maxHeight: 8 },
+  scope: { width: 65, height: 65, altitude: 65 },
   center: null,
   minSpeed: 0.1,
   maxSpeed: 0.2,
@@ -74709,19 +74868,13 @@ const cY = {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -74737,9 +74890,7 @@ class hY extends oV {
       this._initLayerGroup(),
       (this.dummy = new Hi()),
       (this.dummy.matrixAutoUpdate = !1),
-      super.emitPropsWatch({
-        count: 0,
-      }),
+      super.emitPropsWatch({ count: 0 }),
       super.registerInteraction();
   }
   __initTexture() {
@@ -74830,19 +74981,14 @@ class hY extends oV {
       this.group.position.setZ(d);
   }
   _initLayerGroup() {
-    super._initLayerGroup({
-      layerName: "stream-layer",
-      layerType: "env",
-    }),
+    super._initLayerGroup({ layerName: "stream-layer", layerType: "env" }),
       this.animation.start();
   }
   add(t) {
     const { count: e } = t;
     return (
       this.__addstream(e),
-      (this.state = af(this.state, {
-        count: this.state.count + e,
-      })),
+      (this.state = af(this.state, { count: this.state.count + e })),
       this.updateArea(),
       this
     );
@@ -74924,11 +75070,7 @@ class hY extends oV {
                       "varying vec2 vUv;\n\nvoid main() {\n  vUv = uv;\n  \n  gl_Position = projectionMatrix * modelViewMatrix * instanceMatrix * vec4(position, 1.0);\n}",
                     fragmentShader:
                       "precision highp float;\nuniform sampler2D uStreamTexture;\nvarying vec2 vUv;\n\nvoid main() {\n\n  gl_FragColor = texture2D(uStreamTexture, vUv);\n\n}",
-                    uniforms: {
-                      uStreamTexture: {
-                        value: this.textures[0],
-                      },
-                    },
+                    uniforms: { uStreamTexture: { value: this.textures[0] } },
                     transparent: !0,
                     side: xt,
                     depthTest: !1,
@@ -74940,9 +75082,7 @@ class hY extends oV {
           t.count > e.count
             ? (this.clear(),
               (this.state.count = 0),
-              this.add({
-                count: t.count,
-              }))
+              this.add({ count: t.count }))
             : (this.stream.count = t.count);
         }),
         this._propsWatch.defaultRule("", "always", (t) => {
@@ -74968,30 +75108,16 @@ const pY = {
           domain: [],
           range: [FW.light.arcoblue[1], FW.light.arcoblue[9]],
         },
-        ordinal: {
-          domain: [],
-          range: FW.light.arcoblue,
-          unknown: "undefined",
-        },
+        ordinal: { domain: [], range: FW.light.arcoblue, unknown: "undefined" },
         constant: FW.light.arcoblue[1],
         default: "rgba(255,255,255,0)",
       },
     },
     height: {
       type: $U.LINEAR,
-      linear: {
-        domain: [],
-        range: [0, 100],
-        clamp: !1,
-      },
-      threshold: {
-        domain: [],
-        range: [0, 100],
-      },
-      ordinal: {
-        domain: [],
-        range: [0, 100],
-      },
+      linear: { domain: [], range: [0, 100], clamp: !1 },
+      threshold: { domain: [], range: [0, 100] },
+      ordinal: { domain: [], range: [0, 100] },
       constant: 50,
       default: 0,
     },
@@ -74999,18 +75125,10 @@ const pY = {
     radiusBottom: 4,
     segments: 4,
   },
-  animation: {
-    enabled: !1,
-  },
-  topStyle: {
-    fill: {
-      map: null,
-    },
-  },
+  animation: { enabled: !1 },
+  topStyle: { fill: { map: null } },
   sideStyle: {
-    fill: {
-      map: null,
-    },
+    fill: { map: null },
     gradientColorConfig: {},
     gradientOpacityConfig: {},
   },
@@ -75041,30 +75159,20 @@ const pY = {
       offsetX: 0,
       offsetY: 0,
     },
-    custom: {
-      enabled: !1,
-      markerType: "css2d",
-      element: null,
-    },
+    custom: { enabled: !1, markerType: "css2d", element: null },
   },
   clipMode: Qw.intersect,
   interaction: {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -75099,18 +75207,9 @@ class dY extends RW {
       fragmentShader:
         "precision highp float;\n\nvarying vec2 vUv;\nvarying float vZ; \nuniform sampler2D uTopTexture; \nuniform sampler2D uSideTexture; \nuniform vec4 uFromColor; \nuniform vec4 uToColor; \nuniform vec2 uGradientOpacity;\nvoid main() {\n  #if (defined USE_TOP_TEXTURE) || (defined USE_SIDE_TEXTURE)\n  if(vUv.x > 0.0 && vUv.y > 0.0) {\n    gl_FragColor = vZ < 1.0 ? texture2D(uSideTexture, vUv) : texture2D(uTopTexture, vUv);\n  } else {\n    #ifdef USE_COLOR_GRADIENT\n    gl_FragColor = mix(uFromColor, uToColor, vZ);\n    #endif\n    #ifdef USE_OPACITY_GRADIENT\n    gl_FragColor.a *= mix(uGradientOpacity.x, uGradientOpacity.y, vZ);\n    #endif\n  }\n  #else\n  #ifdef USE_COLOR_GRADIENT\n  gl_FragColor = mix(uFromColor, uToColor, vZ);\n  #endif\n  #ifdef USE_OPACITY_GRADIENT\n  gl_FragColor.a *= mix(uGradientOpacity.x, uGradientOpacity.y, vZ);\n  #endif\n  #endif\n}",
       uniforms: {
-        uTime: {
-          type: "float",
-          value: Number(!u),
-        },
-        uTopTexture: {
-          type: "sampler2D",
-          value: new rE().load(o),
-        },
-        uSideTexture: {
-          type: "sampler2D",
-          value: new rE().load(a),
-        },
+        uTime: { type: "float", value: Number(!u) },
+        uTopTexture: { type: "sampler2D", value: new rE().load(o) },
+        uSideTexture: { type: "sampler2D", value: new rE().load(a) },
         uFromColor: {
           type: "vec4",
           value: new je(f.color.r, f.color.g, f.color.b, f.opacity),
@@ -75119,10 +75218,7 @@ class dY extends RW {
           type: "vec4",
           value: new je(g.color.r, g.color.g, g.color.b, g.opacity),
         },
-        uGradientOpacity: {
-          type: "vec2",
-          value: h,
-        },
+        uGradientOpacity: { type: "vec2", value: h },
       },
       defines: {
         USE_TOP_TEXTURE: !!o,
@@ -75131,9 +75227,7 @@ class dY extends RW {
         USE_OPACITY_GRADIENT: !!h,
         USE_COLOR_ALPHA: !0,
       },
-      basicMaterial: ot(rt({}, mr.phong), {
-        lights: !0,
-      }),
+      basicMaterial: ot(rt({}, mr.phong), { lights: !0 }),
     }),
       super.registerInteraction(),
       super.emitPropsWatch();
@@ -75166,10 +75260,7 @@ class dY extends RW {
     return super._getParseData(
       ot(rt({}, t), {
         layerType: "Point",
-        coordsField: {
-          lngField: i,
-          latField: n,
-        },
+        coordsField: { lngField: i, latField: n },
       })
     );
   }
@@ -75180,24 +75271,10 @@ class dY extends RW {
         height: n,
       } = t,
       r = [
-        {
-          visual: i,
-          scaleField: e.colorField,
-          dataField: "_color_",
-        },
-        {
-          visual: n,
-          scaleField: e.heightField,
-          dataField: "_height_",
-        },
-        {
-          scaleField: e.majorPOIField,
-          dataField: "_majorPOI_",
-        },
-        {
-          scaleField: e.minorPOIField,
-          dataField: "_minorPOI_",
-        },
+        { visual: i, scaleField: e.colorField, dataField: "_color_" },
+        { visual: n, scaleField: e.heightField, dataField: "_height_" },
+        { scaleField: e.majorPOIField, dataField: "_majorPOI_" },
+        { scaleField: e.minorPOIField, dataField: "_minorPOI_" },
       ];
     return super._getScaleData(r);
   }
@@ -75217,10 +75294,7 @@ class dY extends RW {
         radiusBottom: c,
         segments: l,
         shape: "cylinder",
-        texture: {
-          top: r,
-          side: o,
-        },
+        texture: { top: r, side: o },
       });
     return (this.state.renderData = h), this;
   }
@@ -75233,9 +75307,7 @@ class dY extends RW {
           this._getScaleData.bind(this),
           this._getRenderData.bind(this),
           this.__draw.bind(this)
-        )({
-          rawData: e,
-        }),
+        )({ rawData: e }),
         this)
       : this;
   }
@@ -75263,11 +75335,7 @@ class dY extends RW {
       d.translate(0, 0, 0.5),
       d.computeVertexNormals();
     const f = this.gis.shaderService.getShaderModule("barShader"),
-      g = new Jn(
-        ot(rt({}, f), {
-          transparent: !0,
-        })
-      );
+      g = new Jn(ot(rt({}, f), { transparent: !0 }));
     if (this.instancedMesh) {
       for (let y = 0; y < this.coreGroup.children.length; y++)
         if (this.coreGroup.children[y].uuid === this.instancedMesh.uuid) {
@@ -75303,16 +75371,10 @@ class dY extends RW {
           case EW.TOP:
         }
         await this._addPoiMesh({
-          pointPosition: {
-            x: o,
-            y: a,
-            z: m + this.coreGroup.position.z,
-          },
+          pointPosition: { x: o, y: a, z: m + this.coreGroup.position.z },
           majorContent: i.format ? i.format(h[y]._majorPOI_) : h[y]._majorPOI_,
           minorContent: n.format ? n.format(h[y]._minorPOI_) : h[y]._minorPOI_,
-          ext: {
-            relatedInstanceId: y,
-          },
+          ext: { relatedInstanceId: y },
         });
       }
     }
@@ -75414,64 +75476,28 @@ const fY = {
     },
     colorWeight: {
       type: $U.LINEAR,
-      linear: {
-        domain: null,
-        range: [0.1, 1],
-        clamp: !1,
-      },
-      threshold: {
-        domain: null,
-        range: [0, 1],
-      },
-      ordinal: {
-        domain: null,
-        range: [0, 1],
-      },
+      linear: { domain: null, range: [0.1, 1], clamp: !1 },
+      threshold: { domain: null, range: [0, 1] },
+      ordinal: { domain: null, range: [0, 1] },
     },
     heightWeight: {
       type: $U.LINEAR,
-      linear: {
-        domain: null,
-        range: [0.1, 1],
-        clamp: !1,
-      },
-      threshold: {
-        domain: null,
-        range: [0, 1],
-      },
-      ordinal: {
-        domain: null,
-        range: [0, 1],
-      },
+      linear: { domain: null, range: [0.1, 1], clamp: !1 },
+      threshold: { domain: null, range: [0, 1] },
+      ordinal: { domain: null, range: [0, 1] },
     },
     size: {
       type: $U.CONSTANT,
-      linear: {
-        domain: null,
-        range: [0, 26],
-        clamp: !1,
-      },
-      threshold: {
-        domain: null,
-        range: [0, 26],
-      },
-      ordinal: {
-        domain: null,
-        range: [0, 26],
-      },
+      linear: { domain: null, range: [0, 26], clamp: !1 },
+      threshold: { domain: null, range: [0, 26] },
+      ordinal: { domain: null, range: [0, 26] },
       constant: 26,
       default: 26,
     },
     height: {
       type: $U.LINEAR,
-      linear: {
-        range: [0, 50],
-      },
-      custom: {
-        name: "bezier",
-        factor: [0.4, 0.2, 0.7, 0.5],
-        range: [0, 100],
-      },
+      linear: { range: [0, 50] },
+      custom: { name: "bezier", factor: [0.4, 0.2, 0.7, 0.5], range: [0, 100] },
     },
   },
   clipMode: Qw.intersect,
@@ -75513,11 +75539,7 @@ class gY extends Es {
           const e = t.linear,
             i = e.range,
             n = e.domain;
-          this.update({
-            colors: i,
-            positions: n,
-            type: "linear",
-          });
+          this.update({ colors: i, positions: n, type: "linear" });
         }
         break;
       case $U.THRESHOLD:
@@ -75525,11 +75547,7 @@ class gY extends Es {
           const e = t.threshold,
             i = e.range,
             n = e.domain;
-          this.update({
-            colors: i,
-            positions: n,
-            type: "ordinal",
-          });
+          this.update({ colors: i, positions: n, type: "ordinal" });
         }
         break;
       default:
@@ -75547,39 +75565,17 @@ class mY extends Cr {
         "precision highp float;\nuniform sampler2D uHeatmapColor;\nuniform sampler2D uColorScale;\nuniform float uOpacity;\n\nvarying vec2 vTextureCoord;\n\nvoid main() {\n    vec4 weight = texture2D(uHeatmapColor, vTextureCoord);\n    gl_FragColor = texture2D(uColorScale, vec2(weight.r, 0.5));\n    gl_FragColor.a *= weight.a;\n    gl_FragColor.a *= uOpacity;\n\n}",
       depthTest: !0,
       uniforms: {
-        uHeatmapColor: {
-          value: null,
-        },
-        uHeatmapHeight: {
-          value: null,
-        },
-        uColorScale: {
-          value: null,
-        },
-        uBaseHeight: {
-          value: 100,
-        },
-        uMinHeight: {
-          value: 0,
-        },
-        uMaxHeight: {
-          value: 100,
-        },
-        uHeightFunc: {
-          value: 0,
-        },
-        uHightFuncFactor: {
-          value: [0, 0, 1, 1],
-        },
-        uBbox: {
-          value: [0, 0, 1, 1],
-        },
-        uResolution: {
-          value: 100,
-        },
-        uOpacity: {
-          value: 1,
-        },
+        uHeatmapColor: { value: null },
+        uHeatmapHeight: { value: null },
+        uColorScale: { value: null },
+        uBaseHeight: { value: 100 },
+        uMinHeight: { value: 0 },
+        uMaxHeight: { value: 100 },
+        uHeightFunc: { value: 0 },
+        uHightFuncFactor: { value: [0, 0, 1, 1] },
+        uBbox: { value: [0, 0, 1, 1] },
+        uResolution: { value: 100 },
+        uOpacity: { value: 1 },
       },
       blending: 1,
     }),
@@ -75600,14 +75596,7 @@ class yY extends Cr {
       depthTest: !1,
       blendSrc: 201,
       blendDst: 201,
-      uniforms: {
-        uResolution: {
-          value: 1e3,
-        },
-        uBbox: {
-          value: [0, 0, 1, 1],
-        },
-      },
+      uniforms: { uResolution: { value: 1e3 }, uBbox: { value: [0, 0, 1, 1] } },
     }),
       (this.type = "PointHeatmapMaterial");
   }
@@ -75899,24 +75888,14 @@ class AY extends oV {
         layerType: "Point",
         options: {
           layerType: "Point",
-          coordsField: {
-            lngField: n,
-            latField: r,
-          },
+          coordsField: { lngField: n, latField: r },
         },
       })
       .transform({
         type: "filter",
-        options: {
-          callback: l && ((t) => Kw(t, a.features[0], i)),
-        },
+        options: { callback: l && ((t) => Kw(t, a.features[0], i)) },
       })
-      .transform({
-        type: "webgis",
-        options: {
-          as: "coordinates",
-        },
-      }).latestData;
+      .transform({ type: "webgis", options: { as: "coordinates" } }).latestData;
   }
   __getScaleData(t) {
     const { fields: e, style: i } = this.state,
@@ -75933,11 +75912,7 @@ class AY extends oV {
           scaleField: e.heightWeightField,
           dataField: "_weightHeight_",
         },
-        {
-          visual: o,
-          scaleField: e.sizeField,
-          dataField: "_size_",
-        },
+        { visual: o, scaleField: e.sizeField, dataField: "_size_" },
       ],
       t
     );
@@ -75952,9 +75927,7 @@ wY([aV("viewportChange"), lq], AY.prototype, "__handleZoomChange", 1),
   (SY[(SY["top-left"] = 2)] = "top-left"),
   (SY[(SY["top-right"] = 3)] = "top-right");
 const EY = {
-  common: af(Sk, {
-    offset: [14, 14, 0],
-  }),
+  common: af(Sk, { offset: [14, 14, 0] }),
   data: {
     type: xk.GEOBUF_URL,
     data: `https://lf3-dpfe.${atob(
@@ -75962,20 +75935,10 @@ const EY = {
     )}/obj/gis/data/chinasouthseaaggregate_aggregatecssea_kld_gc.pbf`,
   },
   style: {
-    fill: {
-      color: "rgba(8,34,47,1)",
-    },
-    stroke: {
-      color: "rgba(36,157,182,1)",
-      width: 1,
-    },
-    border: {
-      color: "rgba(36,157,182,1)",
-      width: 1,
-    },
-    background: {
-      color: "rgba(7,28,37,1)",
-    },
+    fill: { color: "rgba(8,34,47,1)" },
+    stroke: { color: "rgba(36,157,182,1)", width: 1 },
+    border: { color: "rgba(36,157,182,1)", width: 1 },
+    background: { color: "rgba(7,28,37,1)" },
   },
   scale: 6,
   position: _Y["bottom-right"],
@@ -76003,9 +75966,7 @@ const EY = {
       offsetX: 0,
       offsetY: 0,
     },
-    minor: {
-      enabled: !1,
-    },
+    minor: { enabled: !1 },
   },
 };
 class DY {
@@ -76021,18 +75982,10 @@ class DY {
       n = EA(t);
     return new Jn({
       uniforms: {
-        uColor: {
-          value: n.color,
-        },
-        uOpacity: {
-          value: n.opacity,
-        },
-        uLineWidth: {
-          value: e,
-        },
-        uResolution: {
-          value: new Le(...i),
-        },
+        uColor: { value: n.color },
+        uOpacity: { value: n.opacity },
+        uLineWidth: { value: e },
+        uResolution: { value: new Le(...i) },
       },
       vertexShader:
         "attribute float side;\nattribute vec3 prevPoint;\nattribute vec3 nextPoint;\nuniform float uLineWidth;\nuniform vec2 uResolution;\n\nvoid main() {\n\n   \n  float aspect = uResolution.x / uResolution.y;\n\n  mat4 mvpMatrix = projectionMatrix * modelViewMatrix;\n  \n  vec4 currentV4 = mvpMatrix * vec4(position, 1.0);\n  vec4 prevV4 = mvpMatrix * vec4(prevPoint, 1.0);\n  vec4 nextV4 = mvpMatrix * vec4(nextPoint, 1.0);\n\n  \n  vec2 currentV2 = currentV4.xy / currentV4.w;\n  vec2 prevV2 = prevV4.xy / prevV4.w;\n  vec2 nextV2 = nextV4.xy / nextV4.w;\n\n  vec2 dir;\n\n  \n  if(currentV2 == prevV2) {\n    dir = normalize(nextV2 - currentV2);\n  }\n  \n  else if(currentV2 == nextV2) {\n\n    dir = normalize(currentV2 - prevV2);\n  }\n  \n  else {\n\n  \n    vec2 dir1 = normalize(nextV2 - currentV2);\n  \n    vec2 dir2 = normalize(currentV2 - prevV2);\n    dir = normalize(dir1 + dir2);\n\n  }\n\n  \n  \n  \n  \n  \n  \n\n  dir.x *= aspect;\n  \n  dir = normalize(dir);\n\n  vec2 normal = vec2(-dir.y, dir.x);\n\n  normal *= uLineWidth;\n  normal.x /= aspect;\n  normal /= uResolution.y;\n\n  dir.x /= aspect;\n\n  vec4 offset = vec4(normal * side, 0.0, 0.0);\n  gl_Position = currentV4 + offset;\n\n}",
@@ -76214,14 +76167,9 @@ class TY extends NW {
   _updatePOI() {}
   async loadGeoData() {
     const { data: t, poi: e } = this.state;
-    await ZV(t, {
-      useProject: !1,
-    });
+    await ZV(t, { useProject: !1 });
     const i = t.__geojson_process__;
-    (this.geoBBox = am.bbox(i)),
-      await ZV(e.data, {
-        useProject: !1,
-      });
+    (this.geoBBox = am.bbox(i)), await ZV(e.data, { useProject: !1 });
   }
   initFullAndStroke() {
     const {
@@ -76230,10 +76178,7 @@ class TY extends NW {
       } = this.state,
       { renderSystem: n } = this.gis,
       r = [],
-      o = {
-        index: [],
-        position: [],
-      };
+      o = { index: [], position: [] };
     t.__geojson_process__.features.forEach((t) => {
       const e = t.geometry.coordinates;
       r.push(...e);
@@ -76259,11 +76204,7 @@ class TY extends NW {
       s = EA(e.color);
     (this.fillMesh = new Wn(
       a,
-      new pn({
-        color: s.color,
-        opacity: s.opacity,
-        transparent: s.transparent,
-      })
+      new pn({ color: s.color, opacity: s.opacity, transparent: s.transparent })
     )),
       (this.fillMesh.name = "attach-fill-mesh"),
       this.fillMesh.setRenderIndex(cU.ATTACH_LAYER_FILL_MESH),
@@ -76294,11 +76235,7 @@ class TY extends NW {
       e = EA(t.color);
     (this.backgroundMesh = new Wn(
       new dr(this.borderBoxWidth, this.borderBoxHeight),
-      new pn({
-        color: e.color,
-        opacity: e.opacity,
-        transparent: e.transparent,
-      })
+      new pn({ color: e.color, opacity: e.opacity, transparent: e.transparent })
     )),
       (this.backgroundMesh.name = "attach-backgroud-mesh"),
       this.backgroundMesh.setRenderIndex(cU.ATTACH_LAYER_BACKGROUND_MESH),
@@ -76333,11 +76270,7 @@ class TY extends NW {
     const d = EA(t.color);
     (this.borderMesh = new Wn(
       h,
-      new pn({
-        color: d.color,
-        opacity: d.opacity,
-        transparent: d.transparent,
-      })
+      new pn({ color: d.color, opacity: d.opacity, transparent: d.transparent })
     )),
       (this.borderMesh.name = "attach-border-mesh"),
       this.borderMesh.setRenderIndex(cU.ATTACH_LAYER_BORDER_MESH),
@@ -76365,11 +76298,7 @@ class TY extends NW {
       const t = a.data.__geojson__.features[l],
         [e, i] = t.geometry.coordinates;
       await this._addPoiMesh({
-        pointPosition: {
-          x: e * o,
-          y: i * o,
-          z: 0,
-        },
+        pointPosition: { x: e * o, y: i * o, z: 0 },
         majorContent:
           null != (r = null == s ? void 0 : s[t.properties.name])
             ? r
@@ -76430,20 +76359,14 @@ class TY extends NW {
       ]);
   }
 }
-window.TY = TY;
 const PY = {
   common: Sk,
   data: [],
   originPoints: [],
   fields: OW,
   style: {
-    fill: {
-      color: "rgba(0,255,0,0.3)",
-    },
-    stroke: {
-      color: "rgba(0,255,0,1)",
-      width: 4,
-    },
+    fill: { color: "rgba(0,255,0,0.3)" },
+    stroke: { color: "rgba(0,255,0,1)", width: 4 },
   },
   poi: {
     enabled: !1,
@@ -76471,30 +76394,20 @@ const PY = {
       offsetX: 0,
       offsetY: 0,
     },
-    custom: {
-      enabled: !1,
-      markerType: "css2d",
-      element: null,
-    },
+    custom: { enabled: !1, markerType: "css2d", element: null },
   },
   clipMode: Qw.intersect,
   interaction: {
     hover: {
       enabled: !1,
       trigger: "mousemove",
-      effect: {
-        color: vk,
-        poi: !1,
-      },
+      effect: { color: vk, poi: !1 },
     },
     select: {
       enabled: !1,
       trigger: "click",
       multi: !1,
-      effect: {
-        color: bk,
-        poi: !1,
-      },
+      effect: { color: bk, poi: !1 },
     },
   },
 };
@@ -76604,19 +76517,13 @@ class RY extends NW {
             { lng: n, lat: r, majorPOI: o, minorPOI: a } = u;
           u._relatedMeshId = b.id;
           const [s, l] = t.geo.project([n, r]),
-            c = {
-              x: s,
-              y: l,
-              z: 0,
-            };
+            c = { x: s, y: l, z: 0 };
           (c.z += this.coreGroup.position.z),
             await this._addPoiMesh({
               pointPosition: c,
               majorContent: e.format ? e.format(o) : o,
               minorContent: i.format ? i.format(a) : a,
-              ext: {
-                relatedMeshIds: [b.id],
-              },
+              ext: { relatedMeshIds: [b.id] },
             });
         }
       }
@@ -76653,10 +76560,7 @@ class RY extends NW {
               type: h,
               options: {
                 layerType: u,
-                coordsField: {
-                  lngField: n,
-                  latField: r,
-                },
+                coordsField: { lngField: n, latField: r },
               },
             })
             .transform({
@@ -76684,9 +76588,7 @@ class RY extends NW {
             })
             .transform({
               type: "webgis",
-              options: {
-                as: "coordinates",
-              },
+              options: { as: "coordinates" },
             }).latestData;
         c.push(p);
       }),
@@ -76718,18 +76620,12 @@ class RY extends NW {
         { layerManager: o } = this.gis,
         { lng: a, lat: s, majorPOI: l, minorPOI: u } = t,
         [c, h] = o.geo.project([a, s]),
-        p = {
-          x: c,
-          y: h,
-          z: this.coreGroup.position.z,
-        };
+        p = { x: c, y: h, z: this.coreGroup.position.z };
       await this._addPoiMesh({
         pointPosition: p,
         majorContent: i.format ? i.format(l) : l,
         minorContent: n.format ? n.format(u) : u,
-        ext: {
-          relatedMeshIds: [t._relatedMeshId],
-        },
+        ext: { relatedMeshIds: [t._relatedMeshId] },
       });
     }
     this._updatePOI(!0);
@@ -76802,11 +76698,7 @@ const { typo: OY } = i,
           "bold",
           "bolder",
           "normal",
-        ].map((t) => ({
-          value: t,
-          title_en: t,
-          title_cn: t,
-        })),
+        ].map((t) => ({ value: t, title_en: t, title_cn: t })),
         path: "tips.fontWeight",
       },
       {
@@ -77846,10 +77738,7 @@ const { typo: OY } = i,
               path: "amap-style",
               layout_size: r.Large,
               properties: [
-                {
-                  key: "amap.type",
-                  path: "amap.type",
-                },
+                { key: "amap.type", path: "amap.type" },
                 {
                   key: "amap.default",
                   type: n.Panel,
@@ -78138,11 +78027,7 @@ const { typo: OY } = i,
           "bold",
           "bolder",
           "normal",
-        ].map((t) => ({
-          value: t,
-          title_en: t,
-          title_cn: t,
-        })),
+        ].map((t) => ({ value: t, title_en: t, title_cn: t })),
         path: "tips.fontWeight",
       },
       {
@@ -78977,9 +78862,7 @@ const { typo: OY } = i,
     V(),
   ],
   jY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "color",
       type: n.Panel,
@@ -79026,9 +78909,7 @@ const { typo: OY } = i,
     },
   ],
   HY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       type: n.Panel,
       key: "size",
@@ -79118,9 +78999,7 @@ const { typo: OY } = i,
     },
   ],
   VY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "color",
       type: n.Panel,
@@ -79167,9 +79046,7 @@ const { typo: OY } = i,
     },
   ],
   WY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "lineStyle",
       type: n.Panel,
@@ -79246,9 +79123,7 @@ const { typo: OY } = i,
     },
   ],
   qY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "lineStyle",
       type: n.Panel,
@@ -79381,9 +79256,7 @@ const { typo: OY } = i,
     },
   ],
   YY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "display",
       type: n.Panel,
@@ -79534,9 +79407,7 @@ const { typo: OY } = i,
     V(),
   ],
   XY = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "display",
       type: n.Panel,
@@ -79598,16 +79469,13 @@ const { typo: OY } = i,
         },
       ],
     },
-    V({
-      hasAnchor: !0,
-    }),
+    V({ hasAnchor: !0 }),
   ],
   QY = "000000",
   ZY = "100000",
   JY = "460000",
   KY = 0.01,
   $Y = "Region:";
-window.ZY = ZY;
 var tX, eX, iX, nX;
 ((eX = tX || (tX = {})).CHINA_GIS = "gis_map"),
   (eX.WOLRD_GIS = "gis_world_map"),
@@ -79658,14 +79526,10 @@ const cX = {
     direction: "bottom-right",
   },
 };
-window.cX = cX;
 var hX, pX;
 ((pX = hX || (hX = {})).CHINA_GIS = "@dp/aeolian-package-geography://gis_map"),
   (pX.WOLRD_GIS = "@dp/aeolian-package-geography://gis_world_map"),
   (pX.CUSTOM_GIS = "@dp/aeolian-package-geography://gis_custom_map");
-
-window.hX = hX;
-
 const dX = [
     {
       key: "common",
@@ -79713,41 +79577,17 @@ const dX = [
           key: "anchor.position",
           path: "anchor.position",
           items: [
-            {
-              title_cn: "中心",
-              title_en: "center",
-              value: rX.Center,
-            },
-            {
-              title_cn: "左上",
-              title_en: "top left",
-              value: rX.TopLeft,
-            },
-            {
-              title_cn: "正上",
-              title_en: "top center",
-              value: rX.TopCenter,
-            },
-            {
-              title_cn: "右上",
-              title_en: "top right",
-              value: rX.TopRight,
-            },
-            {
-              title_cn: "左中",
-              title_en: "middle left",
-              value: rX.MiddleLeft,
-            },
+            { title_cn: "中心", title_en: "center", value: rX.Center },
+            { title_cn: "左上", title_en: "top left", value: rX.TopLeft },
+            { title_cn: "正上", title_en: "top center", value: rX.TopCenter },
+            { title_cn: "右上", title_en: "top right", value: rX.TopRight },
+            { title_cn: "左中", title_en: "middle left", value: rX.MiddleLeft },
             {
               title_cn: "右中",
               title_en: "middle right",
               value: rX.MiddleRight,
             },
-            {
-              title_cn: "左下",
-              title_en: "bottom left",
-              value: rX.BottomLeft,
-            },
+            { title_cn: "左下", title_en: "bottom left", value: rX.BottomLeft },
             {
               title_cn: "正下",
               title_en: "bottom center",
@@ -79822,16 +79662,8 @@ const dX = [
           key: "carousel.type",
           path: "carousel.type",
           items: [
-            {
-              title_cn: "顺序轮播",
-              title_en: "In Order",
-              value: lX.InOrder,
-            },
-            {
-              title_cn: "随机轮播",
-              title_en: "Random",
-              value: lX.Random,
-            },
+            { title_cn: "顺序轮播", title_en: "In Order", value: lX.InOrder },
+            { title_cn: "随机轮播", title_en: "Random", value: lX.Random },
           ],
         },
         {
@@ -79843,36 +79675,12 @@ const dX = [
           path: "carousel.animationIn",
           prefix: "text",
           items: [
-            {
-              title_cn: "无动画",
-              title_en: "no animation",
-              value: aX.None,
-            },
-            {
-              title_cn: "渐变出现",
-              title_en: "gradient",
-              value: aX.Gradient,
-            },
-            {
-              title_cn: "左飞入",
-              title_en: "fly left",
-              value: aX.FlyLeft,
-            },
-            {
-              title_cn: "右飞入",
-              title_en: "fly right",
-              value: aX.FlyRight,
-            },
-            {
-              title_cn: "上飞入",
-              title_en: "fly top",
-              value: aX.FlyTop,
-            },
-            {
-              title_cn: "下飞入",
-              title_en: "fly bottom",
-              value: aX.FlyBottom,
-            },
+            { title_cn: "无动画", title_en: "no animation", value: aX.None },
+            { title_cn: "渐变出现", title_en: "gradient", value: aX.Gradient },
+            { title_cn: "左飞入", title_en: "fly left", value: aX.FlyLeft },
+            { title_cn: "右飞入", title_en: "fly right", value: aX.FlyRight },
+            { title_cn: "上飞入", title_en: "fly top", value: aX.FlyTop },
+            { title_cn: "下飞入", title_en: "fly bottom", value: aX.FlyBottom },
           ],
         },
         {
@@ -79895,36 +79703,12 @@ const dX = [
           path: "carousel.animationOut",
           prefix: "text",
           items: [
-            {
-              title_cn: "无动画",
-              title_en: "no animation",
-              value: aX.None,
-            },
-            {
-              title_cn: "渐变消失",
-              title_en: "gradient",
-              value: aX.Gradient,
-            },
-            {
-              title_cn: "左飞出",
-              title_en: "fly left",
-              value: aX.FlyLeft,
-            },
-            {
-              title_cn: "右飞出",
-              title_en: "fly right",
-              value: aX.FlyRight,
-            },
-            {
-              title_cn: "上飞出",
-              title_en: "fly top",
-              value: aX.FlyTop,
-            },
-            {
-              title_cn: "下飞出",
-              title_en: "fly bottom",
-              value: aX.FlyBottom,
-            },
+            { title_cn: "无动画", title_en: "no animation", value: aX.None },
+            { title_cn: "渐变消失", title_en: "gradient", value: aX.Gradient },
+            { title_cn: "左飞出", title_en: "fly left", value: aX.FlyLeft },
+            { title_cn: "右飞出", title_en: "fly right", value: aX.FlyRight },
+            { title_cn: "上飞出", title_en: "fly top", value: aX.FlyTop },
+            { title_cn: "下飞出", title_en: "fly bottom", value: aX.FlyBottom },
           ],
         },
         {
@@ -79961,9 +79745,7 @@ const dX = [
     },
   ],
   fX = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "icon",
       type: n.Panel,
@@ -79978,31 +79760,11 @@ const dX = [
           key: "icon.type",
           path: "icon.type",
           items: [
-            {
-              title_cn: "圆",
-              title_en: "circle",
-              value: 30,
-            },
-            {
-              title_cn: "三角形",
-              title_en: "triangle",
-              value: 3,
-            },
-            {
-              title_cn: "正方形",
-              title_en: "square",
-              value: 4,
-            },
-            {
-              title_cn: "五边形",
-              title_en: "pentagon",
-              value: 5,
-            },
-            {
-              title_cn: "六边形",
-              title_en: "hexagon",
-              value: 6,
-            },
+            { title_cn: "圆", title_en: "circle", value: 30 },
+            { title_cn: "三角形", title_en: "triangle", value: 3 },
+            { title_cn: "正方形", title_en: "square", value: 4 },
+            { title_cn: "五边形", title_en: "pentagon", value: 5 },
+            { title_cn: "六边形", title_en: "hexagon", value: 6 },
           ],
         },
         {
@@ -80034,9 +79796,7 @@ const dX = [
     V(),
   ],
   gX = [
-    H({
-      showAllLevelData: !0,
-    }),
+    H({ showAllLevelData: !0 }),
     {
       key: "feature",
       type: n.Panel,
@@ -80063,21 +79823,9 @@ const dX = [
           key: "feature.profile",
           path: "feature.profile",
           items: [
-            {
-              title_en: "Walking",
-              title_cn: "步行",
-              value: "walking",
-            },
-            {
-              title_en: "Cycling",
-              title_cn: "骑行",
-              value: "cycling",
-            },
-            {
-              title_en: "Driving",
-              title_cn: "驾车",
-              value: "driving",
-            },
+            { title_en: "Walking", title_cn: "步行", value: "walking" },
+            { title_en: "Cycling", title_cn: "骑行", value: "cycling" },
+            { title_en: "Driving", title_cn: "驾车", value: "driving" },
           ],
         },
         {
@@ -80190,10 +79938,7 @@ var mX, yX;
 const vX = mX.VolcanoBlue,
   bX = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
       surface: {
         image:
           "data:image/png;base64,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",
@@ -80204,10 +79949,7 @@ const vX = mX.VolcanoBlue,
         offsetY: 5,
         offsetZ: 0,
       },
-      rotate: {
-        enable: !0,
-        speed: -3,
-      },
+      rotate: { enable: !0, speed: -3 },
     },
   },
   xX = {
@@ -80226,25 +79968,15 @@ const vX = mX.VolcanoBlue,
   };
 const _X = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
       display: {
         count: 20,
         size: 20,
         image:
           "data:image/png;base64,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",
       },
-      scope: {
-        width: 65,
-        length: 65,
-        height: 65,
-      },
-      animation: {
-        speedMin: 10,
-        speedMax: 20,
-      },
+      scope: { width: 65, length: 65, height: 65 },
+      animation: { speedMin: 10, speedMax: 20 },
     },
   },
   SX = {
@@ -80263,25 +79995,10 @@ const _X = {
   };
 const MX = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
-      display: {
-        count: 10,
-        width: 2,
-        height: 10,
-      },
-      scope: {
-        width: 65,
-        length: 65,
-        height: 65,
-      },
-      animation: {
-        flashSpeed: 50,
-        speedMin: 10,
-        speedMax: 20,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
+      display: { count: 10, width: 2, height: 10 },
+      scope: { width: 65, length: 65, height: 65 },
+      animation: { flashSpeed: 50, speedMin: 10, speedMax: 20 },
     },
   },
   CX = {
@@ -80338,10 +80055,7 @@ const TX = {
         fontSize: 12,
         color: "rgba(255,255,255,0.7)",
       },
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
       viewport: {
         centerLng: 106,
         centerLat: 35,
@@ -80364,22 +80078,10 @@ const TX = {
         translationEnable: !0,
         pitchEnable: !0,
       },
-      componentBackground: {
-        hasColor: !1,
-        backgroundColor: "#080c11",
-      },
-      baseMapLayer: {
-        show: !0,
-      },
-      districtOutline: {
-        width: 2,
-        opacity: 1,
-      },
-      innerShadow: {
-        enable: !0,
-        color: "rgba(0,102,255,1)",
-        width: 0.1,
-      },
+      componentBackground: { hasColor: !1, backgroundColor: "#080c11" },
+      baseMapLayer: { show: !0 },
+      districtOutline: { width: 2, opacity: 1 },
+      innerShadow: { enable: !0, color: "rgba(0,102,255,1)", width: 0.1 },
       boundaryStreamer: {
         enable: !0,
         headColor: "#895EE6",
@@ -80398,15 +80100,7 @@ const TX = {
         opacity: 1,
         borderColor: "rgba(154,184,254,0.5)",
       },
-      data: {
-        custom: {
-          data: {
-            name: null,
-            url: null,
-          },
-        },
-        region: [],
-      },
+      data: { custom: { data: { name: null, url: null } }, region: [] },
       mapStyle: {
         backgroundColor: "rgba(21,41,81,0.9)",
         metalness: 0.2,
@@ -80443,14 +80137,8 @@ const TX = {
         offsetY: 10,
         scale: 8,
         fill: "rgba(29,58,124,1)",
-        stroke: {
-          color: "#2A59C5",
-          width: 1,
-        },
-        border: {
-          color: "rgba(45,63,109,1)",
-          width: 1,
-        },
+        stroke: { color: "#2A59C5", width: 1 },
+        border: { color: "rgba(45,63,109,1)", width: 1 },
         background: "rgba(12,20,36,1)",
         fontStyle: {
           enable: !0,
@@ -80461,10 +80149,7 @@ const TX = {
         },
       },
       light: {
-        ambient: {
-          color: "#FFFFFF",
-          intensity: 35,
-        },
+        ambient: { color: "#FFFFFF", intensity: 35 },
         directional: {
           color: "#FFFFFF",
           intensity: 35,
@@ -80472,19 +80157,12 @@ const TX = {
           y: -0.5,
           z: 0.5,
         },
-        shadow: {
-          enabled: !0,
-          color: "#000000",
-        },
+        shadow: { enabled: !0, color: "#000000" },
       },
       amap: {
         enable: !1,
         type: "amap.default",
-        custom: {
-          key: "",
-          securityJsCode: "",
-          id: "",
-        },
+        custom: { key: "", securityJsCode: "", id: "" },
         style: "darkblue",
         content: {
           label: !1,
@@ -80522,7 +80200,6 @@ const TX = {
     dataPresets: {},
     plot: [1024, 768],
   };
-window.PX = PX;
 function LX(t) {
   return void 0 !== t;
 }
@@ -80531,13 +80208,7 @@ const IX = function (t, ...e) {
     c(t) || c(e) ? e : void 0 === e ? null : void 0
   );
 };
-window.IX = IX;
-new Proxy(
-  {},
-  {
-    get: (t, e) => (t) => NX(e, t),
-  }
-);
+new Proxy({}, { get: (t, e) => (t) => NX(e, t) });
 const NX = (t, e) => {
     const i = document.createElement(t);
     return (i.style.cssText = e), i;
@@ -80546,8 +80217,6 @@ const NX = (t, e) => {
     "inherit" !== t
       ? t
       : "PingFang SC,Microsoft Yahei,system-ui,-apple-system,segoe ui,Roboto,Helvetica,Arial,sans-serif, apple color emoji,segoe ui emoji,segoe ui symbol";
-
-window.RX = RX;
 function OX(t, e, i, n, r = 0) {
   switch (i.source.type) {
     case h.VizQuery:
@@ -85016,9 +84685,6 @@ const zX = {
       中华人民共和国: "China",
     },
   };
-window.UX = UX;
-window.jX = jX;
-window.HX = HX;
 function qX(t, e) {
   var i, n;
   switch (t) {
@@ -85083,9 +84749,7 @@ const KX = async (t, e) => {
       return Number(t[3] || 0);
     })();
   let s = String(t);
-  const l = {
-    ...u(e),
-  };
+  const l = { ...u(e) };
   n &&
     (JX.forEach(([t, e]) => {
       s = s.replace(t, e);
@@ -85096,11 +84760,7 @@ const KX = async (t, e) => {
       "open-api-token": n,
       "external-header": o || "",
     })),
-    r &&
-      (l.headers = {
-        ...l.headers,
-        Authorization: `Bearer ${r}`,
-      });
+    r && (l.headers = { ...l.headers, Authorization: `Bearer ${r}` });
   const c = await fetch(s, l);
   let h = await c.text();
   if (
@@ -85153,15 +84813,8 @@ async function $X(t) {
   let d;
   d =
     "1" === u && c
-      ? {
-          ...t,
-          openMode: u,
-          accessKey: c,
-          largeScreenId: p,
-        }
-      : {
-          ...t,
-        };
+      ? { ...t, openMode: u, accessKey: c, largeScreenId: p }
+      : { ...t };
   const f = `${
       (null === (o = window.__afc__) || void 0 === o ? void 0 : o.basePath) ||
       ""
@@ -85170,36 +84823,22 @@ async function $X(t) {
       ""
     }`,
     g = f ? `${f}/aeolus/api/v3/geo/lnglat` : "/aeolus/api/v3/geo/lnglat";
-  let m = {
-    "Content-Type": "application/json;charset=utf-8;",
-  };
+  let m = { "Content-Type": "application/json;charset=utf-8;" };
   return (
     h &&
       (m = {
         "Content-Type": "application/json;charset=utf-8;",
         accessToken: String(h),
       }),
-    await KX(g, {
-      method: "post",
-      headers: m,
-      body: JSON.stringify(d),
-    })
+    await KX(g, { method: "post", headers: m, body: JSON.stringify(d) })
   );
 }
 const tQ = new RegExp("^[-\\+]?([0-9]+\\.?)?[0-9]+$");
 function eQ(t) {
   const [e, i] = t.split(",");
   return tQ.test(e) && tQ.test(i)
-    ? {
-        isLngLat: !0,
-        lng: e,
-        lat: i,
-      }
-    : {
-        isLngLat: !1,
-        lng: !1,
-        lat: !1,
-      };
+    ? { isLngLat: !0, lng: e, lat: i }
+    : { isLngLat: !1, lng: !1, lat: !1 };
 }
 function iQ(t) {
   return !!t.includes("]");
@@ -85223,8 +84862,6 @@ const nQ = async (t, e) =>
 function aQ(t) {
   return `${oQ()}/${t}`;
 }
-window.aQ = aQ;
-window.nQ = nQ;
 function sQ(t, e) {
   var i;
   if (e) return !0;
@@ -85274,10 +84911,7 @@ async function lQ(t) {
     const t = S[A],
       e = null !== (n = t[f]) && void 0 !== n ? n : "";
     if (e) {
-      let i = {
-        ...t,
-        name: e,
-      };
+      let i = { ...t, name: e };
       uQ(i, c, t, g),
         cQ(i, s, t, b),
         hQ(i, l, t, v),
@@ -85301,9 +84935,7 @@ async function lQ(t) {
       }),
       AX() && t.length > 0)
     ) {
-      const e = await $X({
-        address: t.map((t) => t.name),
-      });
+      const e = await $X({ address: t.map((t) => t.name) });
       t.forEach((t, i) => {
         const n = e[i].location;
         if (n) {
@@ -85353,10 +84985,7 @@ const fQ = {
         fontSize: 12,
         color: "rgba(255,255,255,0.7)",
       },
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
       viewport: {
         centerLng: 120.329293,
         centerLat: 30.351721,
@@ -85379,22 +85008,10 @@ const fQ = {
         translationEnable: !0,
         pitchEnable: !0,
       },
-      componentBackground: {
-        hasColor: !1,
-        backgroundColor: "#080c11",
-      },
-      baseMapLayer: {
-        show: !0,
-      },
-      districtOutline: {
-        width: 2,
-        opacity: 1,
-      },
-      innerShadow: {
-        enable: !0,
-        color: "rgba(0,102,255,1)",
-        width: 0.1,
-      },
+      componentBackground: { hasColor: !1, backgroundColor: "#080c11" },
+      baseMapLayer: { show: !0 },
+      districtOutline: { width: 2, opacity: 1 },
+      innerShadow: { enable: !0, color: "rgba(0,102,255,1)", width: 0.1 },
       boundaryStreamer: {
         enable: !0,
         headColor: "#895EE6",
@@ -85415,10 +85032,7 @@ const fQ = {
       },
       data: {
         custom: {
-          data: {
-            name: "custom_3d_map.json",
-            url: aQ("custom_3d_map.json"),
-          },
+          data: { name: "custom_3d_map.json", url: aQ("custom_3d_map.json") },
         },
         region: [],
       },
@@ -85458,14 +85072,8 @@ const fQ = {
         offsetY: 10,
         scale: 8,
         fill: "rgba(29,58,124,1)",
-        stroke: {
-          color: "#2A59C5",
-          width: 1,
-        },
-        border: {
-          color: "rgba(45,63,109,1)",
-          width: 1,
-        },
+        stroke: { color: "#2A59C5", width: 1 },
+        border: { color: "rgba(45,63,109,1)", width: 1 },
         background: "rgba(12,20,36,1)",
         fontStyle: {
           enable: !0,
@@ -85476,10 +85084,7 @@ const fQ = {
         },
       },
       light: {
-        ambient: {
-          color: "#FFFFFF",
-          intensity: 35,
-        },
+        ambient: { color: "#FFFFFF", intensity: 35 },
         directional: {
           color: "#FFFFFF",
           intensity: 35,
@@ -85487,19 +85092,12 @@ const fQ = {
           y: -0.5,
           z: 0.5,
         },
-        shadow: {
-          enabled: !0,
-          color: "#000000",
-        },
+        shadow: { enabled: !0, color: "#000000" },
       },
       amap: {
         enable: !1,
         type: "amap.default",
-        custom: {
-          key: "",
-          securityJsCode: "",
-          id: "",
-        },
+        custom: { key: "", securityJsCode: "", id: "" },
         style: "darkblue",
         content: {
           label: !1,
@@ -85546,10 +85144,7 @@ const mQ = {
         fontSize: 12,
         color: "rgba(255,255,255,0.7)",
       },
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
       viewport: {
         centerLng: 17,
         centerLat: 38,
@@ -85572,22 +85167,10 @@ const mQ = {
         translationEnable: !0,
         pitchEnable: !0,
       },
-      componentBackground: {
-        hasColor: !1,
-        backgroundColor: "#080c11",
-      },
-      baseMapLayer: {
-        show: !0,
-      },
-      districtOutline: {
-        width: 1,
-        opacity: 1,
-      },
-      innerShadow: {
-        enable: !0,
-        color: "rgba(0,102,255,1)",
-        width: 0.1,
-      },
+      componentBackground: { hasColor: !1, backgroundColor: "#080c11" },
+      baseMapLayer: { show: !0 },
+      districtOutline: { width: 1, opacity: 1 },
+      innerShadow: { enable: !0, color: "rgba(0,102,255,1)", width: 0.1 },
       boundaryStreamer: {
         enable: !1,
         headColor: "#895EE6",
@@ -85606,15 +85189,7 @@ const mQ = {
         opacity: 1,
         borderColor: "rgba(225,234,255,0.2)",
       },
-      data: {
-        custom: {
-          data: {
-            name: null,
-            url: null,
-          },
-        },
-        region: [],
-      },
+      data: { custom: { data: { name: null, url: null } }, region: [] },
       mapStyle: {
         backgroundColor: "rgba(21,41,81,0.9)",
         metalness: 0.2,
@@ -85651,14 +85226,8 @@ const mQ = {
         offsetY: 10,
         scale: 8,
         fill: "rgba(29,58,124,1)",
-        stroke: {
-          color: "#2A59C5",
-          width: 1,
-        },
-        border: {
-          color: "rgba(45,63,109,1)",
-          width: 1,
-        },
+        stroke: { color: "#2A59C5", width: 1 },
+        border: { color: "rgba(45,63,109,1)", width: 1 },
         background: "rgba(12,20,36,1)",
         fontStyle: {
           enable: !0,
@@ -85669,10 +85238,7 @@ const mQ = {
         },
       },
       light: {
-        ambient: {
-          color: "#FFFFFF",
-          intensity: 35,
-        },
+        ambient: { color: "#FFFFFF", intensity: 35 },
         directional: {
           color: "#FFFFFF",
           intensity: 35,
@@ -85680,19 +85246,12 @@ const mQ = {
           y: -0.5,
           z: 0.5,
         },
-        shadow: {
-          enabled: !0,
-          color: "#000000",
-        },
+        shadow: { enabled: !0, color: "#000000" },
       },
       amap: {
         enable: !1,
         type: "amap.default",
-        custom: {
-          key: "",
-          securityJsCode: "",
-          id: "",
-        },
+        custom: { key: "", securityJsCode: "", id: "" },
         style: "darkblue",
         content: {
           label: !1,
@@ -85734,25 +85293,13 @@ const mQ = {
 const bQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -85770,36 +85317,25 @@ const bQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -85811,15 +85347,10 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         city: [
@@ -85836,36 +85367,25 @@ const bQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -85877,15 +85397,10 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         district: [],
@@ -85903,36 +85418,25 @@ const bQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -85944,15 +85448,10 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         subLabel: [
@@ -85969,36 +85468,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86010,15 +85498,10 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -86074,36 +85557,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86115,49 +85587,28 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   xQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -86176,36 +85627,25 @@ const bQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86217,19 +85657,12 @@ const bQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         city: [],
@@ -86249,36 +85682,25 @@ const bQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86290,19 +85712,12 @@ const bQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -86319,36 +85734,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86360,19 +85764,12 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -86430,36 +85827,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86471,54 +85857,31 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   _Q = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -86537,36 +85900,25 @@ const bQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86578,19 +85930,12 @@ const bQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         city: [],
@@ -86610,36 +85955,25 @@ const bQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86651,19 +85985,12 @@ const bQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -86680,36 +86007,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86721,19 +86037,12 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -86791,36 +86100,25 @@ const bQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -86832,41 +86130,25 @@ const bQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   SQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-      },
-      color: {
-        defaultColor: "rgba(21,41,81,0.9)",
-      },
+      common: { zoomMin: 0, zoomMax: 24 },
+      color: { defaultColor: "rgba(21,41,81,0.9)" },
       poi: {
         enable: !1,
         orient: "vertical",
@@ -86908,12 +86190,7 @@ const bQ = {
             offsetX: 0,
             offsetY: 0,
           },
-          padding: {
-            top: 6,
-            left: 6,
-            right: 6,
-            bottom: 6,
-          },
+          padding: { top: 6, left: 6, right: 6, bottom: 6 },
           borderRadius: {
             topLeft: 2,
             topRight: 2,
@@ -86947,25 +86224,13 @@ const bQ = {
 const CQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -86983,36 +86248,25 @@ const CQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87024,15 +86278,10 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -87084,36 +86333,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87125,15 +86363,10 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
         size: {
@@ -87141,16 +86374,9 @@ const CQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "vCKdzt5EKU02",
@@ -87165,36 +86391,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87206,49 +86421,28 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   wQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -87267,36 +86461,25 @@ const CQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87308,19 +86491,12 @@ const CQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -87373,36 +86549,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87414,19 +86579,12 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -87434,16 +86592,9 @@ const CQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "vCKdzt5EKU02",
@@ -87458,36 +86609,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87499,54 +86639,31 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   AQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -87565,36 +86682,25 @@ const CQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87606,19 +86712,12 @@ const CQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -87671,36 +86770,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87712,19 +86800,12 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -87732,16 +86813,9 @@ const CQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "vCKdzt5EKU02",
@@ -87756,36 +86830,25 @@ const CQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87797,45 +86860,28 @@ const CQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   EQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
       style: {
         size: 50,
         padding: 30,
-        color: {
-          defaultColor: "rgba(92,162,255,0.3)",
-        },
+        color: { defaultColor: "rgba(92,162,255,0.3)" },
       },
     },
   },
@@ -87862,25 +86908,13 @@ const CQ = {
 const TQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -87898,36 +86932,25 @@ const TQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -87939,15 +86962,10 @@ const TQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         value: [
@@ -87964,36 +86982,25 @@ const TQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88005,50 +87012,29 @@ const TQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   PQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -88067,36 +87053,25 @@ const TQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88108,19 +87083,12 @@ const TQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         value: [
@@ -88137,36 +87105,25 @@ const TQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88178,55 +87135,32 @@ const TQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   LQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -88245,36 +87179,25 @@ const TQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88286,19 +87209,12 @@ const TQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         value: [
@@ -88315,36 +87231,25 @@ const TQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88356,40 +87261,25 @@ const TQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   IQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
       style: {
         intensity: 0.5,
         radius: 10,
@@ -88426,25 +87316,13 @@ const TQ = {
 const RQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -88462,36 +87340,25 @@ const RQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88503,15 +87370,10 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -88563,36 +87425,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88604,15 +87455,10 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
         size: {
@@ -88620,16 +87466,9 @@ const RQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "irEWPq71q70I",
@@ -88644,36 +87483,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88685,49 +87513,28 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   OQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -88746,36 +87553,25 @@ const RQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88787,19 +87583,12 @@ const RQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -88852,36 +87641,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88893,19 +87671,12 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -88913,16 +87684,9 @@ const RQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "irEWPq71q70I",
@@ -88937,36 +87701,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -88978,54 +87731,31 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   FQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -89044,36 +87774,25 @@ const RQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89085,19 +87804,12 @@ const RQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -89150,36 +87862,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89191,19 +87892,12 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -89211,16 +87905,9 @@ const RQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [0, 30],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [0, 30], min: null, max: null },
           },
           vizField: {
             id: "irEWPq71q70I",
@@ -89235,36 +87922,25 @@ const RQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89276,45 +87952,28 @@ const RQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   zQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
       style: {
         size: 30,
         padding: 20,
-        color: {
-          defaultColor: "rgba(92,162,255,0.3)",
-        },
+        color: { defaultColor: "rgba(92,162,255,0.3)" },
       },
     },
   },
@@ -89342,25 +88001,13 @@ const RQ = {
 const GQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -89378,36 +88025,25 @@ const GQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89419,15 +88055,10 @@ const GQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         endLocation: [
@@ -89444,36 +88075,25 @@ const GQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89485,15 +88105,10 @@ const GQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -89545,36 +88160,25 @@ const GQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89586,49 +88190,28 @@ const GQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   UQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -89647,36 +88230,25 @@ const GQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89688,19 +88260,12 @@ const GQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         endLocation: [
@@ -89718,36 +88283,25 @@ const GQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89759,19 +88313,12 @@ const GQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -89824,36 +88371,25 @@ const GQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89865,54 +88401,31 @@ const GQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   jQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -89931,36 +88444,25 @@ const GQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -89972,19 +88474,12 @@ const GQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         endLocation: [
@@ -90002,36 +88497,25 @@ const GQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90043,19 +88527,12 @@ const GQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -90108,36 +88585,25 @@ const GQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90149,49 +88615,26 @@ const GQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   HQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
-      lineStyle: {
-        startColor: "#BED6FF",
-        speed: 0.8,
-        size: 3,
-      },
-      breathPoint: {
-        enable: !1,
-        speed: 1,
-        size: 2,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
+      lineStyle: { startColor: "#BED6FF", speed: 0.8, size: 3 },
+      breathPoint: { enable: !1, speed: 1, size: 2 },
     },
   },
   VQ = {
@@ -90217,25 +88660,13 @@ const GQ = {
 const WQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -90253,36 +88684,25 @@ const WQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90294,15 +88714,10 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -90352,36 +88767,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90393,15 +88797,10 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
         size: {
@@ -90409,16 +88808,9 @@ const WQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [3, 4],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [3, 4], min: null, max: null },
           },
           vizField: {
             id: "GIfcGUCMKP24",
@@ -90433,36 +88825,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90474,49 +88855,28 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        limit: 10,
-        type: "none",
-        unit: "rows",
-      },
+      topN: { limit: 10, type: "none", unit: "rows" },
     },
   },
   qQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -90535,36 +88895,25 @@ const WQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90576,19 +88925,12 @@ const WQ = {
                   beginDate: "2024-12-18",
                   endDate: "2024-12-18",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -90644,36 +88986,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90685,19 +89016,12 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -90705,16 +89029,9 @@ const WQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [3, 4],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [3, 4], min: null, max: null },
           },
           vizField: {
             id: "GIfcGUCMKP24",
@@ -90729,36 +89046,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90770,54 +89076,31 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   YQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -90836,36 +89119,25 @@ const WQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90877,19 +89149,12 @@ const WQ = {
                   beginDate: "2024-12-18",
                   endDate: "2024-12-18",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
@@ -90945,36 +89210,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -90986,19 +89240,12 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -91006,16 +89253,9 @@ const WQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [3, 4],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [3, 4], min: null, max: null },
           },
           vizField: {
             id: "GIfcGUCMKP24",
@@ -91030,36 +89270,25 @@ const WQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91071,42 +89300,25 @@ const WQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   XQ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
-      icon: {
-        image: "",
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
+      icon: { image: "" },
       speed: 3,
       startPoint: {
         enable: !0,
@@ -91117,7 +89329,7 @@ const WQ = {
       nodePoint: {
         enable: !0,
         image:
-          "data:image/png;base64,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.Zk/5nJ29xLqYLhDBMyqrXPauOIaVfMgaWcc7bu0BZmvix6bDKaqKwwIhGsg0i+y1pt8ow2kO8/a+UUVzHFyfsig8XT70p5GMTXbsMkBzyYH8zAG2U/Tc9V06FW7uF+qqXUG4dTrLr4ELX7C8etkqA6HayzCURo+cctWEYwy1KaZgPJQpOV38ErPHN9BizWASI6z5pBLFvDpGxae2mpxkYZt0wPUPYTFo0FIENM9Ky60MNZ7bW8c9sRAXV26cio/s1rDsPsLTtCT6+w+pp5bjV0PCeQA0gtWyx8BE4oY+iDZ4gTyLUQOV8WEBFFapPU3zNDg+Z30lIxpN9OcXwD1H9cTEzXW0fkbvC/Q8Emsc7jieBReAb/WCuOydvRdauXs74p0dFjEm2xQB8ctCSFEnY14hpw2rRj06plfR2ofarziCF2foxOpu+i00n1GcvT5ImVqombCLlsGrGR8hsZdIIrTUCniyb70mTFLLY7iKC7Ymingn2sGfcrl0F/A0hgkvLvsEjflsQs1nebwAcSZqZdeZdcawaxhEESBfIleM1ffeq8ZZia4OB3QEI/UH+GdUXrwHfVsgZTkrchcttHJIeyVf/IlyzzZY291aO3vUvJsrvqAA/8Ti2moZ0MF62UL+3esLAKsyxYscGKgmTRBuzlLVfkCJTUoCiCGQfq+j5M1LfUsXlaWiA/B3W9xXfDV2aZK8w0wEKLp6yVryTwNd5zHcFJAP/2SSn+2wHfB928yXl36t4LB8gogNTh+fgnZ6wo0UpLAlbQutyQ8HcjreNspVvACeFhidBxE8NF10zK/qYksStb6YodkTP+hKUNntgAX0f1NJlpMMCpyhlemHLOFhcCXql/Sov4FcNYDwwRyv3/XAa8YSHWaklXwznKHlrdUDY//5a4gt1YPg0O0jFEbSvh+MJJCcNbhgQE5RTwPdbVcbqBCd5RZsX9WN6g4epL4KZv4i6fkccklth5hO/4MUPoAP4a60mzcCstHo1rldrVOAQ8q+fOwNzsQ+bfArd/zBXp04rqF0XgpJbDGtL1ieL20PY8iY+/W8fEkfYZsGIssc/ipZSDvRWzjCiOSucjoFPUfASwdQaRlJKtY3iRWFh7B71Iv0b/5l/i/LfwkL94pB38VjH3bYjAPwX3/Q1Ezk1QeIr3TClyqHTpy/BdYTRkacv0AEXrzcJMbwKfMzKdIOXXgO9htFtVlN1f6V5bzTIaprSKVQwkJyyyphw4gfPC0DqaPWplzThBQ5/cMMAyrXMHWEljV2nFl7thBjqU4GlXd+KN4AHFk4aQRf4Nm/8akl5jI4zc5hMoSPHiHCxSfZPFu2Hp0LeZdjGeQ6yg/gLMzStS/h6A/ztine2rMl6icrdww53avU3iM5q0wTqXsX7XcxE5YVnXOkgV1CIfaUNZF7COKhtH2o7AJeg/5R8/lpVpObQlBtAr6gVOkMEaDA35jzxDr1Ou6VALeMLH4dG8CsS8ivNexJfOBDuUrwcCN/GCV2HBXIWOeR+Hfw4DYUULdLPLMNKBZho+zkodUFWmoHXEddS5EoYWNmBWQtkewztu0sEC8PN5m/QBwK82QflTi+PA9wC5n5k07p0DxhExLOznJ2bTksaLo+mpmC3OqoJaXdAV+WNVERa8K12pY1I+Z82Ag6MZmEnTahCVLhGaabHMR2BmJpESZBz1p4mCww/mEMDIDZnRdYIlBSHEGqdSAHJAGcPIvi97fQ2eatN6tDYYUHPzBlB8skY0xSntfE53xTjYTQD/zOKobP2k0r0fJNwXAupzQnoksELgN+atPg4rqs/gGCdzYI1Rlrmkw5av4/gxLXQaRluGgNAVfWqGlu7PnCvOpsFsfM6iwdxbIoXHmQzXcu/M/bT2TjHH6afDjypjN4i4PoUJ+7IzN5KDoWSO9Gu1hv0ZGlqJXJ9u4jxcAp5DS/ysSg9r4gbf7msmPU21rNm5HbzI66AOjqx+b9U6cf7Pd+TgN35IDisjn8XH0okptDMn49JGd940FF2RQyEXpgwBTF0z7NvDMYiptI+lFcsgx4LQRprDrgrdMoWFypQLRM6AhVbxnJS/IUCTUvGDqlMueRP3xjPjTTANuxJvw/wsdFCBhpTXU5ifeFeWI2ZPIEMvvi70nJWpH4keV97zQWZSuj8R5BvZztu8rl2oIXXNbbOoh5Y7poJOtLqU1p/j9CaswNU/bHUWWOhiyk3sw0zD0k1vFbkprZgExywUP8WVu7dO4pPUkiT8OnHziYUc0dfVkco6jVU0bT1YtyB2Wm40A2M6HH7jZ8kQNwmoCy/oYDU3ttPrv/uW+/X2YHNJOi4IAr8baATQU8ics5NpLzNWwiEu7KyWeTPpaK62YOJt5ladfAYcgW5u5QzuT6Ozg0uBzg8o5jQhBZdmGkKZKlUnjmvCph1jWeF+YR3lfVdmuFdYpznvPYAt3+T2rGRHb0IJ4x1wTOcDoHPlpygh1S+Ppinx31SNf/6DAV/vIQ+51b1mN8dM5eeS9HMDs5YaJ+/keWtucrdWMCoK2AtGFVo43I6ccATXDrZ0voKKRaPGMhHRtrZs7Cq3eV6vtO3DbaN2VjvnkAGdtG1OSvZv6wysuP01LCzNICCShVrkl8DnmE6KVz+DXjD698DAH97qobea18z2eXAazFXW1g91Ms9lqyhIRLCOAhW1r8zIrEJaTUfx+2qogBePECY9MAOdYosjkFnBi6O2KUZoWbXQO8Xj6+uWWjvlxBJt+XZpwwU5mSepncc5A8aiFViV+vRU3B/K+Y5NjW7QClx619493bu1BxNBO7VaDKTjpBOAX4KCmANe0nteXpWS5hzZvG0AKF7CUlyGCIB4ah6V/CrEAsO9v4WIaGINkyeDuMi3qDqn0M+QmxLlGp4thUp2ddq242mras5royMqdjh1VXFlAOcK/bic/2VuQfJFNxHPvM2aN4znDCfkETd35ASwH+aEzw9lNtWx5qmE+qGqvWdH/9Nxqy7ATCUlztnH2oSfF8EZMD2Zi8ZSOZs9KFpwxxGW/VrQ6GN4tbBb3cQxeKOaAqrJ5Ghb82r/MzOdydE6Mhn6ogJiK0bN2Im0gpDJyUXdLDVlaGnY2zc2zXlHhkU1ZC8x/Qdpj0YE1Vp98jfdr/3WkVppX7E6Fb5Ugp+Vz//m/YrLbv+UWCl9bvs8XB5jlyktGM5wRBHn7XedypzF85Zcxrp/Zo3ah+85nFP+4UxZe6f2yBFQbyO/3U+vguDVORfidks9vuQGhumcNVSKblrcSuNOYnXt3LnamArqx2KSo147rXpH6kCfpHR7Dwfk+5wP8kHaY0XAWJtQ1L51Jt6pU1suyHgqG4tL0fHzZeLZ/PyOF8zyGt6eXuu5iY4lfzNWij9/PijlCbQnh4CdWi3G5BvrmNYmUbaKLvjHGZ24WbdW3Pm7jkDzTmPwEM3I/dU8V+wwiUTtpEAXN82KjuBz2yK79wJWw3uLVHuY3+t5u1t7DsTn7WG0/wfP+vE3CnpQJgAAAABJRU5ErkJggg==",
+          "data:image/png;base64,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",
         size: 10,
       },
       endPoint: {
@@ -91152,25 +89364,13 @@ const WQ = {
 const JQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -91188,36 +89388,25 @@ const JQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91229,15 +89418,10 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         majorLabel: [
@@ -91254,36 +89438,25 @@ const JQ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91295,15 +89468,10 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         subLabel: [
@@ -91320,36 +89488,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91361,15 +89518,10 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -91421,36 +89573,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91462,15 +89603,10 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
         size: {
@@ -91478,16 +89614,9 @@ const JQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [30, 70],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [30, 70], min: null, max: null },
           },
           vizField: {
             id: "6PMACrzawmkI",
@@ -91502,36 +89631,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91543,49 +89661,28 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 9,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 9, unit: "rows" },
     },
   },
   KQ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -91604,36 +89701,25 @@ const JQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91645,19 +89731,12 @@ const JQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -91675,36 +89754,25 @@ const JQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91716,19 +89784,12 @@ const JQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -91745,36 +89806,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91786,19 +89836,12 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -91852,36 +89895,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91893,19 +89925,12 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -91913,16 +89938,9 @@ const JQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [30, 70],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [30, 70], min: null, max: null },
           },
           vizField: {
             id: "6PMACrzawmkI",
@@ -91937,36 +89955,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -91978,54 +89985,31 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 9,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 9, unit: "rows" },
       referenceLine: [],
     },
   },
   $Q = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -92044,36 +90028,25 @@ const JQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92085,19 +90058,12 @@ const JQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -92115,36 +90081,25 @@ const JQ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92156,19 +90111,12 @@ const JQ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -92185,36 +90133,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92226,19 +90163,12 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -92292,36 +90222,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92333,19 +90252,12 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -92353,16 +90265,9 @@ const JQ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [30, 70],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [30, 70], min: null, max: null },
           },
           vizField: {
             id: "6PMACrzawmkI",
@@ -92377,36 +90282,25 @@ const JQ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92418,62 +90312,32 @@ const JQ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 9,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 9, unit: "rows" },
       referenceLine: [],
     },
   },
   tZ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
-      display: {
-        useCylinder: !0,
-        segments: 3,
-      },
-      color: {
-        defaultColor: "rgba(252,169,42,1)",
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
+      display: { useCylinder: !0, segments: 3 },
+      color: { defaultColor: "rgba(252,169,42,1)" },
       icon: {
         image:
           "data:image/png;base64,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",
       },
-      opacity: {
-        enable: !1,
-        min: 0.2,
-        max: 1,
-        speed: 0.3,
-      },
-      scale: {
-        enable: !0,
-        min: 0.8,
-        max: 1,
-        speed: 0.2,
-      },
+      opacity: { enable: !1, min: 0.2, max: 1, speed: 0.3 },
+      scale: { enable: !0, min: 0.8, max: 1, speed: 0.2 },
       poi: {
         enable: !1,
         orient: "vertical",
@@ -92514,12 +90378,7 @@ const JQ = {
             offsetX: 0,
             offsetY: 0,
           },
-          padding: {
-            top: 6,
-            left: 6,
-            right: 6,
-            bottom: 6,
-          },
+          padding: { top: 6, left: 6, right: 6, bottom: 6 },
           borderRadius: {
             topLeft: 2,
             topRight: 2,
@@ -92553,25 +90412,13 @@ const JQ = {
 const iZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -92589,36 +90436,25 @@ const iZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92630,15 +90466,10 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         majorLabel: [
@@ -92655,36 +90486,25 @@ const iZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92696,15 +90516,10 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         subLabel: [
@@ -92721,36 +90536,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92762,15 +90566,10 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -92822,36 +90621,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92863,15 +90651,10 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
         size: {
@@ -92879,16 +90662,9 @@ const iZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [10, 50],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [10, 50], min: null, max: null },
           },
           vizField: {
             id: "j5LLl7UH6KDI",
@@ -92903,36 +90679,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -92944,49 +90709,28 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   nZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -93005,36 +90749,25 @@ const iZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93046,19 +90779,12 @@ const iZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -93076,36 +90802,25 @@ const iZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93117,19 +90832,12 @@ const iZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -93146,36 +90854,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93187,19 +90884,12 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -93253,36 +90943,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93294,19 +90973,12 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -93314,16 +90986,9 @@ const iZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [10, 50],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [10, 50], min: null, max: null },
           },
           vizField: {
             id: "j5LLl7UH6KDI",
@@ -93338,36 +91003,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93379,54 +91033,31 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   rZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -93445,36 +91076,25 @@ const iZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93486,19 +91106,12 @@ const iZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -93516,36 +91129,25 @@ const iZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93557,19 +91159,12 @@ const iZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -93586,36 +91181,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93627,19 +91211,12 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -93693,36 +91270,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93734,19 +91300,12 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
         size: {
@@ -93754,16 +91313,9 @@ const iZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [10, 50],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [10, 50], min: null, max: null },
           },
           vizField: {
             id: "j5LLl7UH6KDI",
@@ -93778,36 +91330,25 @@ const iZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -93819,48 +91360,26 @@ const iZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   oZ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
-      display: {
-        useCylinder: !0,
-        segments: 3,
-        radiusTop: 3,
-        radiusBottom: 2,
-      },
-      color: {
-        defaultColor: "rgba(194,255,238,0)",
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
+      display: { useCylinder: !0, segments: 3, radiusTop: 3, radiusBottom: 2 },
+      color: { defaultColor: "rgba(194,255,238,0)" },
       poi: {
         enable: !1,
         anchor: "top",
@@ -93902,12 +91421,7 @@ const iZ = {
             offsetX: 0,
             offsetY: 0,
           },
-          padding: {
-            top: 6,
-            left: 6,
-            right: 6,
-            bottom: 6,
-          },
+          padding: { top: 6, left: 6, right: 6, bottom: 6 },
           borderRadius: {
             topLeft: 2,
             topRight: 2,
@@ -93943,25 +91457,13 @@ var sZ =
 const lZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -93979,36 +91481,25 @@ const lZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94020,15 +91511,10 @@ const lZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         information: [
@@ -94045,36 +91531,25 @@ const lZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94086,15 +91561,10 @@ const lZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
           {
             id: "FghP73ko3yAU",
@@ -94109,36 +91579,25 @@ const lZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94150,50 +91609,29 @@ const lZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   uZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -94212,36 +91650,25 @@ const lZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94253,19 +91680,12 @@ const lZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         information: [
@@ -94283,36 +91703,25 @@ const lZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94324,19 +91733,12 @@ const lZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
           {
             id: "FghP73ko3yAU",
@@ -94351,36 +91753,25 @@ const lZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94392,55 +91783,32 @@ const lZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   cZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -94459,36 +91827,25 @@ const lZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94500,19 +91857,12 @@ const lZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         information: [
@@ -94530,36 +91880,25 @@ const lZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94571,19 +91910,12 @@ const lZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
           {
             id: "FghP73ko3yAU",
@@ -94598,36 +91930,25 @@ const lZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94639,48 +91960,27 @@ const lZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   hZ = {
     [mX.VolcanoBlue]: {
-      common: {
-        showAllLevelData: !1,
-      },
-      marker: {
-        showAll: !1,
-      },
-      anchor: {
-        position: rX.Center,
-        offset: {
-          x: 0,
-          y: 0,
-        },
-      },
+      common: { showAllLevelData: !1 },
+      marker: { showAll: !1 },
+      anchor: { position: rX.Center, offset: { x: 0, y: 0 } },
       carousel: {
         enable: !0,
         type: lX.InOrder,
@@ -94710,33 +92010,19 @@ const lZ = {
     nodeType: "host",
     iconType: "informationLabel",
     presets: hZ[vX],
-    dataPresets: {
-      showLabelCity: "",
-    },
+    dataPresets: { showLabelCity: "" },
     plot: [200, 100],
   };
 const dZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -94754,36 +92040,25 @@ const dZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94795,15 +92070,10 @@ const dZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         majorLabel: [
@@ -94820,36 +92090,25 @@ const dZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94861,15 +92120,10 @@ const dZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         subLabel: [
@@ -94886,36 +92140,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -94927,15 +92170,10 @@ const dZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
@@ -94945,16 +92183,9 @@ const dZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [20, 60],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [20, 60], min: null, max: null },
           },
           vizField: {
             id: "I7eLJZ12qeQp",
@@ -94969,36 +92200,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95010,49 +92230,28 @@ const dZ = {
                   beginDate: "2023-06-15",
                   endDate: "2023-06-15",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   fZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -95071,36 +92270,25 @@ const dZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95112,19 +92300,12 @@ const dZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -95142,36 +92323,25 @@ const dZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95183,19 +92353,12 @@ const dZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -95212,36 +92375,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95253,19 +92405,12 @@ const dZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -95276,16 +92421,9 @@ const dZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [10, 60],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [10, 60], min: null, max: null },
           },
           vizField: {
             id: "I7eLJZ12qeQp",
@@ -95300,36 +92438,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95341,54 +92468,31 @@ const dZ = {
                   beginDate: "2023-06-15",
                   endDate: "2023-06-15",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   gZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -95407,36 +92511,25 @@ const dZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95448,19 +92541,12 @@ const dZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -95478,36 +92564,25 @@ const dZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95519,19 +92594,12 @@ const dZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -95548,36 +92616,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95589,19 +92646,12 @@ const dZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -95612,16 +92662,9 @@ const dZ = {
             type: "continuous",
             discrete: {
               mainPercent: 100,
-              sizeMappingList: {
-                auto: [],
-                manual: [],
-              },
+              sizeMappingList: { auto: [], manual: [] },
             },
-            continuous: {
-              percent: [10, 60],
-              min: null,
-              max: null,
-            },
+            continuous: { percent: [10, 60], min: null, max: null },
           },
           vizField: {
             id: "I7eLJZ12qeQp",
@@ -95636,36 +92679,25 @@ const dZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95677,47 +92709,30 @@ const dZ = {
                   beginDate: "2023-06-15",
                   endDate: "2023-06-15",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         },
       },
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   mZ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
       icon: {
         type: 30,
         image:
           "data:image/png;base64,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",
       },
-      color: {
-        color: "#E2FFFF",
-      },
+      color: { color: "#E2FFFF" },
       poi: {
         enable: !0,
         orient: "vertical",
@@ -95758,12 +92773,7 @@ const dZ = {
             offsetX: 0,
             offsetY: 0,
           },
-          padding: {
-            top: 6,
-            left: 6,
-            right: 6,
-            bottom: 6,
-          },
+          padding: { top: 6, left: 6, right: 6, bottom: 6 },
           borderRadius: {
             topLeft: 2,
             topRight: 2,
@@ -95797,25 +92807,13 @@ const dZ = {
 const bZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -95833,36 +92831,25 @@ const bZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95874,15 +92861,10 @@ const bZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         majorLabel: [
@@ -95899,36 +92881,25 @@ const bZ = {
             vizFieldType: "Text",
             role: "Dimension",
             configDescription: null,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -95940,15 +92911,10 @@ const bZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
         subLabel: [
@@ -95965,36 +92931,25 @@ const bZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96006,50 +92961,29 @@ const bZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
+            timeGranularity: { unit: "None" },
           },
         ],
       },
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
     },
   },
   xZ = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -96068,36 +93002,25 @@ const bZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96109,19 +93032,12 @@ const bZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -96139,36 +93055,25 @@ const bZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96180,19 +93085,12 @@ const bZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -96209,36 +93107,25 @@ const bZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96250,19 +93137,12 @@ const bZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -96270,36 +93150,20 @@ const bZ = {
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   _Z = {
     [mX.VolcanoBlue]: {
       source: {
-        request: {
-          type: "auto",
-          interval: 30,
-        },
+        request: { type: "auto", interval: 30 },
         dataSourceId: "default_map_1",
         type: "query",
         config: {
-          query: {
-            id: "default_map_1",
-          },
-          vizQuery: {
-            vizQueryHistoryId: null,
-            datasetId: null,
-          },
-          report: {
-            id: null,
-            name: "",
-            datasetId: null,
-          },
+          query: { id: "default_map_1" },
+          vizQuery: { vizQueryHistoryId: null, datasetId: null },
+          report: { id: null, name: "", datasetId: null },
         },
       },
       vizFieldBlock: {
@@ -96318,36 +93182,25 @@ const bZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96359,19 +93212,12 @@ const bZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         majorLabel: [
@@ -96389,36 +93235,25 @@ const bZ = {
             role: "Dimension",
             configDescription: null,
             isPartitionField: !1,
-            aggregation: {
-              type: "none",
-            },
+            aggregation: { type: "none" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96430,19 +93265,12 @@ const bZ = {
                   beginDate: "2024-12-16",
                   endDate: "2024-12-16",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         subLabel: [
@@ -96459,36 +93287,25 @@ const bZ = {
             vizFieldType: "Number",
             role: "Measure",
             configDescription: null,
-            aggregation: {
-              type: "sum",
-            },
+            aggregation: { type: "sum" },
             dataFormat: {
               type: "auto",
               numberFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
                 unit: "none",
                 kSep: !0,
               },
               percentageFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
               permilleFormatConfig: {
                 prefix: "",
                 suffix: "",
-                precision: {
-                  type: "decimal",
-                  digit: 2,
-                },
+                precision: { type: "decimal", digit: 2 },
               },
             },
             calculation: {
@@ -96500,19 +93317,12 @@ const bZ = {
                   beginDate: "2023-06-5",
                   endDate: "2023-06-5",
                 },
-                dynamicDateConfig: {
-                  quantity: 1,
-                  unit: "Day",
-                },
+                dynamicDateConfig: { quantity: 1, unit: "Day" },
                 fieldMode: "Group",
               },
             },
-            timeGranularity: {
-              unit: "None",
-            },
-            drill: {
-              enable: !1,
-            },
+            timeGranularity: { unit: "None" },
+            drill: { enable: !1 },
           },
         ],
         detail: [],
@@ -96520,33 +93330,17 @@ const bZ = {
       displayChannel: {},
       filters: [],
       sort: [],
-      topN: {
-        type: "none",
-        limit: 10,
-        unit: "rows",
-      },
+      topN: { type: "none", limit: 10, unit: "rows" },
       referenceLine: [],
     },
   },
   SZ = {
     [mX.VolcanoBlue]: {
-      common: {
-        zoomMin: 0,
-        zoomMax: 24,
-        showAllLevelData: !1,
-      },
-      feature: {
-        token: "",
-        profile: "driving",
-        minutes: 60,
-      },
+      common: { zoomMin: 0, zoomMax: 24, showAllLevelData: !1 },
+      feature: { token: "", profile: "driving", minutes: 60 },
       style: {
         color: "rgba(63,200,255,0.4)",
-        outline: {
-          width: 2,
-          opacity: 1,
-          color: "#3FC8FF",
-        },
+        outline: { width: 2, opacity: 1, color: "#3FC8FF" },
       },
       centerPoint: {
         enable: !0,
@@ -96594,12 +93388,7 @@ const bZ = {
             offsetX: 0,
             offsetY: 0,
           },
-          padding: {
-            top: 6,
-            left: 6,
-            right: 6,
-            bottom: 6,
-          },
+          padding: { top: 6, left: 6, right: 6, bottom: 6 },
           borderRadius: {
             topLeft: 2,
             topRight: 2,
@@ -96698,17 +93487,9 @@ const AZ = new (class {
     return new wZ(this);
   }
   defaultRule(t, e, i, n = !1) {
-    return {
-      rule: {
-        type: e,
-        key: t,
-      },
-      cb: i,
-      serial: n,
-    };
+    return { rule: { type: e, key: t }, cb: i, serial: n };
   }
 })();
-window.AZ = AZ;
 function EZ(t, e) {
   if ("string" == typeof e) return t[e];
   {
@@ -96723,9 +93504,7 @@ function EZ(t, e) {
 }
 function DZ() {
   if (this.editMode === g.View) {
-    this.getRenderer().emit(m.Loaded, {
-      target: this.POMNode,
-    });
+    this.getRenderer().emit(m.Loaded, { target: this.POMNode });
   }
   this.asyncFontsTask && this.onFontsUpdated();
 }
@@ -96784,9 +93563,7 @@ function zZ(t) {
   kZ.call(this, t),
     this.variableContext.gisLayer
       ? ((this.preVizData = void 0),
-        this.variableContext.gisLayer.set({
-          data: [],
-        }),
+        this.variableContext.gisLayer.set({ data: [] }),
         this.tickOnce())
       : this.render(!0);
 }
@@ -96826,11 +93603,7 @@ function BZ(t = !0) {
 }
 function GZ(t) {
   this.variableContext.gis &&
-    (this.variableContext.gisLayer.set({
-      common: {
-        visible: t,
-      },
-    }),
+    (this.variableContext.gisLayer.set({ common: { visible: t } }),
     t && this.errorTip ? this.renderTips(this.errorTip) : this.removeTips(!1),
     this.tickOnce());
 }
@@ -96843,7 +93616,6 @@ function UZ(t) {
   }
   return !0;
 }
-window.UZ = UZ;
 function jZ() {
   if (this.editMode === g.Edit) this.setElementVisibility(this.plot.visible);
   else {
@@ -96861,13 +93633,7 @@ function HZ(t) {
   }
   const n =
     null === (e = this.variableContext) || void 0 === e ? void 0 : e.gisLayer;
-  n &&
-    n.set({
-      common: {
-        zIndex: i,
-      },
-    }),
-    (this.zIndex = i);
+  n && n.set({ common: { zIndex: i } }), (this.zIndex = i);
 }
 function VZ() {
   var t;
@@ -96981,9 +93747,7 @@ class WZ extends O {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: {
-          tipDOM: null,
-        },
+        value: { tipDOM: null },
       }),
       Object.defineProperty(this, "selectedItem", {
         enumerable: !0,
@@ -97052,11 +93816,7 @@ Object.defineProperty(WZ, "events", {
       title_en: "Before Element Load",
       value: b.BeforeLoad,
     },
-    {
-      title_cn: "加载完成",
-      title_en: "Element Loaded",
-      value: b.Loaded,
-    },
+    { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
   ],
 });
 class qZ extends F {
@@ -97114,9 +93874,7 @@ class qZ extends F {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: {
-          tipDOM: null,
-        },
+        value: { tipDOM: null },
       }),
       (this.POMNode.interaction = !1),
       this.POMNode.viz || (this.POMNode.viz = {}),
@@ -97183,9 +93941,7 @@ const YZ = [
 var XZ = "0.15.25";
 function QZ(t) {
   if (t.__esModule) return t;
-  var e = Object.defineProperty({}, "__esModule", {
-    value: !0,
-  });
+  var e = Object.defineProperty({}, "__esModule", { value: !0 });
   return (
     Object.keys(t).forEach(function (i) {
       var n = Object.getOwnPropertyDescriptor(t, i);
@@ -97205,9 +93961,7 @@ function QZ(t) {
     e
   );
 }
-var ZZ = {
-  exports: {},
-};
+var ZZ = { exports: {} };
 function JZ(t, e, i) {
   i = i || 2;
   var n,
@@ -97684,11 +94438,7 @@ function SJ(t, e, i, n) {
   (JZ.flatten = function (t) {
     for (
       var e = t[0][0].length,
-        i = {
-          vertices: [],
-          holes: [],
-          dimensions: e,
-        },
+        i = { vertices: [], holes: [], dimensions: e },
         n = 0,
         r = 0;
       r < t.length;
@@ -97870,12 +94620,7 @@ function mK(t, e) {
 }
 function yK(t, e, i) {
   "__proto__" == e && cK
-    ? cK(t, e, {
-        configurable: !0,
-        enumerable: !0,
-        value: i,
-        writable: !0,
-      })
+    ? cK(t, e, { configurable: !0, enumerable: !0, value: i, writable: !0 })
     : (t[e] = i);
 }
 function vK(t, e) {
@@ -99015,14 +95760,7 @@ const I1 = new (class {
     return new L1(this);
   }
   defaultRule(t, e, i, n = !1) {
-    return {
-      rule: {
-        type: e,
-        key: t,
-      },
-      cb: i,
-      serial: n,
-    };
+    return { rule: { type: e, key: t }, cb: i, serial: n };
   }
 })();
 I1.registerRule("has", (t, e, i) => w1(P1(t, i))),
@@ -99247,9 +95985,7 @@ function W1(t) {
   for (e in t)
     n[e] =
       null == (i = t[e])
-        ? {
-            type: null,
-          }
+        ? { type: null }
         : ("FeatureCollection" === i.type
             ? q1
             : "Feature" === i.type
@@ -99258,10 +95994,7 @@ function W1(t) {
   return n;
 }
 function q1(t) {
-  var e = {
-    type: "GeometryCollection",
-    geometries: t.features.map(Y1),
-  };
+  var e = { type: "GeometryCollection", geometries: t.features.map(Y1) };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function Y1(t) {
@@ -99276,25 +96009,13 @@ function Y1(t) {
   return i;
 }
 function X1(t) {
-  if (null == t)
-    return {
-      type: null,
-    };
+  if (null == t) return { type: null };
   var e =
     "GeometryCollection" === t.type
-      ? {
-          type: "GeometryCollection",
-          geometries: t.geometries.map(X1),
-        }
+      ? { type: "GeometryCollection", geometries: t.geometries.map(X1) }
       : "Point" === t.type || "MultiPoint" === t.type
-      ? {
-          type: t.type,
-          coordinates: t.coordinates,
-        }
-      : {
-          type: t.type,
-          arcs: t.coordinates,
-        };
+      ? { type: t.type, coordinates: t.coordinates }
+      : { type: t.type, arcs: t.coordinates };
   return null != t.bbox && (e.bbox = t.bbox), e;
 }
 function Q1(t) {
@@ -99441,10 +96162,7 @@ var J1 = Object.freeze(
                   },
                 };
                 for (var m in t) f(t[m]);
-                return {
-                  scale: [1 / s, 1 / l],
-                  translate: [n, r],
-                };
+                return { scale: [1 / s, 1 / l], translate: [n, r] };
               })(t, i, e),
             r = (function (t) {
               var e,
@@ -99571,12 +96289,7 @@ var J1 = Object.freeze(
                 for (i = 0, n = a.length; i < n; ++i)
                   for (var l = a[i], u = l[0], c = l[1]; ++u < c; )
                     r.has(o[u]) &&
-                      ((e = {
-                        0: u,
-                        1: l[1],
-                      }),
-                      (l[1] = u),
-                      (l = l.next = e));
+                      ((e = { 0: u, 1: l[1] }), (l[1] = u), (l = l.next = e));
                 for (i = 0, n = s.length; i < n; ++i)
                   for (
                     var h = s[i], p = h[0], d = p, f = h[1], g = r.has(o[p]);
@@ -99585,10 +96298,7 @@ var J1 = Object.freeze(
                   )
                     r.has(o[d]) &&
                       (g
-                        ? ((e = {
-                            0: d,
-                            1: h[1],
-                          }),
+                        ? ((e = { 0: d, 1: h[1] }),
                           (h[1] = d),
                           (h = h.next = e))
                         : (H1(o, p, f, f - d),
@@ -99624,18 +96334,12 @@ var J1 = Object.freeze(
                   };
                   function s(t) {
                     for (var n = 0, o = t.length; n < o; ++n) r[++e] = t[n];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return i.push(a), a;
                   }
                   function l(t) {
                     for (var i = 0, o = t.length; i < o; ++i) r[++e] = t[i];
-                    var a = {
-                      0: e - o + 1,
-                      1: e,
-                    };
+                    var a = { 0: e - o + 1, 1: e };
                     return n.push(a), a;
                   }
                   function u(t) {
@@ -99724,9 +96428,7 @@ var J1 = Object.freeze(
         },
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   K1 = QZ(J1);
@@ -99793,25 +96495,10 @@ function i2(t, e) {
     r = null == e.properties ? {} : e.properties,
     o = n2(t, e);
   return null == i && null == n
-    ? {
-        type: "Feature",
-        properties: r,
-        geometry: o,
-      }
+    ? { type: "Feature", properties: r, geometry: o }
     : null == n
-    ? {
-        type: "Feature",
-        id: i,
-        properties: r,
-        geometry: o,
-      }
-    : {
-        type: "Feature",
-        id: i,
-        bbox: n,
-        properties: r,
-        geometry: o,
-      };
+    ? { type: "Feature", id: i, properties: r, geometry: o }
+    : { type: "Feature", id: i, bbox: n, properties: r, geometry: o };
 }
 function n2(t, e) {
   var i = t2(t.transform),
@@ -99845,10 +96532,7 @@ function n2(t, e) {
       n = e.type;
     switch (n) {
       case "GeometryCollection":
-        return {
-          type: n,
-          geometries: e.geometries.map(t),
-        };
+        return { type: n, geometries: e.geometries.map(t) };
       case "Point":
         i = o(e.coordinates);
         break;
@@ -99870,10 +96554,7 @@ function n2(t, e) {
       default:
         return null;
     }
-    return {
-      type: n,
-      coordinates: i,
-    };
+    return { type: n, coordinates: i };
   })(e);
 }
 function r2(t, e) {
@@ -99951,10 +96632,7 @@ function o2(t, e, i) {
         o = [];
       function a(t) {
         var e = t < 0 ? ~t : t;
-        (o[e] || (o[e] = [])).push({
-          i: t,
-          g: n,
-        });
+        (o[e] || (o[e] = [])).push({ i: t, g: n });
       }
       function s(t) {
         t.forEach(a);
@@ -99996,10 +96674,7 @@ function o2(t, e, i) {
       );
     })(0, e, i);
   else for (r = 0, n = new Array((o = t.arcs.length)); r < o; ++r) n[r] = r;
-  return {
-    type: "MultiLineString",
-    arcs: r2(t, n),
-  };
+  return { type: "MultiLineString", arcs: r2(t, n) };
 }
 function a2(t, e) {
   var i = {},
@@ -100018,12 +96693,7 @@ function a2(t, e) {
       for (var e, i = -1, n = t.length, r = t[n - 1], o = 0; ++i < n; )
         (e = r), (r = t[i]), (o += e[0] * r[1] - e[1] * r[0]);
       return Math.abs(o);
-    })(
-      n2(t, {
-        type: "Polygon",
-        arcs: [e],
-      }).coordinates[0]
-    );
+    })(n2(t, { type: "Polygon", arcs: [e] }).coordinates[0]);
   }
   return (
     e.forEach(function t(e) {
@@ -100216,16 +96886,10 @@ var u2 = Object.freeze(
                 };
                 break;
               case "Point":
-                e = {
-                  type: "Point",
-                  coordinates: p(t.coordinates),
-                };
+                e = { type: "Point", coordinates: p(t.coordinates) };
                 break;
               case "MultiPoint":
-                e = {
-                  type: "MultiPoint",
-                  coordinates: t.coordinates.map(p),
-                };
+                e = { type: "MultiPoint", coordinates: t.coordinates.map(p) };
                 break;
               default:
                 return t;
@@ -100259,9 +96923,7 @@ var u2 = Object.freeze(
         untransform: l2,
       },
       Symbol.toStringTag,
-      {
-        value: "Module",
-      }
+      { value: "Module" }
     )
   ),
   c2 = QZ(u2);
@@ -100353,9 +97015,7 @@ var p2,
     (t.exports.simplify = function (t, i) {
       return e(t, i);
     });
-})({
-  exports: {},
-}),
+})({ exports: {} }),
   (function (t) {
     (t.contain = "contain"),
       (t.intersect = "intersect"),
@@ -100363,9 +97023,7 @@ var p2,
       (t.none = "none");
   })(p2 || (p2 = {}));
 for (let p7 = 0; p7 < 256; p7++) p7.toString(16);
-var m2 = {
-  exports: {},
-};
+var m2 = { exports: {} };
 !(function (t) {
   var e = Object.prototype.hasOwnProperty,
     i = "~";
@@ -100515,16 +97173,8 @@ if (!window) throw Error("AMap JSAPI can only be used in Browser.");
   (v2.loading = "loading"),
   (v2.loaded = "loaded"),
   (v2.failed = "failed");
-let x2 = {
-    key: "",
-    AMap: {
-      version: "2.0",
-      plugins: [],
-    },
-  },
-  _2 = {
-    AMap: y2.notload,
-  };
+let x2 = { key: "", AMap: { version: "2.0", plugins: [] } },
+  _2 = { AMap: y2.notload };
 const S2 = [],
   M2 = (t) =>
     new Promise((e, i) => {
@@ -100592,16 +97242,8 @@ const S2 = [],
     });
 function C2() {
   delete window.AMap,
-    (x2 = {
-      key: "",
-      AMap: {
-        version: "2.0",
-        plugins: [],
-      },
-    }),
-    (_2 = {
-      AMap: y2.notload,
-    });
+    (x2 = { key: "", AMap: { version: "2.0", plugins: [] } }),
+    (_2 = { AMap: y2.notload });
 }
 const w2 = {
     darkblue: "amap://styles/darkblue",
@@ -100653,11 +97295,7 @@ const w2 = {
     showIndoorMap: !1,
     resizeEnable: !0,
     layers: {
-      nebula: {
-        zIndex: 0,
-        visible: !0,
-        zooms: [2, 26],
-      },
+      nebula: { zIndex: 0, visible: !0, zooms: [2, 26] },
       traffic: {
         autoRefresh: !0,
         interval: 60,
@@ -100694,12 +97332,7 @@ const w2 = {
         zooms: [17, 20],
         visible: !1,
       },
-      indoorMap: {
-        zIndex: 1e3,
-        opacity: 1,
-        hideFloorBar: !1,
-        visible: !1,
-      },
+      indoorMap: { zIndex: 1e3, opacity: 1, hideFloorBar: !1, visible: !1 },
     },
   };
 let D2 = 0;
@@ -100740,16 +97373,9 @@ class T2 extends b2 {
       } = this.state;
       a
         ? console.error("[xGis]", "暂不支持直接传入 amap 实例")
-        : (i &&
-            (window._AMapSecurityConfig = {
-              securityJsCode: i,
-            }),
+        : (i && (window._AMapSecurityConfig = { securityJsCode: i }),
           (this.__mapContainer = this.__creatAmapContainer(o)),
-          M2({
-            key: e,
-            version: n,
-            plugins: r,
-          })
+          M2({ key: e, version: n, plugins: r })
             .then((e) => {
               if (this.__destroyed) return;
               if (!this.__mapContainer || !this.__mapContainer.isConnected)
@@ -100888,9 +97514,7 @@ class T2 extends b2 {
   }
   setMapStyle(t) {
     var e;
-    (this.state = C1(this.state, {
-      style: t,
-    })),
+    (this.state = C1(this.state, { style: t })),
       null == (e = this.__map) || e.setMapStyle(this.__getMapStyle(t));
   }
   getZooms() {
@@ -100903,30 +97527,22 @@ class T2 extends b2 {
   }
   setZoom(t, e = !1) {
     var i;
-    (this.state = C1(this.state, {
-      zoom: t,
-    })),
+    (this.state = C1(this.state, { zoom: t })),
       null == (i = this.__map) || i.setZoom(t, e);
   }
   setCenter(t, e = !1) {
     var i;
-    (this.state = C1(this.state, {
-      center: t,
-    })),
+    (this.state = C1(this.state, { center: t })),
       null == (i = this.__map) || i.setCenter(t, e);
   }
   setPitch(t, e = !1) {
     var i;
-    (this.state = C1(this.state, {
-      pitch: t,
-    })),
+    (this.state = C1(this.state, { pitch: t })),
       null == (i = this.__map) || i.setPitch(t, e);
   }
   setFilter(t) {
     var e;
-    this.state = C1(this.state, {
-      filter: t,
-    });
+    this.state = C1(this.state, { filter: t });
     !(function (t, e) {
       if (!t)
         return void console.error(
@@ -100954,9 +97570,7 @@ class T2 extends b2 {
   }
   setRotation(t, e = !1) {
     var i;
-    (this.state = C1(this.state, {
-      rotation: t,
-    })),
+    (this.state = C1(this.state, { rotation: t })),
       null == (i = this.__map) || i.setRotation(t, e);
   }
   then(t) {
@@ -101006,36 +97620,1572 @@ class T2 extends b2 {
     C2();
   }
 }
-
+class P2 {
+  constructor({ executeCallback: t, revokeCallback: e }) {
+    Object.defineProperty(this, "executeCallback", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: void 0,
+    }),
+      Object.defineProperty(this, "revokeCallback", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      (this.executeCallback = t),
+      (this.revokeCallback = e);
+  }
+  execute() {
+    this.executeCallback();
+  }
+  revoke() {
+    this.revokeCallback();
+  }
+}
+const L2 = new Map();
+function I2(t) {
+  var e;
+  switch (t) {
+    case hX.CHINA_GIS:
+      return jX[null !== (e = x.getLocaleId()) && void 0 !== e ? e : "zh_CN"];
+    case hX.WOLRD_GIS:
+      return "zh_CN" !== x.getLocaleId() && WX[x.getLocaleId()]
+        ? WX[x.getLocaleId()]
+        : {};
+    case hX.CUSTOM_GIS:
+    default:
+      return {};
+  }
+}
+var N2, R2;
+((R2 = N2 || (N2 = {}))[(R2.NONE = 0)] = "NONE"),
+  (R2[(R2.ONCE = 1)] = "ONCE"),
+  (R2[(R2.LOOP = 2)] = "LOOP");
+class O2 extends z {
+  constructor(t, e) {
+    super(t, e),
+      Object.defineProperty(this, "lastDrillAdCode", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: null,
+      }),
+      Object.defineProperty(this, "tickMode", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: N2.NONE,
+      }),
+      Object.defineProperty(this, "tickTime", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 0,
+      }),
+      Object.defineProperty(this, "tickId", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 0,
+      }),
+      Object.defineProperty(this, "comboTimer", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "comboTimeout", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 200,
+      }),
+      Object.defineProperty(this, "drillEndCallback", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: [],
+      }),
+      Object.defineProperty(this, "drillStartCallback", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: [],
+      }),
+      Object.defineProperty(this, "preWidth", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 0,
+      }),
+      Object.defineProperty(this, "preHeight", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 0,
+      }),
+      Object.defineProperty(this, "currentSlice", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: null,
+      }),
+      Object.defineProperty(this, "preViewportConfig", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "editingPlot", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: {},
+      }),
+      Object.defineProperty(this, "isInit", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "isInitGis", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "isInitAmap", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "isInitNanhai", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "drillRange", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: [0, 3],
+      }),
+      Object.defineProperty(this, "propsWatch", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "preProperties", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: {},
+      }),
+      Object.defineProperty(this, "needDelayInit", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "elementDisplayObserver", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: null,
+      }),
+      Object.defineProperty(this, "lastCustomData", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "lastRegion", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "needUpgradeViewport", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      }),
+      Object.defineProperty(this, "asyncFontsTask", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: { gis: !1, nanhai: !1 },
+      }),
+      Object.defineProperty(this, "previousConfig", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "gisContextMapKey", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "interactionOperationEmit", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: _(() => {
+          var t;
+          if (
+            !(null === (t = this.variableContext) || void 0 === t
+              ? void 0
+              : t.gis)
+          )
+            return;
+          const e = this.getRawViewportConfig();
+          if (this.POMNode.operationEmit) {
+            const t = new P2({
+              executeCallback: () => {
+                this.setViewportConfig(e);
+              },
+              revokeCallback: () => {
+                this.setViewportConfig(this.preViewportConfig);
+              },
+            });
+            this.POMNode.operationEmit(t);
+          }
+          this.preViewportConfig = e;
+        }, 200),
+      }),
+      Object.defineProperty(this, "drill", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: async (t) => {
+          if ("-1" === t) this.drillUp();
+          else if (rQ(t)) await this.drillUp(ZY);
+          else if (t.includes($Y)) {
+            const e = t.split($Y)[1];
+            this.variableContext.regionData[e] && (await this.drillRegion(e));
+          } else {
+            const e = await nQ(t, this.variableContext.gis);
+            await this.drillDownSingle(e);
+          }
+        },
+      }),
+      Object.defineProperty(this, "drillUp", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: async (t) => {
+          var e;
+          const { baseMapLayer: i } =
+            null === (e = this.variableContext.gis) || void 0 === e
+              ? void 0
+              : e.layerManager;
+          await i.drillUp(t, () => {});
+        },
+      }),
+      (this.propsWatch = AZ.createPropsWatch()),
+      this.initPropsWatchRule(),
+      this.observeElementDisplay();
+  }
+  render(t) {
+    super.render(t);
+    const e =
+      this.POMNode.width !== this.preWidth ||
+      this.POMNode.height !== this.preHeight;
+    if (t || !1 !== this.isInit || !e)
+      if (t || !1 === this.isInit) {
+        let t;
+        switch (
+          (this.editMode === g.View
+            ? (this.gisContextMapKey = `${this.renderer.getScreenId()}-${
+                this.POMNode.id
+              }`)
+            : (this.gisContextMapKey = this.POMNode.id),
+          this.upgradeCompatible(),
+          this.POMNode.renderType)
+        ) {
+          case hX.CHINA_GIS:
+            t = PX.presets;
+            break;
+          case hX.WOLRD_GIS:
+            t = yQ.presets;
+            break;
+          case hX.CUSTOM_GIS:
+            t = gQ.presets;
+        }
+        if (
+          ((this.POMNode.properties = IX(t, this.POMNode.properties)),
+          !UZ(this))
+        )
+          return void (this.needDelayInit = !0);
+        const e = L2.get(this.gisContextMapKey);
+        this.editMode === g.View && e ? this.animateInit() : this.createInit(),
+          this.POMNode.viz || (this.POMNode.viz = {});
+      } else
+        this.isInit &&
+          (e
+            ? ((this.preWidth = this.POMNode.width),
+              (this.preHeight = this.POMNode.height))
+            : this.update());
+  }
+  upgradeCompatible() {
+    !this.POMNode.properties.viewport &&
+      this.POMNode.data.viewportConfig &&
+      (this.needUpgradeViewport = !0);
+  }
+  observeElementDisplay() {
+    const t = this.dom;
+    (this.elementDisplayObserver = new MutationObserver((t) => {
+      t.forEach((t) => {
+        var e = t.target;
+        e &&
+          "block" == e.style.display &&
+          this.needDelayInit &&
+          (this.render(!0), (this.needDelayInit = !1));
+      });
+    })),
+      this.elementDisplayObserver.observe(t, {
+        attributes: !0,
+        childList: !1,
+        subtree: !1,
+        attributeOldValue: !1,
+        attributeFilter: ["style"],
+      });
+  }
+  createInit() {
+    (this.dom.innerHTML = ""), this.clearError(), this.initState();
+    const t = document.createElement("div"),
+      e = document.createElement("div");
+    (e.style.width = "100%"),
+      (e.style.height = "100%"),
+      (e.style.willChange = "width,height"),
+      (this.variableContext = {
+        ...this.variableContext,
+        div: e,
+        ghostDiv: t,
+        tipsPool: {},
+        gis: null,
+        amapLayer: null,
+        nanhaiLayer: null,
+        regionData: {},
+      }),
+      this.dom.append(e),
+      this.initGis();
+  }
+  animateInit() {
+    var t;
+    (this.currentSlice = this.POMNode.slices[0]),
+      (this.preViewportConfig = this.POMNode.data.viewportConfig),
+      this.POMNode.slices.forEach((t) => {
+        t.editingSpace = "gisSurface";
+      });
+    const e = L2.get(this.gisContextMapKey);
+    (this.variableContext = e),
+      this.dom.append(this.variableContext.div),
+      null === (t = this.variableContext.gis) ||
+        void 0 === t ||
+        t.tickSystem.start(),
+      this.initHandle();
+  }
+  initState() {
+    var t;
+    (this.isInit = !1),
+      (this.isInitGis = !1),
+      (this.isInitAmap = !1),
+      (this.isInitNanhai = !1),
+      (this.lastDrillAdCode = null),
+      (this.drillEndCallback = []),
+      (this.drillStartCallback = []),
+      null === (t = this.variableContext.gis) || void 0 === t || t.destroy(),
+      (this.variableContext = {
+        ...this.variableContext,
+        div: null,
+        ghostDiv: null,
+        tipsPool: {},
+        gis: null,
+        amapLayer: null,
+        nanhaiLayer: null,
+        regionData: {},
+      }),
+      (this.preProperties = u(this.properties)),
+      (this.preWidth = this.POMNode.width),
+      (this.preHeight = this.POMNode.height),
+      (this.currentSlice = this.POMNode.slices[0]),
+      (this.preViewportConfig = this.POMNode.data.viewportConfig),
+      this.POMNode.slices.forEach((t) => {
+        t.editingSpace = "gisSurface";
+      });
+  }
+  getRealDPR() {
+    return (
+      (window.devicePixelRatio ? window.devicePixelRatio : 1) *
+      this.renderer.getScale()[0]
+    );
+  }
+  async initGis() {
+    const {
+        amap: { enable: e },
+        nanhai: { enable: i },
+      } = this.properties,
+      { div: n } = this.variableContext,
+      r = {
+        common: { visible: !1 },
+        districtStyle: { heightScale: 0, bottomStroke: { width: 0 } },
+        data: await this.getDataConfig(),
+        drill: await this.getDrillConfig(),
+        viewClip: this.getViewClipConfig(),
+        poi: { major: { aliasMap: I2(this.POMNode.renderType) } },
+      },
+      o = {
+        containerDom: n,
+        globalVariable:
+          this.editMode === g.Edit ||
+          window.location.href.includes("showToolbar=true"),
+        viewportConfig: this.getViewportConfig(),
+        lightConfig: this.getLightConfig(),
+        sceneConfig: IX(
+          { logo: { visible: !1 }, background: { transparent: !0 } },
+          this.getSceneConfig()
+        ),
+        baseMapLayer: IX(r, this.getBaseLayerConfig()),
+      };
+    (this.variableContext.gis = new IW(o)),
+      this.variableContext.gis
+        .then(() => {
+          var n;
+          if (((this.isInitGis = !0), this.needUpgradeViewport)) {
+            const e =
+              null === (n = this.variableContext.gis) || void 0 === n
+                ? void 0
+                : n.viewportSystem.get();
+            (this.POMNode.properties.viewport = {
+              centerLng: t(e.center[0], 6),
+              centerLat: t(e.center[1], 6),
+              zoom: t(e.zoom, 2),
+              pitch: t(e.pitch, 0),
+              rotation: t(e.rotation, 0),
+            }),
+              (this.needUpgradeViewport = !1);
+          }
+          e || i || this.initHandle(),
+            i && this.setNanhaiEnable(),
+            e && this.setAMapEnable();
+        })
+        .catch((t) => {
+          let e = t.message;
+          if ("地图数据加载失败" === e)
+            e = S("地图数据加载失败，请确保地图数据源配置正常");
+          this.renderGisError(e);
+        });
+  }
+  renderGisError(t) {
+    const e = new y(v.RenderError, t);
+    this.variableContext &&
+      ((this.variableContext.tipsPool[this.POMNode.id] = e), this.renderTips()),
+      console.error(t);
+  }
+  tickOnce() {
+    this.editMode !== g.View &&
+      this.tickMode === N2.NONE &&
+      ((this.tickMode = N2.ONCE),
+      (this.tickId = window.requestAnimationFrame(() => {
+        if (this.variableContext) {
+          const { gis: t } = this.variableContext;
+          null == t || t.tickSystem.tick();
+        }
+        this.tickMode = N2.NONE;
+      })));
+  }
+  tickLoop(t) {
+    if (this.editMode !== g.View)
+      if (this.tickMode !== N2.LOOP) {
+        const e = Date.now(),
+          i = () => {
+            this.tickTime < 4e3
+              ? ((this.tickMode = N2.LOOP),
+                (this.tickId = window.requestAnimationFrame(() => {
+                  if (this.variableContext) {
+                    const { gis: t } = this.variableContext;
+                    null == t || t.tickSystem.tick();
+                  }
+                  const t = Date.now();
+                  (this.tickTime = t - e), i();
+                })))
+              : ((this.tickTime = 0), (this.tickMode = N2.NONE), t && t());
+          };
+        i();
+      } else this.tickTime = 0;
+  }
+  initHandle(t = !0) {
+    var e;
+    const { gis: i } = this.variableContext;
+    this.asyncFontsTask.gis && this.updateGisFonts(),
+      this.asyncFontsTask.nanhai && this.updateNanhaiFonts(),
+      this.editMode !== g.View &&
+        (null == i || i.tickSystem.pause(), this.tickLoop()),
+      this.renderLayer(),
+      M(this.preViewportConfig) &&
+        (this.preViewportConfig =
+          null === (e = this.variableContext.gis) || void 0 === e
+            ? void 0
+            : e.viewportSystem.get()),
+      this.initEventListener(),
+      (this.isInit = !0),
+      s.call(this, b.Loaded),
+      L2.set(this.gisContextMapKey, this.variableContext);
+  }
+  initEventListener() {
+    const { gis: t } = this.variableContext;
+    null == t ||
+      t.on("resize", (e) => {
+        var i;
+        e.width &&
+          e.height &&
+          (this.setViewportConfig(),
+          null == t || t.layerManager.baseMapLayer.scaleAdaptation(!1),
+          null === (i = this.POMNode) ||
+            void 0 === i ||
+            i.slices.forEach((t) => {
+              t.children
+                .filter(
+                  (t) =>
+                    "@dp/aeolian-package-geography://informationLabel" ===
+                    t.renderType
+                )
+                .forEach((t) => {
+                  var e;
+                  null === (e = t.layer) ||
+                    void 0 === e ||
+                    e.updateLayerInteractive();
+                });
+            }),
+          this.tickOnce());
+      }),
+      null == t ||
+        t.layerManager.baseMapLayer.on("click", (e) => {
+          var i;
+          if (this.comboTimer)
+            if (
+              (clearTimeout(this.comboTimer),
+              (this.comboTimer = setTimeout(() => {
+                this.comboTimer = void 0;
+              }, this.comboTimeout)),
+              e)
+            ) {
+              let n = e.properties.alias;
+              const r =
+                !(null == t
+                  ? void 0
+                  : t.layerManager.baseMapLayer.currentRegion) &&
+                Object.values(this.variableContext.regionData).find((t) =>
+                  t.child.includes(e.properties.id)
+                );
+              r && (n = $Y + r.name);
+              const o =
+                null !== (i = t.layerManager.baseMapLayer.currentLevel) &&
+                void 0 !== i
+                  ? i
+                  : iX.country;
+              s.call(this, b.AreaDbClick, {
+                region: n,
+                currentLevel: o,
+                maxLevel: 4,
+              });
+            } else s.call(this, b.OutSideAreaDbClick, {});
+          else
+            this.comboTimer = setTimeout(() => {
+              var i;
+              if (((this.comboTimer = void 0), e)) {
+                let n = e.properties.alias;
+                const r =
+                  !(null == t
+                    ? void 0
+                    : t.layerManager.baseMapLayer.currentRegion) &&
+                  Object.values(this.variableContext.regionData).find((t) =>
+                    t.child.includes(e.properties.id)
+                  );
+                r && (n = $Y + r.name);
+                const o =
+                  null !== (i = t.layerManager.baseMapLayer.currentLevel) &&
+                  void 0 !== i
+                    ? i
+                    : iX.country;
+                s.call(this, b.AreaClick, {
+                  region: n,
+                  currentLevel: o,
+                  maxLevel: 4,
+                });
+              } else s.call(this, b.OutSideAreaClick, {});
+            }, this.comboTimeout);
+        }),
+      null == t ||
+        t.layerManager.baseMapLayer.on("drill", async (t) => {
+          this.setNanhaiVisible(t.properties.currentCode),
+            this.drillStartCallback.forEach((e) => e(t.properties.currentCode));
+        }),
+      null == t ||
+        t.layerManager.baseMapLayer.on("drillEnd", async (t) => {
+          this.storeViewport(),
+            this.drillEndCallback.forEach((e) => e(t.properties.currentCode));
+        }),
+      null == t ||
+        t.controlsSystem.controls.addEventListener(
+          "start",
+          this.interactionOperationEmit
+        ),
+      this.editMode !== g.View &&
+        (null == t ||
+          t.on("viewportChange", () => {
+            "gisSurface" === this.renderer.page.editingSpace && this.tickOnce();
+          }));
+  }
+  clearEventListener() {
+    var t, e, i, n, r, o;
+    if (null === (t = this.variableContext) || void 0 === t ? void 0 : t.gis) {
+      const t =
+        null ===
+          (i =
+            null === (e = this.variableContext.gis) || void 0 === e
+              ? void 0
+              : e.layerManager) || void 0 === i
+          ? void 0
+          : i.baseMapLayer;
+      t &&
+        (t.off("click"),
+        t.off("dblclick"),
+        t.off("drill"),
+        t.off("drillEnd"),
+        t.off("drillUpEnd"),
+        t.off("drillDownEnd")),
+        null === (n = this.variableContext.gis) ||
+          void 0 === n ||
+          n.controlsSystem.controls.removeEventListener(
+            "start",
+            this.interactionOperationEmit
+          ),
+        null ===
+          (o =
+            null === (r = this.variableContext) || void 0 === r
+              ? void 0
+              : r.gis) ||
+          void 0 === o ||
+          o.off("viewportChange");
+    }
+  }
+  async update() {
+    const { gis: t } = this.variableContext;
+    t &&
+      (this.propsWatch.compare(this.preProperties, this.properties),
+      (this.preProperties = u(this.properties)));
+  }
+  renderTips() {
+    if (this.variableContext) {
+      const t = this.variableContext.tipsPool;
+      if (Object.keys(t).length > 0) {
+        const e = Object.values(t),
+          i = e.reduce((t, e) => t + e.message, ""),
+          n = e[e.length - 1].type;
+        super.renderTips(new y(n, i));
+      } else this.removeTips();
+    }
+  }
+  getSceneConfig() {
+    const { componentBackground: t } = this.properties;
+    return {
+      dpr: this.getRealDPR(),
+      background: {
+        transparent: !(null == t ? void 0 : t.hasColor),
+        color: t.backgroundColor,
+      },
+    };
+  }
+  setSceneConfig() {
+    const { gis: t } = this.variableContext,
+      e = this.getSceneConfig();
+    null == t || t.sceneSystem.set(e);
+  }
+  getViewportConfig() {
+    const { interaction: t } = this.properties,
+      {
+        sceneChangeEnable: e,
+        zoomEnable: i,
+        translationEnable: n,
+        pitchEnable: r,
+        rotationEnable: o,
+      } = t,
+      a = this.editMode !== g.View;
+    let s;
+    if (this.needUpgradeViewport)
+      s = {
+        ...this.POMNode.data.viewportConfig,
+        enableZoom: a || i,
+        enablePitch: a || r,
+        enableRotate: a || o,
+        enablePan: a || n,
+        lock: !a && !e,
+        drillSave: !0,
+      };
+    else {
+      const { viewport: t } = this.properties,
+        { centerLng: l, centerLat: u } = t;
+      s = {
+        ...t,
+        center: [l, u],
+        enableZoom: a || i,
+        enablePitch: a || r,
+        enableRotate: a || o,
+        enablePan: a || n,
+        lock: !a && !e,
+        drillSave: !0,
+      };
+    }
+    return s;
+  }
+  getRawViewportConfig() {
+    var e;
+    const i =
+      null === (e = this.variableContext.gis) || void 0 === e
+        ? void 0
+        : e.viewportSystem.get();
+    return {
+      center: [t(i.center[0], 6), t(i.center[1], 6)],
+      zoom: t(i.zoom, 2),
+      pitch: t(i.pitch, 0),
+      rotation: t(i.rotation, 0),
+      maxZoom: i.maxZoom,
+      minZoom: i.minZoom,
+      maxPitch: i.maxPitch,
+      minPitch: i.minPitch,
+      maxRotation: i.maxRotation,
+      minRotation: i.minRotation,
+    };
+  }
+  setViewportConfig(t) {
+    if (this.variableContext) {
+      const { gis: e } = this.variableContext,
+        i = null != t ? t : this.getViewportConfig();
+      null == e || e.viewportSystem.setWebGisCameraState(i);
+    }
+  }
+  ayncViewportConfig(t) {
+    (this.properties.viewport.centerLng = t.center[0]),
+      (this.properties.viewport.centerLat = t.center[1]),
+      (this.properties.viewport.zoom = t.zoom),
+      (this.properties.viewport.pitch = t.pitch),
+      (this.properties.viewport.rotation = t.rotation);
+  }
+  setLightConfig() {
+    const { gis: t } = this.variableContext,
+      e = this.getLightConfig();
+    null == t || t.lightSystem.set(e);
+  }
+  getLightConfig() {
+    const { light: t } = this.properties;
+    return {
+      ambient: { color: t.ambient.color, intensity: t.ambient.intensity },
+      directional: {
+        color: t.directional.color,
+        intensity: t.directional.intensity,
+        x: t.directional.x,
+        y: t.directional.y,
+        z: t.directional.z,
+        shadow: { enabled: t.shadow.enabled, color: t.shadow.color },
+      },
+    };
+  }
+  getBaseLayerConfig() {
+    const {
+        baseMapLayer: t,
+        districtOutline: e,
+        innerShadow: i,
+        extrude: n,
+        boundaryStreamer: r,
+        provinceOutline: o,
+        mapStyle: a,
+        common: s,
+      } = this.properties,
+      { labelEnable: l = !0 } = a,
+      u = null == t ? void 0 : t.show,
+      c = {
+        common: { visible: u, zoomRange: [s.zoomMin, s.zoomMax] },
+        districtStyle: {
+          enabled: !0,
+          stroke: { color: a.borderColor },
+          fill: {
+            color: a.backgroundColor,
+            metalness: a.metalness,
+            roughness: a.roughness,
+            map:
+              "mapStyle-image-tab-1" === a.backgroundType
+                ? this.replaceStaticTemplatePath(a.backgroundImage)
+                : a.backgroundTile,
+            normalMap:
+              "mapStyle-tile-tab-1" === a.normalType
+                ? this.replaceStaticTemplatePath(a.normalImage)
+                : a.normalTile,
+            normalScale: a.normalScale,
+          },
+          innerShadow: {
+            enabled: i.enable,
+            shadowColor: i.color,
+            shadowBlurScale: i.width,
+          },
+          boundaryStreamer: {
+            enabled: r.enable,
+            lineLength: r.length,
+            lineWidth: r.width,
+            lineColor: r.endColor,
+            lineHeadColor: r.headColor,
+            lineHeadRatio: 0.2,
+            speed: r.speed,
+          },
+        },
+        drill: {},
+        poi: {
+          major: {
+            enabled: l,
+            color: a.fontStyle.color,
+            fontWeight: a.fontStyle.fontWeight,
+            fontSize: a.fontStyle.fontSize,
+            aliasMap: I2(this.POMNode.renderType),
+            fontFamily: RX(a.fontStyle.fontFamily),
+          },
+          coverEnable: !a.coverEnable,
+        },
+      };
+    return (
+      (c.districtStyle.heightScale = u ? n.height : 0),
+      (c.districtStyle.sideConfig = {
+        colorConfig: { range: [n.topColor, n.bottomColor] },
+      }),
+      e &&
+        (c.districtStyle.stroke = {
+          ...c.districtStyle.stroke,
+          opacity: e.opacity,
+          width: e.width,
+        }),
+      o &&
+        (c.subDistrictStyle = {
+          stroke: { opacity: o.opacity, width: o.width, color: o.borderColor },
+        }),
+      c
+    );
+  }
+  async setBaseLayer() {
+    const { gis: t } = this.variableContext,
+      e = this.getBaseLayerConfig();
+    f(e, this.previousConfig) ||
+      ((this.previousConfig = e),
+      null == t || t.layerManager.baseMapLayer.set(e));
+  }
+  async getDataConfig() {
+    const {
+      data: { region: t },
+    } = this.properties;
+    let e;
+    switch (
+      (this.buildRegionData(), (this.lastRegion = t), this.POMNode.renderType)
+    ) {
+      case hX.CHINA_GIS:
+        e = {
+          district: {
+            type: xk.GEOBUF_URL,
+            data: aQ("countryborder_208_gc.pbf"),
+          },
+          subDistrict: {
+            type: xk.GEOBUF_URL,
+            data: aQ("district_100000_1_gc.pbf"),
+          },
+          region: this.variableContext.regionData,
+          nameMap: UX,
+        };
+        break;
+      case hX.WOLRD_GIS:
+        e = {
+          district: null,
+          subDistrict: {
+            type: xk.GEOBUF_URL,
+            data: aQ("bd_world_without_antarctica.pbf"),
+            simplify: { enabled: !0, tolerance: 0.1 },
+          },
+          region: this.variableContext.regionData,
+        };
+        break;
+      case hX.CUSTOM_GIS:
+        const {
+            data: {
+              custom: { data: t },
+            },
+          } = this.properties,
+          i = await fetch(this.replaceStaticTemplatePath(t.url)),
+          n = await i.json();
+        (e = {
+          district: null,
+          subDistrict: {
+            type: "geojson",
+            data: n[n.rootId],
+            simplify: { enabled: !1 },
+          },
+          region: this.variableContext.regionData,
+        }),
+          (this.lastCustomData = u(t));
+    }
+    return e;
+  }
+  getViewClipConfig() {
+    const {
+      nanhai: { enable: t },
+    } = this.properties;
+    if (t) {
+      const t = cX,
+        e = Object.values(this.variableContext.regionData).find((t) =>
+          t.child.includes(JY)
+        );
+      return e && (t[e.adcode] = cX[ZY]), t;
+    }
+    return null;
+  }
+  async getDrillConfig() {
+    const {
+      interaction: { initialLevelName: t },
+    } = this.properties;
+    let e;
+    switch (this.POMNode.renderType) {
+      case hX.CHINA_GIS:
+        const i = await nQ(t, this.variableContext.gis);
+        (e = {
+          enabled: !0,
+          level: { range: this.drillRange, adcode: i },
+          data: {
+            0: {
+              type: xk.GEOBUF_URL,
+              data: aQ("districtaggregate_province_kld_gc.pbf"),
+            },
+            1: {
+              type: xk.GEOBUF_URL,
+              data: aQ("districtaggregate_city_kld_gc.pbf"),
+            },
+            2: {
+              type: xk.GEOBUF_URL,
+              data: aQ("districtaggregate_county_kld_gc.pbf"),
+            },
+          },
+          duration: 500,
+          preventMouse: !0,
+        }),
+          (this.lastDrillAdCode = i);
+        break;
+      case hX.WOLRD_GIS:
+        (e = { enabled: !1, data: null, duration: 500, preventMouse: !0 }),
+          (this.lastDrillAdCode = QY);
+        break;
+      case hX.CUSTOM_GIS:
+        (e = { enabled: !1, data: null, duration: 500, preventMouse: !0 }),
+          (this.lastDrillAdCode = "999999");
+    }
+    return e;
+  }
+  async modifyCustomData() {
+    const { gis: t } = this.variableContext,
+      {
+        data: {
+          custom: { data: e },
+        },
+      } = this.properties;
+    f(e, this.lastCustomData) ||
+      (null == t ||
+        t.layerManager.baseMapLayer.ee.emit("modifyCustomDataStart"),
+      null == t ||
+        t.layerManager.baseMapLayer.set({
+          data: await this.getDataConfig(),
+          drill: await this.getDrillConfig(),
+        }),
+      await (null == t ? void 0 : t.layerManager.baseMapLayer.release()),
+      this.storeViewport(),
+      null == t ||
+        t.layerManager.baseMapLayer.ee.emit(
+          "modifyCustomDataEnd",
+          this.lastDrillAdCode
+        ),
+      (this.lastCustomData = u(e)));
+  }
+  async updateDefaultData() {
+    const {
+      interaction: { initialLevelName: t },
+    } = this.properties;
+    if (this.POMNode.renderType !== hX.CHINA_GIS) return;
+    const e = await nQ(t, this.variableContext.gis);
+    this.lastDrillAdCode !== e &&
+      (e === ZY ? await this.drillUp(ZY) : await this.drillDownSingle(e),
+      (this.lastDrillAdCode = e));
+  }
+  setAMapEnable(t = !0) {
+    const {
+        amap: e,
+        nanhai: { enable: i },
+      } = this.properties,
+      {
+        style: n,
+        enable: r,
+        content: o,
+        custom: { key: a, securityJsCode: s, id: l },
+        type: u,
+        filter: c,
+      } = e,
+      { gis: h, div: p } = this.variableContext;
+    if ((this.destroyAMap(), r)) {
+      const e = new T2({
+        id: p,
+        key: "amap.default" === u ? "255b6b2933a0084ac1ea75faf6994e47" : a,
+        securityJsCode:
+          "amap.default" === u ? "22658a511592b5249bf6a69b9911e149" : s,
+        style: "amap.default" === u ? n : this.getAMapCustomStyle(l),
+        showLabel: !0,
+        terrain: o.terrain,
+        layers: {
+          nebula: { visible: o.nebula },
+          traffic: { visible: o.traffic },
+          roadnet: { visible: o.roadnet },
+          buildings: { visible: o.buildings },
+        },
+        filter: { ...c, enabled: c.enable },
+      });
+      (this.variableContext.amapLayer = e),
+        e.then(() => {
+          null == h || h.registerMap(e),
+            o.label ? e.show("label") : e.hide("label"),
+            (this.isInitAmap = !0),
+            t && (!i || (i && this.isInitNanhai)) && this.initHandle();
+        });
+    }
+  }
+  getAMapCustomStyle(t) {
+    return `amap://styles/${t}`;
+  }
+  setAMapContent() {
+    const { amap: t } = this.properties,
+      { content: e } = t,
+      { amapLayer: i } = this.variableContext;
+    this.isInitAmap &&
+      Object.entries(e).forEach((t) => {
+        "terrain" !== t[0] && (!0 === t[1] ? i.show(t[0]) : i.hide(t[0]));
+      });
+  }
+  setAMapFilter() {
+    const { amap: t } = this.properties,
+      { filter: e } = t,
+      { amapLayer: i } = this.variableContext;
+    this.isInitAmap && (null == i || i.setFilter({ ...e, enabled: e.enable }));
+  }
+  updateViewClip(t) {
+    const { gis: e } = this.variableContext;
+    null == e || e.layerManager.baseMapLayer.set({ viewClip: t }),
+      null == e || e.layerManager.baseMapLayer.scaleAdaptation(!1),
+      this.storeViewport();
+  }
+  setNanhaiEnable(t = !0) {
+    const {
+        nanhai: e,
+        amap: { enable: i },
+      } = this.properties,
+      {
+        enable: n,
+        offsetX: r,
+        offsetY: o,
+        scale: a,
+        fill: s,
+        background: l,
+        position: u,
+        stroke: c,
+        border: h,
+        fontStyle: p,
+      } = e,
+      { nanhaiLayer: d, gis: f } = this.variableContext;
+    if (n) {
+      if ((this.updateViewClip(cX), d)) return;
+      const e = {
+          common: { offset: [r, o, 0] },
+          scale: a,
+          position: u,
+          data: {
+            type: xk.GEOBUF_URL,
+            data: aQ("chinasouthseaaggregate_aggregatecssea_kld_gc.pbf"),
+          },
+          style: {
+            fill: { color: s },
+            background: { color: l },
+            stroke: { color: c.color, width: c.width },
+            border: { color: h.color, width: h.width },
+          },
+          poi: {
+            enabled: !0,
+            data: {
+              type: xk.GEOBUF_URL,
+              data: aQ("chinasouthseaaggregate_aggregatecssea_name_kld_gc.pbf"),
+            },
+            major: {
+              enabled: p.enable,
+              color: p.color,
+              fontSize: p.fontSize,
+              fontWeight: p.fontWeight,
+              fontFamily: RX(p.fontFamily),
+              aliasMap: HX[x.getLocaleId() || "zh_CN"],
+            },
+          },
+        },
+        n = new TY(f, e);
+      n.then(() => {
+        (this.variableContext.nanhaiLayer = n),
+          (this.isInitNanhai = !0),
+          this.setNanhaiVisible(this.lastDrillAdCode),
+          t || this.tickOnce(),
+          t && (!i || (i && this.isInitAmap)) && this.initHandle();
+      });
+    } else {
+      if ((this.updateViewClip(null), !d)) return;
+      d.remove(), (this.variableContext.nanhaiLayer = null), this.tickOnce();
+    }
+  }
+  setNanhaiVisible(t) {
+    const { nanhaiLayer: e } = this.variableContext,
+      {
+        nanhai: { enable: i },
+      } = this.properties;
+    if (!i) return;
+    if (!e) return;
+    const n = Object.values(this.variableContext.regionData).find((t) =>
+      t.child.includes(JY)
+    );
+    t === (null == n ? void 0 : n.adcode) || ZY === t || JY === t
+      ? e.set({ common: { visible: !0 } })
+      : e.set({ common: { visible: !1 } });
+  }
+  setNanhaiContent() {
+    const { nanhai: t } = this.properties,
+      {
+        offsetX: e,
+        offsetY: i,
+        scale: n,
+        fill: r,
+        background: o,
+        position: a,
+        stroke: s,
+        border: l,
+        fontStyle: u,
+      } = t,
+      { nanhaiLayer: c } = this.variableContext;
+    if (!c) return;
+    const h = {
+      common: { offset: [e, i, 0] },
+      scale: n,
+      position: a,
+      style: {
+        fill: { color: r },
+        background: { color: o },
+        stroke: { color: s.color, width: s.width },
+        border: { color: l.color, width: l.width },
+      },
+      poi: {
+        enabled: !0,
+        major: {
+          enabled: u.enable,
+          color: u.color,
+          fontSize: u.fontSize,
+          fontWeight: u.fontWeight,
+          fontFamily: RX(u.fontFamily),
+          aliasMap: HX[x.getLocaleId() || "zh_CN"],
+        },
+      },
+    };
+    c.set(h);
+  }
+  setAMapStyle() {
+    const { amap: t } = this.properties,
+      {
+        style: e,
+        type: i,
+        custom: { id: n },
+      } = t,
+      { amapLayer: r } = this.variableContext;
+    this.isInitAmap &&
+      (null == r ||
+        r.setMapStyle("amap.default" === i ? e : this.getAMapCustomStyle(n)));
+  }
+  animate() {
+    var t;
+    (this.gisContextMapKey = `${this.renderer.getScreenId()}-${
+      this.POMNode.id
+    }`),
+      null === (t = this.currentSlice) ||
+        void 0 === t ||
+        t.children.forEach((t) => {
+          var e, i, n;
+          null ===
+            (i =
+              null === (e = this.renderer.page) || void 0 === e
+                ? void 0
+                : e.clear) ||
+            void 0 === i ||
+            i.call(e, t.id),
+            null === (n = t.layer) || void 0 === n || n.destroy(),
+            (t.layer = void 0);
+        }),
+      (this.currentSlice = this.POMNode.slices[0]),
+      (this.drillEndCallback = []),
+      (this.drillStartCallback = []),
+      this.update(),
+      this.renderLayer();
+  }
+  renderLayer() {
+    const t = this.POMNode.slices[0];
+    this.renderer.renderLayer(t, this.variableContext.ghostDiv);
+  }
+  modifyNodePlots() {
+    (this.editingPlot = { x: this.POMNode.x, y: this.POMNode.y }),
+      this.POMNode.slices.forEach((t) => {
+        (t.width = this.POMNode.width), (t.height = this.POMNode.height);
+      }),
+      (this.dom.style.transform = "translate(0,0)");
+    const t = this.POMNode.page,
+      [e] = t.properties;
+    e && (this.dom.style.backgroundColor = e);
+  }
+  resetNodePlots() {
+    const { x: t, y: e } = this.editingPlot;
+    (this.dom.style.transform = `translate(${t}px,${e}px)`),
+      (this.dom.style.backgroundColor = "transparent");
+  }
+  enterEdit() {
+    return (
+      UZ(this) ||
+        ((this.dom.style.display = "block"), this.isInit || this.render(!0)),
+      this.renderer.elementRequestStage(this),
+      this.modifyNodePlots(),
+      this.renderer.enterSlice(this.POMNode.slices[0], !0),
+      setTimeout(() => {
+        this.renderer.editing = this.POMNode;
+      }, 0),
+      !0
+    );
+  }
+  storeViewport() {
+    const { gis: t } = this.variableContext;
+    t &&
+      ((this.preViewportConfig = this.getRawViewportConfig()),
+      this.ayncViewportConfig(this.preViewportConfig));
+  }
+  quitEdit() {
+    UZ(this) || (this.dom.style.display = "none");
+    let t = this.POMNode.slices[0].host.parent;
+    for (; !t.isSlice; ) t = t.parent;
+    this.storeViewport(),
+      this.resetNodePlots(),
+      this.renderer.elementExitStage(),
+      this.renderer.exitSlice(t);
+  }
+  forwardToPage() {
+    UZ(this) || (this.dom.style.display = "none");
+    let t = this.POMNode.slices[0].host.parent;
+    for (; !t.isSlice || !t.isPage; )
+      t.isSlice ? t.isPage || (t = t.host.parent) : (t = t.parent);
+    this.storeViewport(),
+      this.resetNodePlots(),
+      this.renderer.elementExitStage(),
+      this.renderer.exitSlice(t),
+      (this.renderer.editing = void 0);
+  }
+  async drillDownSingle(t) {
+    var e;
+    const { baseMapLayer: i } =
+      null === (e = this.variableContext.gis) || void 0 === e
+        ? void 0
+        : e.layerManager;
+    await i.drillDown(t, () => {});
+  }
+  async drillRegion(t) {
+    var e;
+    const { baseMapLayer: i } =
+      null === (e = this.variableContext.gis) || void 0 === e
+        ? void 0
+        : e.layerManager;
+    await i.drillRegion(t, () => {});
+  }
+  buildRegionData() {
+    const {
+      data: { region: t },
+    } = this.properties;
+    (this.variableContext.regionData = {}),
+      t.forEach((t) => {
+        let e = t.name;
+        const [i, n] = t.position.split(",");
+        this.variableContext.regionData[e] = {
+          adcode: e,
+          name: e,
+          position: [Number(i), Number(n)],
+          child: t.child,
+        };
+      });
+  }
+  updateRegion() {
+    var t;
+    const {
+        data: { region: e },
+      } = this.properties,
+      { baseMapLayer: i } =
+        null === (t = this.variableContext.gis) || void 0 === t
+          ? void 0
+          : t.layerManager;
+    f(e, this.lastRegion) ||
+      (this.buildRegionData(),
+      (i.state.data.region = {}),
+      i.set({ data: { region: this.variableContext.regionData } }),
+      i.ee.emit("modifyCustomDataStart"),
+      i.ee.emit("modifyCustomDataEnd", this.lastDrillAdCode),
+      (this.lastRegion = u(e)));
+  }
+  initPropsWatchRule() {
+    this.propsWatch.addWatch([
+      this.propsWatch.defaultRule(
+        [
+          "common",
+          "baseMapLayer",
+          "districtOutline",
+          "extrude",
+          "shadow",
+          "innerShadow",
+          ["mapStyle", "backgroundColor"],
+          ["mapStyle", "metalness"],
+          ["mapStyle", "roughness"],
+          ["mapStyle", "normalScale"],
+          ["mapStyle", "borderColor"],
+          ["mapStyle", "fontStyle"],
+          ["mapStyle", "coverEnable"],
+          ["mapStyle", "labelEnable"],
+          "provinceOutline",
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setBaseLayer(), this.tickOnce();
+        }
+      ),
+      this.propsWatch.defaultRule(
+        [
+          ["mapStyle", "backgroundType"],
+          ["mapStyle", "backgroundImage"],
+          ["mapStyle", "backgroundTile"],
+          ["mapStyle", "normalType"],
+          ["mapStyle", "normalImage"],
+          ["mapStyle", "normalTile"],
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setBaseLayer(), this.tickLoop();
+        }
+      ),
+      this.propsWatch.defaultRule(
+        ["boundaryStreamer", "enable"],
+        "diffDeep",
+        (t) => {
+          this.setBaseLayer(),
+            (null == t ? void 0 : t.boundaryStreamer.enable)
+              ? this.tickLoop()
+              : this.tickOnce();
+        }
+      ),
+      this.propsWatch.defaultRule(
+        [
+          ["boundaryStreamer", "headColor"],
+          ["boundaryStreamer", "endColor"],
+          ["boundaryStreamer", "width"],
+          ["boundaryStreamer", "speed"],
+          ["boundaryStreamer", "length"],
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setBaseLayer(), this.tickLoop();
+        }
+      ),
+      this.propsWatch.defaultRule(
+        [["data", "custom", "data"]],
+        "diffAnyoneDeep",
+        async () => {
+          await this.modifyCustomData(), this.tickOnce();
+        }
+      ),
+      this.propsWatch.defaultRule(["data", "region"], "diffDeep", () => {
+        this.updateRegion();
+      }),
+      this.propsWatch.defaultRule(
+        ["interaction", "initialLevelName"],
+        "diffDeep",
+        async () => {
+          this.updateDefaultData(), this.tickLoop();
+        }
+      ),
+      this.propsWatch.defaultRule("componentBackground", "diffDeep", () => {
+        this.setSceneConfig(), this.tickOnce();
+      }),
+      this.propsWatch.defaultRule("light", "diffDeep", () => {
+        this.setLightConfig(), this.tickOnce();
+      }),
+      this.propsWatch.defaultRule(
+        ["interaction", "viewport"],
+        "diffAnyoneDeep",
+        () => {
+          this.setViewportConfig(), this.tickOnce();
+        }
+      ),
+      this.propsWatch.defaultRule(["nanhai", "enable"], "diffDeep", () => {
+        this.setNanhaiEnable(!1);
+      }),
+      this.propsWatch.defaultRule(
+        [
+          ["nanhai", "position"],
+          ["nanhai", "offsetX"],
+          ["nanhai", "offsetY"],
+          ["nanhai", "scale"],
+          ["nanhai", "fill"],
+          ["nanhai", "stroke"],
+          ["nanhai", "border"],
+          ["nanhai", "background"],
+          ["nanhai", "fontStyle"],
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setNanhaiContent(), this.tickOnce();
+        }
+      ),
+      this.propsWatch.defaultRule(
+        ["amap", "custom", "key"],
+        "diffDeep",
+        () => {
+          C2(), this.setAMapEnable(!1);
+        },
+        !0
+      ),
+      this.propsWatch.defaultRule(
+        [
+          ["amap", "enable"],
+          ["amap", "type"],
+          ["amap", "custom", "securityJsCode"],
+          ["amap", "content", "terrain"],
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setAMapEnable(!1);
+        },
+        !0
+      ),
+      this.propsWatch.defaultRule(
+        [
+          ["amap", "style"],
+          ["amap", "custom", "id"],
+        ],
+        "diffAnyoneDeep",
+        () => {
+          this.setAMapStyle();
+        }
+      ),
+      this.propsWatch.defaultRule(["amap", "content"], "diffDeep", () => {
+        this.setAMapContent();
+      }),
+      this.propsWatch.defaultRule(["amap", "filter"], "diffDeep", () => {
+        this.setAMapFilter();
+      }),
+    ]);
+  }
+  onFontsUpdated() {
+    this.updateGisFonts(), this.updateNanhaiFonts();
+  }
+  updateGisFonts() {
+    const { gis: t } = this.variableContext;
+    (this.asyncFontsTask.gis = !0),
+      t &&
+        this.isInitGis &&
+        ((this.asyncFontsTask.gis = !1),
+        null == t || t.layerManager.baseMapLayer.initPOI());
+  }
+  updateNanhaiFonts() {
+    const { nanhaiLayer: t } = this.variableContext;
+    (this.asyncFontsTask.nanhai = !0),
+      t &&
+        this.isInitNanhai &&
+        ((this.asyncFontsTask.nanhai = !1), t.initPOI());
+  }
+  toDataURL(t = "image/jpeg", e = 0.92) {
+    const { gis: i } = this.variableContext;
+    if (i) return null == i ? void 0 : i.renderSystem.toDataURL(t, e);
+  }
+  destroyAMap() {
+    const { amapLayer: t, gis: e } = this.variableContext;
+    null == e || e.unregisterMap(t),
+      null == t || t.destroy(),
+      (this.variableContext.amapLayer = null),
+      (this.isInitAmap = !1);
+  }
+  suspend() {
+    this.variableContext.gis && this.variableContext.gis.tickSystem.pause();
+  }
+  resume() {
+    this.variableContext.gis && this.variableContext.gis.tickSystem.start();
+  }
+  async destroy(t) {
+    var e, i, n, r, o;
+    this.clearEventListener();
+    for (let a = 0; a < this.POMNode.slices.length; a++) {
+      const n = this.POMNode.slices[a];
+      await (null === (i = (e = this.renderer).destroyLayer) || void 0 === i
+        ? void 0
+        : i.call(e, n, void 0, t)),
+        n.children.forEach((t) => {
+          var e, i, n;
+          null ===
+            (i =
+              null === (e = this.renderer.page) || void 0 === e
+                ? void 0
+                : e.clear) ||
+            void 0 === i ||
+            i.call(e, t.id),
+            null === (n = t.layer) || void 0 === n || n.destroy(),
+            (t.layer = void 0);
+        });
+    }
+    this.isInit && t === C.Flip
+      ? null === (n = this.variableContext.gis) ||
+        void 0 === n ||
+        n.tickSystem.pause()
+      : (window.cancelAnimationFrame(this.tickId),
+        this.destroyAMap(),
+        null === (r = this.variableContext.gis) || void 0 === r || r.destroy(),
+        (this.variableContext.gis = null),
+        L2.delete(this.gisContextMapKey),
+        null === (o = this.elementDisplayObserver) ||
+          void 0 === o ||
+          o.disconnect()),
+      super.destroy(t);
+  }
+}
 Object.defineProperty(O2, "panelConfig", {
   enumerable: !0,
   configurable: !0,
   writable: !0,
-  value: {
-    panelLimit: 1,
-    name: "Gis",
-  },
+  value: { panelLimit: 1, name: "Gis" },
 }),
   Object.defineProperty(O2, "events", {
     enumerable: !0,
     configurable: !0,
     writable: !0,
     value: [
-      {
-        title_cn: "单击",
-        title_en: "Click",
-        value: b.Click,
-      },
-      {
-        title_cn: "双击",
-        title_en: "Double Click",
-        value: b.DbClick,
-      },
-      {
-        title_cn: "区域单击",
-        title_en: "Area Click",
-        value: b.AreaClick,
-      },
+      { title_cn: "单击", title_en: "Click", value: b.Click },
+      { title_cn: "双击", title_en: "Double Click", value: b.DbClick },
+      { title_cn: "区域单击", title_en: "Area Click", value: b.AreaClick },
       {
         title_cn: "区域双击",
         title_en: "Area Double Click",
@@ -101056,11 +99206,7 @@ Object.defineProperty(O2, "panelConfig", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 const F2 = {
@@ -101110,31 +99256,13 @@ const F2 = {
       },
     },
   },
-  z2 = (t, e) => ({
-    name: t,
-    actAs: null != e ? e : t,
-  }),
-  k2 = (t, e = "") => ({
-    title_cn: t,
-    title_en: e,
-  }),
-  B2 = (t, e) => ({
-    minVizFields: t,
-    maxVizFields: e,
-  }),
-  G2 = () => ({
-    acceptVizFieldType: [T.Dimension],
-  }),
-  U2 = () => ({
-    acceptVizFieldType: [T.Measure],
-  }),
-  j2 = () => ({
-    acceptVizFieldType: [T.Dimension, T.Measure],
-  }),
-  H2 = (t, e) => ({
-    displayChannel: t,
-    vizFieldBlock: e,
-  }),
+  z2 = (t, e) => ({ name: t, actAs: null != e ? e : t }),
+  k2 = (t, e = "") => ({ title_cn: t, title_en: e }),
+  B2 = (t, e) => ({ minVizFields: t, maxVizFields: e }),
+  G2 = () => ({ acceptVizFieldType: [T.Dimension] }),
+  U2 = () => ({ acceptVizFieldType: [T.Measure] }),
+  j2 = () => ({ acceptVizFieldType: [T.Dimension, T.Measure] }),
+  H2 = (t, e) => ({ displayChannel: t, vizFieldBlock: e }),
   V2 = [
     {
       ...k2("一级区域", "First Level Region"),
@@ -101182,12 +99310,7 @@ const F2 = {
       ...B2(1, 1),
       ...G2(),
     },
-    {
-      ...k2("值", "Value"),
-      ...z2("value", E.Measure),
-      ...B2(1, 1),
-      ...U2(),
-    },
+    { ...k2("值", "Value"), ...z2("value", E.Measure), ...B2(1, 1), ...U2() },
   ],
   Y2 = [
     {
@@ -101315,13 +99438,7 @@ const F2 = {
         },
       ]
     ),
-    [tX.InformationLabel]: H2(
-      {
-        color: void 0,
-        size: void 0,
-      },
-      Y2
-    ),
+    [tX.InformationLabel]: H2({ color: void 0, size: void 0 }, Y2),
     [tX.FlyLine]: H2(
       {
         color: {
@@ -101419,21 +99536,15 @@ const F2 = {
       },
       W2
     ),
-    [tX.Isochrone]: H2(
+    [tX.Isochrone]: H2({ color: void 0, size: void 0 }, [
+      ...X2,
       {
-        color: void 0,
-        size: void 0,
+        ...k2("额外字段", "Additional Field"),
+        ...z2("detail"),
+        ...B2(0, void 0),
+        ...j2(),
       },
-      [
-        ...X2,
-        {
-          ...k2("额外字段", "Additional Field"),
-          ...z2("detail"),
-          ...B2(0, void 0),
-          ...j2(),
-        },
-      ]
-    ),
+    ]),
   };
 function J2(t) {
   const e = t.match(/^(\d+deg),\s*#([0-9A-Fa-f]{6}),\s*#([0-9A-Fa-f]{3})$/);
@@ -101449,13 +99560,7 @@ const K2 = (t, e) => {
         i.forEach((i) => {
           t.push(i.title), e.push(J2(i.color));
         }),
-          (a = {
-            type: "ordinal",
-            ordinal: {
-              domain: t,
-              range: e,
-            },
-          });
+          (a = { type: "ordinal", ordinal: { domain: t, range: e } });
       } else
         o &&
           (a = {
@@ -101482,24 +99587,14 @@ const K2 = (t, e) => {
                 },
               })
         : (console.error("[vscreen-gis]", "color 解析失败"),
-          (a = {
-            type: "linear",
-            linear: {
-              range: ["#041c22", "#40cad8"],
-            },
-          }));
+          (a = { type: "linear", linear: { range: ["#041c22", "#40cad8"] } }));
     return e && (a.default = J2(e)), (a.conditional = t.conditionalConfig), a;
   },
   $2 = (t, e = 0, i = 1) => {
     const { range: n } = t;
     let r;
     return (
-      (r = {
-        type: "linear",
-        linear: {
-          range: n.map((t) => t * i),
-        },
-      }),
+      (r = { type: "linear", linear: { range: n.map((t) => t * i) } }),
       e && (r.default = e),
       r
     );
@@ -101604,9 +99699,7 @@ class t3 extends WZ {
       i = new oY(
         this.variableContext.gis,
         IX(e, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           fields: {
             majorPOIField: "majorPOI",
             minorPOIField: "minorPOI",
@@ -101663,9 +99756,7 @@ class t3 extends WZ {
         ) {
           const e = t.properties,
             i = this.buildRowData(e);
-          s.call(this, b.AreaDbClick, {
-            RowData: i,
-          });
+          s.call(this, b.AreaDbClick, { RowData: i });
         }
       } else
         this.comboTimer = setTimeout(() => {
@@ -101676,16 +99767,11 @@ class t3 extends WZ {
             L(e) || !f(this.selectedItem, e)
               ? ((this.selectedItem = e), (n = !0))
               : (this.selectedItem = null),
-              s.call(this, b.AreaClick, {
-                RowData: i,
-                selected: n,
-              });
+              s.call(this, b.AreaClick, { RowData: i, selected: n });
           } else
             this.selectedItem &&
               ((this.selectedItem = null),
-              s.call(this, b.ChartBlankClick, {
-                selected: !1,
-              }));
+              s.call(this, b.ChartBlankClick, { selected: !1 }));
         }, this.comboTimeout);
     });
   }
@@ -101694,16 +99780,8 @@ class t3 extends WZ {
     let n = i.enable;
     n && this.editMode !== g.View && "show" !== i.trigger && (n = !1);
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
-      style: {
-        fill: {
-          color: {
-            default: t.defaultColor,
-          },
-        },
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
+      style: { fill: { color: { default: t.defaultColor } } },
       poi: {
         ...i,
         enabled: n,
@@ -101733,18 +99811,13 @@ class t3 extends WZ {
         hover: {
           enabled: this.editMode === g.View && "hover" === i.trigger,
           trigger: "mousemove",
-          effect: {
-            poi: !0,
-          },
+          effect: { poi: !0 },
         },
         select: {
           enabled: this.editMode === g.View && "click" === i.trigger,
           multi: !1,
           trigger: "click",
-          effect: {
-            color: "1.3",
-            poi: !0,
-          },
+          effect: { color: "1.3", poi: !0 },
         },
       },
     };
@@ -101775,11 +99848,7 @@ class t3 extends WZ {
       { gis: s, gisLayer: l, drillLevelMap: u } = this.variableContext;
     if (!r || 0 === r.datasets.length)
       return (
-        (this.preVizData = void 0),
-        l.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), l.set({ data: [] }), void super.tickOnce()
       );
     try {
       const c =
@@ -101794,18 +99863,10 @@ class t3 extends WZ {
       l.set({
         data: Object.values(null != h ? h : {}),
         poi: {
-          major: {
-            format: (t) => e.prefix + f(t) + e.suffix,
-          },
-          minor: {
-            format: (t) => i.prefix + g(t) + i.suffix,
-          },
+          major: { format: (t) => e.prefix + f(t) + e.suffix },
+          minor: { format: (t) => i.prefix + g(t) + i.suffix },
         },
-        style: {
-          fill: {
-            color: K2(r.displayConf.color, a),
-          },
-        },
+        style: { fill: { color: K2(r.displayConf.color, a) } },
       }),
         super.tickOnce();
     } catch (c) {
@@ -102036,9 +100097,7 @@ class t3 extends WZ {
         if (!l || 0 === l.datasets.length)
           return (
             (this.preVizData = void 0),
-            o.set({
-              data: [],
-            }),
+            o.set({ data: [] }),
             void super.tickOnce()
           );
         this.currentAdCode = t;
@@ -102060,11 +100119,7 @@ class t3 extends WZ {
     const l = await s.promise;
     o.set({
       data: u(l),
-      style: {
-        fill: {
-          color: K2(e.displayConf.color, i.defaultColor),
-        },
-      },
+      style: { fill: { color: K2(e.displayConf.color, i.defaultColor) } },
     }),
       super.tickOnce();
   }
@@ -102141,11 +100196,7 @@ Object.defineProperty(t3, "chartConstraintRequest", {
     configurable: !0,
     writable: !0,
     value: [
-      {
-        title_cn: "每项区域单击",
-        title_en: "Area Click",
-        value: b.AreaClick,
-      },
+      { title_cn: "每项区域单击", title_en: "Area Click", value: b.AreaClick },
       {
         title_cn: "每项区域双击",
         title_en: "Area Double Click",
@@ -102161,11 +100212,7 @@ Object.defineProperty(t3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class e3 extends WZ {
@@ -102202,14 +100249,9 @@ class e3 extends WZ {
       e = new GW(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
-          fields: {
-            colorField: "color",
-            heightField: "size",
-          },
+          fields: { colorField: "color", heightField: "size" },
         })
       );
     (this.variableContext.gisLayer = e),
@@ -102219,18 +100261,12 @@ class e3 extends WZ {
   getLayerConfig() {
     const { style: t, common: e } = this.properties;
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
       style: {
         tessellate: !0,
         padding: (t.padding / 100) * t.size,
         size: t.size,
-        fill: {
-          color: {
-            default: t.color.defaultColor,
-          },
-        },
+        fill: { color: { default: t.color.defaultColor } },
       },
     };
   }
@@ -102248,11 +100284,7 @@ class e3 extends WZ {
     if (!t && f(this.preVizData, r)) return;
     if ((this.removeTips(), !r || 0 === r.datasets.length))
       return (
-        (this.preVizData = void 0),
-        n.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), n.set({ data: [] }), void super.tickOnce()
       );
     const s = [];
     try {
@@ -102273,9 +100305,7 @@ class e3 extends WZ {
       n.set({
         data: u(s),
         style: {
-          fill: {
-            color: K2(r.displayConf.color, a.color.defaultColor),
-          },
+          fill: { color: K2(r.displayConf.color, a.color.defaultColor) },
           height: $2(r.displayConf.size, 0, 3),
         },
       }),
@@ -102328,11 +100358,7 @@ Object.defineProperty(e3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class i3 extends WZ {
@@ -102369,9 +100395,7 @@ class i3 extends WZ {
       e = new AY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
           fields: {
             colorField: "value",
@@ -102388,30 +100412,17 @@ class i3 extends WZ {
   getLayerConfig() {
     const { style: t, common: e } = this.properties;
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
       style: {
         colorWeight: {
           type: "linear",
-          linear: {
-            domain: null,
-            range: [t.intensity, 1],
-            clamp: !1,
-          },
+          linear: { domain: null, range: [t.intensity, 1], clamp: !1 },
         },
         heightWeight: {
           type: "linear",
-          linear: {
-            domain: null,
-            range: [t.intensity, 1],
-            clamp: !1,
-          },
+          linear: { domain: null, range: [t.intensity, 1], clamp: !1 },
         },
-        size: {
-          type: "constant",
-          constant: 3 * t.radius,
-        },
+        size: { type: "constant", constant: 3 * t.radius },
         colorPalette: {
           type: "linear",
           linear: {
@@ -102424,12 +100435,7 @@ class i3 extends WZ {
             domain: [0.35, 0.55, 0.85, 1],
           },
         },
-        height: {
-          type: "linear",
-          linear: {
-            range: [0, 3 * t.height],
-          },
-        },
+        height: { type: "linear", linear: { range: [0, 3 * t.height] } },
       },
     };
   }
@@ -102445,12 +100451,7 @@ class i3 extends WZ {
       { vizData: r, analytic: o } = this.POMNode.viz;
     if (!t && f(this.preVizData, r)) return;
     if ((this.removeTips(), !r || 0 === r.datasets.length))
-      return (
-        (this.preVizData = void 0),
-        void n.set({
-          data: [],
-        })
-      );
+      return (this.preVizData = void 0), void n.set({ data: [] });
     const a = [];
     try {
       const t = await lQ({
@@ -102466,9 +100467,7 @@ class i3 extends WZ {
       console.error("[vscreen-gis]", "数据解析经纬度失败", s);
     }
     (this.preVizData = r),
-      n.set({
-        data: u(a),
-      }),
+      n.set({ data: u(a) }),
       setTimeout(() => {
         super.tickOnce();
       }, 0);
@@ -102523,11 +100522,7 @@ Object.defineProperty(i3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class n3 extends WZ {
@@ -102564,14 +100559,9 @@ class n3 extends WZ {
       e = new kW(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
-          fields: {
-            colorField: "color",
-            heightField: "size",
-          },
+          fields: { colorField: "color", heightField: "size" },
         })
       );
     (this.variableContext.gisLayer = e),
@@ -102581,18 +100571,12 @@ class n3 extends WZ {
   getLayerConfig() {
     const { style: t, common: e } = this.properties;
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
       style: {
         tessellate: !0,
         padding: (t.padding / 100) * t.size,
         size: t.size,
-        fill: {
-          color: {
-            default: t.color.defaultColor,
-          },
-        },
+        fill: { color: { default: t.color.defaultColor } },
       },
     };
   }
@@ -102610,11 +100594,7 @@ class n3 extends WZ {
     if (!t && f(this.preVizData, r)) return;
     if ((this.removeTips(), !r || 0 === r.datasets.length))
       return (
-        (this.preVizData = void 0),
-        n.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), n.set({ data: [] }), void super.tickOnce()
       );
     const s = [];
     try {
@@ -102635,9 +100615,7 @@ class n3 extends WZ {
       n.set({
         data: u(s),
         style: {
-          fill: {
-            color: K2(r.displayConf.color, a.color.defaultColor),
-          },
+          fill: { color: K2(r.displayConf.color, a.color.defaultColor) },
           height: $2(r.displayConf.size, 0, 3),
         },
       }),
@@ -102690,11 +100668,7 @@ Object.defineProperty(n3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class r3 extends WZ {
@@ -102731,13 +100705,9 @@ class r3 extends WZ {
       e = new Fq(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
-          fields: {
-            toColorField: "color",
-          },
+          fields: { toColorField: "color" },
         })
       );
     (this.variableContext.gisLayer = e),
@@ -102747,25 +100717,14 @@ class r3 extends WZ {
   getLayerConfig() {
     const { lineStyle: t, breathPoint: e, common: i } = this.properties;
     return {
-      common: {
-        zoomRange: [i.zoomMin, i.zoomMax],
-      },
+      common: { zoomRange: [i.zoomMin, i.zoomMax] },
       style: {
-        fill: {
-          fromColor: {
-            type: "constant",
-            constant: t.startColor,
-          },
-        },
+        fill: { fromColor: { type: "constant", constant: t.startColor } },
         width: t.size,
       },
-      animation: {
-        speed: t.speed,
-      },
+      animation: { speed: t.speed },
       breathPointLayer: {
-        common: {
-          visible: e.enable,
-        },
+        common: { visible: e.enable },
         speed: e.speed,
         size: 10 * e.size,
       },
@@ -102782,11 +100741,7 @@ class r3 extends WZ {
     if (!t && f(this.preVizData, a)) return;
     if ((this.removeTips(), !a || 0 === a.datasets.length))
       return (
-        (this.preVizData = void 0),
-        o.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), o.set({ data: [] }), void super.tickOnce()
       );
     const l = OX("startLocation", a, s, 0),
       c = OX("endLocation", a, s, 1),
@@ -102838,15 +100793,7 @@ class r3 extends WZ {
                 };
                 pQ(t, Boolean(v), i, v), p.push(t);
               }
-            } else
-              m &&
-                (d.push({
-                  name: t,
-                  color: o,
-                }),
-                g.push({
-                  name: e,
-                }));
+            } else m && (d.push({ name: t, color: o }), g.push({ name: e }));
           }
         } catch (b) {
           console.error("[vscreen-gis]", "数据解析经纬度失败", i, b);
@@ -102854,12 +100801,8 @@ class r3 extends WZ {
       }
       if (AX() && d.length > 0) {
         const [t, e] = await Promise.all([
-          $X({
-            address: d.map((t) => t.name),
-          }),
-          $X({
-            address: g.map((t) => t.name),
-          }),
+          $X({ address: d.map((t) => t.name) }),
+          $X({ address: g.map((t) => t.name) }),
         ]);
         d.forEach((i, n) => {
           const r = t[n].location,
@@ -102880,11 +100823,7 @@ class r3 extends WZ {
     (this.preVizData = a),
       o.set({
         data: u(p),
-        style: {
-          fill: {
-            toColor: K2(a.displayConf.color, "#9EEEFF"),
-          },
-        },
+        style: { fill: { toColor: K2(a.displayConf.color, "#9EEEFF") } },
       }),
       super.tickLoop();
   }
@@ -102942,11 +100881,7 @@ Object.defineProperty(r3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class o3 extends WZ {
@@ -102986,15 +100921,10 @@ class o3 extends WZ {
       e = new Xq(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           usePixel: !0,
           clipMode: YX(this.parent.POMNode.renderType),
-          fields: {
-            colorField: "color",
-            widthField: "size",
-          },
+          fields: { colorField: "color", widthField: "size" },
         })
       ),
       i = new eY(this.variableContext.gis, this.getStartPointLayerConfig()),
@@ -103010,9 +100940,7 @@ class o3 extends WZ {
   getLayerConfig() {
     const { icon: t, common: e, speed: i } = this.properties;
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
       style: {
         fill: {
           map: {
@@ -103021,9 +100949,7 @@ class o3 extends WZ {
           },
         },
       },
-      animation: {
-        speed: i,
-      },
+      animation: { speed: i },
     };
   }
   renderTips(t) {
@@ -103035,18 +100961,10 @@ class o3 extends WZ {
     kZ.call(this, t),
       this.variableContext.gisLayer
         ? ((this.preVizData = void 0),
-          this.variableContext.gisLayer.set({
-            data: [],
-          }),
-          e.set({
-            data: [],
-          }),
-          i.set({
-            data: [],
-          }),
-          n.set({
-            data: [],
-          }),
+          this.variableContext.gisLayer.set({ data: [] }),
+          e.set({ data: [] }),
+          i.set({ data: [] }),
+          n.set({ data: [] }),
           super.tickOnce())
         : this.render(!0);
   }
@@ -103068,18 +100986,10 @@ class o3 extends WZ {
     if ((this.removeTips(), !h || 0 === h.datasets.length))
       return (
         (this.preVizData = void 0),
-        a.set({
-          data: [],
-        }),
-        s.set({
-          data: [],
-        }),
-        l.set({
-          data: [],
-        }),
-        c.set({
-          data: [],
-        }),
+        a.set({ data: [] }),
+        s.set({ data: [] }),
+        l.set({ data: [] }),
+        c.set({ data: [] }),
         void super.tickOnce()
       );
     let d = [],
@@ -103101,10 +101011,7 @@ class o3 extends WZ {
         try {
           const t = null !== (e = s[x]) && void 0 !== e ? e : "",
             a = iQ(t),
-            l = {
-              coordinates: [],
-              adressList: [],
-            };
+            l = { coordinates: [], adressList: [] };
           if (a) {
             let e = JSON.parse(`[${t}]`);
             if (e.length < 2) continue;
@@ -103138,11 +101045,7 @@ class o3 extends WZ {
                   }
                 });
             else if (AX() && v) {
-              (
-                await $X({
-                  address: e,
-                })
-              ).forEach((t, i) => {
+              (await $X({ address: e })).forEach((t, i) => {
                 const n = t.location;
                 if (n) {
                   const [t, r] = n.split(",");
@@ -103176,21 +101079,13 @@ class o3 extends WZ {
       a.set({
         data: u(d),
         style: {
-          fill: {
-            color: K2(h.displayConf.color),
-          },
+          fill: { color: K2(h.displayConf.color) },
           width: $2(h.displayConf.size),
         },
       }),
-      l.set({
-        data: u(m),
-      }),
-      s.set({
-        data: u(g),
-      }),
-      c.set({
-        data: u(y),
-      }),
+      l.set({ data: u(m) }),
+      s.set({ data: u(g) }),
+      c.set({ data: u(y) }),
       super.tickLoop();
   }
   getStartPointLayerConfig() {
@@ -103206,25 +101101,12 @@ class o3 extends WZ {
             type: "constant",
             constant: this.replaceStaticTemplatePath(t.image),
           },
-          color: {
-            type: "constant",
-            constant: null,
-          },
+          color: { type: "constant", constant: null },
         },
-        size: {
-          type: "constant",
-          constant: t.size,
-        },
+        size: { type: "constant", constant: t.size },
         segments: 4,
       },
-      animation: {
-        opacity: {
-          enabled: !1,
-        },
-        scale: {
-          enabled: !1,
-        },
-      },
+      animation: { opacity: { enabled: !1 }, scale: { enabled: !1 } },
     };
   }
   getNodePointLayerConfig() {
@@ -103240,25 +101122,12 @@ class o3 extends WZ {
             type: "constant",
             constant: this.replaceStaticTemplatePath(t.image),
           },
-          color: {
-            type: "constant",
-            constant: null,
-          },
+          color: { type: "constant", constant: null },
         },
-        size: {
-          type: "constant",
-          constant: t.size,
-        },
+        size: { type: "constant", constant: t.size },
         segments: 4,
       },
-      animation: {
-        opacity: {
-          enabled: !1,
-        },
-        scale: {
-          enabled: !1,
-        },
-      },
+      animation: { opacity: { enabled: !1 }, scale: { enabled: !1 } },
     };
   }
   getEndPointLayerConfig() {
@@ -103274,25 +101143,12 @@ class o3 extends WZ {
             type: "constant",
             constant: this.replaceStaticTemplatePath(t.image),
           },
-          color: {
-            type: "constant",
-            constant: null,
-          },
+          color: { type: "constant", constant: null },
         },
-        size: {
-          type: "constant",
-          constant: t.size,
-        },
+        size: { type: "constant", constant: t.size },
         segments: 4,
       },
-      animation: {
-        opacity: {
-          enabled: !1,
-        },
-        scale: {
-          enabled: !1,
-        },
-      },
+      animation: { opacity: { enabled: !1 }, scale: { enabled: !1 } },
     };
   }
   setStartPointLayerConfig() {
@@ -103312,44 +101168,22 @@ class o3 extends WZ {
   }
   processPointData(t, e, i, n, r, o, a) {
     0 === t
-      ? r.push({
-          lng: i,
-          lat: n,
-          value: 0,
-        })
+      ? r.push({ lng: i, lat: n, value: 0 })
       : t === e - 1
-      ? a.push({
-          lng: i,
-          lat: n,
-          value: 0,
-        })
-      : o.push({
-          lng: i,
-          lat: n,
-          value: 0,
-        });
+      ? a.push({ lng: i, lat: n, value: 0 })
+      : o.push({ lng: i, lat: n, value: 0 });
   }
   setElementVisibility(t) {
     this.variableContext.gis &&
-      (this.variableContext.gisLayer.set({
-        common: {
-          visible: t,
-        },
-      }),
+      (this.variableContext.gisLayer.set({ common: { visible: t } }),
       this.variableContext.startPointLayer.set({
-        common: {
-          visible: t ? this.properties.startPoint.enable : t,
-        },
+        common: { visible: t ? this.properties.startPoint.enable : t },
       }),
       this.variableContext.nodePointLayer.set({
-        common: {
-          visible: t ? this.properties.nodePoint.enable : t,
-        },
+        common: { visible: t ? this.properties.nodePoint.enable : t },
       }),
       this.variableContext.endPointLayer.set({
-        common: {
-          visible: t ? this.properties.endPoint.enable : t,
-        },
+        common: { visible: t ? this.properties.endPoint.enable : t },
       }),
       t && this.errorTip ? this.renderTips(this.errorTip) : this.removeTips(!1),
       super.tickOnce());
@@ -103433,11 +101267,7 @@ Object.defineProperty(o3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class a3 extends WZ {
@@ -103521,9 +101351,7 @@ class a3 extends WZ {
       e = new eY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
           fields: {
             majorPOIField: "majorPOI",
@@ -103553,9 +101381,7 @@ class a3 extends WZ {
         ) {
           const e = t.properties,
             i = this.buildRowData(e);
-          s.call(this, b.BubbleDbClick, {
-            RowData: i,
-          });
+          s.call(this, b.BubbleDbClick, { RowData: i });
         }
       } else
         this.comboTimer = setTimeout(() => {
@@ -103566,16 +101392,11 @@ class a3 extends WZ {
             L(e) || !f(this.selectedItem, e)
               ? ((this.selectedItem = e), (n = !0))
               : (this.selectedItem = null),
-              s.call(this, b.BubbleClick, {
-                RowData: i,
-                selected: n,
-              });
+              s.call(this, b.BubbleClick, { RowData: i, selected: n });
           } else
             this.selectedItem &&
               ((this.selectedItem = null),
-              s.call(this, b.ChartBlankClick, {
-                selected: !1,
-              }));
+              s.call(this, b.ChartBlankClick, { selected: !1 }));
         }, this.comboTimeout);
     });
   }
@@ -103593,9 +101414,7 @@ class a3 extends WZ {
     let l = s.enable;
     l && this.editMode !== g.View && "show" !== s.trigger && (l = !1);
     return {
-      common: {
-        zoomRange: [i.zoomMin, i.zoomMax],
-      },
+      common: { zoomRange: [i.zoomMin, i.zoomMax] },
       style: {
         fill: {
           map: {
@@ -103606,25 +101425,13 @@ class a3 extends WZ {
                 ? t
                 : "",
           },
-          color: {
-            default: a.defaultColor,
-          },
+          color: { default: a.defaultColor },
         },
         segments: e.useCylinder ? 30 : e.segments,
       },
       animation: {
-        opacity: {
-          enabled: r.enable,
-          min: r.min,
-          max: r.max,
-          speed: r.speed,
-        },
-        scale: {
-          enabled: o.enable,
-          min: o.min,
-          max: o.max,
-          speed: o.speed,
-        },
+        opacity: { enabled: r.enable, min: r.min, max: r.max, speed: r.speed },
+        scale: { enabled: o.enable, min: o.min, max: o.max, speed: o.speed },
       },
       poi: {
         ...s,
@@ -103655,18 +101462,13 @@ class a3 extends WZ {
         hover: {
           enabled: this.editMode === g.View && "hover" === s.trigger,
           trigger: "mousemove",
-          effect: {
-            poi: !0,
-          },
+          effect: { poi: !0 },
         },
         select: {
           enabled: this.editMode === g.View && "click" === s.trigger,
           multi: !1,
           trigger: "click",
-          effect: {
-            color: "1.3",
-            poi: !0,
-          },
+          effect: { color: "1.3", poi: !0 },
         },
       },
     };
@@ -103683,11 +101485,7 @@ class a3 extends WZ {
     if (!t && f(this.preVizData, a)) return;
     if ((this.removeTips(), !a || 0 === a.datasets.length))
       return (
-        (this.preVizData = void 0),
-        o.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), o.set({ data: [] }), void super.tickOnce()
       );
     const c = [];
     try {
@@ -103713,18 +101511,12 @@ class a3 extends WZ {
     o.set({
       data: u(c),
       style: {
-        fill: {
-          color: K2(a.displayConf.color, l.defaultColor),
-        },
+        fill: { color: K2(a.displayConf.color, l.defaultColor) },
         size: $2(a.displayConf.size, 0),
       },
       poi: {
-        major: {
-          format: (t) => i.prefix + d(t) + i.suffix,
-        },
-        minor: {
-          format: (t) => n.prefix + g(t) + n.suffix,
-        },
+        major: { format: (t) => i.prefix + d(t) + i.suffix },
+        minor: { format: (t) => n.prefix + g(t) + n.suffix },
       },
     }),
       super.tickLoop();
@@ -103799,11 +101591,7 @@ Object.defineProperty(a3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class s3 extends WZ {
@@ -103887,9 +101675,7 @@ class s3 extends WZ {
       e = new dY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
           fields: {
             majorPOIField: "majorPOI",
@@ -103919,9 +101705,7 @@ class s3 extends WZ {
         ) {
           const e = t.properties,
             i = this.buildRowData(e);
-          s.call(this, b.BarDbClick, {
-            RowData: i,
-          });
+          s.call(this, b.BarDbClick, { RowData: i });
         }
       } else
         this.comboTimer = setTimeout(() => {
@@ -103932,16 +101716,11 @@ class s3 extends WZ {
             L(e) || !f(this.selectedItem, e)
               ? ((this.selectedItem = e), (n = !0))
               : (this.selectedItem = null),
-              s.call(this, b.BarClick, {
-                RowData: i,
-                selected: n,
-              });
+              s.call(this, b.BarClick, { RowData: i, selected: n });
           } else
             this.selectedItem &&
               ((this.selectedItem = null),
-              s.call(this, b.ChartBlankClick, {
-                selected: !1,
-              }));
+              s.call(this, b.ChartBlankClick, { selected: !1 }));
         }, this.comboTimeout);
     });
   }
@@ -103950,15 +101729,9 @@ class s3 extends WZ {
     let r = n.enable;
     r && this.editMode !== g.View && "show" !== n.trigger && (r = !1);
     return {
-      common: {
-        zoomRange: [i.zoomMin, i.zoomMax],
-      },
+      common: { zoomRange: [i.zoomMin, i.zoomMax] },
       style: {
-        fill: {
-          color: {
-            default: e.defaultColor,
-          },
-        },
+        fill: { color: { default: e.defaultColor } },
         radiusTop: t.radiusTop,
         radiusBottom: t.radiusBottom,
         segments: t.useCylinder ? 32 : t.segments,
@@ -103992,18 +101765,13 @@ class s3 extends WZ {
         hover: {
           enabled: this.editMode === g.View && "hover" === n.trigger,
           trigger: "mousemove",
-          effect: {
-            poi: !0,
-          },
+          effect: { poi: !0 },
         },
         select: {
           enabled: this.editMode === g.View && "click" === n.trigger,
           multi: !1,
           trigger: "click",
-          effect: {
-            color: "1.3",
-            poi: !0,
-          },
+          effect: { color: "1.3", poi: !0 },
         },
       },
     };
@@ -104020,11 +101788,7 @@ class s3 extends WZ {
     if (!t && f(this.preVizData, a)) return;
     if ((this.removeTips(), !a || 0 === a.datasets.length))
       return (
-        (this.preVizData = void 0),
-        o.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), o.set({ data: [] }), void super.tickOnce()
       );
     const c = [];
     try {
@@ -104050,18 +101814,12 @@ class s3 extends WZ {
     o.set({
       data: u(c),
       style: {
-        fill: {
-          color: K2(a.displayConf.color, l.defaultColor),
-        },
+        fill: { color: K2(a.displayConf.color, l.defaultColor) },
         height: $2(a.displayConf.size, 0, 3),
       },
       poi: {
-        major: {
-          format: (t) => i.prefix + d(t) + i.suffix,
-        },
-        minor: {
-          format: (t) => n.prefix + g(t) + n.suffix,
-        },
+        major: { format: (t) => i.prefix + d(t) + i.suffix },
+        minor: { format: (t) => n.prefix + g(t) + n.suffix },
       },
     }),
       super.tickOnce();
@@ -104119,11 +101877,7 @@ Object.defineProperty(s3, "chartConstraintRequest", {
     configurable: !0,
     writable: !0,
     value: [
-      {
-        title_cn: "每项柱形单击",
-        title_en: "Bar Click",
-        value: b.BarClick,
-      },
+      { title_cn: "每项柱形单击", title_en: "Bar Click", value: b.BarClick },
       {
         title_cn: "每项柱形双击",
         title_en: "Bar DbClick",
@@ -104139,11 +101893,7 @@ Object.defineProperty(s3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 class l3 extends qZ {
@@ -104249,9 +101999,7 @@ class l3 extends qZ {
       e = new nY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           label: {
             enabled: !0,
             markerType: "css2d",
@@ -104265,14 +102013,9 @@ class l3 extends qZ {
   getLayerConfig() {
     const { anchor: t } = this.properties;
     return {
-      common: {
-        zIndex: this.zIndex,
-      },
+      common: { zIndex: this.zIndex },
       label: {
-        anchor: {
-          position: t.position,
-          offset: [t.offset.x, t.offset.y],
-        },
+        anchor: { position: t.position, offset: [t.offset.x, t.offset.y] },
       },
     };
   }
@@ -104366,10 +102109,7 @@ class l3 extends qZ {
     if (i[r]) {
       this.clearVariableContextMarkers();
       const t = i[r];
-      n.set({
-        data: u(t),
-      }),
-        this.updateLayerInteractive();
+      n.set({ data: u(t) }), this.updateLayerInteractive();
     } else this.setData(!0);
     this.clearIntervals(), this.initCarousel();
   }
@@ -104389,9 +102129,7 @@ class l3 extends qZ {
     if ((this.removeTips(), !r || 0 === r.datasets.length))
       return (
         (this.preVizData = void 0),
-        s.set({
-          data: [],
-        }),
+        s.set({ data: [] }),
         (this.totalItemsLength = 0),
         super.tickOnce(),
         !1
@@ -104417,12 +102155,7 @@ class l3 extends qZ {
             const i = qX(this.parent.POMNode.renderType, e);
             t = XV.getGeoCoordByAlias(i, a);
           }
-          const r = {
-            ext: {
-              index: u,
-              city: e,
-            },
-          };
+          const r = { ext: { index: u, city: e } };
           t
             ? (n || e !== m) && ((r.lng = t.lng), (r.lat = t.lat), h.push(r))
             : g && ((r.name = e), p.push(r));
@@ -104432,9 +102165,7 @@ class l3 extends qZ {
       }
     }
     if (AX() && p.length > 0) {
-      const t = await $X({
-        address: p.map((t) => t.name),
-      });
+      const t = await $X({ address: p.map((t) => t.name) });
       p.forEach((e, i) => {
         const n = t[i].location;
         if (n) {
@@ -104448,9 +102179,7 @@ class l3 extends qZ {
       this.clearVariableContextMarkers(),
       (this.variableContext.data[l] = h),
       (this.totalItemsLength = h.length),
-      s.set({
-        data: u(h),
-      }),
+      s.set({ data: u(h) }),
       this.updateLayerInteractive(),
       super.tickOnce(),
       !0
@@ -104709,21 +102438,9 @@ Object.defineProperty(l3, "analyticDeclaration", {
     configurable: !0,
     writable: !0,
     value: [
-      {
-        title_cn: "单击",
-        title_en: "Click",
-        value: b.Click,
-      },
-      {
-        title_cn: "双击",
-        title_en: "Double Click",
-        value: b.DbClick,
-      },
-      {
-        title_cn: "每项单击时",
-        title_en: "Item Click",
-        value: b.ItemClick,
-      },
+      { title_cn: "单击", title_en: "Click", value: b.Click },
+      { title_cn: "双击", title_en: "Double Click", value: b.DbClick },
+      { title_cn: "每项单击时", title_en: "Item Click", value: b.ItemClick },
       {
         title_cn: "每项双击时",
         title_en: "Item Double Click",
@@ -104749,21 +102466,14 @@ Object.defineProperty(l3, "analyticDeclaration", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   }),
   Object.defineProperty(l3, "panelConfig", {
     enumerable: !0,
     configurable: !0,
     writable: !0,
-    value: {
-      panelLimit: 1,
-      name: "Panel",
-    },
+    value: { panelLimit: 1, name: "Panel" },
   }),
   Object.defineProperty(l3, "chartConstraintRequest", {
     enumerable: !0,
@@ -104852,23 +102562,14 @@ class u3 extends WZ {
       e = new eY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
           fields: {
             sizeField: "size",
             majorPOIField: "majorPOI",
             minorPOIField: "minorPOI",
           },
-          animation: {
-            opacity: {
-              enabled: !1,
-            },
-            scale: {
-              enabled: !1,
-            },
-          },
+          animation: { opacity: { enabled: !1 }, scale: { enabled: !1 } },
         })
       );
     (this.variableContext.gisLayer = e),
@@ -104891,9 +102592,7 @@ class u3 extends WZ {
         ) {
           const e = t.properties,
             i = this.buildRowData(e);
-          s.call(this, b.BubbleDbClick, {
-            RowData: i,
-          });
+          s.call(this, b.BubbleDbClick, { RowData: i });
         }
       } else
         this.comboTimer = setTimeout(() => {
@@ -104904,16 +102603,11 @@ class u3 extends WZ {
             L(e) || !f(this.selectedItem, e)
               ? ((this.selectedItem = e), (n = !0))
               : (this.selectedItem = null),
-              s.call(this, b.BubbleClick, {
-                RowData: i,
-                selected: n,
-              });
+              s.call(this, b.BubbleClick, { RowData: i, selected: n });
           } else
             this.selectedItem &&
               ((this.selectedItem = null),
-              s.call(this, b.ChartBlankClick, {
-                selected: !1,
-              }));
+              s.call(this, b.ChartBlankClick, { selected: !1 }));
         }, this.comboTimeout);
     });
   }
@@ -104923,16 +102617,10 @@ class u3 extends WZ {
     let o = n.enable;
     o && this.editMode !== g.View && "show" !== n.trigger && (o = !1);
     return {
-      common: {
-        zoomRange: [r.zoomMin, r.zoomMax],
-      },
+      common: { zoomRange: [r.zoomMin, r.zoomMax] },
       style: {
         fill: {
-          color: {
-            type: "constant",
-            constant: i.color,
-            default: i.color,
-          },
+          color: { type: "constant", constant: i.color, default: i.color },
           map: {
             type: "constant",
             constant:
@@ -104973,18 +102661,13 @@ class u3 extends WZ {
         hover: {
           enabled: this.editMode === g.View && "hover" === n.trigger,
           trigger: "mousemove",
-          effect: {
-            poi: !0,
-          },
+          effect: { poi: !0 },
         },
         select: {
           enabled: this.editMode === g.View && "click" === n.trigger,
           multi: !1,
           trigger: "click",
-          effect: {
-            color: "1.3",
-            poi: !0,
-          },
+          effect: { color: "1.3", poi: !0 },
         },
       },
     };
@@ -105001,11 +102684,7 @@ class u3 extends WZ {
     if (!t && f(this.preVizData, c)) return;
     if ((this.removeTips(), !c || 0 === c.datasets.length))
       return (
-        (this.preVizData = void 0),
-        l.set({
-          data: [],
-        }),
-        void super.tickOnce()
+        (this.preVizData = void 0), l.set({ data: [] }), void super.tickOnce()
       );
     const p = OX("location", c, h, 0),
       d = OX("majorLabel", c, h, 1),
@@ -105032,12 +102711,7 @@ class u3 extends WZ {
           const t = qX(this.parent.POMNode.renderType, o);
           u = XV.getGeoCoordByAlias(t, s);
         }
-        const h = {
-          ...t,
-          name: o,
-          majorPOI: a,
-          minorPOI: l,
-        };
+        const h = { ...t, name: o, majorPOI: a, minorPOI: l };
         hQ(h, !0, t, m),
           u
             ? (r || o !== _) && ((h.lng = u.lng), (h.lat = u.lat), y.push(h))
@@ -105047,9 +102721,7 @@ class u3 extends WZ {
       }
     }
     if (AX() && v.length > 0) {
-      const t = await $X({
-        address: v.map((t) => t.name),
-      });
+      const t = await $X({ address: v.map((t) => t.name) });
       v.forEach((e, i) => {
         const n = t[i].location;
         if (n) {
@@ -105063,16 +102735,10 @@ class u3 extends WZ {
       C = I(g, c);
     l.set({
       data: u(y),
-      style: {
-        size: $2(c.displayConf.size, 0),
-      },
+      style: { size: $2(c.displayConf.size, 0) },
       poi: {
-        major: {
-          format: (t) => o.prefix + S(t) + o.suffix,
-        },
-        minor: {
-          format: (t) => a.prefix + C(t) + a.suffix,
-        },
+        major: { format: (t) => o.prefix + S(t) + o.suffix },
+        minor: { format: (t) => a.prefix + C(t) + a.suffix },
       },
     }),
       super.tickLoop();
@@ -105153,11 +102819,7 @@ Object.defineProperty(u3, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   });
 var c3 = 1,
@@ -105194,14 +102856,7 @@ var c3 = 1,
     athens: 23.7163375,
     oslo: 10.722916666667,
   };
-const P3 = {
-  ft: {
-    to_meter: 0.3048,
-  },
-  "us-ft": {
-    to_meter: 1200 / 3937,
-  },
-};
+const P3 = { ft: { to_meter: 0.3048 }, "us-ft": { to_meter: 1200 / 3937 } };
 var L3 = /[\s_\-\/\(\)]/g;
 function I3(t, e) {
   if (t[e]) return t[e];
@@ -105384,20 +103039,13 @@ function j3(t, e) {
           case "PRIMEM":
           case "VERT_DATUM":
             return (
-              (e[i] = {
-                name: t[0].toLowerCase(),
-                convert: t[1],
-              }),
+              (e[i] = { name: t[0].toLowerCase(), convert: t[1] }),
               void (3 === t.length && j3(t[2], e[i]))
             );
           case "SPHEROID":
           case "ELLIPSOID":
             return (
-              (e[i] = {
-                name: t[0],
-                a: t[1],
-                rf: t[2],
-              }),
+              (e[i] = { name: t[0], a: t[1], rf: t[2] }),
               void (4 === t.length && j3(t[3], e[i]))
             );
           case "PROJECTEDCRS":
@@ -105909,11 +103557,7 @@ const l5 = {
   },
 };
 var u5 = {
-    MERIT: {
-      a: 6378137,
-      rf: 298.257,
-      ellipseName: "MERIT 1983",
-    },
+    MERIT: { a: 6378137, rf: 298.257, ellipseName: "MERIT 1983" },
     SGS85: {
       a: 6378136,
       rf: 298.257,
@@ -105924,31 +103568,11 @@ var u5 = {
       rf: 298.257222101,
       ellipseName: "GRS 1980(IUGG, 1980)",
     },
-    IAU76: {
-      a: 6378140,
-      rf: 298.257,
-      ellipseName: "IAU 1976",
-    },
-    airy: {
-      a: 6377563.396,
-      b: 6356256.91,
-      ellipseName: "Airy 1830",
-    },
-    APL4: {
-      a: 6378137,
-      rf: 298.25,
-      ellipseName: "Appl. Physics. 1965",
-    },
-    NWL9D: {
-      a: 6378145,
-      rf: 298.25,
-      ellipseName: "Naval Weapons Lab., 1965",
-    },
-    mod_airy: {
-      a: 6377340.189,
-      b: 6356034.446,
-      ellipseName: "Modified Airy",
-    },
+    IAU76: { a: 6378140, rf: 298.257, ellipseName: "IAU 1976" },
+    airy: { a: 6377563.396, b: 6356256.91, ellipseName: "Airy 1830" },
+    APL4: { a: 6378137, rf: 298.25, ellipseName: "Appl. Physics. 1965" },
+    NWL9D: { a: 6378145, rf: 298.25, ellipseName: "Naval Weapons Lab., 1965" },
+    mod_airy: { a: 6377340.189, b: 6356034.446, ellipseName: "Modified Airy" },
     andrae: {
       a: 6377104.43,
       rf: 300,
@@ -105959,31 +103583,15 @@ var u5 = {
       rf: 298.25,
       ellipseName: "Australian Natl & S. Amer. 1969",
     },
-    GRS67: {
-      a: 6378160,
-      rf: 298.247167427,
-      ellipseName: "GRS 67(IUGG 1967)",
-    },
-    bessel: {
-      a: 6377397.155,
-      rf: 299.1528128,
-      ellipseName: "Bessel 1841",
-    },
+    GRS67: { a: 6378160, rf: 298.247167427, ellipseName: "GRS 67(IUGG 1967)" },
+    bessel: { a: 6377397.155, rf: 299.1528128, ellipseName: "Bessel 1841" },
     bess_nam: {
       a: 6377483.865,
       rf: 299.1528128,
       ellipseName: "Bessel 1841 (Namibia)",
     },
-    clrk66: {
-      a: 6378206.4,
-      b: 6356583.8,
-      ellipseName: "Clarke 1866",
-    },
-    clrk80: {
-      a: 6378249.145,
-      rf: 293.4663,
-      ellipseName: "Clarke 1880 mod.",
-    },
+    clrk66: { a: 6378206.4, b: 6356583.8, ellipseName: "Clarke 1866" },
+    clrk80: { a: 6378249.145, rf: 293.4663, ellipseName: "Clarke 1880 mod." },
     clrk80ign: {
       a: 6378249.2,
       b: 6356515,
@@ -106000,36 +103608,12 @@ var u5 = {
       rf: 334.29,
       ellipseName: "Comm. des Poids et Mesures 1799",
     },
-    delmbr: {
-      a: 6376428,
-      rf: 311.5,
-      ellipseName: "Delambre 1810 (Belgium)",
-    },
-    engelis: {
-      a: 6378136.05,
-      rf: 298.2566,
-      ellipseName: "Engelis 1985",
-    },
-    evrst30: {
-      a: 6377276.345,
-      rf: 300.8017,
-      ellipseName: "Everest 1830",
-    },
-    evrst48: {
-      a: 6377304.063,
-      rf: 300.8017,
-      ellipseName: "Everest 1948",
-    },
-    evrst56: {
-      a: 6377301.243,
-      rf: 300.8017,
-      ellipseName: "Everest 1956",
-    },
-    evrst69: {
-      a: 6377295.664,
-      rf: 300.8017,
-      ellipseName: "Everest 1969",
-    },
+    delmbr: { a: 6376428, rf: 311.5, ellipseName: "Delambre 1810 (Belgium)" },
+    engelis: { a: 6378136.05, rf: 298.2566, ellipseName: "Engelis 1985" },
+    evrst30: { a: 6377276.345, rf: 300.8017, ellipseName: "Everest 1830" },
+    evrst48: { a: 6377304.063, rf: 300.8017, ellipseName: "Everest 1948" },
+    evrst56: { a: 6377301.243, rf: 300.8017, ellipseName: "Everest 1956" },
+    evrst69: { a: 6377295.664, rf: 300.8017, ellipseName: "Everest 1969" },
     evrstSS: {
       a: 6377298.556,
       rf: 300.8017,
@@ -106040,103 +103624,35 @@ var u5 = {
       rf: 298.3,
       ellipseName: "Fischer (Mercury Datum) 1960",
     },
-    fschr60m: {
-      a: 6378155,
-      rf: 298.3,
-      ellipseName: "Fischer 1960",
-    },
-    fschr68: {
-      a: 6378150,
-      rf: 298.3,
-      ellipseName: "Fischer 1968",
-    },
-    helmert: {
-      a: 6378200,
-      rf: 298.3,
-      ellipseName: "Helmert 1906",
-    },
-    hough: {
-      a: 6378270,
-      rf: 297,
-      ellipseName: "Hough",
-    },
-    intl: {
-      a: 6378388,
-      rf: 297,
-      ellipseName: "International 1909 (Hayford)",
-    },
-    kaula: {
-      a: 6378163,
-      rf: 298.24,
-      ellipseName: "Kaula 1961",
-    },
-    lerch: {
-      a: 6378139,
-      rf: 298.257,
-      ellipseName: "Lerch 1979",
-    },
-    mprts: {
-      a: 6397300,
-      rf: 191,
-      ellipseName: "Maupertius 1738",
-    },
+    fschr60m: { a: 6378155, rf: 298.3, ellipseName: "Fischer 1960" },
+    fschr68: { a: 6378150, rf: 298.3, ellipseName: "Fischer 1968" },
+    helmert: { a: 6378200, rf: 298.3, ellipseName: "Helmert 1906" },
+    hough: { a: 6378270, rf: 297, ellipseName: "Hough" },
+    intl: { a: 6378388, rf: 297, ellipseName: "International 1909 (Hayford)" },
+    kaula: { a: 6378163, rf: 298.24, ellipseName: "Kaula 1961" },
+    lerch: { a: 6378139, rf: 298.257, ellipseName: "Lerch 1979" },
+    mprts: { a: 6397300, rf: 191, ellipseName: "Maupertius 1738" },
     new_intl: {
       a: 6378157.5,
       b: 6356772.2,
       ellipseName: "New International 1967",
     },
-    plessis: {
-      a: 6376523,
-      rf: 6355863,
-      ellipseName: "Plessis 1817 (France)",
-    },
-    krass: {
-      a: 6378245,
-      rf: 298.3,
-      ellipseName: "Krassovsky, 1942",
-    },
-    SEasia: {
-      a: 6378155,
-      b: 6356773.3205,
-      ellipseName: "Southeast Asia",
-    },
-    walbeck: {
-      a: 6376896,
-      b: 6355834.8467,
-      ellipseName: "Walbeck",
-    },
-    WGS60: {
-      a: 6378165,
-      rf: 298.3,
-      ellipseName: "WGS 60",
-    },
-    WGS66: {
-      a: 6378145,
-      rf: 298.25,
-      ellipseName: "WGS 66",
-    },
-    WGS7: {
-      a: 6378135,
-      rf: 298.26,
-      ellipseName: "WGS 72",
-    },
+    plessis: { a: 6376523, rf: 6355863, ellipseName: "Plessis 1817 (France)" },
+    krass: { a: 6378245, rf: 298.3, ellipseName: "Krassovsky, 1942" },
+    SEasia: { a: 6378155, b: 6356773.3205, ellipseName: "Southeast Asia" },
+    walbeck: { a: 6376896, b: 6355834.8467, ellipseName: "Walbeck" },
+    WGS60: { a: 6378165, rf: 298.3, ellipseName: "WGS 60" },
+    WGS66: { a: 6378145, rf: 298.25, ellipseName: "WGS 66" },
+    WGS7: { a: 6378135, rf: 298.26, ellipseName: "WGS 72" },
   },
-  c5 = (u5.WGS84 = {
-    a: 6378137,
-    rf: 298.257223563,
-    ellipseName: "WGS 84",
-  });
+  c5 = (u5.WGS84 = { a: 6378137, rf: 298.257223563, ellipseName: "WGS 84" });
 u5.sphere = {
   a: 6370997,
   b: 6370997,
   ellipseName: "Normal Sphere (r=6370997)",
 };
 var h5 = {};
-(h5.wgs84 = {
-  towgs84: "0,0,0",
-  ellipse: "WGS84",
-  datumName: "WGS84",
-}),
+(h5.wgs84 = { towgs84: "0,0,0", ellipse: "WGS84", datumName: "WGS84" }),
   (h5.ch1903 = {
     towgs84: "674.374,15.056,405.346",
     ellipse: "bessel",
@@ -106229,18 +103745,8 @@ function d5(t) {
   return (
     e && (t = t.slice(1)),
     "null" === t
-      ? {
-          name: "null",
-          mandatory: !e,
-          grid: null,
-          isNull: !0,
-        }
-      : {
-          name: t,
-          mandatory: !e,
-          grid: p5[t] || null,
-          isNull: !1,
-        }
+      ? { name: "null", mandatory: !e, grid: null, isNull: !0 }
+      : { name: t, mandatory: !e, grid: p5[t] || null, isNull: !1 }
   );
 }
 function f5(t) {
@@ -106310,12 +103816,7 @@ function b5(t, e) {
           return (
             i && !e && (e = (1 - 1 / i) * t),
             (0 === i || Math.abs(t - e) < M3) && ((r = !0), (e = t)),
-            {
-              a: t,
-              b: e,
-              rf: i,
-              sphere: r,
-            }
+            { a: t, b: e, rf: i, sphere: r }
           );
         })(i.a, i.b, i.rf, i.ellps, i.sphere),
         a = (function (t, e, i, n) {
@@ -106327,11 +103828,7 @@ function b5(t, e) {
             n
               ? ((r = (t *= 1 - a * (x3 + a * (_3 + a * S3))) * t), (a = 0))
               : (s = Math.sqrt(a)),
-            {
-              es: a,
-              e: s,
-              ep2: (r - o) / o,
-            }
+            { es: a, e: s, ep2: (r - o) / o }
           );
         })(o.a, o.b, o.rf, i.R_A),
         s = (function (t) {
@@ -106393,18 +103890,8 @@ function x5(t, e, i) {
   if (l < -b3 && l > -1.001 * b3) l = -b3;
   else if (l > b3 && l < 1.001 * b3) l = b3;
   else {
-    if (l < -b3)
-      return {
-        x: -1 / 0,
-        y: -1 / 0,
-        z: t.z,
-      };
-    if (l > b3)
-      return {
-        x: 1 / 0,
-        y: 1 / 0,
-        z: t.z,
-      };
+    if (l < -b3) return { x: -1 / 0, y: -1 / 0, z: t.z };
+    if (l > b3) return { x: 1 / 0, y: 1 / 0, z: t.z };
   }
   return (
     s > Math.PI && (s -= 2 * Math.PI),
@@ -106443,16 +103930,7 @@ function _5(t, e, i, n) {
     (o = Math.sqrt(x * x + _ * _ + S * S)),
     r / i < b)
   ) {
-    if (((y = 0), o / i < b))
-      return (
-        b3,
-        (v = -n),
-        {
-          x: t.x,
-          y: t.y,
-          z: t.z,
-        }
-      );
+    if (((y = 0), o / i < b)) return b3, (v = -n), { x: t.x, y: t.y, z: t.z };
   } else y = Math.atan2(_, x);
   (a = S / o),
     (h = (s = r / o) * (1 - e) * (l = 1 / Math.sqrt(1 - e * (2 - e) * s * s))),
@@ -106469,11 +103947,7 @@ function _5(t, e, i, n) {
       (h = d),
       (p = f);
   } while (g * g > 1e-24 && m < 30);
-  return {
-    x: y,
-    y: Math.atan(f / Math.abs(d)),
-    z: v,
-  };
+  return { x: y, y: Math.atan(f / Math.abs(d)), z: v };
 }
 function S5(t) {
   return t === c3 || t === h3;
@@ -106519,12 +103993,7 @@ function M5(t, e, i) {
     ((i = x5(i, r, n)),
     S5(t.datum_type) &&
       (i = (function (t, e, i) {
-        if (e === c3)
-          return {
-            x: t.x + i[0],
-            y: t.y + i[1],
-            z: t.z + i[2],
-          };
+        if (e === c3) return { x: t.x + i[0], y: t.y + i[1], z: t.z + i[2] };
         if (e === h3) {
           var n = i[0],
             r = i[1],
@@ -106542,12 +104011,7 @@ function M5(t, e, i) {
       })(i, t.datum_type, t.datum_params)),
     S5(e.datum_type) &&
       (i = (function (t, e, i) {
-        if (e === c3)
-          return {
-            x: t.x - i[0],
-            y: t.y - i[1],
-            z: t.z - i[2],
-          };
+        if (e === c3) return { x: t.x - i[0], y: t.y - i[1], z: t.z - i[2] };
         if (e === h3) {
           var n = i[0],
             r = i[1],
@@ -106575,14 +104039,8 @@ function M5(t, e, i) {
 }
 function C5(t, e, i) {
   if (null === t.grids || 0 === t.grids.length) return -1;
-  var n = {
-      x: -i.x,
-      y: i.y,
-    },
-    r = {
-      x: Number.NaN,
-      y: Number.NaN,
-    },
+  var n = { x: -i.x, y: i.y },
+    r = { x: Number.NaN, y: Number.NaN },
     o = [];
   t: for (var a = 0; a < t.grids.length; a++) {
     var s = t.grids[a];
@@ -106609,15 +104067,9 @@ function C5(t, e, i) {
   return isNaN(r.x) ? -1 : ((i.x = -r.x), (i.y = r.y), 0);
 }
 function w5(t, e, i) {
-  var n = {
-    x: Number.NaN,
-    y: Number.NaN,
-  };
+  var n = { x: Number.NaN, y: Number.NaN };
   if (isNaN(t.x)) return n;
-  var r = {
-    x: t.x,
-    y: t.y,
-  };
+  var r = { x: t.x, y: t.y };
   (r.x -= i.ll[0]), (r.y -= i.ll[1]), (r.x = t5(r.x - Math.PI) + Math.PI);
   var o = A5(r, i);
   if (e) {
@@ -106628,10 +104080,7 @@ function w5(t, e, i) {
       l = 9;
     do {
       if (((s = A5(o, i)), isNaN(s.x))) break;
-      (a = {
-        x: r.x - (s.x + o.x),
-        y: r.y - (s.y + o.y),
-      }),
+      (a = { x: r.x - (s.x + o.x), y: r.y - (s.y + o.y) }),
         (o.x += a.x),
         (o.y += a.y);
     } while (l-- && Math.abs(a.x) > 1e-12 && Math.abs(a.y) > 1e-12);
@@ -106642,18 +104091,12 @@ function w5(t, e, i) {
 }
 function A5(t, e) {
   var i,
-    n = {
-      x: t.x / e.del[0],
-      y: t.y / e.del[1],
-    },
+    n = { x: t.x / e.del[0], y: t.y / e.del[1] },
     r = Math.floor(n.x),
     o = Math.floor(n.y),
     a = n.x - 1 * r,
     s = n.y - 1 * o,
-    l = {
-      x: Number.NaN,
-      y: Number.NaN,
-    };
+    l = { x: Number.NaN, y: Number.NaN };
   if (r < 0 || r >= e.lim[0]) return l;
   if (o < 0 || o >= e.lim[1]) return l;
   i = o * e.lim[0] + r;
@@ -106716,10 +104159,7 @@ function E5(t, e, i) {
   return u;
 }
 function D5(t) {
-  var e = {
-    x: t[0],
-    y: t[1],
-  };
+  var e = { x: t[0], y: t[1] };
   return t.length > 2 && (e.z = t[2]), t.length > 3 && (e.m = t[3]), e;
 }
 function T5(t) {
@@ -106734,14 +104174,7 @@ function P5(t, e, i, n) {
   var r,
     o =
       void 0 !==
-      (i = Array.isArray(i)
-        ? D5(i)
-        : {
-            x: i.x,
-            y: i.y,
-            z: i.z,
-            m: i.m,
-          }).z;
+      (i = Array.isArray(i) ? D5(i) : { x: i.x, y: i.y, z: i.z, m: i.m }).z;
   if (
     ((function (t) {
       T5(t.x), T5(t.y);
@@ -106764,18 +104197,10 @@ function P5(t, e, i, n) {
     n && "enu" !== t.axis && (i = E5(t, !1, i)),
     "longlat" === t.projName)
   )
-    i = {
-      x: i.x * C3,
-      y: i.y * C3,
-      z: i.z || 0,
-    };
+    i = { x: i.x * C3, y: i.y * C3, z: i.z || 0 };
   else if (
     (t.to_meter &&
-      (i = {
-        x: i.x * t.to_meter,
-        y: i.y * t.to_meter,
-        z: i.z || 0,
-      }),
+      (i = { x: i.x * t.to_meter, y: i.y * t.to_meter, z: i.z || 0 }),
     !(i = t.inverse(i)))
   )
     return;
@@ -106785,24 +104210,12 @@ function P5(t, e, i, n) {
   )
     return (
       e.from_greenwich &&
-        (i = {
-          x: i.x - e.from_greenwich,
-          y: i.y,
-          z: i.z || 0,
-        }),
+        (i = { x: i.x - e.from_greenwich, y: i.y, z: i.z || 0 }),
       "longlat" === e.projName
-        ? (i = {
-            x: i.x * w3,
-            y: i.y * w3,
-            z: i.z || 0,
-          })
+        ? (i = { x: i.x * w3, y: i.y * w3, z: i.z || 0 })
         : ((i = e.forward(i)),
           e.to_meter &&
-            (i = {
-              x: i.x / e.to_meter,
-              y: i.y / e.to_meter,
-              z: i.z || 0,
-            })),
+            (i = { x: i.x / e.to_meter, y: i.y / e.to_meter, z: i.z || 0 })),
       n && "enu" !== e.axis ? E5(e, !0, i) : (i && !o && delete i.z, i)
     );
 }
@@ -106811,10 +104224,7 @@ var L5 = b5("WGS84");
 function I5(t, e, i, n) {
   var r, o, a;
   return Array.isArray(i)
-    ? ((r = P5(t, e, i, n) || {
-        x: NaN,
-        y: NaN,
-      }),
+    ? ((r = P5(t, e, i, n) || { x: NaN, y: NaN }),
       i.length > 2
         ? (void 0 !== t.name && "geocent" === t.name) ||
           (void 0 !== e.name && "geocent" === e.name)
@@ -106995,10 +104405,7 @@ function V5(t, e) {
           zoneNumber: l,
           zoneLetter: Q5(u),
         };
-      })({
-        lat: t[1],
-        lon: t[0],
-      }),
+      })({ lat: t[1], lon: t[0] }),
       e
     )
   );
@@ -107082,17 +104489,8 @@ function X5(t) {
       zoneLetter: t.zoneLetter,
       zoneNumber: t.zoneNumber,
     });
-    _ = {
-      top: M.lat,
-      right: M.lon,
-      bottom: x,
-      left: S,
-    };
-  } else
-    _ = {
-      lat: x,
-      lon: S,
-    };
+    _ = { top: M.lat, right: M.lon, bottom: x, left: S };
+  } else _ = { lat: x, lon: S };
   return _;
 }
 function Q5(t) {
@@ -109869,12 +107267,7 @@ var c6 = 1,
   d6 = 4,
   f6 = 5,
   g6 = 6,
-  m6 = {
-    AREA_0: 1,
-    AREA_1: 2,
-    AREA_2: 3,
-    AREA_3: 4,
-  };
+  m6 = { AREA_0: 1, AREA_1: 2, AREA_2: 3, AREA_3: 4 };
 function y6(t, e, i, n) {
   var r;
   return (
@@ -109923,13 +107316,8 @@ const b6 = {
       r,
       o,
       a,
-      s = {
-        x: 0,
-        y: 0,
-      },
-      l = {
-        value: 0,
-      };
+      s = { x: 0, y: 0 },
+      l = { value: 0 };
     if (
       ((t.x -= this.long0),
       (e =
@@ -110015,13 +107403,8 @@ const b6 = {
       c,
       h,
       p,
-      d = {
-        lam: 0,
-        phi: 0,
-      },
-      f = {
-        value: 0,
-      };
+      d = { lam: 0, phi: 0 },
+      f = { value: 0 };
     if (
       ((t.x = (t.x - this.x0) / this.a),
       (t.y = (t.y - this.y0) / this.a),
@@ -110176,10 +107559,7 @@ const D6 = {
       i = Math.abs(t.y),
       n = Math.floor(i * C6);
     n < 0 ? (n = 0) : n >= A6 && (n = 17);
-    var r = {
-      x: E6(x6[n], (i = w3 * (i - w6 * n))) * e,
-      y: E6(_6[n], i),
-    };
+    var r = { x: E6(x6[n], (i = w3 * (i - w6 * n))) * e, y: E6(_6[n], i) };
     return (
       t.y < 0 && (r.y = -r.y),
       (r.x = r.x * this.a * S6 + this.x0),
@@ -110247,28 +107627,11 @@ var P6 = 0,
   I6 = 2,
   N6 = 3,
   R6 = {
-    h: {
-      def: 1e5,
-      num: !0,
-    },
-    azi: {
-      def: 0,
-      num: !0,
-      degrees: !0,
-    },
-    tilt: {
-      def: 0,
-      num: !0,
-      degrees: !0,
-    },
-    long0: {
-      def: 0,
-      num: !0,
-    },
-    lat0: {
-      def: 0,
-      num: !0,
-    },
+    h: { def: 1e5, num: !0 },
+    azi: { def: 0, num: !0, degrees: !0 },
+    tilt: { def: 0, num: !0, degrees: !0 },
+    long0: { def: 0, num: !0 },
+    lat0: { def: 0, num: !0 },
   };
 const O6 = {
   init: function () {
@@ -110363,10 +107726,7 @@ const O6 = {
     var e,
       i,
       n,
-      r = {
-        x: t.x,
-        y: t.y,
-      };
+      r = { x: t.x, y: t.y };
     (n = 1 / (this.pn1 - t.y * this.sw)),
       (e = this.pn1 * t.x * n),
       (i = this.pn1 * t.y * this.cw * n),
@@ -110645,10 +108005,7 @@ function W6(t, e) {
         }
         return r;
       })(i, r, n),
-      a = {
-        header: r,
-        subgrids: o,
-      };
+      a = { header: r, subgrids: o };
     return (p5[t] = a), a;
   }),
   (R5.transform = P5),
@@ -110969,9 +108326,7 @@ class l7 extends WZ {
       e = new RY(
         this.variableContext.gis,
         IX(t, {
-          common: {
-            zIndex: this.zIndex,
-          },
+          common: { zIndex: this.zIndex },
           clipMode: YX(this.parent.POMNode.renderType),
           fields: {
             majorPOIField: "majorPOI",
@@ -111002,9 +108357,7 @@ class l7 extends WZ {
         ) {
           const e = t.properties,
             i = this.buildRowData(e);
-          s.call(this, b.AreaDbClick, {
-            RowData: i,
-          });
+          s.call(this, b.AreaDbClick, { RowData: i });
         }
       } else
         this.comboTimer = setTimeout(() => {
@@ -111015,16 +108368,11 @@ class l7 extends WZ {
             L(e) || !f(this.selectedItem, e)
               ? ((this.selectedItem = e), (n = !0))
               : (this.selectedItem = null),
-              s.call(this, b.AreaClick, {
-                RowData: i,
-                selected: n,
-              });
+              s.call(this, b.AreaClick, { RowData: i, selected: n });
           } else
             this.selectedItem &&
               ((this.selectedItem = null),
-              s.call(this, b.ChartBlankClick, {
-                selected: !1,
-              }));
+              s.call(this, b.ChartBlankClick, { selected: !1 }));
         }, this.comboTimeout);
     });
   }
@@ -111033,13 +108381,9 @@ class l7 extends WZ {
     let n = i.enable;
     n && this.editMode !== g.View && "show" !== i.trigger && (n = !1);
     return {
-      common: {
-        zoomRange: [e.zoomMin, e.zoomMax],
-      },
+      common: { zoomRange: [e.zoomMin, e.zoomMax] },
       style: {
-        fill: {
-          color: t.color,
-        },
+        fill: { color: t.color },
         stroke: {
           color: t.outline.color,
           width: t.outline.width,
@@ -111075,18 +108419,13 @@ class l7 extends WZ {
         hover: {
           enabled: this.editMode === g.View && "hover" === i.trigger,
           trigger: "mousemove",
-          effect: {
-            poi: !0,
-          },
+          effect: { poi: !0 },
         },
         select: {
           enabled: this.editMode === g.View && "click" === i.trigger,
           multi: !1,
           trigger: "click",
-          effect: {
-            color: "1.3",
-            poi: !0,
-          },
+          effect: { color: "1.3", poi: !0 },
         },
       },
     };
@@ -111104,25 +108443,12 @@ class l7 extends WZ {
             type: "constant",
             constant: this.replaceStaticTemplatePath(t.image),
           },
-          color: {
-            type: "constant",
-            constant: null,
-          },
+          color: { type: "constant", constant: null },
         },
-        size: {
-          type: "constant",
-          constant: t.size,
-        },
+        size: { type: "constant", constant: t.size },
         segments: 4,
       },
-      animation: {
-        opacity: {
-          enabled: !1,
-        },
-        scale: {
-          enabled: !1,
-        },
-      },
+      animation: { opacity: { enabled: !1 }, scale: { enabled: !1 } },
     };
   }
   setCenterPointLayerConfig() {
@@ -111132,15 +108458,9 @@ class l7 extends WZ {
   }
   setElementVisibility(t) {
     this.variableContext.gis &&
-      (this.variableContext.gisLayer.set({
-        common: {
-          visible: t,
-        },
-      }),
+      (this.variableContext.gisLayer.set({ common: { visible: t } }),
       this.variableContext.centerPointLayer.set({
-        common: {
-          visible: t ? this.properties.centerPoint.enable : t,
-        },
+        common: { visible: t ? this.properties.centerPoint.enable : t },
       }),
       t && this.errorTip ? this.renderTips(this.errorTip) : this.removeTips(!1),
       super.tickOnce());
@@ -111150,12 +108470,8 @@ class l7 extends WZ {
     kZ.call(this, t),
       this.variableContext.gisLayer
         ? ((this.preVizData = void 0),
-          this.variableContext.gisLayer.set({
-            data: [],
-          }),
-          e.set({
-            data: [],
-          }),
+          this.variableContext.gisLayer.set({ data: [] }),
+          e.set({ data: [] }),
           super.tickOnce())
         : this.render(!0);
   }
@@ -111182,12 +108498,8 @@ class l7 extends WZ {
     if ((this.removeTips(), !l || 0 === l.datasets.length))
       return (
         (this.preVizData = void 0),
-        a.set({
-          data: [],
-        }),
-        s.set({
-          data: [],
-        }),
+        a.set({ data: [] }),
+        s.set({ data: [] }),
         void super.tickOnce()
       );
     const h = [];
@@ -111223,17 +108535,11 @@ class l7 extends WZ {
           data: u(i.filter((t) => t)),
           originPoints: u(e),
           poi: {
-            major: {
-              format: (t) => n.prefix + m(t) + n.suffix,
-            },
-            minor: {
-              format: (t) => r.prefix + b(t) + r.suffix,
-            },
+            major: { format: (t) => n.prefix + m(t) + n.suffix },
+            minor: { format: (t) => r.prefix + b(t) + r.suffix },
           },
         }),
-          s.set({
-            data: u(e),
-          });
+          s.set({ data: u(e) });
       } catch (_) {
         if (this.editMode !== g.View) {
           const t = new y(
@@ -111244,13 +108550,7 @@ class l7 extends WZ {
         }
         return;
       }
-    } else
-      a.set({
-        data: [],
-      }),
-        s.set({
-          data: [],
-        });
+    } else a.set({ data: [] }), s.set({ data: [] });
     super.tickOnce();
   }
   async getIsoData(t) {
@@ -111263,9 +108563,7 @@ class l7 extends WZ {
       l = a[1],
       c = await fetch(
         `https://api.mapbox.com/isochrone/v1/mapbox/${r}/${s},${l}?contours_minutes=${o}&polygons=true&access_token=${n}`,
-        {
-          method: "GET",
-        }
+        { method: "GET" }
       ),
       h = await c.json();
     if (h.features) {
@@ -111336,11 +108634,7 @@ Object.defineProperty(l7, "chartConstraintRequest", {
     configurable: !0,
     writable: !0,
     value: [
-      {
-        title_cn: "每项区域单击",
-        title_en: "Area Click",
-        value: b.AreaClick,
-      },
+      { title_cn: "每项区域单击", title_en: "Area Click", value: b.AreaClick },
       {
         title_cn: "每项区域双击",
         title_en: "Area Double Click",
@@ -111356,11 +108650,7 @@ Object.defineProperty(l7, "chartConstraintRequest", {
         title_en: "Before Element Load",
         value: b.BeforeLoad,
       },
-      {
-        title_cn: "加载完成",
-        title_en: "Element Loaded",
-        value: b.Loaded,
-      },
+      { title_cn: "加载完成", title_en: "Element Loaded", value: b.Loaded },
     ],
   }),
   e.enableBoundaryChecking(!1);
@@ -111408,14 +108698,8 @@ const u7 = {
           e = new sY(
             this.variableContext.gis,
             IX(t, {
-              common: {
-                zIndex: this.zIndex,
-              },
-              style: {
-                fill: {
-                  color: "rgba(255,255,255,0)",
-                },
-              },
+              common: { zIndex: this.zIndex },
+              style: { fill: { color: "rgba(255,255,255,0)" } },
             })
           );
         (this.variableContext.gisLayer = e),
@@ -111444,9 +108728,7 @@ const u7 = {
       setLayerAnimation() {
         const { rotate: t } = this.properties,
           { gisLayer: e } = this.variableContext;
-        e.animation.set({
-          speed: 0.001 * t.speed,
-        }),
+        e.animation.set({ speed: 0.001 * t.speed }),
           t.enable ? e.animation.start() : e.animation.pause();
       }
       initPropsWatchRule() {
@@ -111503,11 +108785,7 @@ const u7 = {
         const t = this.getLayerConfig(),
           e = new hY(
             this.variableContext.gis,
-            IX(t, {
-              common: {
-                zIndex: this.zIndex,
-              },
-            })
+            IX(t, { common: { zIndex: this.zIndex } })
           );
         (this.variableContext.gisLayer = e),
           (this.preProperties = u(this.properties)),
@@ -111523,14 +108801,8 @@ const u7 = {
           scope: n,
         } = this.properties;
         return {
-          common: {
-            zoomRange: [e.zoomMin, e.zoomMax],
-          },
-          style: {
-            fill: {
-              maps: this.spriteImages,
-            },
-          },
+          common: { zoomRange: [e.zoomMin, e.zoomMax] },
+          style: { fill: { maps: this.spriteImages } },
           count: t.count,
           flash: 0 === i.flashSpeed ? 0 : 101 - i.flashSpeed,
           size: {
@@ -111539,11 +108811,7 @@ const u7 = {
             minHeight: t.height,
             maxHeight: t.height,
           },
-          scope: {
-            width: n.length,
-            height: n.width,
-            altitude: n.height,
-          },
+          scope: { width: n.length, height: n.width, altitude: n.height },
           minSpeed: i.speedMin / 100,
           maxSpeed: i.speedMax / 100,
         };
@@ -111595,11 +108863,7 @@ const u7 = {
         const t = this.getLayerConfig(),
           e = new uY(
             this.variableContext.gis,
-            IX(t, {
-              common: {
-                zIndex: this.zIndex,
-              },
-            })
+            IX(t, { common: { zIndex: this.zIndex } })
           );
         (this.variableContext.gisLayer = e),
           (this.preProperties = u(this.properties)),
@@ -111616,9 +108880,7 @@ const u7 = {
           scope: r,
         } = this.properties;
         return {
-          common: {
-            zoomRange: [i.zoomMin, i.zoomMax],
-          },
+          common: { zoomRange: [i.zoomMin, i.zoomMax] },
           style: {
             fill: {
               map:
@@ -111630,11 +108892,7 @@ const u7 = {
           },
           size: e.size,
           count: e.count,
-          scope: {
-            width: r.length,
-            height: r.width,
-            altitude: r.height,
-          },
+          scope: { width: r.length, height: r.width, altitude: r.height },
           minSpeed: n.speedMin / 100,
           maxSpeed: n.speedMax / 100,
         };
