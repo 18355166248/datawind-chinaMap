@@ -110,7 +110,6 @@ class IW {
           width: e,
           height: i,
         });
-        console.log("🚀 ~ IW ~ constructor ~ this.cameraSystem:", this.cameraSystem)
       }),
       (this.__initSceneSystem = () => {
         const {
@@ -338,7 +337,6 @@ class IW {
   }
   __initViewportSystem() {
     const { viewportConfig: t } = this.state;
-    console.log("🚀 ~ IW ~ __initViewportSystem ~ t:", t)
     this.viewportSystem = new window.dW({
       sceneSystem: this.sceneSystem,
       renderSystem: this.renderSystem,

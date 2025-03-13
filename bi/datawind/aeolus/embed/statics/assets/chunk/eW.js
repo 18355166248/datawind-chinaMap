@@ -247,14 +247,6 @@ class eW extends window.oV {
         const { geojson: geoJsonData, bboxOption: bboxOptions } = options;
         // 处理地理数据
         const processedData = window.bV(geoJsonData, bboxOptions.bboxProj);
-        console.log(
-          "🚀 ~ eW ~ createDistrictExtrude ~ bboxOptions.bboxProj:",
-          JSON.stringify(bboxOptions.bboxProj)
-        );
-        console.log(
-          "🚀 ~ eW ~ createDistrictExtrude ~ geoJsonData:",
-          processedData
-        );
 
         // 初始化索引和位置计数器
         let indexOffset = 0,
@@ -1173,7 +1165,6 @@ class eW extends window.oV {
     let a;
     a = o && drillSave ? o.viewPortInfo : this.gis.viewportSystem.get();
     const { pitch, rotation, offset } = a;
-    console.log("🚀 ~ eW ~ scaleAdaptation ~ a:", a);
     const c = Vf,
       h = null == viewClip ? void 0 : viewClip[this.currentCode],
       p = window.KV({
