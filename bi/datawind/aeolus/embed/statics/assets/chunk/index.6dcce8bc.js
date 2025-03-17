@@ -41,6 +41,7 @@ import { E as z } from "./EntityHostElement.e9904ea6.js";
 
 import "./utils.js";
 import "./sm.js";
+import './OV_map.js';
 import "./upperZV.js";
 import "./tW.js";
 import "./_G.js";
@@ -61361,6 +61362,7 @@ class MU {
 window.MU = MU;
 const CU = new ln(16777215),
   wU = !1;
+window.CU = CU;
 new ln("grey");
 const AU = {
   axis: "z",
@@ -65424,138 +65426,7 @@ function RV(t) {
   );
 }
 window.RV = RV;
-const OV = (t, e, i, n) => {
-  let r, o, a;
-  switch (n) {
-    case "extrude":
-      r = t.extrudeTopMaterial;
-      o = t.gis.globalOpts.bboxOption;
-      a = !1;
-      break;
-    case "extrude-background":
-      (r = t.extrudeBackgroundTopMaterial),
-        (o = t.gis.globalOpts.backgroundBboxOption),
-        (a = !0);
-  }
-  !(function (t) {
-    return (
-      t.indexOf("{x}") > -1 && t.indexOf("{y}") > -1 && t.indexOf("{z}") > -1
-    );
-  })(e)
-    ? t.textureManager(`${n}-${i}`).setTexture(
-        (r) => {
-          t.textureManager(`${n}-${i}`).loader.load(e, (t) => {
-            r(t);
-          });
-        },
-        (t) => {
-          switch (i) {
-            case "map":
-              r.map = t;
-              r.color = CU;
-              break;
-            case "normalMap":
-              r.normalMap = t;
-              break;
-            case "emissiveMap":
-              r.emissiveMap = t;
-              r.emissiveIntensity = 1;
-          }
-          r.needsUpdate = !0;
-        }
-      )
-    : t.textureManager(`${n}-${i}`).setTexture(
-        (t) => {
-          !(function (t) {
-            const {
-                tileUrl: e,
-                bboxOption: i,
-                maxZoom: n,
-                cb: r,
-                isExtrudeBackground: o,
-              } = t,
-              { bbox: a, bboxProj: s, size: l } = i,
-              u = MV({
-                tileUrl: e,
-                bbox: a,
-                maxZoom: n,
-                worldBboxSize: Vf,
-                bboxOption: i,
-                isExtrudeBackground: o,
-              }),
-              {
-                minCol: c,
-                maxCol: h,
-                minRow: p,
-                maxRow: d,
-                tilesInfo: f,
-                tileBboxProj: g,
-              } = u,
-              m = [];
-            for (let y = 0; y < f.length; y++) {
-              const t = f[y],
-                e = new Promise((e, i) => {
-                  fetch(t.url).then((i) => {
-                    i.blob().then((i) => {
-                      createImageBitmap(i).then((i) => {
-                        (t.imageBitmap = i), e(t);
-                      });
-                    });
-                  });
-                });
-              m.push(e);
-            }
-            Promise.all(m)
-              .then((t) => {
-                const e = document.createElement("canvas");
-                (e.width = (256 * (h - c + 1) * l.width) / g.width),
-                  (e.height = (256 * (d - p + 1) * l.height) / g.height),
-                  (e.style.width =
-                    (256 * (h - c + 1) * l.width) / g.width + "px"),
-                  (e.style.height =
-                    (256 * (d - p + 1) * l.height) / g.height + "px");
-                const i = e.getContext("2d");
-                for (let r = 0; r < t.length; r++) {
-                  const e = t[r],
-                    n =
-                      256 * (e.col - c) -
-                      (Math.abs(s[0] - g.leftTop[0]) * (h - c + 1) * 256) /
-                        g.width,
-                    o =
-                      256 * (e.row - p) -
-                      (Math.abs(s[3] - g.leftTop[1]) * (d - p + 1) * 256) /
-                        g.height;
-                  i.drawImage(e.imageBitmap, n, o, 256, 256);
-                }
-                const n = new Es(e);
-                (n.wrapS = n.wrapT = kt), n.repeat.set(1, 1), r(n);
-              })
-              .catch((t) => {});
-          })({
-            tileUrl: e,
-            bboxOption: o,
-            maxZoom: 12,
-            imageType: i,
-            isExtrudeBackground: a,
-            cb: t,
-          });
-        },
-        (t) => {
-          switch (i) {
-            case "map":
-              (r.map = t), (r.color = CU);
-              break;
-              case "normalMap":
-              // 设置地图的山峰效果
-              r.normalMap = t;
-              break;
-            case "emissiveMap":
-              (r.emissiveMap = t), (r.emissiveIntensity = 1);
-          }
-          r.needsUpdate = !0;
-        }
-      );
-};
+
 function FV(t, e) {
   let i, n, r, o, a;
   switch (e) {
