@@ -346,6 +346,24 @@ class IW {
       layerManager: this.layerManager,
       gis: this,
     });
+    setTimeout(() => {
+      // const v = this.viewportSystem.props.sceneSystem.coreScene.children.splice(
+      //   3,
+      //   1
+      // );
+
+      // const v =
+      //   this.viewportSystem.props.sceneSystem.coreScene.children[3].children[0].children[2].children.splice(
+      //     1,
+      //     3
+      //   );
+      // console.log(
+      //   "this.viewportSystem",
+
+      //   this.viewportSystem.props.sceneSystem.coreScene.children[3].children[0]
+      //     .children[2].children
+      // );
+    }, 3000);
   }
   __iniTickSystem() {
     this.tickSystem = new window.JU({

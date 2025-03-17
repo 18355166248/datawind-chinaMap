@@ -297,7 +297,8 @@ class eW extends window.oV {
                 topGeometry,
                 context.extrudeTopMaterial
               );
-              topMesh.setRenderIndex(window.lU.BASE_MAP_LAYER_EXTRUDE_MESH);
+              // 这里材质会在 OV函数中设置 normalMap r.normalMap = t;
+              // topMesh.setRenderIndex(window.lU.BASE_MAP_LAYER_EXTRUDE_MESH);
               topMesh.scale.z = baseHeight;
               topMesh.position.z = 0;
               topMesh.userData.faceType = "top";
@@ -677,6 +678,7 @@ class eW extends window.oV {
     if (useXGisViewport) {
       this.gis.viewportSystem.init("xgis");
     } else {
+      // 函数 dW
       this.gis.viewportSystem.init();
     }
 
@@ -686,7 +688,8 @@ class eW extends window.oV {
     // 创建区域拉伸材质
     (function createExtrudeMaterials(districtStyle, scene, context) {
       // 获取背景颜色
-      const backgroundColor = window.EA(scene.state.background.color);
+      // const backgroundColor = window.EA(scene.state.background.color);
+      const backgroundColor = window.EA("#e91a0b");
 
       // 创建顶部材质
       context.extrudeTopMaterial = new window.zA({

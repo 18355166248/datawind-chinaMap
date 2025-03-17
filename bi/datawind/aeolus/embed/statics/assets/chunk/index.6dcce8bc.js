@@ -40,9 +40,9 @@ import { G as O, a as F } from "./GhostElement.0a01c8ce.js";
 import { E as z } from "./EntityHostElement.e9904ea6.js";
 
 import "./utils.js";
-import './sm.js';
-import './upperZV.js';
-import './tW.js';
+import "./sm.js";
+import "./upperZV.js";
+import "./tW.js";
 import "./_G.js";
 import "./kf.js";
 import "./bv.js";
@@ -46769,8 +46769,9 @@ class gA {
   }
   _checkSubject() {
     Object.keys(this._listeners).forEach((t) => {
-      const { name: e, func: i } = this._listeners[t];
-      i(this.get(e));
+      const { name, func } = this._listeners[t];
+      const v = this.get(name);
+      func(v);
     });
   }
   _uuid() {
@@ -59981,7 +59982,7 @@ class DG {
       t.registerGetAndSet(AG.XGis, new pA(e).transform, new dA(e).transform),
       t.registerGetAndSet(AG.Engine, new hA(e).transform, new cA(e).transform);
     const i = new mA(e);
-    (this.controls = new mD(this.props.gis.state.containerDom, {
+    this.controls = new mD(this.props.gis.state.containerDom, {
       dolly: (e) => {
         t.reactiveState.setSourceState(i.dolly(e, t.get(AG.WebGis)));
       },
@@ -59993,20 +59994,20 @@ class DG {
       rotate: (e, n) => {
         t.reactiveState.setSourceState(i.rotate(e, n, t.get(AG.WebGis)));
       },
-    })),
-      this.controls.addEventListener("change", this.__controlChangeHandler),
-      this.controls.addEventListener("end", this.__controlEndHandler),
-      t.subscribe(AG.Engine, (t) => {
-        this.props.cameraSystem.coreCamera.position.fromArray(t.position),
-          this.props.cameraSystem.coreCamera.up.fromArray(t.up),
-          (this.props.cameraSystem.coreCamera.near = t.near),
-          (this.props.cameraSystem.coreCamera.far = t.far),
-          (this.props.cameraSystem.coreCamera.fov = t.fov),
-          this.props.cameraSystem.coreCamera.updateProjectionMatrix(),
-          this.controls.target.fromArray(t.target),
-          this.props.cameraSystem.coreCamera.lookAt(this.controls.target);
-      }),
-      (this.gisStateApi = t);
+    });
+    this.controls.addEventListener("change", this.__controlChangeHandler);
+    this.controls.addEventListener("end", this.__controlEndHandler);
+    t.subscribe(AG.Engine, (t) => {
+      this.props.cameraSystem.coreCamera.position.fromArray(t.position),
+        this.props.cameraSystem.coreCamera.up.fromArray(t.up),
+        (this.props.cameraSystem.coreCamera.near = t.near),
+        (this.props.cameraSystem.coreCamera.far = t.far),
+        (this.props.cameraSystem.coreCamera.fov = t.fov),
+        this.props.cameraSystem.coreCamera.updateProjectionMatrix(),
+        this.controls.target.fromArray(t.target),
+        this.props.cameraSystem.coreCamera.lookAt(this.controls.target);
+    });
+    this.gisStateApi = t;
   }
   getCameraResolution() {
     const { zoom: t, center: e } = this.gisStateApi.getSourceState();
@@ -65427,7 +65428,9 @@ const OV = (t, e, i, n) => {
   let r, o, a;
   switch (n) {
     case "extrude":
-      (r = t.extrudeTopMaterial), (o = t.gis.globalOpts.bboxOption), (a = !1);
+      r = t.extrudeTopMaterial;
+      o = t.gis.globalOpts.bboxOption;
+      a = !1;
       break;
     case "extrude-background":
       (r = t.extrudeBackgroundTopMaterial),
@@ -65448,13 +65451,15 @@ const OV = (t, e, i, n) => {
         (t) => {
           switch (i) {
             case "map":
-              (r.map = t), (r.color = CU);
+              r.map = t;
+              r.color = CU;
               break;
             case "normalMap":
               r.normalMap = t;
               break;
             case "emissiveMap":
-              (r.emissiveMap = t), (r.emissiveIntensity = 1);
+              r.emissiveMap = t;
+              r.emissiveIntensity = 1;
           }
           r.needsUpdate = !0;
         }
@@ -65540,7 +65545,8 @@ const OV = (t, e, i, n) => {
             case "map":
               (r.map = t), (r.color = CU);
               break;
-            case "normalMap":
+              case "normalMap":
+              // 设置地图的山峰效果
               r.normalMap = t;
               break;
             case "emissiveMap":
@@ -65554,13 +65560,13 @@ function FV(t, e) {
   let i, n, r, o, a;
   switch (e) {
     case "extrude":
-      (a = t.extrudeTopMaterial),
-        (i = t.state.districtStyle.fill.map),
-        (n = t.state.districtStyle.fill.color),
-        (r = t.state.districtStyle.fill.normalMap),
-        (o = t.state.districtStyle.fill.normalScale),
-        (a.metalness = t.state.districtStyle.fill.metalness),
-        (a.roughness = t.state.districtStyle.fill.roughness);
+      a = t.extrudeTopMaterial;
+      i = t.state.districtStyle.fill.map;
+      n = t.state.districtStyle.fill.color;
+      r = t.state.districtStyle.fill.normalMap;
+      o = t.state.districtStyle.fill.normalScale;
+      a.metalness = t.state.districtStyle.fill.metalness;
+      a.roughness = t.state.districtStyle.fill.roughness;
       break;
     case "extrude-background":
       (a = t.extrudeBackgroundTopMaterial),
@@ -66690,39 +66696,39 @@ class dW {
       let c;
       switch (r) {
         case "orbit":
-          i.set(AG.Engine, t),
-            (c = {
-              name: "相机环绕轨道动画",
-              loop: o,
-              yoyo: a,
-              onStart: () => {
-                this.props.controlsSystem.lock();
-              },
-              onComplete: () => {
-                this.props.controlsSystem.unlock(),
-                  this.props.controlsSystem.controls.dispatchEvent({
-                    type: "end",
-                  });
-              },
-              onUpdate: (t) => {
-                i.set(AG.WebGis, t),
-                  this.props.controlsSystem.controls.dispatchEvent({
-                    type: "change",
-                  });
-              },
-              animation: [
-                {
-                  from: {
-                    rotation: i.getSourceState().rotation,
-                  },
-                  to: {
-                    rotation: 360 + i.getSourceState().rotation,
-                  },
-                  duration: s,
-                  delay: l,
+          i.set(AG.Engine, t);
+          c = {
+            name: "相机环绕轨道动画",
+            loop: o,
+            yoyo: a,
+            onStart: () => {
+              this.props.controlsSystem.lock();
+            },
+            onComplete: () => {
+              this.props.controlsSystem.unlock(),
+                this.props.controlsSystem.controls.dispatchEvent({
+                  type: "end",
+                });
+            },
+            onUpdate: (t) => {
+              i.set(AG.WebGis, t),
+                this.props.controlsSystem.controls.dispatchEvent({
+                  type: "change",
+                });
+            },
+            animation: [
+              {
+                from: {
+                  rotation: i.getSourceState().rotation,
                 },
-              ],
-            });
+                to: {
+                  rotation: 360 + i.getSourceState().rotation,
+                },
+                duration: s,
+                delay: l,
+              },
+            ],
+          };
           break;
         case "straight":
           c = {
@@ -66863,11 +66869,10 @@ class dW {
           };
       }
       u.run(c);
-    } else
-      i.set(AG.WebGis, n),
-        this.props.controlsSystem.controls.dispatchEvent({
-          type: "end",
-        });
+    } else i.set(AG.WebGis, n);
+    this.props.controlsSystem.controls.dispatchEvent({
+      type: "end",
+    });
     return this;
   }
   getBaseCameraState(t) {

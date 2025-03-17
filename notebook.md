@@ -72,4 +72,7 @@ t.__geojson_process_proj__ = window.sm(
 
 深拷贝 cloneDeep
 
-## cW 
+## cW
+
+## 设置地图的山峰效果
+OV 函数下  r.normalMap = t;

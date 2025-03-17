@@ -83,6 +83,7 @@ function KV(t) {
     cameraStatus: {
       near: Math.max(bboxOptions.size.bboxSize, 0.001),
       far: 10 * bboxOptions.size.bboxSize,
+      // 定义了相机在三维空间中的状态。
       target: [
         bboxCenter[0] + cameraOffset[0] * bboxOptions.size.bboxSize,
         bboxCenter[1] + cameraOffset[1] * bboxOptions.size.bboxSize,
