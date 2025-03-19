@@ -41,7 +41,7 @@ import { E as z } from "./EntityHostElement.e9904ea6.js";
 
 import "./utils.js";
 import "./sm.js";
-import './OV_map.js';
+import "./OV_map.js";
 import "./upperZV.js";
 import "./tW.js";
 import "./_G.js";
@@ -64088,11 +64088,12 @@ var KH = Object.defineProperty,
   };
 class eV extends As {
   constructor(t = cU.POI) {
-    super(),
-      (this.zIndex = t),
-      (this.__asyncTaskPool = []),
-      (this.__prevVisible = !1),
-      (this.__moving = !1);
+    // console.log("🚀 ~ eV ~ constructor ~ t:", t);
+    super();
+    this.zIndex = t;
+    this.__asyncTaskPool = [];
+    this.__prevVisible = !1;
+    this.__moving = !1;
   }
   set moving(t) {
     this.__moving !== t &&

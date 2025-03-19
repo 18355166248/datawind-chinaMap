@@ -83,3 +83,7 @@ OV 函数下 r.normalMap = t;
 ## wA THREE.Color
 
 ## Le THREE.Vector2
+
+## 省名称初始化在 oV \_initLayerGroup
+
+## As 是 THREE.Group
