@@ -174,6 +174,18 @@ const loadMapTexture = (context, textureUrl, textureType, layerType) => {
           ctx.drawImage(tile.imageBitmap, x, y, tileSize, tileSize);
         }
 
+        // // 注释掉的导出图片功能
+        // // 生成图片数据URL（PNG格式，默认质量0.9）
+        // const dataUrl = canvas.toDataURL("image/png", 0.9);
+        // // 创建隐藏的下载链接
+        // const link = document.createElement("a");
+        // link.href = dataUrl;
+        // link.download = "test.png"; // 自定义文件名
+        // // 触发下载
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
+
         // 创建纹理并设置属性
         const texture = new Es(canvas);
         texture.wrapS = texture.wrapT = kt; // 设置纹理环绕模式

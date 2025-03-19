@@ -822,7 +822,7 @@ class eW extends window.oV {
     })(backgroundStyleConfig, sceneSystem, this);
 
     // 初始化拉伸效果
-    await this.initExtrude();
+    // await this.initExtrude();
   }
   /**
    * 地图下钻功能 - 从当前层级钻取到下一级行政区
@@ -1337,6 +1337,7 @@ class eW extends window.oV {
             window.zV(this);
           }
         ),
+        // 动态线效果
         this._propsWatch.defaultRule(
           ["districtStyle", "boundaryStreamer"],
           "diffDeep",

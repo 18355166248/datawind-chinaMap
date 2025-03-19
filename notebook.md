@@ -75,4 +75,11 @@ t.__geojson_process_proj__ = window.sm(
 ## cW
 
 ## 设置地图的山峰效果
-OV 函数下  r.normalMap = t;
+
+OV 函数下 r.normalMap = t;
+
+## pd 是 lodash 的 cloneDeep
+
+## wA THREE.Color
+
+## Le THREE.Vector2
