@@ -44,14 +44,17 @@ let oV = class {
       { enabled: a = !1, markerType: s = "css2d" } = r,
       { sceneSystem: l, layerManager: u } = this.gis;
     this.layerType = i;
+    // console.log("this.layerType", o, this.group);
     o ? l.hudScene.add(this.group) : l.coreScene.add(this.group);
     this.group.name = e;
     this.coreGroup = null != n ? n : new window.As();
     this.coreGroup.name = `core-${e}`;
     this.group.add(this.coreGroup);
+    // 初始化省文字
     this.poiGroup = new window.eV();
     this.poiGroup.name = `${e}-poi-layer`;
     l.hudScene.add(this.poiGroup);
+    console.log("🚀 ~ _initLayerGroup ~ this.poiGroup:", this.poiGroup);
     u.add({
       layerType: i,
       layer: this,

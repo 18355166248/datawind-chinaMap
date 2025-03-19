@@ -347,22 +347,22 @@ class IW {
       gis: this,
     });
     setTimeout(() => {
-      // const v = this.viewportSystem.props.sceneSystem.coreScene.children.splice(
-      //   3,
-      //   1
-      // );
+      // 删除省线
+      // this.viewportSystem.props.sceneSystem.coreScene.children.splice(3, 1);
+      // 删除省名称 第一个
+      // this.viewportSystem.props.sceneSystem.hudScene.children.splice(0, 1);
+      // 删除右下角岛屿 第二个
+      // this.viewportSystem.props.sceneSystem.hudScene.children.splice(0, 1);
 
       // const v =
       //   this.viewportSystem.props.sceneSystem.coreScene.children[3].children[0].children[2].children.splice(
       //     1,
       //     3
       //   );
-      // console.log(
-      //   "this.viewportSystem",
-
-      //   this.viewportSystem.props.sceneSystem.coreScene.children[3].children[0]
-      //     .children[2].children
-      // );
+      console.log(
+        "this.viewportSystem",
+        this.viewportSystem.props.sceneSystem.hudScene.children
+      );
     }, 3000);
   }
   __iniTickSystem() {
