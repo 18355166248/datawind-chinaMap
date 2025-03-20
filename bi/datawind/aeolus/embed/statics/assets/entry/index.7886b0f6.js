@@ -44716,12 +44716,12 @@ function sendTrack(_e, et, tt) {
       } catch (e2) {
         "ignore" !== (null == e2 ? void 0 : e2.message) && trackError(e2);
       }
-    nt &&
-      AeolusCollectEvent(_e, et, (_e) => {
-        trackClient.post(AEOLUS_EVENT_TRACKING_PATH, _e).catch((_e) => {
-          trackError("send tracking event failed", _e);
-        });
-      });
+    // nt &&
+    //   AeolusCollectEvent(_e, et, (_e) => {
+    //     trackClient.post(AEOLUS_EVENT_TRACKING_PATH, _e).catch((_e) => {
+    //       trackError("send tracking event failed", _e);
+    //     });
+    //   });
   }
 }
 class Reporter {}
@@ -44747,13 +44747,13 @@ const trackEvent = async ({ payload: _e, requestClient: et }) => {
       },
     ],
   };
-  try {
-    return { data: await et.post(AEOLUS_EVENT_TRACKING_PATH, tt) };
-  } catch (error3) {
-    return (
-      trackError("ErrorReporter encounter error: ", error3), { error: error3 }
-    );
-  }
+  // try {
+  //   return { data: await et.post(AEOLUS_EVENT_TRACKING_PATH, tt) };
+  // } catch (error3) {
+  //   return (
+  //     trackError("ErrorReporter encounter error: ", error3), { error: error3 }
+  //   );
+  // }
 };
 class Collector {
   static collect = (..._e) => {};

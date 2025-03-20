@@ -468,27 +468,27 @@ export class O2 extends z {
             aliasMap: I2(this.POMNode.renderType),
           },
         },
-      },
-      o = {
-        containerDom: n,
-        globalVariable:
-          this.editMode === g.Edit ||
-          window.location.href.includes("showToolbar=true"),
-        viewportConfig: this.getViewportConfig(),
-        lightConfig: this.getLightConfig(),
-        sceneConfig: window.IX(
-          {
-            logo: {
-              visible: !1,
-            },
-            background: {
-              transparent: !0,
-            },
-          },
-          this.getSceneConfig()
-        ),
-        baseMapLayer: window.IX(r, this.getBaseLayerConfig()),
       };
+    const o = {
+      containerDom: n,
+      globalVariable:
+        this.editMode === g.Edit ||
+        window.location.href.includes("showToolbar=true"),
+      viewportConfig: this.getViewportConfig(),
+      lightConfig: this.getLightConfig(),
+      sceneConfig: window.IX(
+        {
+          logo: {
+            visible: !1,
+          },
+          background: {
+            transparent: !0,
+          },
+        },
+        this.getSceneConfig()
+      ),
+      baseMapLayer: window.IX(r, this.getBaseLayerConfig()),
+    };
 
     (this.variableContext.gis = new window.IW(o)),
       this.variableContext.gis

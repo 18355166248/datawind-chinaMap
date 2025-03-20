@@ -54,7 +54,6 @@ let oV = class {
     this.poiGroup = new window.eV();
     this.poiGroup.name = `${e}-poi-layer`;
     l.hudScene.add(this.poiGroup);
-    console.log("🚀 ~ _initLayerGroup ~ this.poiGroup:", this.poiGroup);
     u.add({
       layerType: i,
       layer: this,

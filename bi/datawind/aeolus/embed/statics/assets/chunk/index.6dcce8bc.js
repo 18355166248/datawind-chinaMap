@@ -65618,11 +65618,13 @@ async function HV(t, e = "all") {
       color: CU,
       opacity: 0,
     });
+  // console.log(n.geo.project);
   t.subDistrictData.forEach((i) => {
     var r;
     const l = i.properties.name,
-      u = null != (r = o[l]) ? r : l,
-      c = n.geo.project([i.properties.centroidx, i.properties.centroidy]),
+      u = null != (r = o[l]) ? r : l;
+    // project 就是 Qf
+    const c = n.geo.project([i.properties.centroidx, i.properties.centroidy]),
       h = {
         adcode: i.properties.id,
         name: l,

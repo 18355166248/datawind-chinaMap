@@ -669,6 +669,7 @@ class eW extends window.oV {
     // 初始化地图组件
     window.tW(this);
     window.uV(this);
+    // 初始化省区信息 subDistrictInfoArr
     window.HV(this);
 
     // 调整地图比例
@@ -1119,47 +1120,45 @@ class eW extends window.oV {
   }
   async initPOI() {
     const { poi: t } = this.state,
-      {
-        enabled: e,
-        background: i,
-        orient: n,
-        alignment: r,
-        offsetX: o,
-        offsetY: a,
-        major: s,
-      } = t;
-    if (!e || !s.enabled) return void this.clearPoiGroup();
+      { enabled, background, orient, alignment, offsetX, offsetY, major } = t;
+    if (!enabled || !major.enabled) return void this.clearPoiGroup();
     this.clearPoiGroup();
     const { baseHeight: l } = this.gis.globalOpts.bboxOption;
+    console.log(
+      "🚀 ~ eW ~ initPOI ~ this.subDistrictInfoArr:",
+      this.subDistrictInfoArr
+    );
     for (let u = 0; u < this.subDistrictInfoArr.length; u++) {
-      const t = this.subDistrictInfoArr[u],
-        { centroid: e, alias: c } = t;
-      if (!e) continue;
+      const t = this.subDistrictInfoArr[u];
+      const { centroid, alias } = t;
+      if (!centroid) continue;
+      // Vector3
       const h = new Ye(0, 0, 0);
       await this.poiGroup.addText(
         h,
-        n,
-        r,
-        i,
+        orient,
+        alignment,
+        background,
         {
-          content: `${s.format ? s.format(c) : c}`,
-          props: s,
+          content: `${major.format ? major.format(alias) : alias}`,
+          props: major,
         },
         null,
-        o,
-        a,
+        offsetX,
+        offsetY,
         {
-          position: [e[0], e[1], l],
-          offsetX: o,
-          offsetY: a,
+          position: [centroid[0], centroid[1], l],
+          offsetX: offsetX,
+          offsetY: offsetY,
         }
       );
     }
     this._updatePOI(!0);
   }
   scaleAdaptation(t = !0) {
-    const { project } = this.gis.layerManager.geo,
-      {
+    const { project } = this.gis.layerManager.geo;
+    // console.log("🚀 ~ eW ~ scaleAdaptation ~ project:", project);
+    const {
         districtStyle: { heightScale },
         viewClip,
       } = this.state,
