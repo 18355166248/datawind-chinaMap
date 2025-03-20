@@ -43,6 +43,7 @@ import "./utils.js";
 import "./sm.js";
 import "./OV_map.js";
 import "./upperZV.js";
+import './HV.js';
 import "./tW.js";
 import "./_G.js";
 import "./kf.js";
@@ -7962,6 +7963,7 @@ class ln {
     return this.getHex();
   }
 }
+window.ln = ln;
 let un = 0;
 const cn = new Map();
 class hn extends vt {
@@ -8379,6 +8381,7 @@ class pn extends hn {
     );
   }
 }
+window.pn = pn;
 const dn = new Ye(),
   fn = new Le();
 class gn {
@@ -19755,6 +19758,7 @@ class qs extends Ws {
     return this;
   }
 }
+window.qs = qs;
 function Ys(t, e) {
   return (function (t, e) {
     const i = t.toString(),
@@ -47449,6 +47453,7 @@ class NA extends En {
     return new NA(i, t.curveSegments);
   }
 }
+window.NA = NA;
 class RA extends En {
   constructor(t = null) {
     if (
@@ -51458,6 +51463,7 @@ class TD extends Jn {
       this.setValues(t);
   }
 }
+window.TD = TD;
 const PD = new li(),
   LD = new Ye();
 class ID extends dE {
@@ -51764,6 +51770,7 @@ class YD extends ID {
     );
   }
 }
+window.YD = YD;
 class XD extends qD {
   constructor(
     t = new YD(),
@@ -51774,6 +51781,7 @@ class XD extends qD {
     super(t, e), (this.isLine2 = !0), (this.type = "Line2");
   }
 }
+window.XD = XD;
 new ln(0), new Le(1, 0), new Le(0, 1);
 class QD {
   static isWebGLAvailable() {
@@ -65585,94 +65593,7 @@ function jV(t, e) {
   n && ((n.scale.z = t || 1), (n.position.z = 0));
 }
 window.jV = jV;
-async function HV(t, e = "all") {
-  var i;
-  if (!t.subDistrictData) return;
-  const { layerManager: n } = t.gis,
-    {
-      poi: { major: r },
-    } = t.state;
-  t.subDistrictInfoArr = [];
-  const o = null != (i = r.aliasMap) ? i : r.nameMap ? pf(r.nameMap) : null,
-    a = (function (t) {
-      const { subDistrictStyle: e } = t.state;
-      if (e.stroke && e.stroke.width) {
-        const i = new TD({
-          color: new ln(e.stroke.color).getHex(),
-          transparent: !0,
-          opacity: e.stroke.opacity,
-          linewidth: e.stroke.width,
-        });
-        return (
-          i.resolution.set(
-            t.gis.props.containerDom.clientWidth,
-            t.gis.props.containerDom.clientHeight
-          ),
-          i
-        );
-      }
-      return null;
-    })(t),
-    s = new pn({
-      transparent: !0,
-      color: CU,
-      opacity: 0,
-    });
-  // console.log(n.geo.project);
-  t.subDistrictData.forEach((i) => {
-    var r;
-    const l = i.properties.name,
-      u = null != (r = o[l]) ? r : l;
-    // project 就是 Qf
-    const c = n.geo.project([i.properties.centroidx, i.properties.centroidy]),
-      h = {
-        adcode: i.properties.id,
-        name: l,
-        alias: u,
-        lng: i.properties.centroidx,
-        lat: i.properties.centroidy,
-        centroid: c,
-      };
-    i.geometry.coordinates.forEach((n, r) => {
-      u &&
-        ((i, n, r, o) => {
-          if (i.length > 2) {
-            let l;
-            const u = [],
-              c = new qs();
-            for (let t = 0; t < i.length; t++) {
-              const [e, n] = i[t];
-              0 === t && c.moveTo(e, n), c.lineTo(e, n), u.push(e, n, 0);
-            }
-            if (a) {
-              (l = new YD()),
-                l.setPositions(u),
-                a.resolution.set(
-                  t.gis.props.containerDom.clientWidth,
-                  t.gis.props.containerDom.clientHeight
-                );
-              const e = new XD(l, a);
-              e.setRenderIndex(lU.BASE_MAP_LAYER_PROVINCE_STROKE),
-                t.subDistrictStrokeGroup.add(e);
-            }
-            if ("stroke" !== e) {
-              const e = new NA(c),
-                i = s.clone(),
-                a = new Wn(e, i);
-              a.setRenderIndex(lU.BASE_MAP_LAYER_PROVINCE_MESH),
-                (a.name = `sub-district-${o.alias}-${n}`),
-                (a.ext = af(r.properties, o)),
-                t.subDistrictFillGroup.add(a);
-            }
-          }
-        })(n, r, i, h);
-    }),
-      u &&
-        !t.subDistrictInfoArr.find((t) => t.adcode == h.adcode) &&
-        t.subDistrictInfoArr.push(h);
-  });
-}
-window.HV = HV;
+
 function VV(t, e) {
   if (sf(t, "stroke")) {
     const i = EA(t.stroke.color);
