@@ -87,3 +87,13 @@ OV 函数下 r.normalMap = t;
 ## 省名称初始化在 oV \_initLayerGroup
 
 ## As 是 THREE.Group
+
+## TD 是 LineMaterial
+
+## Be Ge 是 Texture
+
+## rE 是 TextureLoader
+
+## Yd 是 lodash.curry
+
+## Wn 是 Mesh

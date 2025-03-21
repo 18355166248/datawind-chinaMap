@@ -56,6 +56,10 @@ async function HV(map, renderMode = "all") {
   });
 
   // 处理每个子区域数据
+  console.log(
+    "🚀 ~ map.subDistrictData.forEach ~ map.subDistrictData:",
+    map.subDistrictData
+  );
   map.subDistrictData.forEach((district) => {
     const districtName = district.properties.name;
     const districtAlias = aliasMap?.[districtName] ?? districtName;

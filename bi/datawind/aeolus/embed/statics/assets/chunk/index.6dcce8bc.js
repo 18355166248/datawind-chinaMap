@@ -64219,7 +64219,7 @@ class eV extends As {
       });
   }
 }
-tV([_G(window.KB.ITextService)], eV.prototype, "textService", 2),
+tV([_G(window.KB.ITextService)], eV.prototype, "textService", 2);
   tV([_G(window.KB.ILogService)], eV.prototype, "logService", 2);
 
 window.eV = eV;

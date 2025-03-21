@@ -54,6 +54,7 @@ let oV = class {
     this.poiGroup = new window.eV();
     this.poiGroup.name = `${e}-poi-layer`;
     l.hudScene.add(this.poiGroup);
+    console.log("🚀 ~ _initLayerGroup ~ l.hudScene:", l.hudScene);
     u.add({
       layerType: i,
       layer: this,
@@ -585,10 +586,10 @@ let oV = class {
     const { cameraSystem: n } = this.gis,
       { coverEnable: r, hideOnMove: o } = e;
     if (o && !t) return void (this.poiGroup.moving = !0);
-    t && (this.poiGroup.moving = !1),
-      this.group.updateWorldMatrix(!0, !1),
-      n.coreCamera.updateWorldMatrix(!0, !1),
-      this.poiGroup.updateTextPosition(this.group.matrixWorld, n);
+    t && (this.poiGroup.moving = !1);
+    this.group.updateWorldMatrix(!0, !1);
+    n.coreCamera.updateWorldMatrix(!0, !1);
+    this.poiGroup.updateTextPosition(this.group.matrixWorld, n);
     (i.hover.enabled && i.hover.effect.poi) ||
     (i.select.enabled && i.select.effect.poi)
       ? this.poiGroup.hide({
