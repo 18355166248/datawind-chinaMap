@@ -41067,7 +41067,7 @@ function formatLang(_e, et) {
 var defaultFallbackLanguage = "zh-CN",
   defaultConfig$K = {
     lng: defaultFallbackLanguage,
-    fallbackLng: ["en-US"],
+    fallbackLng: ["zh-CN"],
     inContext: !0,
   },
   defaultPlugins = [IES_INTL_ICU_PLUGIN, index$3],
@@ -43754,7 +43754,7 @@ class VScreenIntl {
             case "zh":
               return "zh-CN";
             case "en":
-              return "en-US";
+              return "zh-CN";
             default:
               return _e.replace("_", "-");
           }
@@ -181405,7 +181405,7 @@ const AJAX_IS_CANCELLED = "AJAX_IS_CANCELLED",
       paths: ["icon.image", "poi.background.image"],
     },
   ],
-  LOCALE_MAP = { zh_CN: "zh-CN", en_US: "en-US" },
+  LOCALE_MAP = { zh_CN: "zh-CN", en_US: "zh-CN" },
   isServerException = (_e) =>
     !!_e &&
     _e instanceof Object &&
